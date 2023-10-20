@@ -1,0 +1,48 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Oct 05 14:20:58 2023 *
+NOTE DESIGN NAME: main *
+NOTE DEVICE NAME: LCMXO2-7000HC-5TQFP144 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS M : 96 : out *
+NOTE PINS L : 84 : out *
+NOTE PINS DAC1B : 10 : out *
+NOTE PINS K : 82 : out *
+NOTE PINS H : 78 : out *
+NOTE PINS G : 77 : out *
+NOTE PINS F : 103 : out *
+NOTE PINS E : 100 : out *
+NOTE PINS D : 99 : out *
+NOTE PINS C : 98 : out *
+NOTE PINS B : 97 : out *
+NOTE PINS A : 83 : out *
+NOTE PINS DAC2H : 95 : out *
+NOTE PINS DAC2G : 94 : out *
+NOTE PINS DAC2F : 93 : out *
+NOTE PINS DAC2E : 92 : out *
+NOTE PINS DAC2D : 89 : out *
+NOTE PINS DAC2C : 87 : out *
+NOTE PINS DAC2B : 86 : out *
+NOTE PINS DAC2A : 85 : out *
+NOTE PINS DAC1H : 17 : out *
+NOTE PINS DAC1G : 15 : out *
+NOTE PINS DAC1F : 14 : out *
+NOTE PINS DAC1E : 13 : out *
+NOTE PINS DAC1D : 12 : out *
+NOTE PINS DAC1C : 11 : out *
+NOTE PINS DAC1A : 9 : out *
+NOTE PINS N : 122 : out *
+NOTE PINS O : 121 : out *
+NOTE PINS P : 117 : out *
+NOTE PINS Q : 115 : out *
+NOTE PINS R : 114 : out *
+NOTE PINS S : 113 : out *
+NOTE PINS T : 112 : out *
+NOTE PINS V : 21 : out *
+NOTE PINS W : 22 : out *
+NOTE PINS UPLOAD : 142 : out *
+NOTE PINS EMPTY : 24 : out *
+NOTE PINS ACTIV : 119 : out *
+NOTE PINS CK : 38 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

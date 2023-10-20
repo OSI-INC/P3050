@@ -1,0 +1,10 @@
+#Start recording tcl command: 10/5/2023 10:15:44
+#Project Location: C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG; Project name: P3050FG
+C:/Users/Nathan Sayer/Documents/OSI/TCB/P3042DP
+P3042DP
+#Start recording tcl command: 10/5/2023 10:20:26
+#Project Location: C:/Users/Nathan Sayer/Documents/OSI/TCB/P3042DP; Project name: P3042DP
+prj_project open "C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG/P3050FG.ldf"
+prj_project close
+prj_project open "C:/Users/Nathan Sayer/Documents/OSI/TCB/P3042DP/P3042DP.ldf"
+#Stop recording: 10/5/2023 10:20:26
