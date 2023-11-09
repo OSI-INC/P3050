@@ -19,9 +19,9 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG/impl1/P3050FG_impl1.jed</File>
-			<FileTime>10/05/23 14:20:58</FileTime>
-			<JedecChecksum>0x1618</JedecChecksum>
+			<File>C:/Firmware/P3050FG/impl1/P3050FG_impl1.jed</File>
+			<FileTime>11/08/23 14:10:06</FileTime>
+			<JedecChecksum>0xA923</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
@@ -50,7 +50,6 @@
 		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#6&amp;amp;118a5f7e&amp;amp;0&amp;amp;1#</USBID>
 		<JTAGPinSetting>
 			TRST	ABSENT;
-			ISPEN	ABSENT;
 		</JTAGPinSetting>
 	</CableOptions>
 </ispXCF>

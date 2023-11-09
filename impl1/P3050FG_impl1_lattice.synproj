@@ -30,11 +30,13 @@
 
 
 -lpf 1
--lib "work" -vhd "C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG/Main.vhd"
+-lib "work" -vhd "C:/Firmware/P3050FG/DAQ_RAM.vhd"
+"C:/Firmware/P3050FG/DAQ_RAM.vhd"
+"C:/Firmware/P3050FG/Main.vhd"
 -top main
 
 
--p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG/impl1" "C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG"
+-p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Firmware/P3050FG/impl1" "C:/Firmware/P3050FG"
 
 -ngd "P3050FG_impl1.ngd"
 

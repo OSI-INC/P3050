@@ -1,0 +1,22 @@
+Running in Lattice mode
+
+Starting:    C:\lscc\diamond\3.12\synpbase\bin64\mbin\synplify.exe
+Install:     C:\lscc\diamond\3.12\synpbase
+Hostname:    DESKTOP-B8KCQ2H
+Date:        Mon Oct 23 13:27:38 2023
+Version:     Q-2020.03L-SP1
+
+Arguments:   -product synplify_pro -tcl C:/Firmware/P3050FG/impl1/launch_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+
+No project opened.
+@W: UI147 |File already exists in project: "C:\Firmware\P3050FG\CPU_ROM.vhd"
+@W: UI147 |File already exists in project: "C:\Firmware\P3050FG\CPU_RAM.vhd"
+@W: UI147 |File already exists in project: "C:\Firmware\P3050FG\FIFO_8.vhd"
+@W: UI147 |File already exists in project: "C:\Firmware\P3050FG\FIFO_40.vhd"
+TCL script complete: "C:/Firmware/P3050FG/impl1/launch_synplify.tcl"
+exit status=0

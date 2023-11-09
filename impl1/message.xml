@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(47): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>UPLOAD</Dynamic>
+            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>47</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(48): Semantic error in &quot;IOBUF PORT &quot;ACTIV&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>ACTIV</Dynamic>
+            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>48</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(49): Semantic error in &quot;IOBUF PORT &quot;EMPTY&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>EMPTY</Dynamic>
+            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>49</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(52): Semantic error in &quot;IOBUF PORT &quot;CK&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>CK</Dynamic>
+            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>CK</Dynamic>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>UPLOAD</Dynamic>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>EMPTY</Dynamic>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>ACTIV</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CK</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>UPLOAD</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>EMPTY</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ACTIV</Dynamic>
+        </Message>
+    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -13,107 +91,259 @@
             <ID>35921504</ID>
             <Severity>Info</Severity>
             <Dynamic></Dynamic>
-            <Dynamic>C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG/impl1</Dynamic>
+            <Dynamic>C:/Firmware/P3050FG/impl1</Dynamic>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/nathan sayer/documents/osi/kicad/a305001a (function generator)/p3050fg/main.vhd(10): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(14): </Dynamic>
+            <Dynamic>dac_ram</Dynamic>
+            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(28): </Dynamic>
+            <Dynamic>structure</Dynamic>
+            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>28</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(14): </Dynamic>
+            <Dynamic>dac_ram</Dynamic>
+            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(28): </Dynamic>
+            <Dynamic>structure</Dynamic>
+            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>28</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(10): </Dynamic>
             <Dynamic>main</Dynamic>
-            <Navigation>c:/users/nathan sayer/documents/osi/kicad/a305001a (function generator)/p3050fg/main.vhd</Navigation>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
             <Navigation>10</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/nathan sayer/documents/osi/kicad/a305001a (function generator)/p3050fg/main.vhd(59): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(135): </Dynamic>
             <Dynamic>behavior</Dynamic>
-            <Navigation>c:/users/nathan sayer/documents/osi/kicad/a305001a (function generator)/p3050fg/main.vhd</Navigation>
-            <Navigation>59</Navigation>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>135</Navigation>
+        </Message>
+        <Message>
+            <ID>35921303</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(115): </Dynamic>
+            <Dynamic>'U'</Dynamic>
+            <Dynamic>reset</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>115</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(187): </Dynamic>
+            <Dynamic>cont_addr</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>187</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(282): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>282</Navigation>
+        </Message>
+        <Message>
+            <ID>35921303</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(343): </Dynamic>
+            <Dynamic>0</Dynamic>
+            <Dynamic>next_state</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>343</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(346): </Dynamic>
+            <Dynamic>daca_0</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>346</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(347): </Dynamic>
+            <Dynamic>daca_1</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>347</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(348): </Dynamic>
+            <Dynamic>daca_2</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>348</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(349): </Dynamic>
+            <Dynamic>daca_3</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>349</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(350): </Dynamic>
+            <Dynamic>daca_4</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>350</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(351): </Dynamic>
+            <Dynamic>daca_5</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>351</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(352): </Dynamic>
+            <Dynamic>daca_6</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>352</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(353): </Dynamic>
+            <Dynamic>daca_7</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>353</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(354): </Dynamic>
+            <Dynamic>daca_8</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>354</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(355): </Dynamic>
+            <Dynamic>daca_9</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>355</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(356): </Dynamic>
+            <Dynamic>daca_10</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>356</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(357): </Dynamic>
+            <Dynamic>daca_11</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>357</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(358): </Dynamic>
+            <Dynamic>daca_12</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>358</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(359): </Dynamic>
+            <Dynamic>daca_13</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>359</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(360): </Dynamic>
+            <Dynamic>daca_14</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>360</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(361): </Dynamic>
+            <Dynamic>daca_15</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>361</Navigation>
+        </Message>
+        <Message>
+            <ID>35921303</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(361): </Dynamic>
+            <Dynamic>(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)</Dynamic>
+            <Dynamic>sine</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>361</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(363): </Dynamic>
+            <Dynamic>not_reset</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>363</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(397): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>397</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/nathan sayer/documents/osi/kicad/a305001a (function generator)/p3050fg/main.vhd(55): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(132): </Dynamic>
             <Dynamic>main</Dynamic>
             <Dynamic>behavior</Dynamic>
-            <Navigation>c:/users/nathan sayer/documents/osi/kicad/a305001a (function generator)/p3050fg/main.vhd</Navigation>
-            <Navigation>55</Navigation>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>132</Navigation>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>n704</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
             <Severity>Warning</Severity>
-            <Dynamic>DAC1B</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC1C</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC1D</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC1E</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC1F</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC1G</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC1H</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2A</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2B</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2C</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2D</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2E</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2F</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2G</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>DAC2H</Dynamic>
+            <Dynamic>CK</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -131,19 +361,115 @@
             <Dynamic>ACTIV</Dynamic>
         </Message>
         <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CK</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>UPLOAD</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>EMPTY</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ACTIV</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>RAM_write.bstate_289</Dynamic>
+        </Message>
+        <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>CK</Dynamic>
+            <Navigation>CK</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>CK</Dynamic>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>UPLOAD</Dynamic>
+            <Navigation>UPLOAD</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>UPLOAD</Dynamic>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>EMPTY</Dynamic>
+            <Navigation>EMPTY</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>EMPTY</Dynamic>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>ACTIV</Dynamic>
+            <Navigation>ACTIV</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>ACTIV</Dynamic>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>8</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">
         <Message>
             <ID>61061008</ID>
             <Severity>Warning</Severity>
-            <Dynamic>CK_c</Dynamic>
+            <Dynamic>FCK_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>FCK</Dynamic>
+            <Dynamic>39</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>NOT_RESET_c</Dynamic>
             <Dynamic>Secondary</Dynamic>
-            <Dynamic>CK</Dynamic>
-            <Dynamic>38</Dynamic>
+            <Dynamic>NOT_RESET</Dynamic>
+            <Dynamic>40</Dynamic>
             <Dynamic>Secondary</Dynamic>
+        </Message>
+        <Message>
+            <ID>62061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>FCK_c</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

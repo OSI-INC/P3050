@@ -1,14 +1,32 @@
 ----------------------------------------------------------------------
 Report for cell main.TECH
-Register bits:  14 of 7209 (0.194%)
-I/O cells:      40
+Register bits:  285 of 7209 (3.953%)
+I/O cells:      57
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D         7          100.0
-                            FD1S3AX         3          100.0
-                            FD1S3IX        11          100.0
+                                 BB         8          100.0
+                              CCU2D        44          100.0
+                              DP8KC         1          100.0
+                            FD1P3AX       202          100.0
+                            FD1P3IX         4          100.0
+                            FD1S3AX        36          100.0
+                            FD1S3AY         1          100.0
+                            FD1S3IX        41          100.0
+                            FD1S3JX         1          100.0
                                 GSR         1          100.0
-                                 IB         1          100.0
-                               LUT4        13          100.0
-                                 OB        39          100.0
-                              TOTAL        75
+                                 IB        11          100.0
+                                INV         1          100.0
+                            L6MUX21        40          100.0
+                               LUT4       288          100.0
+                                 OB        38          100.0
+                              PFUMX        88          100.0
+SUB MODULES
+                            DAC_RAM         1
+                              TOTAL       806
+----------------------------------------------------------------------
+Report for cell DAC_RAM.v1
+Instance Path : RAM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              DP8KC         1          100.0
+                              TOTAL         1

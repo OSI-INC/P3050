@@ -7,35 +7,33 @@ Design Information
 
 Command line:   map -a MachXO2 -p LCMXO2-7000HC -t TQFP144 -s 5 -oc Commercial
      P3050FG_impl1.ngd -o P3050FG_impl1_map.ncd -pr P3050FG_impl1.prf -mp
-     P3050FG_impl1.mrp -lpf C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A
-     (Function Generator)/P3050FG/impl1/P3050FG_impl1.lpf -lpf C:/Users/Nathan
-     Sayer/Documents/OSI/KiCad/A305001A (Function Generator)/P3050FG/P3050FG.lpf
-     -c 0 -gui -msgset C:/Users/Nathan Sayer/Documents/OSI/KiCad/A305001A
-     (Function Generator)/P3050FG/promote.xml 
+     P3050FG_impl1.mrp -lpf C:/Firmware/P3050FG/impl1/P3050FG_impl1.lpf -lpf
+     C:/Firmware/P3050FG/P3050FG.lpf -c 0 -gui -msgset
+     C:/Firmware/P3050FG/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO2-7000HCTQFP144
 Target Performance:   5
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  10/05/23  14:20:48
+Mapped on:  11/08/23  16:05:31
 
 Design Summary
 --------------
 
-   Number of registers:     14 out of  7209 (0%)
-      PFU registers:           14 out of  6864 (0%)
+   Number of registers:    285 out of  7209 (4%)
+      PFU registers:          285 out of  6864 (4%)
       PIO registers:            0 out of   345 (0%)
-   Number of SLICEs:        15 out of  3432 (0%)
-      SLICEs as Logic/ROM:     15 out of  3432 (0%)
+   Number of SLICEs:       229 out of  3432 (7%)
+      SLICEs as Logic/ROM:    229 out of  3432 (7%)
       SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:          7 out of  3432 (0%)
-   Number of LUT4s:         29 out of  6864 (0%)
-      Number used as logic LUTs:         15
+      SLICEs as Carry:         44 out of  3432 (1%)
+   Number of LUT4s:        376 out of  6864 (5%)
+      Number used as logic LUTs:        288
       Number used as distributed RAM:     0
-      Number used as ripple logic:       14
+      Number used as ripple logic:       88
       Number used as shift registers:     0
-   Number of PIO sites used: 40 + 4(JTAG) out of 115 (38%)
-   Number of block RAMs:  0 out of 26 (0%)
-   Number of GSRs:        0 out of 1 (0%)
+   Number of PIO sites used: 57 + 4(JTAG) out of 115 (53%)
+   Number of block RAMs:  1 out of 26 (4%)
+   Number of GSRs:        1 out of 1 (100%)
    EFB used :        No
    JTAG used :       No
    Readback used :   No
@@ -59,44 +57,107 @@ Design Summary
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  1
-     Net CK_c: 8 loads, 8 rising, 0 falling (Driver: PIO CK )
+     Net FCK_c: 159 loads, 152 rising, 7 falling (Driver: PIO FCK )
+   Number of Clock Enables:  26
+     Net FCK_c_enable_48: 4 loads, 4 LSLICEs
 
                                     Page 1
 
 
 
 
-Design:  main                                          Date:  10/05/23  14:20:48
+Design:  main                                          Date:  11/08/23  16:05:31
 
 Design Summary (cont)
 ---------------------
-   Number of Clock Enables:  0
-   Number of LSRs:  1
-     Net n177: 6 loads, 6 LSLICEs
+     Net FCK_c_enable_1: 1 loads, 1 LSLICEs
+     Net FCK_c_enable_34: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_41: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_55: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_62: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_69: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_76: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_83: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_90: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_97: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_104: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_111: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_118: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_125: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_132: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_139: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_146: 4 loads, 4 LSLICEs
+     Net NOT_RESET_c: 14 loads, 14 LSLICEs
+     Net FCK_c_enable_153: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_164: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_27: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_180: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_188: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_172: 4 loads, 4 LSLICEs
+     Net FCK_c_enable_158: 2 loads, 2 LSLICEs
+   Number of LSRs:  5
+     Net n7570: 5 loads, 5 LSLICEs
+     Net n6946: 1 loads, 1 LSLICEs
+     Net n7584: 1 loads, 1 LSLICEs
+     Net Clock_Divider_2.count_30__N_462: 16 loads, 16 LSLICEs
+     Net n6669: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net VCC_net: 12 loads
-     Net n177: 9 loads
-     Net Clock_Divider.count_1: 2 loads
-     Net Clock_Divider.count_10: 2 loads
-     Net Clock_Divider.count_12_N_14_10: 2 loads
-     Net Clock_Divider.count_12_N_14_7: 2 loads
-     Net Clock_Divider.count_12_N_14_8: 2 loads
-     Net Clock_Divider.count_12_N_14_9: 2 loads
-     Net Clock_Divider.count_7: 2 loads
-     Net Clock_Divider.count_8: 2 loads
+     Net cont_addr_c_0: 114 loads
+     Net RAM_write.i_0: 69 loads
+     Net cont_addr_c_2: 68 loads
+     Net cont_addr_c_1: 63 loads
+     Net NOT_RESET_c: 48 loads
+     Net RAM_write.i_1: 36 loads
+     Net cont_addr_c_3: 34 loads
+     Net wr_reset: 32 loads
+     Net n7579: 31 loads
+     Net cont_data_out_0: 23 loads
 
 
 
 
-   Number of warnings:  0
+   Number of warnings:  12
    Number of errors:    0
      
 
 Design Errors/Warnings
 ----------------------
 
-   No errors or warnings present.
+WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(47): Semantic error in "IOBUF
+     PORT "UPLOAD" IO_TYPE=LVCMOS33 PULLMODE=UP ;": Port "UPLOAD" does not exist
+
+                                    Page 2
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+Design Errors/Warnings (cont)
+-----------------------------
+     in the design. This preference has been disabled.
+WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(48): Semantic error in "IOBUF
+     PORT "ACTIV" IO_TYPE=LVCMOS33 PULLMODE=UP ;": Port "ACTIV" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(49): Semantic error in "IOBUF
+     PORT "EMPTY" IO_TYPE=LVCMOS33 PULLMODE=UP ;": Port "EMPTY" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(52): Semantic error in "IOBUF
+     PORT "CK" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;": Port "CK" does not exist in
+     the design. This preference has been disabled.
+WARNING - map: input pad net 'CK' has no legal load.
+WARNING - map: input pad net 'UPLOAD' has no legal load.
+WARNING - map: input pad net 'EMPTY' has no legal load.
+WARNING - map: input pad net 'ACTIV' has no legal load.
+WARNING - map: IO buffer missing for top level port CK...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port UPLOAD...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port EMPTY...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port ACTIV...logic will be
+     discarded.
 
 IO (PIO) Attributes
 -------------------
@@ -105,11 +166,61 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
+| cont_data[6]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| NOT_RESET           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ETH                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CDS_in              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CWR_in              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_addr[0]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_addr[1]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_addr[2]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_addr[3]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_addr[4]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_addr[5]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| FCK                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| W                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+IO (PIO) Attributes (cont)
+--------------------------
+| V                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| T                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| S                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| R                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Q                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| P                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| O                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| N                   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
 | M                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | L                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| DAC1B               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | K                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -126,102 +237,534 @@ IO (PIO) Attributes
 | C                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | B                   | OUTPUT    | LVCMOS33  |            |
-
-                                    Page 2
-
-
-
-
-Design:  main                                          Date:  10/05/23  14:20:48
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | A                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2H               | OUTPUT    | LVCMOS33  |            |
+| DACB[0]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2G               | OUTPUT    | LVCMOS33  |            |
+| DACB[1]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2F               | OUTPUT    | LVCMOS33  |            |
+| DACB[2]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2E               | OUTPUT    | LVCMOS33  |            |
+| DACB[3]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2D               | OUTPUT    | LVCMOS33  |            |
+| DACB[4]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2C               | OUTPUT    | LVCMOS33  |            |
+| DACB[5]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2B               | OUTPUT    | LVCMOS33  |            |
+| DACB[6]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC2A               | OUTPUT    | LVCMOS33  |            |
+| DACB[7]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC1H               | OUTPUT    | LVCMOS33  |            |
+| DACA[0]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| DAC1G               | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| DAC1F               | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| DAC1E               | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| DAC1D               | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| DAC1C               | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| DAC1A               | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| N                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| O                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| P                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| Q                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| R                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| S                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| T                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| V                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| W                   | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| UPLOAD              | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| EMPTY               | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| ACTIV               | OUTPUT    | LVCMOS33  |            |
 
-                                    Page 3
+                                    Page 4
 
 
 
 
-Design:  main                                          Date:  10/05/23  14:20:48
+Design:  main                                          Date:  11/08/23  16:05:31
 
 IO (PIO) Attributes (cont)
 --------------------------
+| DACA[1]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| CK                  | INPUT     | LVCMOS33  |            |
+| DACA[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DACA[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DACA[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DACA[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DACA[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DACA[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| EYLW                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| EGRN                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[0]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[1]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[2]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[3]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[4]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[5]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[7]        | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 
 Removed logic
 -------------
 
-Block GSR_INST undriven or does not drive anything - clipped.
-Signal add_7_1/S0 undriven or does not drive anything - clipped.
-Signal add_7_1/CI undriven or does not drive anything - clipped.
-Signal add_7_13/CO undriven or does not drive anything - clipped.
+Signal FCK_N_588 was merged into signal FCK_c
+Signal n7345 was merged into signal W_c
+Signal n3105 was merged into signal cont_data_7__N_9
+Signal DIVI_30__I_0_31_5330/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_31_5330/S0 undriven or does not drive anything - clipped.
+Signal add_197_11/S1 undriven or does not drive anything - clipped.
+Signal add_197_11/CO undriven or does not drive anything - clipped.
+Signal add_173_13/CO undriven or does not drive anything - clipped.
+Signal Clock_Divider_2.count_1621_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal Clock_Divider_2.count_1621_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal DIVI_30__I_0_19/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_19/S0 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_25/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_25/S0 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_31/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_31/CO undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_0/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_0/S0 undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+Removed logic (cont)
+--------------------
+Signal DIVI_30__I_0_0/CI undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_21/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_21/S0 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_27/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_27/S0 undriven or does not drive anything - clipped.
+Signal Clock_Divider_2.count_1621_add_4_31/CO undriven or does not drive
+     anything - clipped.
+Signal RAM_read.count_1623_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal RAM_read.count_1623_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal RAM_read.count_1623_add_4_11/S1 undriven or does not drive anything -
+     clipped.
+Signal RAM_read.count_1623_add_4_11/CO undriven or does not drive anything -
+     clipped.
+Signal DIVI_30__I_0_29/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_29/S0 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_23/S1 undriven or does not drive anything - clipped.
+Signal DIVI_30__I_0_23/S0 undriven or does not drive anything - clipped.
+Signal add_197_1/S0 undriven or does not drive anything - clipped.
+Signal add_197_1/CI undriven or does not drive anything - clipped.
+Signal add_173_1/S0 undriven or does not drive anything - clipped.
+Signal add_173_1/CI undriven or does not drive anything - clipped.
+Block i6361 was optimized away.
+Block i6068_2_lut was optimized away.
+Block i1655_1_lut was optimized away.
+
+Memory Usage
+------------
+
+    
+         
+    INFO: Design contains EBR with GSR enabled. The GSR is only applicable for
+         output registers except FIFO. 
+    /RAM:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR DAC_RAM_0_0_0_0:  TYPE= DP8KC,  Width_B= 8,  Depth_A= 1024,
+         Depth_B= 1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAC_RAM.lpc
 
      
+
+ASIC Components
+---------------
+
+Instance Name: RAM/DAC_RAM_0_0_0_0
+         Type: DP8KC
+
+GSR Usage
+---------
+
+GSR Component:
+
+                                    Page 6
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+GSR Usage (cont)
+----------------
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'NOT_RESET_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'NOT_RESET_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 275 
+
+     Type and instance name of component: 
+   Register : CDS_249
+   Register : rca_sw_i0_i1
+   Register : wr_reset_251
+   Register : rcb_sw_i0_i1
+   Register : daca_0_i0_i0
+   Register : daca_1_i0_i0
+   Register : daca_2_i0_i0
+   Register : daca_3_i0_i0
+   Register : daca_4_i0_i0
+   Register : daca_5_i0_i0
+   Register : daca_6_i0_i0
+   Register : daca_7_i0_i0
+   Register : daca_8_i0_i0
+   Register : daca_9_i0_i0
+   Register : daca_10_i0_i0
+   Register : daca_11_i0_i0
+   Register : daca_12_i0_i0
+   Register : daca_13_i0_i0
+   Register : daca_14_i0_i0
+   Register : daca_15_i0_i0
+   Register : wr_ram_addr_i0_i0
+   Register : cont_tst__i1
+   Register : Clock_Divider.count_i0
+   Register : i105_273
+   Register : MCK_282
+   Register : DIVCK_284
+   Register : dac_ram_in_i0_i0
+   Register : CWR_248
+   Register : Clock_Divider_2.count_1621__i0
+   Register : RAM_read.count_1623__i0
+   Register : DIVI_i0_i0
+   Register : cont_data_i1
+   Register : cont_data_i2
+   Register : cont_data_i3
+   Register : cont_data_i4
+   Register : cont_data_i5
+
+                                    Page 7
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+GSR Usage (cont)
+----------------
+   Register : cont_data_i6
+   Register : cont_data_i7
+   Register : rca_sw_i0_i2
+   Register : rca_sw_i0_i3
+   Register : rca_sw_i0_i4
+   Register : rca_sw_i0_i5
+   Register : rca_sw_i0_i6
+   Register : rca_sw_i0_i7
+   Register : rca_sw_i0_i8
+   Register : rcb_sw_i0_i2
+   Register : rcb_sw_i0_i3
+   Register : rcb_sw_i0_i4
+   Register : rcb_sw_i0_i5
+   Register : rcb_sw_i0_i6
+   Register : rcb_sw_i0_i7
+   Register : rcb_sw_i0_i8
+   Register : daca_0_i0_i1
+   Register : daca_0_i0_i2
+   Register : daca_0_i0_i3
+   Register : daca_0_i0_i4
+   Register : daca_0_i0_i5
+   Register : daca_0_i0_i6
+   Register : daca_0_i0_i7
+   Register : daca_1_i0_i1
+   Register : daca_1_i0_i2
+   Register : daca_1_i0_i3
+   Register : daca_1_i0_i4
+   Register : daca_1_i0_i5
+   Register : daca_1_i0_i6
+   Register : daca_1_i0_i7
+   Register : daca_2_i0_i1
+   Register : daca_2_i0_i2
+   Register : daca_2_i0_i3
+   Register : daca_2_i0_i4
+   Register : daca_2_i0_i5
+   Register : daca_2_i0_i6
+   Register : daca_2_i0_i7
+   Register : daca_3_i0_i1
+   Register : daca_3_i0_i2
+   Register : daca_3_i0_i3
+   Register : daca_3_i0_i4
+   Register : daca_3_i0_i5
+   Register : daca_3_i0_i6
+   Register : daca_3_i0_i7
+   Register : daca_4_i0_i1
+   Register : daca_4_i0_i2
+   Register : daca_4_i0_i3
+   Register : daca_4_i0_i4
+   Register : daca_4_i0_i5
+   Register : daca_4_i0_i6
+   Register : daca_4_i0_i7
+   Register : daca_5_i0_i1
+   Register : daca_5_i0_i2
+   Register : daca_5_i0_i3
+   Register : daca_5_i0_i4
+   Register : daca_5_i0_i5
+
+                                    Page 8
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+GSR Usage (cont)
+----------------
+   Register : daca_5_i0_i6
+   Register : daca_5_i0_i7
+   Register : daca_6_i0_i1
+   Register : daca_6_i0_i2
+   Register : daca_6_i0_i3
+   Register : daca_6_i0_i4
+   Register : daca_6_i0_i5
+   Register : daca_6_i0_i6
+   Register : daca_6_i0_i7
+   Register : daca_7_i0_i1
+   Register : daca_7_i0_i2
+   Register : daca_7_i0_i3
+   Register : daca_7_i0_i4
+   Register : daca_7_i0_i5
+   Register : daca_7_i0_i6
+   Register : daca_7_i0_i7
+   Register : daca_8_i0_i1
+   Register : daca_8_i0_i2
+   Register : daca_8_i0_i3
+   Register : daca_8_i0_i4
+   Register : daca_8_i0_i5
+   Register : daca_8_i0_i6
+   Register : daca_8_i0_i7
+   Register : daca_9_i0_i1
+   Register : daca_9_i0_i2
+   Register : daca_9_i0_i3
+   Register : daca_9_i0_i4
+   Register : daca_9_i0_i5
+   Register : daca_9_i0_i6
+   Register : daca_9_i0_i7
+   Register : daca_10_i0_i1
+   Register : daca_10_i0_i2
+   Register : daca_10_i0_i3
+   Register : daca_10_i0_i4
+   Register : daca_10_i0_i5
+   Register : daca_10_i0_i6
+   Register : daca_10_i0_i7
+   Register : daca_11_i0_i1
+   Register : daca_11_i0_i2
+   Register : daca_11_i0_i3
+   Register : daca_11_i0_i4
+   Register : daca_11_i0_i5
+   Register : daca_11_i0_i6
+   Register : daca_11_i0_i7
+   Register : daca_12_i0_i1
+   Register : daca_12_i0_i2
+   Register : daca_12_i0_i3
+   Register : daca_12_i0_i4
+   Register : daca_12_i0_i5
+   Register : daca_12_i0_i6
+   Register : daca_12_i0_i7
+   Register : daca_13_i0_i1
+   Register : daca_13_i0_i2
+   Register : daca_13_i0_i3
+   Register : daca_13_i0_i4
+   Register : daca_13_i0_i5
+
+                                    Page 9
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+GSR Usage (cont)
+----------------
+   Register : daca_13_i0_i6
+   Register : daca_13_i0_i7
+   Register : daca_14_i0_i1
+   Register : daca_14_i0_i2
+   Register : daca_14_i0_i3
+   Register : daca_14_i0_i4
+   Register : daca_14_i0_i5
+   Register : daca_14_i0_i6
+   Register : daca_14_i0_i7
+   Register : daca_15_i0_i1
+   Register : daca_15_i0_i2
+   Register : daca_15_i0_i3
+   Register : daca_15_i0_i4
+   Register : daca_15_i0_i5
+   Register : daca_15_i0_i6
+   Register : daca_15_i0_i7
+   Register : wr_ram_addr_i0_i1
+   Register : wr_ram_addr_i0_i2
+   Register : wr_ram_addr_i0_i3
+   Register : wr_ram_addr_i0_i4
+   Register : wr_ram_addr_i0_i5
+   Register : wr_ram_addr_i0_i6
+   Register : wr_ram_addr_i0_i7
+   Register : wr_ram_addr_i0_i8
+   Register : wr_ram_addr_i0_i9
+   Register : cont_tst__i2
+   Register : cont_tst__i3
+   Register : cont_tst__i4
+   Register : cont_tst__i5
+   Register : cont_tst__i6
+   Register : cont_tst__i7
+   Register : cont_tst__i8
+   Register : Clock_Divider.count_i2
+   Register : Clock_Divider.count_i3
+   Register : Clock_Divider.count_i4
+   Register : Clock_Divider.count_i5
+   Register : Clock_Divider.count_i6
+   Register : Clock_Divider.count_i7
+   Register : Clock_Divider.count_i8
+   Register : Clock_Divider.count_i9
+   Register : Clock_Divider.count_i10
+   Register : Clock_Divider.count_i11
+   Register : Clock_Divider.count_i12
+   Register : dac_ram_in_i0_i1
+   Register : dac_ram_in_i0_i2
+   Register : dac_ram_in_i0_i3
+   Register : dac_ram_in_i0_i4
+   Register : dac_ram_in_i0_i5
+   Register : dac_ram_in_i0_i6
+   Register : dac_ram_in_i0_i7
+   Register : Clock_Divider_2.count_1621__i1
+   Register : Clock_Divider_2.count_1621__i2
+   Register : Clock_Divider_2.count_1621__i3
+   Register : Clock_Divider_2.count_1621__i4
+   Register : Clock_Divider_2.count_1621__i5
+   Register : Clock_Divider_2.count_1621__i6
+
+                                   Page 10
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+GSR Usage (cont)
+----------------
+   Register : Clock_Divider_2.count_1621__i7
+   Register : Clock_Divider_2.count_1621__i8
+   Register : Clock_Divider_2.count_1621__i9
+   Register : Clock_Divider_2.count_1621__i10
+   Register : Clock_Divider_2.count_1621__i11
+   Register : Clock_Divider_2.count_1621__i12
+   Register : Clock_Divider_2.count_1621__i13
+   Register : Clock_Divider_2.count_1621__i14
+   Register : Clock_Divider_2.count_1621__i15
+   Register : Clock_Divider_2.count_1621__i16
+   Register : Clock_Divider_2.count_1621__i17
+   Register : Clock_Divider_2.count_1621__i18
+   Register : Clock_Divider_2.count_1621__i19
+   Register : Clock_Divider_2.count_1621__i20
+   Register : Clock_Divider_2.count_1621__i21
+   Register : Clock_Divider_2.count_1621__i22
+   Register : Clock_Divider_2.count_1621__i23
+   Register : Clock_Divider_2.count_1621__i24
+   Register : Clock_Divider_2.count_1621__i25
+   Register : Clock_Divider_2.count_1621__i26
+   Register : Clock_Divider_2.count_1621__i27
+   Register : Clock_Divider_2.count_1621__i28
+   Register : Clock_Divider_2.count_1621__i29
+   Register : Clock_Divider_2.count_1621__i30
+   Register : RAM_read.count_1623__i1
+   Register : RAM_read.count_1623__i2
+   Register : RAM_read.count_1623__i3
+   Register : RAM_read.count_1623__i4
+   Register : RAM_read.count_1623__i5
+   Register : RAM_read.count_1623__i6
+   Register : RAM_read.count_1623__i7
+   Register : RAM_read.count_1623__i8
+   Register : RAM_read.count_1623__i9
+   Register : DIVI_i0_i1
+   Register : RAM_write.i_1622__i3
+   Register : RAM_write.i_1622__i2
+   Register : RAM_write.i_1622__i1
+   Register : Clock_Divider.count_i1
+   Register : RAM_write.i_1622__i0
+   Register : cont_data_i0
+   Register : DIVI_i0_i2
+   Register : DIVI_i0_i3
+   Register : DIVI_i0_i4
+   Register : DIVI_i0_i5
+   Register : DIVI_i0_i6
+   Register : DIVI_i0_i7
+   Register : DIVI_i0_i8
+   Register : DIVI_i0_i9
+   Register : DIVI_i0_i10
+   Register : DIVI_i0_i11
+   Register : DIVI_i0_i12
+   Register : DIVI_i0_i13
+   Register : DIVI_i0_i14
+   Register : DIVI_i0_i15
+   Register : DIVI_i0_i16
+   Register : DIVI_i0_i17
+
+                                   Page 11
+
+
+
+
+Design:  main                                          Date:  11/08/23  16:05:31
+
+GSR Usage (cont)
+----------------
+   Register : DIVI_i0_i18
+   Register : DIVI_i0_i19
+   Register : DIVI_i0_i20
+   Register : DIVI_i0_i21
+   Register : DIVI_i0_i22
+   Register : DIVI_i0_i23
+   Register : DIVI_i0_i24
+   Register : DIVI_i0_i25
+   Register : DIVI_i0_i26
+   Register : DIVI_i0_i27
+   Register : DIVI_i0_i28
+   Register : DIVI_i0_i29
+   Register : DIVI_i0_i30
+   Register : DIVI_i0_i31
+   Register : RAM_write.bstate_289
+
+     EBR components with enabled GSR
+-------------------------------
+
+     These EBR components have the GSR property set to ENABLED. The components
+     will respond to the asynchronous reset signal 'NOT_RESET_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   DP8KC = 1
+
+     Type and instance name of component: 
+   DP8KC : RAM/DAC_RAM_0_0_0_0
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 59 MB
+   Peak Memory Usage: 64 MB
         
 
 
@@ -244,22 +787,7 @@ Run Time and Memory Usage
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    Page 4
+                                   Page 12
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
