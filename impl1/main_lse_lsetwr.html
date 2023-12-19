@@ -9,7 +9,7 @@
 <PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Nov 08 16:05:31 2023
+Mon Dec 18 15:13:46 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -27,262 +27,401 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk1 [get_nets FCK_N_588]
-            59 items scored, 0 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets J_c]
+            266 items scored, 169 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 0.693ns
+Error:  The following path violates requirements by 1.973ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3AX    CK             RAM_read.count_1623__i0  (from FCK_N_588 +)
-   Destination:    FD1S3AX    D              RAM_read.count_1623__i9  (to FCK_N_588 -)
+   Source:         FD1S3IX    CK             RAM2_read.count_727__i0  (from J_c +)
+   Destination:    FD1S3IX    CD             RAM2_read.count_727__i12  (to J_c -)
 
-   Delay:                   4.161ns  (54.6% logic, 45.4% route), 7 logic levels.
+   Delay:                   6.827ns  (44.0% logic, 56.0% route), 10 logic levels.
 
  Constraint Details:
 
-      4.161ns data_path RAM_read.count_1623__i0 to RAM_read.count_1623__i9 meets
+      6.827ns data_path RAM2_read.count_727__i0 to RAM2_read.count_727__i12 violates
       5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 0.693ns
+      0.146ns L_S requirement (totaling 4.854ns) by 1.973ns
 
- Path Details: RAM_read.count_1623__i0 to RAM_read.count_1623__i9
+ Path Details: RAM2_read.count_727__i0 to RAM2_read.count_727__i12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              RAM_read.count_1623__i0 (from FCK_N_588)
-Route         2   e 1.002                                  RAM_read.count[0]
-A1_TO_FCO   ---     0.752           A[2] to COUT           RAM_read.count_1623_add_4_1
-Route         1   e 0.020                                  n6760
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_3
-Route         1   e 0.020                                  n6761
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_5
-Route         1   e 0.020                                  n6762
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_7
-Route         1   e 0.020                                  n6763
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_9
-Route         1   e 0.020                                  n6764
-FCI_TO_F    ---     0.544            CIN to S[2]           RAM_read.count_1623_add_4_11
-Route         1   e 0.788                                  n46
+L_CO        ---     0.403             CK to Q              RAM2_read.count_727__i0 (from J_c)
+Route        10   e 1.388                                  RAM2_read.count[0]
+A1_TO_FCO   ---     0.752           A[2] to COUT           sub_672_add_2_1
+Route         1   e 0.020                                  n6140
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_3
+Route         1   e 0.020                                  n6141
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_5
+Route         1   e 0.020                                  n6142
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_7
+Route         1   e 0.020                                  n6143
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_9
+Route         1   e 0.020                                  n6144
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_11
+Route         1   e 0.020                                  n6145
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_13
+Route         1   e 0.020                                  n6146
+FCI_TO_F    ---     0.544            CIN to S[2]           sub_672_add_2_cout
+Route         1   e 0.788                                  n3631
+LUT4        ---     0.448              A to Z              i3_4_lut_adj_56
+Route        13   e 1.506                                  RAM2_read.count_12__N_615
                   --------
-                    4.161  (54.6% logic, 45.4% route), 7 logic levels.
+                    6.827  (44.0% logic, 56.0% route), 10 logic levels.
 
 
-Passed:  The following path meets requirements by 0.856ns
+Error:  The following path violates requirements by 1.973ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3AX    CK             RAM_read.count_1623__i2  (from FCK_N_588 +)
-   Destination:    FD1S3AX    D              RAM_read.count_1623__i9  (to FCK_N_588 -)
+   Source:         FD1S3IX    CK             RAM2_read.count_727__i0  (from J_c +)
+   Destination:    FD1S3IX    CD             RAM2_read.count_727__i11  (to J_c -)
 
-   Delay:                   3.998ns  (53.2% logic, 46.8% route), 6 logic levels.
+   Delay:                   6.827ns  (44.0% logic, 56.0% route), 10 logic levels.
 
  Constraint Details:
 
-      3.998ns data_path RAM_read.count_1623__i2 to RAM_read.count_1623__i9 meets
+      6.827ns data_path RAM2_read.count_727__i0 to RAM2_read.count_727__i11 violates
       5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 0.856ns
+      0.146ns L_S requirement (totaling 4.854ns) by 1.973ns
 
- Path Details: RAM_read.count_1623__i2 to RAM_read.count_1623__i9
+ Path Details: RAM2_read.count_727__i0 to RAM2_read.count_727__i11
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              RAM_read.count_1623__i2 (from FCK_N_588)
-Route         2   e 1.002                                  RAM_read.count[2]
-A1_TO_FCO   ---     0.752           A[2] to COUT           RAM_read.count_1623_add_4_3
-Route         1   e 0.020                                  n6761
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_5
-Route         1   e 0.020                                  n6762
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_7
-Route         1   e 0.020                                  n6763
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_9
-Route         1   e 0.020                                  n6764
-FCI_TO_F    ---     0.544            CIN to S[2]           RAM_read.count_1623_add_4_11
-Route         1   e 0.788                                  n46
+L_CO        ---     0.403             CK to Q              RAM2_read.count_727__i0 (from J_c)
+Route        10   e 1.388                                  RAM2_read.count[0]
+A1_TO_FCO   ---     0.752           A[2] to COUT           sub_672_add_2_1
+Route         1   e 0.020                                  n6140
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_3
+Route         1   e 0.020                                  n6141
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_5
+Route         1   e 0.020                                  n6142
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_7
+Route         1   e 0.020                                  n6143
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_9
+Route         1   e 0.020                                  n6144
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_11
+Route         1   e 0.020                                  n6145
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_13
+Route         1   e 0.020                                  n6146
+FCI_TO_F    ---     0.544            CIN to S[2]           sub_672_add_2_cout
+Route         1   e 0.788                                  n3631
+LUT4        ---     0.448              A to Z              i3_4_lut_adj_56
+Route        13   e 1.506                                  RAM2_read.count_12__N_615
                   --------
-                    3.998  (53.2% logic, 46.8% route), 6 logic levels.
+                    6.827  (44.0% logic, 56.0% route), 10 logic levels.
 
 
-Passed:  The following path meets requirements by 0.856ns
+Error:  The following path violates requirements by 1.973ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3AX    CK             RAM_read.count_1623__i1  (from FCK_N_588 +)
-   Destination:    FD1S3AX    D              RAM_read.count_1623__i9  (to FCK_N_588 -)
+   Source:         FD1S3IX    CK             RAM2_read.count_727__i0  (from J_c +)
+   Destination:    FD1S3IX    CD             RAM2_read.count_727__i10  (to J_c -)
 
-   Delay:                   3.998ns  (53.2% logic, 46.8% route), 6 logic levels.
+   Delay:                   6.827ns  (44.0% logic, 56.0% route), 10 logic levels.
 
  Constraint Details:
 
-      3.998ns data_path RAM_read.count_1623__i1 to RAM_read.count_1623__i9 meets
+      6.827ns data_path RAM2_read.count_727__i0 to RAM2_read.count_727__i10 violates
       5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 0.856ns
+      0.146ns L_S requirement (totaling 4.854ns) by 1.973ns
 
- Path Details: RAM_read.count_1623__i1 to RAM_read.count_1623__i9
+ Path Details: RAM2_read.count_727__i0 to RAM2_read.count_727__i10
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              RAM_read.count_1623__i1 (from FCK_N_588)
-Route         2   e 1.002                                  RAM_read.count[1]
-A1_TO_FCO   ---     0.752           A[2] to COUT           RAM_read.count_1623_add_4_3
-Route         1   e 0.020                                  n6761
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_5
-Route         1   e 0.020                                  n6762
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_7
-Route         1   e 0.020                                  n6763
-FCI_TO_FCO  ---     0.143            CIN to COUT           RAM_read.count_1623_add_4_9
-Route         1   e 0.020                                  n6764
-FCI_TO_F    ---     0.544            CIN to S[2]           RAM_read.count_1623_add_4_11
-Route         1   e 0.788                                  n46
+L_CO        ---     0.403             CK to Q              RAM2_read.count_727__i0 (from J_c)
+Route        10   e 1.388                                  RAM2_read.count[0]
+A1_TO_FCO   ---     0.752           A[2] to COUT           sub_672_add_2_1
+Route         1   e 0.020                                  n6140
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_3
+Route         1   e 0.020                                  n6141
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_5
+Route         1   e 0.020                                  n6142
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_7
+Route         1   e 0.020                                  n6143
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_9
+Route         1   e 0.020                                  n6144
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_11
+Route         1   e 0.020                                  n6145
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_672_add_2_13
+Route         1   e 0.020                                  n6146
+FCI_TO_F    ---     0.544            CIN to S[2]           sub_672_add_2_cout
+Route         1   e 0.788                                  n3631
+LUT4        ---     0.448              A to Z              i3_4_lut_adj_56
+Route        13   e 1.506                                  RAM2_read.count_12__N_615
                   --------
-                    3.998  (53.2% logic, 46.8% route), 6 logic levels.
+                    6.827  (44.0% logic, 56.0% route), 10 logic levels.
 
-Report: 4.307 ns is the maximum delay for this constraint.
+Warning: 6.973 ns is the maximum delay for this constraint.
 
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets FCK_c]
-            1299 items scored, 1299 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets I_c]
+            266 items scored, 169 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 4.220ns
+Error:  The following path violates requirements by 1.973ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3JX    CK             wr_reset_251  (from FCK_c +)
-   Destination:    FD1S3AX    D              DIVCK_284  (to FCK_c +)
+   Source:         FD1S3IX    CK             RAM1_read.count_725__i0  (from I_c +)
+   Destination:    FD1S3IX    CD             RAM1_read.count_725__i12  (to I_c -)
 
-   Delay:                   9.074ns  (39.6% logic, 60.4% route), 12 logic levels.
+   Delay:                   6.827ns  (44.0% logic, 56.0% route), 10 logic levels.
 
  Constraint Details:
 
-      9.074ns data_path wr_reset_251 to DIVCK_284 violates
+      6.827ns data_path RAM1_read.count_725__i0 to RAM1_read.count_725__i12 violates
       5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 4.220ns
+      0.146ns L_S requirement (totaling 4.854ns) by 1.973ns
 
- Path Details: wr_reset_251 to DIVCK_284
+ Path Details: RAM1_read.count_725__i0 to RAM1_read.count_725__i12
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              wr_reset_251 (from FCK_c)
-Route        32   e 1.751                                  wr_reset
-LUT4        ---     0.448              B to Z              i5084_2_lut_3_lut
-Route         1   e 0.788                                  Clock_Divider_2.count_30__N_463[29]
-A1_TO_FCO   ---     0.752           A[2] to COUT           DIVI_30__I_0_0
-Route         1   e 0.020                                  n6695
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_19
-Route         1   e 0.020                                  n6696
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_21
-Route         1   e 0.020                                  n6697
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_23
-Route         1   e 0.020                                  n6698
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_25
-Route         1   e 0.020                                  n6699
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_27
-Route         1   e 0.020                                  n6700
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_29
-Route         1   e 0.020                                  n6701
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_31_5330
-Route         1   e 0.020                                  n6702
-FCI_TO_F    ---     0.544            CIN to S[2]           DIVI_30__I_0_31
-Route        32   e 1.991                                  Clock_Divider_2.count_30__N_462
-LUT4        ---     0.448              B to Z              W_I_0_308_2_lut
-Route         1   e 0.788                                  W_N_572
+L_CO        ---     0.403             CK to Q              RAM1_read.count_725__i0 (from I_c)
+Route        10   e 1.388                                  RAM1_read.count[0]
+A1_TO_FCO   ---     0.752           A[2] to COUT           sub_668_add_2_1
+Route         1   e 0.020                                  n6179
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_3
+Route         1   e 0.020                                  n6180
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_5
+Route         1   e 0.020                                  n6181
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_7
+Route         1   e 0.020                                  n6182
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_9
+Route         1   e 0.020                                  n6183
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_11
+Route         1   e 0.020                                  n6184
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_13
+Route         1   e 0.020                                  n6185
+FCI_TO_F    ---     0.544            CIN to S[2]           sub_668_add_2_cout
+Route         1   e 0.788                                  n3549
+LUT4        ---     0.448              A to Z              i3_4_lut_adj_54
+Route        13   e 1.506                                  RAM1_read.count_12__N_572
                   --------
-                    9.074  (39.6% logic, 60.4% route), 12 logic levels.
+                    6.827  (44.0% logic, 56.0% route), 10 logic levels.
 
 
-Error:  The following path violates requirements by 4.220ns
+Error:  The following path violates requirements by 1.973ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3JX    CK             wr_reset_251  (from FCK_c +)
-   Destination:    FD1S3AX    D              DIVCK_284  (to FCK_c +)
+   Source:         FD1S3IX    CK             RAM1_read.count_725__i0  (from I_c +)
+   Destination:    FD1S3IX    CD             RAM1_read.count_725__i11  (to I_c -)
 
-   Delay:                   9.074ns  (39.6% logic, 60.4% route), 12 logic levels.
+   Delay:                   6.827ns  (44.0% logic, 56.0% route), 10 logic levels.
 
  Constraint Details:
 
-      9.074ns data_path wr_reset_251 to DIVCK_284 violates
+      6.827ns data_path RAM1_read.count_725__i0 to RAM1_read.count_725__i11 violates
       5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 4.220ns
+      0.146ns L_S requirement (totaling 4.854ns) by 1.973ns
 
- Path Details: wr_reset_251 to DIVCK_284
+ Path Details: RAM1_read.count_725__i0 to RAM1_read.count_725__i11
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              wr_reset_251 (from FCK_c)
-Route        32   e 1.751                                  wr_reset
-LUT4        ---     0.448              B to Z              i5085_2_lut_3_lut
-Route         1   e 0.788                                  Clock_Divider_2.count_30__N_463[30]
-A1_TO_FCO   ---     0.752           A[2] to COUT           DIVI_30__I_0_0
-Route         1   e 0.020                                  n6695
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_19
-Route         1   e 0.020                                  n6696
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_21
-Route         1   e 0.020                                  n6697
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_23
-Route         1   e 0.020                                  n6698
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_25
-Route         1   e 0.020                                  n6699
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_27
-Route         1   e 0.020                                  n6700
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_29
-Route         1   e 0.020                                  n6701
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_31_5330
-Route         1   e 0.020                                  n6702
-FCI_TO_F    ---     0.544            CIN to S[2]           DIVI_30__I_0_31
-Route        32   e 1.991                                  Clock_Divider_2.count_30__N_462
-LUT4        ---     0.448              B to Z              W_I_0_308_2_lut
-Route         1   e 0.788                                  W_N_572
+L_CO        ---     0.403             CK to Q              RAM1_read.count_725__i0 (from I_c)
+Route        10   e 1.388                                  RAM1_read.count[0]
+A1_TO_FCO   ---     0.752           A[2] to COUT           sub_668_add_2_1
+Route         1   e 0.020                                  n6179
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_3
+Route         1   e 0.020                                  n6180
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_5
+Route         1   e 0.020                                  n6181
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_7
+Route         1   e 0.020                                  n6182
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_9
+Route         1   e 0.020                                  n6183
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_11
+Route         1   e 0.020                                  n6184
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_13
+Route         1   e 0.020                                  n6185
+FCI_TO_F    ---     0.544            CIN to S[2]           sub_668_add_2_cout
+Route         1   e 0.788                                  n3549
+LUT4        ---     0.448              A to Z              i3_4_lut_adj_54
+Route        13   e 1.506                                  RAM1_read.count_12__N_572
                   --------
-                    9.074  (39.6% logic, 60.4% route), 12 logic levels.
+                    6.827  (44.0% logic, 56.0% route), 10 logic levels.
 
 
-Error:  The following path violates requirements by 4.220ns
+Error:  The following path violates requirements by 1.973ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3JX    CK             wr_reset_251  (from FCK_c +)
-   Destination:    FD1S3AX    D              DIVCK_284  (to FCK_c +)
+   Source:         FD1S3IX    CK             RAM1_read.count_725__i0  (from I_c +)
+   Destination:    FD1S3IX    CD             RAM1_read.count_725__i10  (to I_c -)
 
-   Delay:                   9.074ns  (39.6% logic, 60.4% route), 12 logic levels.
+   Delay:                   6.827ns  (44.0% logic, 56.0% route), 10 logic levels.
 
  Constraint Details:
 
-      9.074ns data_path wr_reset_251 to DIVCK_284 violates
+      6.827ns data_path RAM1_read.count_725__i0 to RAM1_read.count_725__i10 violates
       5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 4.220ns
+      0.146ns L_S requirement (totaling 4.854ns) by 1.973ns
 
- Path Details: wr_reset_251 to DIVCK_284
+ Path Details: RAM1_read.count_725__i0 to RAM1_read.count_725__i10
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              wr_reset_251 (from FCK_c)
-Route        32   e 1.751                                  wr_reset
-LUT4        ---     0.448              B to Z              i5083_2_lut_3_lut
-Route         1   e 0.788                                  Clock_Divider_2.count_30__N_463[28]
-A1_TO_FCO   ---     0.752           C[2] to COUT           DIVI_30__I_0_0
-Route         1   e 0.020                                  n6695
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_19
-Route         1   e 0.020                                  n6696
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_21
-Route         1   e 0.020                                  n6697
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_23
-Route         1   e 0.020                                  n6698
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_25
-Route         1   e 0.020                                  n6699
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_27
-Route         1   e 0.020                                  n6700
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_29
-Route         1   e 0.020                                  n6701
-FCI_TO_FCO  ---     0.143            CIN to COUT           DIVI_30__I_0_31_5330
-Route         1   e 0.020                                  n6702
-FCI_TO_F    ---     0.544            CIN to S[2]           DIVI_30__I_0_31
-Route        32   e 1.991                                  Clock_Divider_2.count_30__N_462
-LUT4        ---     0.448              B to Z              W_I_0_308_2_lut
-Route         1   e 0.788                                  W_N_572
+L_CO        ---     0.403             CK to Q              RAM1_read.count_725__i0 (from I_c)
+Route        10   e 1.388                                  RAM1_read.count[0]
+A1_TO_FCO   ---     0.752           A[2] to COUT           sub_668_add_2_1
+Route         1   e 0.020                                  n6179
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_3
+Route         1   e 0.020                                  n6180
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_5
+Route         1   e 0.020                                  n6181
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_7
+Route         1   e 0.020                                  n6182
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_9
+Route         1   e 0.020                                  n6183
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_11
+Route         1   e 0.020                                  n6184
+FCI_TO_FCO  ---     0.143            CIN to COUT           sub_668_add_2_13
+Route         1   e 0.020                                  n6185
+FCI_TO_F    ---     0.544            CIN to S[2]           sub_668_add_2_cout
+Route         1   e 0.788                                  n3549
+LUT4        ---     0.448              A to Z              i3_4_lut_adj_54
+Route        13   e 1.506                                  RAM1_read.count_12__N_572
                   --------
-                    9.074  (39.6% logic, 60.4% route), 12 logic levels.
+                    6.827  (44.0% logic, 56.0% route), 10 logic levels.
 
-Warning: 9.220 ns is the maximum delay for this constraint.
+Warning: 6.973 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets FCK_N_652]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets FCK_c]
+            3530 items scored, 3530 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 6.454ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             data_addr_i8  (from FCK_c +)
+   Destination:    FD1P3AX    SP             DIVIA_i0_i8  (to FCK_c +)
+
+   Delay:                  11.195ns  (29.5% logic, 70.5% route), 8 logic levels.
+
+ Constraint Details:
+
+     11.195ns data_path data_addr_i8 to DIVIA_i0_i8 violates
+      5.000ns delay constraint less
+      0.259ns LCE_S requirement (totaling 4.741ns) by 6.454ns
+
+ Path Details: data_addr_i8 to DIVIA_i0_i8
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              data_addr_i8 (from FCK_c)
+Route        19   e 1.572                                  data_addr[7]
+LUT4        ---     0.448              B to Z              i1_2_lut_adj_55
+Route         2   e 0.954                                  n10
+LUT4        ---     0.448              D to Z              i7_4_lut_adj_47
+Route         1   e 0.788                                  n16
+LUT4        ---     0.448              B to Z              i8_4_lut
+Route        11   e 1.363                                  n4818
+LUT4        ---     0.448              C to Z              i1_4_lut_else_1_lut
+Route         1   e 0.020                                  n6634
+MUXL5       ---     0.212           BLUT to Z              i3405
+Route         4   e 1.120                                  n2
+LUT4        ---     0.448              C to Z              i1_2_lut_rep_18_3_lut_4_lut
+Route         1   e 0.788                                  n6615
+LUT4        ---     0.448              A to Z              i2_4_lut
+Route         8   e 1.287                                  FCK_c_enable_89
+                  --------
+                   11.195  (29.5% logic, 70.5% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 6.454ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             data_addr_i8  (from FCK_c +)
+   Destination:    FD1P3AX    SP             DIVIA_i0_i9  (to FCK_c +)
+
+   Delay:                  11.195ns  (29.5% logic, 70.5% route), 8 logic levels.
+
+ Constraint Details:
+
+     11.195ns data_path data_addr_i8 to DIVIA_i0_i9 violates
+      5.000ns delay constraint less
+      0.259ns LCE_S requirement (totaling 4.741ns) by 6.454ns
+
+ Path Details: data_addr_i8 to DIVIA_i0_i9
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              data_addr_i8 (from FCK_c)
+Route        19   e 1.572                                  data_addr[7]
+LUT4        ---     0.448              B to Z              i1_2_lut_adj_55
+Route         2   e 0.954                                  n10
+LUT4        ---     0.448              D to Z              i7_4_lut_adj_47
+Route         1   e 0.788                                  n16
+LUT4        ---     0.448              B to Z              i8_4_lut
+Route        11   e 1.363                                  n4818
+LUT4        ---     0.448              C to Z              i1_4_lut_else_1_lut
+Route         1   e 0.020                                  n6634
+MUXL5       ---     0.212           BLUT to Z              i3405
+Route         4   e 1.120                                  n2
+LUT4        ---     0.448              C to Z              i1_2_lut_rep_18_3_lut_4_lut
+Route         1   e 0.788                                  n6615
+LUT4        ---     0.448              A to Z              i2_4_lut
+Route         8   e 1.287                                  FCK_c_enable_89
+                  --------
+                   11.195  (29.5% logic, 70.5% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 6.454ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             data_addr_i8  (from FCK_c +)
+   Destination:    FD1P3AX    SP             DIVIA_i0_i10  (to FCK_c +)
+
+   Delay:                  11.195ns  (29.5% logic, 70.5% route), 8 logic levels.
+
+ Constraint Details:
+
+     11.195ns data_path data_addr_i8 to DIVIA_i0_i10 violates
+      5.000ns delay constraint less
+      0.259ns LCE_S requirement (totaling 4.741ns) by 6.454ns
+
+ Path Details: data_addr_i8 to DIVIA_i0_i10
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              data_addr_i8 (from FCK_c)
+Route        19   e 1.572                                  data_addr[7]
+LUT4        ---     0.448              B to Z              i1_2_lut_adj_55
+Route         2   e 0.954                                  n10
+LUT4        ---     0.448              D to Z              i7_4_lut_adj_47
+Route         1   e 0.788                                  n16
+LUT4        ---     0.448              B to Z              i8_4_lut
+Route        11   e 1.363                                  n4818
+LUT4        ---     0.448              C to Z              i1_4_lut_else_1_lut
+Route         1   e 0.020                                  n6634
+MUXL5       ---     0.212           BLUT to Z              i3405
+Route         4   e 1.120                                  n2
+LUT4        ---     0.448              C to Z              i1_2_lut_rep_18_3_lut_4_lut
+Route         1   e 0.788                                  n6615
+LUT4        ---     0.448              A to Z              i2_4_lut
+Route         8   e 1.287                                  FCK_c_enable_89
+                  --------
+                   11.195  (29.5% logic, 70.5% route), 8 logic levels.
+
+Warning: 11.454 ns is the maximum delay for this constraint.
 
 
 <A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -292,58 +431,92 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets FCK_N_588]               |     5.000 ns|     4.307 ns|     7  
+clk3 [get_nets J_c]                     |     5.000 ns|     6.973 ns|    10 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets FCK_c]                   |     5.000 ns|     9.220 ns|    12 *
+clk2 [get_nets I_c]                     |     5.000 ns|     6.973 ns|    10 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets FCK_N_652]               |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets FCK_c]                   |     5.000 ns|    11.454 ns|     8 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+3 constraints not met.
 
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-Clock_Divider_2.count_30__N_462         |      32|     999|     76.91%
+n4818                                   |      11|    1938|     50.10%
                                         |        |        |
-n6702                                   |       1|     999|     76.91%
+n16                                     |       1|    1512|     39.09%
                                         |        |        |
-n6701                                   |       1|     991|     76.29%
+Clock_Divider_2.count_30__N_498         |      32|     636|     16.44%
                                         |        |        |
-wr_reset                                |      32|     986|     75.90%
+n6162                                   |       1|     636|     16.44%
                                         |        |        |
-n6700                                   |       1|     983|     75.67%
+Clock_Divider_1.count_30__N_404         |      32|     635|     16.42%
                                         |        |        |
-n6699                                   |       1|     851|     65.51%
+n6178                                   |       1|     635|     16.42%
                                         |        |        |
-n6698                                   |       1|     719|     55.35%
+n6161                                   |       1|     634|     16.39%
                                         |        |        |
-n6697                                   |       1|     587|     45.19%
+n6177                                   |       1|     633|     16.37%
                                         |        |        |
-n6696                                   |       1|     455|     35.03%
+n6160                                   |       1|     632|     16.34%
                                         |        |        |
-n7579                                   |      31|     242|     18.63%
+n6176                                   |       1|     631|     16.31%
                                         |        |        |
-n6751                                   |       1|     200|     15.40%
+n6159                                   |       1|     630|     16.29%
                                         |        |        |
-n6752                                   |       1|     198|     15.24%
+n6175                                   |       1|     629|     16.26%
                                         |        |        |
-n6695                                   |       1|     195|     15.01%
+n1713                                   |      62|     628|     16.24%
                                         |        |        |
-n6750                                   |       1|     194|     14.93%
+n1851                                   |      62|     628|     16.24%
                                         |        |        |
-n6753                                   |       1|     188|     14.47%
+n6158                                   |       1|     628|     16.24%
                                         |        |        |
-n6749                                   |       1|     180|     13.86%
+rstcd1                                  |       1|     628|     16.24%
                                         |        |        |
-n6754                                   |       1|     170|     13.09%
+rstcd2                                  |       1|     628|     16.24%
                                         |        |        |
-n6748                                   |       1|     158|     12.16%
+n6174                                   |       1|     627|     16.21%
                                         |        |        |
-n6755                                   |       1|     144|     11.09%
+n6157                                   |       1|     626|     16.18%
                                         |        |        |
-n6747                                   |       1|     130|     10.01%
+n6173                                   |       1|     625|     16.16%
+                                        |        |        |
+n6156                                   |       1|     624|     16.13%
+                                        |        |        |
+n6172                                   |       1|     623|     16.11%
+                                        |        |        |
+n6629                                   |       1|     567|     14.66%
+                                        |        |        |
+n6155                                   |       1|     560|     14.48%
+                                        |        |        |
+n6171                                   |       1|     559|     14.45%
+                                        |        |        |
+n6154                                   |       1|     496|     12.82%
+                                        |        |        |
+n6170                                   |       1|     495|     12.80%
+                                        |        |        |
+n2                                      |       4|     450|     11.63%
+                                        |        |        |
+n6153                                   |       1|     432|     11.17%
+                                        |        |        |
+n6169                                   |       1|     431|     11.14%
+                                        |        |        |
+n10                                     |       2|     410|     10.60%
+                                        |        |        |
+n11                                     |       2|     410|     10.60%
+                                        |        |        |
+n6478                                   |       2|     394|     10.19%
+                                        |        |        |
+n6634                                   |       1|     388|     10.03%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -351,12 +524,12 @@ n6747                                   |       1|     130|     10.01%
 <A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
 ---------------
 
-Timing errors: 1299  Score: 3295915
+Timing errors: 3868  Score: 15146308
 
-Constraints cover  5403 paths, 761 nets, and 1708 connections (71.5% coverage)
+Constraints cover  12847 paths, 551 nets, and 1455 connections (64.4% coverage)
 
 
-Peak memory: 96522240 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 94547968 bytes, TRCE: 7213056 bytes, DLYMAN: 327680 bytes
 CPU_TIME_REPORT: 0 secs 
 
 

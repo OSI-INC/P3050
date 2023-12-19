@@ -1,0 +1,4 @@
+#Start recording tcl command: 12/19/2023 14:20:41
+#Project Location: C:/Firmware/P3050FG; Project name: P3050FG
+prj_project open "C:/Firmware/P3050FG/P3050FG.ldf"
+#Stop recording: 12/19/2023 14:20:52

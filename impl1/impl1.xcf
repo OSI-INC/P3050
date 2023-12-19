@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Firmware/P3050FG/impl1/P3050FG_impl1.jed</File>
-			<FileTime>11/08/23 14:10:06</FileTime>
-			<JedecChecksum>0xA923</JedecChecksum>
+			<FileTime>12/12/23 16:37:35</FileTime>
+			<JedecChecksum>0xE529</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

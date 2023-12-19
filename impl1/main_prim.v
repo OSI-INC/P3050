@@ -1,13 +1,13 @@
 // Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.12.0.240.2
-// Netlist written on Wed Nov 08 16:05:31 2023
+// Netlist written on Mon Dec 18 15:13:46 2023
 //
 // Verilog Description of module main
 //
 
 module main (CK, FCK, cont_data, cont_addr, CWR_in, CDS_in, ETH, 
-            NOT_RESET, EGRN, EYLW, DACA, DACB, A, B, C, D, 
-            E, F, G, H, K, L, M, N, O, P, Q, R, S, 
-            T, V, W, UPLOAD, EMPTY, ACTIV);   // c:/firmware/p3050fg/main.vhd(10[8:12])
+            NOT_RESET, EGRN, EYLW, DACA_OUT, DACB_OUT, A, B, C, 
+            D, E, F, G, H, I, J, K, L, M, N, O, P, 
+            Q, R, S, T, V, W, UPLOAD, EMPTY, ACTIV);   // c:/firmware/p3050fg/main.vhd(10[8:12])
     input CK;   // c:/firmware/p3050fg/main.vhd(12[3:5])
     input FCK;   // c:/firmware/p3050fg/main.vhd(13[3:6])
     inout [7:0]cont_data;   // c:/firmware/p3050fg/main.vhd(14[3:12])
@@ -18,8 +18,8 @@ module main (CK, FCK, cont_data, cont_addr, CWR_in, CDS_in, ETH,
     input NOT_RESET;   // c:/firmware/p3050fg/main.vhd(19[3:12])
     output EGRN;   // c:/firmware/p3050fg/main.vhd(20[3:7])
     output EYLW;   // c:/firmware/p3050fg/main.vhd(20[9:13])
-    output [7:0]DACA;   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    output [7:0]DACB;   // c:/firmware/p3050fg/main.vhd(22[3:7])
+    output [7:0]DACA_OUT;   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    output [7:0]DACB_OUT;   // c:/firmware/p3050fg/main.vhd(22[3:11])
     output A;   // c:/firmware/p3050fg/main.vhd(23[3:4])
     output B;   // c:/firmware/p3050fg/main.vhd(24[3:4])
     output C;   // c:/firmware/p3050fg/main.vhd(25[3:4])
@@ -28,2359 +28,2743 @@ module main (CK, FCK, cont_data, cont_addr, CWR_in, CDS_in, ETH,
     output F;   // c:/firmware/p3050fg/main.vhd(28[3:4])
     output G;   // c:/firmware/p3050fg/main.vhd(29[3:4])
     output H;   // c:/firmware/p3050fg/main.vhd(30[3:4])
-    output K;   // c:/firmware/p3050fg/main.vhd(31[3:4])
-    output L;   // c:/firmware/p3050fg/main.vhd(32[3:4])
-    output M;   // c:/firmware/p3050fg/main.vhd(33[3:4])
-    output N;   // c:/firmware/p3050fg/main.vhd(34[3:4])
-    output O;   // c:/firmware/p3050fg/main.vhd(35[3:4])
-    output P;   // c:/firmware/p3050fg/main.vhd(36[3:4])
-    output Q;   // c:/firmware/p3050fg/main.vhd(37[3:4])
-    output R;   // c:/firmware/p3050fg/main.vhd(38[3:4])
-    output S;   // c:/firmware/p3050fg/main.vhd(39[3:4])
-    output T;   // c:/firmware/p3050fg/main.vhd(40[3:4])
-    output V;   // c:/firmware/p3050fg/main.vhd(41[3:4])
-    output W;   // c:/firmware/p3050fg/main.vhd(42[3:4])
-    input UPLOAD;   // c:/firmware/p3050fg/main.vhd(44[3:9])
-    input EMPTY;   // c:/firmware/p3050fg/main.vhd(45[3:8])
-    input ACTIV;   // c:/firmware/p3050fg/main.vhd(46[3:8])
+    output I;   // c:/firmware/p3050fg/main.vhd(31[3:4])
+    output J;   // c:/firmware/p3050fg/main.vhd(32[3:4])
+    output K;   // c:/firmware/p3050fg/main.vhd(33[3:4])
+    output L;   // c:/firmware/p3050fg/main.vhd(34[3:4])
+    output M;   // c:/firmware/p3050fg/main.vhd(35[3:4])
+    output N;   // c:/firmware/p3050fg/main.vhd(36[3:4])
+    output O;   // c:/firmware/p3050fg/main.vhd(37[3:4])
+    output P;   // c:/firmware/p3050fg/main.vhd(38[3:4])
+    output Q;   // c:/firmware/p3050fg/main.vhd(39[3:4])
+    output R;   // c:/firmware/p3050fg/main.vhd(40[3:4])
+    output S;   // c:/firmware/p3050fg/main.vhd(41[3:4])
+    output T;   // c:/firmware/p3050fg/main.vhd(42[3:4])
+    output V;   // c:/firmware/p3050fg/main.vhd(43[3:4])
+    output W;   // c:/firmware/p3050fg/main.vhd(44[3:4])
+    input UPLOAD;   // c:/firmware/p3050fg/main.vhd(46[3:9])
+    input EMPTY;   // c:/firmware/p3050fg/main.vhd(47[3:8])
+    input ACTIV;   // c:/firmware/p3050fg/main.vhd(48[3:8])
     
     wire FCK_c /* synthesis SET_AS_NETWORK=FCK_c, is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(13[3:6])
-    wire FCK_N_588 /* synthesis is_inv_clock=1, is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(145[9:13])
+    wire I_c /* synthesis is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(31[3:4])
+    wire J_c /* synthesis is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(32[3:4])
+    wire FCK_N_652 /* synthesis is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(118[9:13])
+    wire I_N_544 /* synthesis is_inv_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[11:16])
+    wire J_N_587 /* synthesis is_inv_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(333[11:16])
     
-    wire GND_net, VCC_net, cont_addr_c_5, cont_addr_c_4, cont_addr_c_3, 
+    wire GND_net, VCC_net, W_c_c, cont_addr_c_5, cont_addr_c_4, cont_addr_c_3, 
         cont_addr_c_2, cont_addr_c_1, cont_addr_c_0, CWR_in_c, CDS_in_c, 
-        ETH_c, NOT_RESET_c, EYLW_c, DACB_c, n3110, n3111, n3112, 
-        n3113, n3114, n3115, n3116, A_c_0, B_c_1, C_c_2, D_c_3, 
-        E_c_4, F_c_5, G_c_6, H_c_7, K_c_0, M_c_0, N_c_1, O_c_2, 
-        P_c_3, Q_c_4, R_c_5, S_c_6, T_c_7, V_c, W_c;
-    wire [7:0]cont_tst;   // c:/firmware/p3050fg/main.vhd(52[10:18])
+        ETH_c, NOT_RESET_c, EYLW_c, DACA_OUT_c_7, DACA_OUT_c_6, DACA_OUT_c_5, 
+        DACA_OUT_c_4, DACA_OUT_c_3, DACA_OUT_c_2, DACA_OUT_c_1, DACA_OUT_c_0, 
+        DACB_OUT_c_7, DACB_OUT_c_6, DACB_OUT_c_5, DACB_OUT_c_4, DACB_OUT_c_3, 
+        DACB_OUT_c_2, DACB_OUT_c_1, DACB_OUT_c_0, A_c_0, B_c_1, C_c_2, 
+        D_c_3, E_c_4, F_c_5, G_c_6, H_c_7, K_c, M_c_0, N_c_1, 
+        O_c_2, P_c_3, Q_c_4, R_c_5, S_c_6, T_c_7, V_c_0, rstcd1, 
+        rstcd2;
+    wire [31:0]data_addr;   // c:/firmware/p3050fg/main.vhd(59[10:19])
     
-    wire wr_reset;
-    wire [7:0]daca_0;   // c:/firmware/p3050fg/main.vhd(57[10:16])
-    wire [7:0]daca_1;   // c:/firmware/p3050fg/main.vhd(58[10:16])
-    wire [7:0]daca_2;   // c:/firmware/p3050fg/main.vhd(59[10:16])
-    wire [7:0]daca_3;   // c:/firmware/p3050fg/main.vhd(60[10:16])
-    wire [7:0]daca_4;   // c:/firmware/p3050fg/main.vhd(61[10:16])
-    wire [7:0]daca_5;   // c:/firmware/p3050fg/main.vhd(62[10:16])
-    wire [7:0]daca_6;   // c:/firmware/p3050fg/main.vhd(63[10:16])
-    wire [7:0]daca_7;   // c:/firmware/p3050fg/main.vhd(64[10:16])
-    wire [7:0]daca_8;   // c:/firmware/p3050fg/main.vhd(65[10:16])
-    wire [7:0]daca_9;   // c:/firmware/p3050fg/main.vhd(66[10:16])
-    wire [7:0]daca_10;   // c:/firmware/p3050fg/main.vhd(67[10:17])
-    wire [7:0]daca_11;   // c:/firmware/p3050fg/main.vhd(68[10:17])
-    wire [7:0]daca_12;   // c:/firmware/p3050fg/main.vhd(69[10:17])
-    wire [7:0]daca_13;   // c:/firmware/p3050fg/main.vhd(70[10:17])
-    wire [7:0]daca_14;   // c:/firmware/p3050fg/main.vhd(71[10:17])
-    wire [7:0]daca_15;   // c:/firmware/p3050fg/main.vhd(72[10:17])
+    wire ram1_we, ram2_we;
+    wire [15:0]spca;   // c:/firmware/p3050fg/main.vhd(64[10:14])
+    wire [15:0]spcb;   // c:/firmware/p3050fg/main.vhd(65[10:14])
     
-    wire CDS, CWR;
-    wire [31:0]DIVI;   // c:/firmware/p3050fg/main.vhd(146[9:13])
-    wire [9:0]wr_ram_addr;   // c:/firmware/p3050fg/main.vhd(147[9:20])
-    wire [7:0]dac_ram_in;   // c:/firmware/p3050fg/main.vhd(148[22:32])
+    wire CDS, CWR, CDS_delayed;
+    wire [31:0]DIVIA;   // c:/firmware/p3050fg/main.vhd(114[9:14])
+    wire [31:0]DIVIB;   // c:/firmware/p3050fg/main.vhd(115[9:14])
     
-    wire CWR_in_N_587, CDS_in_N_585, n7212, n7211, wr_reset_N_576, 
-        cont_data_7__N_592;
-    wire [7:0]cont_data_7__N_365;
+    wire CWR_in_N_651, CDS_in_N_628, data_addr_15__N_639, ram2_we_N_649, 
+        n6214, n6213, n6182, FCK_c_enable_120, n4109, n4105, n4068, 
+        n6248, n6181, n6150, n6212, n6180, n6166, n6165, n6179, 
+        n6164, n6149, n6163, n160, n159, n158, n157, n156, n155, 
+        n154, n153, n152, n151, n150, n149, n148, n147, n146, 
+        n145, n144, n143, n142, n141, n140, n139, n138, n137, 
+        n136, n135, n134, n133, n132, n131, n130, n6162, FCK_c_enable_36, 
+        n6148, n6143, n6142, n6178, n6161, n6211, n5595, n6210, 
+        FCK_c_enable_112, n3631, n3755, n6499, n3756, n6478, n3754, 
+        n28, n4818, n6141, n6147, n3549, n3753, n6160, FCK_c_enable_142, 
+        n2633, n6246, n70, n69, n68, n67, n66, n65, n64, n63, 
+        n62, n61, n60, n59, n58, n6209, FCK_c_enable_127, data_addr_31__N_307, 
+        n6208, n3760, n3759, n6207, FCK_c_enable_141, n6245, n6177;
+    wire [7:0]cont_data_7__N_310;
+    wire [31:0]data_addr_31__N_242;
     
-    wire n7208, n7206, n7205, n7203, n7202, n7200, n7199, n7194, 
-        n7193, n7191, n7190, n7185, n7184, n7182, n7181, n7176, 
-        n7175, n7095, n7173, n7094, n7093, n7172, n7092, n7091, 
-        n7090, n7088, n7167, n7087, n7086, n7166, n7085, n7164, 
-        n7084, n7083, n7163, n7082, n7081, n7080;
+    wire n6176, n6244, n6243, n6633, n6242, n6241, n6206, n6240, 
+        n6205, n31, n6204, n6159, n6239, n6175, n6146, n6238, 
+        n6158, n6632, n6631;
+    wire [31:0]data_addr_31__N_17;
     wire [7:0]cont_data_7__N_1;
     
-    wire n7158, cont_data_7__N_9;
-    wire [12:0]\Clock_Divider.count ;   // c:/firmware/p3050fg/main.vhd(288[11:16])
-    wire [12:0]\Clock_Divider.count_12__N_386 ;
+    wire cont_data_7__N_320, n6174, cont_data_7__N_308, n6455, cont_data_7__N_321, 
+        n6237, cont_data_7__N_324, cont_data_7__N_327, n6236, cont_data_7__N_330, 
+        cont_data_2__N_12, cont_data_7__N_333, n6157, cont_data_7__N_336, 
+        cont_data_7__N_339;
+    wire [30:0]\Clock_Divider_1.count ;   // c:/firmware/p3050fg/main.vhd(243[11:16])
     
-    wire n7079, n7157, n7078;
-    wire [12:0]\Clock_Divider.count_12__N_373 ;
+    wire n1713, n6630, \Clock_Divider_1.count_30__N_404 , n33, n29, 
+        n70_adj_666, n6629, n6628, n38, n45, n70_adj_667, I_N_545, 
+        FCK_c_enable_29, n6173;
+    wire [30:0]\Clock_Divider_2.count ;   // c:/firmware/p3050fg/main.vhd(263[11:16])
     
-    wire n7077, n7076, V_N_570;
-    wire [30:0]\Clock_Divider_2.count ;   // c:/firmware/p3050fg/main.vhd(306[11:16])
+    wire n1851, n6424, n6432, n11, n10, n6627, n6626, \Clock_Divider_2.count_30__N_498 , 
+        n35, n38_adj_668, n45_adj_669, n6203, n6235, n51, n6202, 
+        n6201, n44, J_N_588, n6234, n6625, n70_adj_670, n6624, 
+        n38_adj_671, n45_adj_672, n6200, n70_adj_673;
+    wire [12:0]\RAM1_read.count ;   // c:/firmware/p3050fg/main.vhd(318[11:16])
     
-    wire n6743;
-    wire [30:0]\Clock_Divider_2.count_30__N_463 ;
+    wire \RAM1_read.count_12__N_572 , n74, n6199, n6623, n33_adj_674, 
+        n29_adj_675, n6233, n3758, n3774, n3775, n3776, n3777, 
+        n3778, n3779, n3780, n3781, n3782, n3783, n3784, n6232, 
+        n38_adj_676, n45_adj_677, n6156, n6198, n6145;
+    wire [12:0]\RAM2_read.count ;   // c:/firmware/p3050fg/main.vhd(333[11:16])
     
-    wire \Clock_Divider_2.count_30__N_462 , n7155, n7075, n7154, n7073, 
-        n7062, n7072, n7071, n7149, n7061, W_N_572;
-    wire [9:0]\RAM_write.count ;   // c:/firmware/p3050fg/main.vhd(341[11:16])
-    
-    wire \RAM_write.bstate ;
-    wire [3:0]\RAM_write.i ;   // c:/firmware/p3050fg/main.vhd(344[11:12])
-    
-    wire n6733;
-    wire [9:0]\RAM_write.count_9__N_520 ;
-    
-    wire n55, n54, n53;
-    wire [7:0]dac_ram_in_7__N_530;
-    
-    wire n6742, n6698, n6701, n6735, n7070, n7148, n7069, n7068, 
-        n9, n7000, n7067;
-    wire [9:0]\RAM_read.count ;   // c:/firmware/p3050fg/main.vhd(402[11:16])
-    
-    wire n15, n7145, n14, n7066, n52, n51, n50, n49, n48, 
-        n47, n46, n24, n23, n22, n7142, n7065, n7140, n25, 
-        n7060, n6739, n7058, n7139, cont_data_out_0, cont_data_out_1, 
-        n3105, cont_data_out_2, cont_data_out_3, cont_data_out_4, cont_data_out_5, 
-        cont_data_out_6, n7137, n7064, n6700, n7057, n6697, n6695, 
-        n6732, n7063, n6741, n6740, n7056, n7055, n6736, n7136, 
-        n160, n159, n158, n157, n156, n155, n154, n153, n152, 
-        n151, n150, n149, n148, n147, n146, n145, n144, n143, 
-        n142, n141, n140, n139, n138, n137, n136, n135, n134, 
-        n133, n132, n131, n130, cont_data_out_7, n7623, n7133, 
-        n7132, n7131, n7130, n7020, n7129, n7128, n7628, n7627, 
-        n7127, n7217, n30, n31, n7625, n7239, n39, n40, n41, 
-        n46_adj_603, n7624, n7299, n7298, n7126, n7293, n7292, 
-        n7290, n7289, n7288, n7287, n7125, n7286, n7124, n7014, 
-        n7123, n7010, n6669, n7122, n7285, n7283, n7282, n7006, 
-        n7281, n7121, n7280, n7120, n7279, n7278, n7276, n6764, 
-        n6763, n6762, n7275, n6761, n6760, n7054, n7274, n6758, 
-        n6757, n6756, n6755, n6754, n6753, n6752, n7118, n7273, 
-        n6751, n6750, n6749, n6748, n7117, n6747, n6746, n7272, 
-        n6745, n6744, n7271, n7622, FCK_c_enable_90, n7297, n7269, 
-        n7116, n7256, n7621, n7593, n31_adj_604, n7115, n7268, 
-        n7246, n7590, n62, n7619, n6962, n7267, n7153, n7114, 
-        FCK_c_enable_1, n7156, n7266, n7113, n7626, n31_adj_605, 
-        n7053, n7265, n7253, n7596, n62_adj_606, n7618, n7162, 
-        n7052, n7616, n7165, n7264, n7112, n6946, n31_adj_607, 
-        n7262, n7261, n7263, n7599, n7615, n62_adj_608, n7260, 
-        n7111, n7171, n7051, n7174, n7259, n7620, n31_adj_609, 
-        n7258, n7110, n7270, n7602, n7613, n62_adj_610, n7050, 
-        n7257, n7180, n7586, n7183, n7109, n7049, n7048, n31_adj_611, 
-        n7047, n7255, n7254, n7252, n7251, n7277, n7585, n7605, 
-        n7612, n62_adj_612, n7610, n7108, n7189, n7250, n7192, 
-        n7249, n7608, n31_adj_613, n7107, n7248, n7247, n7245, 
-        n7284, n7584, n7614, n7609, n62_adj_614, n7198, n7244, 
-        n7201, n7243, n7611, n7106, n7210, n31_adj_615, n7242, 
-        n7583, n7582, n7291, n7581, n7617, n7607, n62_adj_616, 
-        FCK_c_enable_41, n7046, FCK_c_enable_139, n7241, n6699, FCK_c_enable_97, 
-        FCK_c_enable_132, FCK_c_enable_118, n7045, FCK_c_enable_158, 
-        FCK_c_enable_153, FCK_c_enable_146, n7580, n7043, n7042, n7240, 
-        FCK_c_enable_172, n7041, n7238, n7579, n7606, n7578, n7577, 
-        FCK_c_enable_125, n7237, n7576, FCK_c_enable_62, n7040, n7236, 
-        n7575, n7235, n7039, n7604, FCK_c_enable_180, n7234, n7603, 
-        n7233, n7038, n6702, n7232, n7105, n6, n7230, n7574, 
-        n7229, n7228, n7037, n7601, n6734, n6819, n7227, n7573, 
-        n7036, n7035, n7226, n7225, n7224, n7103, n6259, n7345, 
-        FCK_c_enable_34, n6737, n7223, n7572, n7222, n7102, n7034, 
-        n7221, n7101, n7571, n7570, n7220, n7219, FCK_c_enable_76, 
-        n7033, FCK_c_enable_104, n7218, n7100, n7600, n7569, n7216, 
-        n7215, n7099, n7214, FCK_c_enable_48, n7098, n6293, n7213, 
-        n7032, n7097, n7598, n7096, n7031, n7597, FCK_c_enable_164, 
-        n7595, n7030, n7594, n7592, n7591, n7589, FCK_c_enable_188, 
-        FCK_c_enable_27, n7588, FCK_c_enable_83, n7568, n7587, FCK_c_enable_55, 
-        FCK_c_enable_111, FCK_c_enable_69, n6696;
+    wire \RAM2_read.count_12__N_615 , n6197, n6622, n6172, n2, n3757, 
+        n3761, n3762, n3763, n3764, n3765, n3766, n3767, n3768, 
+        n3769, n3770, n3771, n3772, n3773, n6621, n6620, FCK_c_enable_21, 
+        n33_adj_678, n29_adj_679, n6155, n6196, n6195, n4, n6171, 
+        n6194, n6193, FCK_c_enable_14, n58_adj_680, n59_adj_681, n60_adj_682, 
+        n61_adj_683, n62_adj_684, n63_adj_685, n64_adj_686, n65_adj_687, 
+        n66_adj_688, n67_adj_689, n68_adj_690, n69_adj_691, n70_adj_692, 
+        n6170, n6458, n6230, n6140, n6229, n6144, n6228, n6227, 
+        n6169, n6226, n6192, n9, n6619, n6191, n6225, n6154, 
+        n130_adj_693, n131_adj_694, n132_adj_695, n133_adj_696, n134_adj_697, 
+        n135_adj_698, n136_adj_699, n137_adj_700, n138_adj_701, n139_adj_702, 
+        n140_adj_703, n141_adj_704, n142_adj_705, n143_adj_706, n144_adj_707, 
+        n145_adj_708, n146_adj_709, n147_adj_710, n148_adj_711, n149_adj_712, 
+        n150_adj_713, n151_adj_714, n152_adj_715, n153_adj_716, n154_adj_717, 
+        n155_adj_718, n156_adj_719, n157_adj_720, n158_adj_721, n159_adj_722, 
+        n160_adj_723, n6223, n6222, n6190, n6189, n6221, n6188, 
+        n6187, n6168, n6220, n6186, n16, n6185, n3860, n6219, 
+        n6153, n6218, n6618, n6167, n4870, n6184, n6216, FCK_c_enable_73, 
+        FCK_c_enable_59, FCK_c_enable_51, FCK_c_enable_104, FCK_c_enable_43, 
+        n6152, FCK_c_enable_96, FCK_c_enable_89, n6215, n6183, FCK_c_enable_81, 
+        n6616, n6615, n6752, n4869, n6151, FCK_c_enable_66, n6634;
     
     VHI i2 (.Z(VCC_net));
-    LUT4 i5630_3_lut (.A(daca_10[7]), .B(daca_11[7]), .C(\RAM_write.i [0]), 
-         .Z(n7035)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5630_3_lut.init = 16'hcaca;
-    LUT4 i6060_2_lut_2_lut_4_lut (.A(n7580), .B(cont_addr_c_3), .C(n7573), 
-         .D(n6293), .Z(FCK_c_enable_48)) /* synthesis lut_function=(!(A+((C+(D))+!B))) */ ;
-    defparam i6060_2_lut_2_lut_4_lut.init = 16'h0004;
-    LUT4 i6029_4_lut_rep_26 (.A(n6819), .B(\Clock_Divider.count [3]), .C(n7006), 
-         .D(\Clock_Divider.count [0]), .Z(n7570)) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i6029_4_lut_rep_26.init = 16'h4000;
-    LUT4 n7150_bdd_4_lut_else_4_lut (.A(cont_tst[6]), .B(cont_addr_c_2), 
-         .C(DIVI[6]), .D(cont_addr_c_0), .Z(n7593)) /* synthesis lut_function=(A ((C+!(D))+!B)+!A ((C (D))+!B)) */ ;
-    defparam n7150_bdd_4_lut_else_4_lut.init = 16'hf3bb;
-    LUT4 i5595_2_lut (.A(\Clock_Divider.count_12__N_386 [7]), .B(\Clock_Divider.count_12__N_386 [11]), 
-         .Z(n7000)) /* synthesis lut_function=(A+(B)) */ ;
-    defparam i5595_2_lut.init = 16'heeee;
-    LUT4 i5354_3_lut_4_lut (.A(\RAM_write.i [1]), .B(\RAM_write.i [0]), 
-         .C(\RAM_write.i [2]), .D(\RAM_write.i [3]), .Z(n22)) /* synthesis lut_function=(!(A (B (C (D)+!C !(D))+!B !(D))+!A !(D))) */ ;   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam i5354_3_lut_4_lut.init = 16'h7f80;
-    LUT4 i5629_3_lut (.A(daca_8[7]), .B(daca_9[7]), .C(\RAM_write.i [0]), 
-         .Z(n7034)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5629_3_lut.init = 16'hcaca;
-    LUT4 i5615_4_lut (.A(\Clock_Divider.count_12__N_386 [10]), .B(\Clock_Divider.count_12__N_386 [5]), 
-         .C(\Clock_Divider.count_12__N_386 [4]), .D(n7014), .Z(n7020)) /* synthesis lut_function=(A+(B (C+(D)))) */ ;
-    defparam i5615_4_lut.init = 16'heeea;
-    LUT4 n39_bdd_4_lut_then_3_lut (.A(daca_15[6]), .B(cont_addr_c_2), .C(cont_addr_c_0), 
-         .Z(n7597)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam n39_bdd_4_lut_then_3_lut.init = 16'hfefe;
-    LUT4 i5819_3_lut (.A(daca_14[0]), .B(daca_15[0]), .C(\RAM_write.i [0]), 
-         .Z(n7224)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5819_3_lut.init = 16'hcaca;
-    LUT4 i5861_3_lut (.A(daca_11[4]), .B(daca_12[4]), .C(cont_addr_c_0), 
-         .Z(n7266)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5861_3_lut.init = 16'hcaca;
-    LUT4 i5702_3_lut (.A(daca_4[2]), .B(daca_5[2]), .C(\RAM_write.i [0]), 
-         .Z(n7107)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5702_3_lut.init = 16'hcaca;
-    FD1S3AX CDS_249 (.D(CDS_in_N_585), .CK(FCK_c), .Q(CDS));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam CDS_249.GSR = "DISABLED";
-    PFUMX i5678 (.BLUT(n7075), .ALUT(n7076), .C0(\RAM_write.i [1]), .Z(n7083));
-    FD1P3AX rca_sw_i0_i1 (.D(cont_data_out_0), .SP(FCK_c_enable_1), .CK(FCK_c), 
-            .Q(A_c_0));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i1.GSR = "DISABLED";
-    FD1S3JX wr_reset_251 (.D(wr_reset_N_576), .CK(FCK_c), .PD(n6946), 
-            .Q(wr_reset));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam wr_reset_251.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i1 (.D(cont_data_out_0), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(M_c_0));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i0.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i0.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i0 (.D(\RAM_write.count_9__N_520 [0]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[0]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i0.GSR = "DISABLED";
-    FD1P3AX cont_tst__i1 (.D(cont_data_out_0), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(K_c_0));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i1.GSR = "DISABLED";
-    FD1S3AX \Clock_Divider.count_i0  (.D(\Clock_Divider.count_12__N_373 [0]), 
-            .CK(FCK_c), .Q(\Clock_Divider.count [0]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i0 .GSR = "DISABLED";
-    FD1S3IX i105_273 (.D(cont_data_7__N_592), .CK(FCK_c), .CD(n7584), 
-            .Q(cont_data_7__N_9));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam i105_273.GSR = "DISABLED";
-    FD1S3AX MCK_282 (.D(V_N_570), .CK(FCK_c), .Q(V_c));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam MCK_282.GSR = "DISABLED";
-    LUT4 n39_bdd_4_lut_else_3_lut (.A(daca_13[6]), .B(cont_addr_c_2), .C(daca_14[6]), 
-         .D(cont_addr_c_0), .Z(n7596)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;
-    defparam n39_bdd_4_lut_else_3_lut.init = 16'hfcee;
-    PFUMX i5694 (.BLUT(n7092), .ALUT(n7093), .C0(\RAM_write.i [1]), .Z(n7099));
-    LUT4 i5609_4_lut (.A(\Clock_Divider.count_12__N_386 [3]), .B(\Clock_Divider.count_12__N_386 [2]), 
-         .C(\Clock_Divider.count_12__N_386 [0]), .D(\Clock_Divider.count_12__N_386 [1]), 
-         .Z(n7014)) /* synthesis lut_function=(A (B+(C+(D)))) */ ;
-    defparam i5609_4_lut.init = 16'haaa8;
-    FD1S3AX \RAM_write.count_i0  (.D(\RAM_write.count_9__N_520 [0]), .CK(FCK_c), 
-            .Q(\RAM_write.count [0])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i0 .GSR = "ENABLED";
-    LUT4 n39_bdd_4_lut_then_3_lut_adj_5 (.A(daca_15[5]), .B(cont_addr_c_2), 
-         .C(cont_addr_c_0), .Z(n7600)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam n39_bdd_4_lut_then_3_lut_adj_5.init = 16'hfefe;
-    CCU2D add_173_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
-          .A1(\Clock_Divider.count [0]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
-          .COUT(n6732), .S1(\Clock_Divider.count_12__N_386 [0]));   // c:/firmware/p3050fg/main.vhd(295[13:18])
-    defparam add_173_1.INIT0 = 16'hF000;
-    defparam add_173_1.INIT1 = 16'h5555;
-    defparam add_173_1.INJECT1_0 = "NO";
-    defparam add_173_1.INJECT1_1 = "NO";
-    CCU2D add_197_3 (.A0(\RAM_write.count [1]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\RAM_write.count [2]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6739), .COUT(n6740), .S0(\RAM_write.count_9__N_520 [1]), 
-          .S1(\RAM_write.count_9__N_520 [2]));   // c:/firmware/p3050fg/main.vhd(367[13:18])
-    defparam add_197_3.INIT0 = 16'h5aaa;
-    defparam add_197_3.INIT1 = 16'h5aaa;
-    defparam add_197_3.INJECT1_0 = "NO";
-    defparam add_197_3.INJECT1_1 = "NO";
-    CCU2D add_173_11 (.A0(\Clock_Divider.count [9]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\Clock_Divider.count [10]), .B1(GND_net), 
-          .C1(GND_net), .D1(GND_net), .CIN(n6736), .COUT(n6737), .S0(\Clock_Divider.count_12__N_386 [9]), 
-          .S1(\Clock_Divider.count_12__N_386 [10]));   // c:/firmware/p3050fg/main.vhd(295[13:18])
-    defparam add_173_11.INIT0 = 16'h5aaa;
-    defparam add_173_11.INIT1 = 16'h5aaa;
-    defparam add_173_11.INJECT1_0 = "NO";
-    defparam add_173_11.INJECT1_1 = "NO";
-    FD1S3AX DIVCK_284 (.D(W_N_572), .CK(FCK_c), .Q(W_c));   // c:/firmware/p3050fg/main.vhd(308[2] 320[9])
-    defparam DIVCK_284.GSR = "DISABLED";
-    FD1P3AX dac_ram_in_i0_i0 (.D(dac_ram_in_7__N_530[0]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[0]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i0.GSR = "DISABLED";
-    PFUMX i5839 (.BLUT(n7241), .ALUT(n7242), .C0(cont_addr_c_1), .Z(n7244));
-    CCU2D add_197_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
-          .A1(\RAM_write.count [0]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
-          .COUT(n6739), .S1(\RAM_write.count_9__N_520 [0]));   // c:/firmware/p3050fg/main.vhd(367[13:18])
-    defparam add_197_1.INIT0 = 16'hF000;
-    defparam add_197_1.INIT1 = 16'h5555;
-    defparam add_197_1.INJECT1_0 = "NO";
-    defparam add_197_1.INJECT1_1 = "NO";
-    CCU2D DIVI_30__I_0_23 (.A0(\Clock_Divider_2.count_30__N_463 [19]), .B0(DIVI[19]), 
-          .C0(\Clock_Divider_2.count_30__N_463 [18]), .D0(DIVI[18]), .A1(\Clock_Divider_2.count_30__N_463 [17]), 
-          .B1(DIVI[17]), .C1(\Clock_Divider_2.count_30__N_463 [16]), .D1(DIVI[16]), 
-          .CIN(n6697), .COUT(n6698));
-    defparam DIVI_30__I_0_23.INIT0 = 16'h9009;
-    defparam DIVI_30__I_0_23.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_23.INJECT1_0 = "YES";
-    defparam DIVI_30__I_0_23.INJECT1_1 = "YES";
-    CCU2D DIVI_30__I_0_29 (.A0(\Clock_Divider_2.count_30__N_463 [7]), .B0(DIVI[7]), 
-          .C0(\Clock_Divider_2.count_30__N_463 [6]), .D0(DIVI[6]), .A1(\Clock_Divider_2.count_30__N_463 [5]), 
-          .B1(DIVI[5]), .C1(\Clock_Divider_2.count_30__N_463 [4]), .D1(DIVI[4]), 
-          .CIN(n6700), .COUT(n6701));
-    defparam DIVI_30__I_0_29.INIT0 = 16'h9009;
-    defparam DIVI_30__I_0_29.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_29.INJECT1_0 = "YES";
-    defparam DIVI_30__I_0_29.INJECT1_1 = "YES";
-    LUT4 i1_2_lut_3_lut_4_lut (.A(n7581), .B(n7577), .C(cont_addr_c_2), 
-         .D(n6259), .Z(FCK_c_enable_97)) /* synthesis lut_function=(!(((C+!(D))+!B)+!A)) */ ;
+    INV i3456 (.A(I_c), .Z(I_N_544));
+    LUT4 mux_229_i27_3_lut (.A(data_addr_31__N_242[26]), .B(n3757), .C(n2633), 
+         .Z(data_addr_31__N_17[26])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i27_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i26_3_lut (.A(data_addr_31__N_242[25]), .B(n3758), .C(n2633), 
+         .Z(data_addr_31__N_17[25])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i26_3_lut.init = 16'hcaca;
+    CCU2D \Clock_Divider_1.count_722_add_4_15  (.A0(\Clock_Divider_1.count [13]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [14]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6208), .COUT(n6209), 
+          .S0(n147), .S1(n146));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_15 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_15 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_15 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_15 .INJECT1_1 = "NO";
+    LUT4 mux_229_i25_3_lut (.A(data_addr_31__N_242[24]), .B(n3759), .C(n2633), 
+         .Z(data_addr_31__N_17[24])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i25_3_lut.init = 16'hcaca;
+    CCU2D sub_670_add_2_3 (.A0(\Clock_Divider_1.count [1]), .B0(n1713), 
+          .C0(DIVIA[1]), .D0(GND_net), .A1(\Clock_Divider_1.count [2]), 
+          .B1(n1713), .C1(DIVIA[2]), .D1(GND_net), .CIN(n6163), .COUT(n6164));
+    defparam sub_670_add_2_3.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_3.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_3.INJECT1_0 = "NO";
+    defparam sub_670_add_2_3.INJECT1_1 = "NO";
+    FD1S3AX cont_data_i0 (.D(cont_data_7__N_339), .CK(FCK_c), .Q(cont_data_7__N_1[0]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i0.GSR = "ENABLED";
+    LUT4 i26_2_lut_4_lut (.A(n33), .B(n29), .C(cont_addr_c_1), .D(n6626), 
+         .Z(cont_data_7__N_310[4])) /* synthesis lut_function=(!(A (B (D)+!B !(C+!(D)))+!A (B (C (D))))) */ ;
+    defparam i26_2_lut_4_lut.init = 16'h35ff;
+    LUT4 mux_229_i24_3_lut (.A(data_addr_31__N_242[31]), .B(n3760), .C(n2633), 
+         .Z(data_addr_31__N_17[23])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i24_3_lut.init = 16'hcaca;
+    LUT4 i432_2_lut (.A(NOT_RESET_c), .B(rstcd2), .Z(n1851)) /* synthesis lut_function=((B)+!A) */ ;   // c:/firmware/p3050fg/main.vhd(266[6:41])
+    defparam i432_2_lut.init = 16'hdddd;
+    LUT4 mux_229_i23_3_lut (.A(data_addr_31__N_242[30]), .B(n3761), .C(n2633), 
+         .Z(data_addr_31__N_17[22])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i23_3_lut.init = 16'hcaca;
+    LUT4 i2_3_lut_rep_27 (.A(V_c_0), .B(n4818), .C(data_addr[1]), .Z(n6624)) /* synthesis lut_function=((B+(C))+!A) */ ;   // c:/firmware/p3050fg/main.vhd(204[10:53])
+    defparam i2_3_lut_rep_27.init = 16'hfdfd;
+    LUT4 i1_2_lut (.A(V_c_0), .B(n6458), .Z(FCK_c_enable_141)) /* synthesis lut_function=(!(A+!(B))) */ ;
+    defparam i1_2_lut.init = 16'h4444;
+    LUT4 mux_229_i22_3_lut (.A(data_addr_31__N_242[29]), .B(n3762), .C(n2633), 
+         .Z(data_addr_31__N_17[21])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i22_3_lut.init = 16'hcaca;
+    LUT4 i1_3_lut_4_lut (.A(cont_addr_c_0), .B(n6625), .C(n2633), .D(cont_addr_c_1), 
+         .Z(FCK_c_enable_127)) /* synthesis lut_function=(A (B (C+(D))+!B (C))+!A (C)) */ ;
+    defparam i1_3_lut_4_lut.init = 16'hf8f0;
+    CCU2D sub_668_add_2_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(\RAM1_read.count [0]), .B1(spca[0]), .C1(GND_net), .D1(GND_net), 
+          .COUT(n6179));
+    defparam sub_668_add_2_1.INIT0 = 16'h0000;
+    defparam sub_668_add_2_1.INIT1 = 16'h5999;
+    defparam sub_668_add_2_1.INJECT1_0 = "NO";
+    defparam sub_668_add_2_1.INJECT1_1 = "NO";
+    LUT4 i2_3_lut_4_lut (.A(data_addr[1]), .B(n6623), .C(n6631), .D(n2), 
+         .Z(FCK_c_enable_96)) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;
+    defparam i2_3_lut_4_lut.init = 16'h4000;
+    LUT4 i1_3_lut_4_lut_adj_22 (.A(cont_addr_c_0), .B(n6625), .C(n2633), 
+         .D(cont_addr_c_1), .Z(FCK_c_enable_112)) /* synthesis lut_function=(A (B (C+!(D))+!B (C))+!A (C)) */ ;
+    defparam i1_3_lut_4_lut_adj_22.init = 16'hf0f8;
+    FD1S3AX CDS_467 (.D(CDS_in_N_628), .CK(FCK_c), .Q(CDS));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam CDS_467.GSR = "ENABLED";
+    LUT4 mux_229_i21_3_lut (.A(data_addr_31__N_242[28]), .B(n3763), .C(n2633), 
+         .Z(data_addr_31__N_17[20])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i21_3_lut.init = 16'hcaca;
+    FD1S3AX CDS_delayed_468 (.D(CDS), .CK(FCK_c), .Q(CDS_delayed));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam CDS_delayed_468.GSR = "ENABLED";
+    FD1P3AX data_addr_i1 (.D(data_addr_31__N_17[0]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(V_c_0));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i1.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i0 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[0])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i0.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i0 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[0])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i0.GSR = "ENABLED";
+    FD1P3AX spca_i0_i0 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[0]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i0.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i0 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[0]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i0.GSR = "ENABLED";
+    FD1S3AX DIVCKA_490 (.D(I_N_545), .CK(FCK_c), .Q(I_c));   // c:/firmware/p3050fg/main.vhd(246[2] 258[9])
+    defparam DIVCKA_490.GSR = "ENABLED";
+    CCU2D sub_670_add_2_cout (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6178), .S0(\Clock_Divider_1.count_30__N_404 ));
+    defparam sub_670_add_2_cout.INIT0 = 16'h0000;
+    defparam sub_670_add_2_cout.INIT1 = 16'h0000;
+    defparam sub_670_add_2_cout.INJECT1_0 = "NO";
+    defparam sub_670_add_2_cout.INJECT1_1 = "NO";
+    LUT4 i33_4_lut (.A(n35), .B(n6632), .C(cont_addr_c_4), .D(n45_adj_672), 
+         .Z(cont_data_7__N_310[7])) /* synthesis lut_function=(!(A (B)+!A (B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i33_4_lut.init = 16'h3777;
+    LUT4 i1_2_lut_rep_18_3_lut_4_lut (.A(V_c_0), .B(n6621), .C(n2), .D(n6628), 
+         .Z(n6615)) /* synthesis lut_function=(A (C)+!A (B (C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(194[10:53])
+    defparam i1_2_lut_rep_18_3_lut_4_lut.init = 16'hf0e0;
+    LUT4 i3364_2_lut_2_lut_3_lut_4_lut (.A(V_c_0), .B(n6621), .C(n2), 
+         .D(n6628), .Z(FCK_c_enable_73)) /* synthesis lut_function=(!(A+(B+((D)+!C)))) */ ;   // c:/firmware/p3050fg/main.vhd(194[10:53])
+    defparam i3364_2_lut_2_lut_3_lut_4_lut.init = 16'h0010;
+    BB cont_data_pad_6 (.I(cont_data_7__N_1[6]), .T(n3860), .B(cont_data[6]), 
+       .O(data_addr_31__N_242[30]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    FD1S3AX DIVCKB_492 (.D(J_N_588), .CK(FCK_c), .Q(J_c));   // c:/firmware/p3050fg/main.vhd(265[2] 277[9])
+    defparam DIVCKB_492.GSR = "ENABLED";
+    FD1S3AX CWR_466 (.D(CWR_in_N_651), .CK(FCK_c), .Q(CWR));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam CWR_466.GSR = "ENABLED";
+    LUT4 data_addr_31__N_242_30__bdd_4_lut (.A(data_addr_31__N_242[30]), .B(cont_data_7__N_320), 
+         .C(cont_data_7__N_310[6]), .D(n6633), .Z(cont_data_7__N_321)) /* synthesis lut_function=(A (B (C+(D))+!B !((D)+!C))+!A !((D)+!C)) */ ;
+    defparam data_addr_31__N_242_30__bdd_4_lut.init = 16'h88f0;
+    LUT4 data_addr_31__N_242_27__bdd_4_lut (.A(data_addr_31__N_242[27]), .B(cont_data_7__N_320), 
+         .C(cont_data_7__N_310[3]), .D(n6633), .Z(cont_data_7__N_330)) /* synthesis lut_function=(A (B (C+(D))+!B !((D)+!C))+!A !((D)+!C)) */ ;
+    defparam data_addr_31__N_242_27__bdd_4_lut.init = 16'h88f0;
+    FD1S3AX i369_486 (.D(n4068), .CK(FCK_c), .Q(cont_data_2__N_12));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i369_486.GSR = "ENABLED";
+    LUT4 mux_229_i20_3_lut (.A(data_addr_31__N_242[27]), .B(n3764), .C(n2633), 
+         .Z(data_addr_31__N_17[19])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i20_3_lut.init = 16'hcaca;
+    DAQ_RAM_U0 RAM1 (.\data_addr[12] (data_addr[12]), .\data_addr[11] (data_addr[11]), 
+            .\data_addr[10] (data_addr[10]), .\data_addr[9] (data_addr[9]), 
+            .\data_addr[8] (data_addr[8]), .\data_addr[7] (data_addr[7]), 
+            .\data_addr[6] (data_addr[6]), .\data_addr[5] (data_addr[5]), 
+            .\data_addr[4] (data_addr[4]), .\data_addr[3] (data_addr[3]), 
+            .\data_addr[2] (data_addr[2]), .\data_addr[1] (data_addr[1]), 
+            .V_c_0(V_c_0), .\RAM1_read.count ({\RAM1_read.count }), .\data_addr_31__N_242[26] (data_addr_31__N_242[26]), 
+            .ram1_we(ram1_we), .FCK_c(FCK_c), .VCC_net(VCC_net), .GND_net(GND_net), 
+            .FCK_N_652(FCK_N_652), .DACA_OUT_c_2(DACA_OUT_c_2), .\data_addr_31__N_242[31] (data_addr_31__N_242[31]), 
+            .DACA_OUT_c_7(DACA_OUT_c_7), .\data_addr_31__N_242[25] (data_addr_31__N_242[25]), 
+            .DACA_OUT_c_1(DACA_OUT_c_1), .\data_addr_31__N_242[24] (data_addr_31__N_242[24]), 
+            .DACA_OUT_c_0(DACA_OUT_c_0), .\data_addr_31__N_242[27] (data_addr_31__N_242[27]), 
+            .DACA_OUT_c_3(DACA_OUT_c_3), .\data_addr_31__N_242[28] (data_addr_31__N_242[28]), 
+            .DACA_OUT_c_4(DACA_OUT_c_4), .\data_addr_31__N_242[29] (data_addr_31__N_242[29]), 
+            .DACA_OUT_c_5(DACA_OUT_c_5), .\data_addr_31__N_242[30] (data_addr_31__N_242[30]), 
+            .DACA_OUT_c_6(DACA_OUT_c_6)) /* synthesis NGD_DRC_MASK=1 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    LUT4 i33_4_lut_adj_23 (.A(n35), .B(n6632), .C(cont_addr_c_4), .D(n45_adj_677), 
+         .Z(cont_data_7__N_310[6])) /* synthesis lut_function=(!(A (B)+!A (B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i33_4_lut_adj_23.init = 16'h3777;
+    LUT4 i7_4_lut (.A(n9), .B(n6499), .C(n6424), .D(data_addr[15]), 
+         .Z(n6458)) /* synthesis lut_function=(!((B+(C+!(D)))+!A)) */ ;
+    defparam i7_4_lut.init = 16'h0200;
+    LUT4 i1_4_lut (.A(n6752), .B(n6478), .C(data_addr[2]), .D(data_addr[1]), 
+         .Z(n9)) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;
+    defparam i1_4_lut.init = 16'h0002;
+    LUT4 i419_2_lut (.A(NOT_RESET_c), .B(rstcd1), .Z(n1713)) /* synthesis lut_function=((B)+!A) */ ;   // c:/firmware/p3050fg/main.vhd(247[6:41])
+    defparam i419_2_lut.init = 16'hdddd;
+    LUT4 i1_2_lut_rep_19_3_lut_4_lut (.A(V_c_0), .B(n6621), .C(data_addr[3]), 
+         .D(n6752), .Z(n6616)) /* synthesis lut_function=(A (C (D))+!A (B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(194[10:53])
+    defparam i1_2_lut_rep_19_3_lut_4_lut.init = 16'he000;
+    LUT4 mux_229_i19_3_lut (.A(data_addr_31__N_242[26]), .B(n3765), .C(n2633), 
+         .Z(data_addr_31__N_17[18])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i19_3_lut.init = 16'hcaca;
+    LUT4 i26_2_lut_4_lut_adj_24 (.A(n33_adj_674), .B(n29_adj_675), .C(cont_addr_c_1), 
+         .D(n6626), .Z(cont_data_7__N_310[1])) /* synthesis lut_function=(!(A (B (D)+!B !(C+!(D)))+!A (B (C (D))))) */ ;
+    defparam i26_2_lut_4_lut_adj_24.init = 16'h35ff;
+    BB cont_data_pad_7 (.I(cont_data_7__N_1[7]), .T(n3860), .B(cont_data[7]), 
+       .O(data_addr_31__N_242[31]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    LUT4 i1_2_lut_3_lut_4_lut (.A(data_addr[3]), .B(n6618), .C(data_addr[2]), 
+         .D(n6619), .Z(FCK_c_enable_66)) /* synthesis lut_function=(!(((C+!(D))+!B)+!A)) */ ;
     defparam i1_2_lut_3_lut_4_lut.init = 16'h0800;
-    FD1S3AX CWR_248 (.D(CWR_in_N_587), .CK(FCK_c), .Q(CWR));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam CWR_248.GSR = "DISABLED";
-    LUT4 i1_2_lut_3_lut_4_lut_adj_6 (.A(n7581), .B(n7577), .C(cont_addr_c_2), 
-         .D(n6259), .Z(FCK_c_enable_125)) /* synthesis lut_function=(A (B (C (D)))) */ ;
-    defparam i1_2_lut_3_lut_4_lut_adj_6.init = 16'h8000;
-    FD1S3IX \Clock_Divider_2.count_1621__i0  (.D(n160), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i0 .GSR = "DISABLED";
-    LUT4 i6046_3_lut_4_lut (.A(n7582), .B(n7574), .C(cont_addr_c_3), .D(cont_addr_c_2), 
-         .Z(FCK_c_enable_118)) /* synthesis lut_function=(!(A+(B+(C+!(D))))) */ ;
-    defparam i6046_3_lut_4_lut.init = 16'h0100;
-    CCU2D add_173_5 (.A0(\Clock_Divider.count [3]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\Clock_Divider.count [4]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6733), .COUT(n6734), .S0(\Clock_Divider.count_12__N_386 [3]), 
-          .S1(\Clock_Divider.count_12__N_386 [4]));   // c:/firmware/p3050fg/main.vhd(295[13:18])
-    defparam add_173_5.INIT0 = 16'h5aaa;
-    defparam add_173_5.INIT1 = 16'h5aaa;
-    defparam add_173_5.INJECT1_0 = "NO";
-    defparam add_173_5.INJECT1_1 = "NO";
-    PFUMX i5845 (.BLUT(n7246), .ALUT(n7247), .C0(cont_addr_c_1), .Z(n7250));
-    CCU2D add_173_3 (.A0(\Clock_Divider.count [1]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\Clock_Divider.count [2]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6732), .COUT(n6733), .S0(\Clock_Divider.count_12__N_386 [1]), 
-          .S1(\Clock_Divider.count_12__N_386 [2]));   // c:/firmware/p3050fg/main.vhd(295[13:18])
-    defparam add_173_3.INIT0 = 16'h5aaa;
-    defparam add_173_3.INIT1 = 16'h5aaa;
-    defparam add_173_3.INJECT1_0 = "NO";
-    defparam add_173_3.INJECT1_1 = "NO";
-    BB cont_data_pad_6 (.I(cont_data_7__N_1[6]), .T(n3105), .B(cont_data[6]), 
-       .O(cont_data_out_6));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    PFUMX i5759 (.BLUT(n7162), .ALUT(n7163), .C0(cont_addr_c_1), .Z(n7164));
-    LUT4 n39_bdd_4_lut_else_3_lut_adj_7 (.A(daca_13[5]), .B(cont_addr_c_2), 
-         .C(daca_14[5]), .D(cont_addr_c_0), .Z(n7599)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;
-    defparam n39_bdd_4_lut_else_3_lut_adj_7.init = 16'hfcee;
-    PFUMX i5846 (.BLUT(n7248), .ALUT(n7249), .C0(cont_addr_c_1), .Z(n7251));
-    PFUMX i5679 (.BLUT(n7077), .ALUT(n7078), .C0(\RAM_write.i [1]), .Z(n7084));
-    PFUMX i5695 (.BLUT(n7094), .ALUT(n7095), .C0(\RAM_write.i [1]), .Z(n7100));
-    IB NOT_RESET_pad (.I(NOT_RESET), .O(NOT_RESET_c));   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    IB ETH_pad (.I(ETH), .O(ETH_c));   // c:/firmware/p3050fg/main.vhd(18[3:6])
-    IB CDS_in_pad (.I(CDS_in), .O(CDS_in_c));   // c:/firmware/p3050fg/main.vhd(17[3:9])
-    IB CWR_in_pad (.I(CWR_in), .O(CWR_in_c));   // c:/firmware/p3050fg/main.vhd(16[3:9])
-    IB cont_addr_pad_0 (.I(cont_addr[0]), .O(cont_addr_c_0));   // c:/firmware/p3050fg/main.vhd(15[3:12])
-    IB cont_addr_pad_1 (.I(cont_addr[1]), .O(cont_addr_c_1));   // c:/firmware/p3050fg/main.vhd(15[3:12])
-    IB cont_addr_pad_2 (.I(cont_addr[2]), .O(cont_addr_c_2));   // c:/firmware/p3050fg/main.vhd(15[3:12])
-    IB cont_addr_pad_3 (.I(cont_addr[3]), .O(cont_addr_c_3));   // c:/firmware/p3050fg/main.vhd(15[3:12])
-    IB cont_addr_pad_4 (.I(cont_addr[4]), .O(cont_addr_c_4));   // c:/firmware/p3050fg/main.vhd(15[3:12])
-    IB cont_addr_pad_5 (.I(cont_addr[5]), .O(cont_addr_c_5));   // c:/firmware/p3050fg/main.vhd(15[3:12])
-    IB FCK_pad (.I(FCK), .O(FCK_c));   // c:/firmware/p3050fg/main.vhd(13[3:6])
-    OB W_pad (.I(W_c), .O(W));   // c:/firmware/p3050fg/main.vhd(42[3:4])
-    OB V_pad (.I(V_c), .O(V));   // c:/firmware/p3050fg/main.vhd(41[3:4])
-    OB T_pad (.I(T_c_7), .O(T));   // c:/firmware/p3050fg/main.vhd(40[3:4])
-    OB S_pad (.I(S_c_6), .O(S));   // c:/firmware/p3050fg/main.vhd(39[3:4])
-    OB R_pad (.I(R_c_5), .O(R));   // c:/firmware/p3050fg/main.vhd(38[3:4])
-    OB Q_pad (.I(Q_c_4), .O(Q));   // c:/firmware/p3050fg/main.vhd(37[3:4])
-    OB P_pad (.I(P_c_3), .O(P));   // c:/firmware/p3050fg/main.vhd(36[3:4])
-    OB O_pad (.I(O_c_2), .O(O));   // c:/firmware/p3050fg/main.vhd(35[3:4])
-    OB N_pad (.I(N_c_1), .O(N));   // c:/firmware/p3050fg/main.vhd(34[3:4])
-    OB M_pad (.I(M_c_0), .O(M));   // c:/firmware/p3050fg/main.vhd(33[3:4])
-    OB L_pad (.I(GND_net), .O(L));   // c:/firmware/p3050fg/main.vhd(32[3:4])
-    OB K_pad (.I(K_c_0), .O(K));   // c:/firmware/p3050fg/main.vhd(31[3:4])
-    OB H_pad (.I(H_c_7), .O(H));   // c:/firmware/p3050fg/main.vhd(30[3:4])
-    OB G_pad (.I(G_c_6), .O(G));   // c:/firmware/p3050fg/main.vhd(29[3:4])
-    OB F_pad (.I(F_c_5), .O(F));   // c:/firmware/p3050fg/main.vhd(28[3:4])
-    OB E_pad (.I(E_c_4), .O(E));   // c:/firmware/p3050fg/main.vhd(27[3:4])
-    OB D_pad (.I(D_c_3), .O(D));   // c:/firmware/p3050fg/main.vhd(26[3:4])
-    OB C_pad (.I(C_c_2), .O(C));   // c:/firmware/p3050fg/main.vhd(25[3:4])
-    OB B_pad (.I(B_c_1), .O(B));   // c:/firmware/p3050fg/main.vhd(24[3:4])
-    OB A_pad (.I(A_c_0), .O(A));   // c:/firmware/p3050fg/main.vhd(23[3:4])
-    OB DACB_pad_0 (.I(n3116), .O(DACB[0]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACB_pad_1 (.I(n3115), .O(DACB[1]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACB_pad_2 (.I(n3114), .O(DACB[2]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACB_pad_3 (.I(n3113), .O(DACB[3]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACB_pad_4 (.I(n3112), .O(DACB[4]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACB_pad_5 (.I(n3111), .O(DACB[5]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACB_pad_6 (.I(n3110), .O(DACB[6]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACB_pad_7 (.I(DACB_c), .O(DACB[7]));   // c:/firmware/p3050fg/main.vhd(22[3:7])
-    OB DACA_pad_0 (.I(n3116), .O(DACA[0]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB DACA_pad_1 (.I(n3115), .O(DACA[1]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB DACA_pad_2 (.I(n3114), .O(DACA[2]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB DACA_pad_3 (.I(n3113), .O(DACA[3]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB DACA_pad_4 (.I(n3112), .O(DACA[4]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB DACA_pad_5 (.I(n3111), .O(DACA[5]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB DACA_pad_6 (.I(n3110), .O(DACA[6]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB DACA_pad_7 (.I(DACB_c), .O(DACA[7]));   // c:/firmware/p3050fg/main.vhd(21[3:7])
-    OB EYLW_pad (.I(EYLW_c), .O(EYLW));   // c:/firmware/p3050fg/main.vhd(20[9:13])
-    OB EGRN_pad (.I(VCC_net), .O(EGRN));   // c:/firmware/p3050fg/main.vhd(20[3:7])
-    BB cont_data_pad_0 (.I(cont_data_7__N_1[0]), .T(n3105), .B(cont_data[0]), 
-       .O(cont_data_out_0));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    BB cont_data_pad_1 (.I(cont_data_7__N_1[1]), .T(n3105), .B(cont_data[1]), 
-       .O(cont_data_out_1));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    BB cont_data_pad_2 (.I(cont_data_7__N_1[2]), .T(n3105), .B(cont_data[2]), 
-       .O(cont_data_out_2));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    BB cont_data_pad_3 (.I(cont_data_7__N_1[3]), .T(n3105), .B(cont_data[3]), 
-       .O(cont_data_out_3));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    BB cont_data_pad_4 (.I(cont_data_7__N_1[4]), .T(n3105), .B(cont_data[4]), 
-       .O(cont_data_out_4));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    BB cont_data_pad_5 (.I(cont_data_7__N_1[5]), .T(n3105), .B(cont_data[5]), 
-       .O(cont_data_out_5));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    PFUMX i5651 (.BLUT(n7051), .ALUT(n7052), .C0(\RAM_write.i [1]), .Z(n7056));
-    PFUMX i5723 (.BLUT(n7120), .ALUT(n7121), .C0(\RAM_write.i [1]), .Z(n7128));
-    PFUMX i5680 (.BLUT(n7079), .ALUT(n7080), .C0(\RAM_write.i [1]), .Z(n7085));
-    LUT4 i6052_2_lut_3_lut_4_lut (.A(n7582), .B(n7574), .C(cont_addr_c_3), 
-         .D(cont_addr_c_2), .Z(FCK_c_enable_90)) /* synthesis lut_function=(!(A+(B+(C+(D))))) */ ;
-    defparam i6052_2_lut_3_lut_4_lut.init = 16'h0001;
-    FD1S3AX \RAM_read.count_1623__i0  (.D(n55), .CK(FCK_N_588), .Q(\RAM_read.count [0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i0 .GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i0 (.D(cont_data_out_0), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i0.GSR = "DISABLED";
-    LUT4 i6040_2_lut_3_lut_4_lut (.A(n7582), .B(n7574), .C(cont_addr_c_3), 
-         .D(cont_addr_c_2), .Z(FCK_c_enable_146)) /* synthesis lut_function=(!(A+(B+((D)+!C)))) */ ;
-    defparam i6040_2_lut_3_lut_4_lut.init = 16'h0010;
-    PFUMX i5681 (.BLUT(n7081), .ALUT(n7082), .C0(\RAM_write.i [1]), .Z(n7086));
-    PFUMX i5636 (.BLUT(n7036), .ALUT(n7037), .C0(\RAM_write.i [1]), .Z(n7041));
-    LUT4 i1_2_lut_4_lut (.A(n7575), .B(n7584), .C(n7581), .D(cont_addr_c_2), 
-         .Z(FCK_c_enable_83)) /* synthesis lut_function=(!((((D)+!C)+!B)+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(195[2] 204[9])
-    defparam i1_2_lut_4_lut.init = 16'h0080;
-    PFUMX i5724 (.BLUT(n7122), .ALUT(n7123), .C0(\RAM_write.i [1]), .Z(n7129));
-    PFUMX i5762 (.BLUT(n7165), .ALUT(n7166), .C0(cont_addr_c_1), .Z(n7167));
-    LUT4 i1_2_lut_4_lut_adj_8 (.A(n7575), .B(n7584), .C(n7581), .D(cont_addr_c_2), 
-         .Z(FCK_c_enable_111)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(195[2] 204[9])
-    defparam i1_2_lut_4_lut_adj_8.init = 16'h8000;
-    LUT4 i6043_3_lut_4_lut (.A(n7573), .B(n7582), .C(cont_addr_c_3), .D(n7583), 
-         .Z(FCK_c_enable_132)) /* synthesis lut_function=(!(A+(B+((D)+!C)))) */ ;
-    defparam i6043_3_lut_4_lut.init = 16'h0010;
-    FD1S3AX cont_data_i1 (.D(cont_data_7__N_365[1]), .CK(FCK_c), .Q(cont_data_7__N_1[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i1.GSR = "DISABLED";
-    BB cont_data_pad_7 (.I(cont_data_7__N_1[7]), .T(n3105), .B(cont_data[7]), 
-       .O(cont_data_out_7));   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    LUT4 i6049_3_lut_4_lut (.A(n7573), .B(n7582), .C(cont_addr_c_3), .D(n6293), 
-         .Z(FCK_c_enable_104)) /* synthesis lut_function=(!(A+(B+(C+(D))))) */ ;
-    defparam i6049_3_lut_4_lut.init = 16'h0001;
-    PFUMX i5696 (.BLUT(n7096), .ALUT(n7097), .C0(\RAM_write.i [1]), .Z(n7101));
-    LUT4 i5055_2_lut_2_lut (.A(n7570), .B(\Clock_Divider.count_12__N_386 [5]), 
-         .Z(\Clock_Divider.count_12__N_373 [5])) /* synthesis lut_function=(!(A+!(B))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i5055_2_lut_2_lut.init = 16'h4444;
-    LUT4 i5818_3_lut (.A(daca_12[0]), .B(daca_13[0]), .C(\RAM_write.i [0]), 
-         .Z(n7223)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5818_3_lut.init = 16'hcaca;
-    PFUMX i5850 (.BLUT(n7253), .ALUT(n7254), .C0(cont_addr_c_1), .Z(n7255));
-    LUT4 i5065_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [10]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [10])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5065_2_lut_3_lut.init = 16'h2020;
-    LUT4 i3_4_lut (.A(cont_addr_c_3), .B(n7572), .C(cont_addr_c_2), .D(n7586), 
-         .Z(FCK_c_enable_1)) /* synthesis lut_function=(!(((C+!(D))+!B)+!A)) */ ;
-    defparam i3_4_lut.init = 16'h0800;
-    LUT4 n39_bdd_4_lut_then_3_lut_adj_9 (.A(daca_15[4]), .B(cont_addr_c_2), 
-         .C(cont_addr_c_0), .Z(n7603)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam n39_bdd_4_lut_then_3_lut_adj_9.init = 16'hfefe;
-    LUT4 n39_bdd_4_lut_else_3_lut_adj_10 (.A(daca_13[4]), .B(cont_addr_c_2), 
-         .C(daca_14[4]), .D(cont_addr_c_0), .Z(n7602)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;
-    defparam n39_bdd_4_lut_else_3_lut_adj_10.init = 16'hfcee;
-    PFUMX i5768 (.BLUT(n7171), .ALUT(n7172), .C0(cont_addr_c_1), .Z(n7173));
-    PFUMX i5725 (.BLUT(n7124), .ALUT(n7125), .C0(\RAM_write.i [1]), .Z(n7130));
-    PFUMX i5820 (.BLUT(n7217), .ALUT(n7218), .C0(\RAM_write.i [1]), .Z(n7225));
-    LUT4 W_I_0_308_2_lut (.A(W_c), .B(\Clock_Divider_2.count_30__N_462 ), 
-         .Z(W_N_572)) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/firmware/p3050fg/main.vhd(314[3] 319[10])
-    defparam W_I_0_308_2_lut.init = 16'h6666;
-    FD1S3AX cont_data_i2 (.D(cont_data_7__N_365[2]), .CK(FCK_c), .Q(cont_data_7__N_1[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i2.GSR = "DISABLED";
-    FD1S3AX cont_data_i3 (.D(cont_data_7__N_365[3]), .CK(FCK_c), .Q(cont_data_7__N_1[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i3.GSR = "DISABLED";
-    FD1S3AX cont_data_i4 (.D(cont_data_7__N_365[4]), .CK(FCK_c), .Q(cont_data_7__N_1[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i4.GSR = "DISABLED";
-    FD1S3AX cont_data_i5 (.D(cont_data_7__N_365[5]), .CK(FCK_c), .Q(cont_data_7__N_1[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i5.GSR = "DISABLED";
-    FD1S3AX cont_data_i6 (.D(cont_data_7__N_365[6]), .CK(FCK_c), .Q(cont_data_7__N_1[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i6.GSR = "DISABLED";
-    FD1S3AX cont_data_i7 (.D(cont_data_7__N_365[7]), .CK(FCK_c), .Q(cont_data_7__N_1[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i7.GSR = "DISABLED";
-    FD1P3AX rca_sw_i0_i2 (.D(cont_data_out_1), .SP(FCK_c_enable_27), .CK(FCK_c), 
-            .Q(B_c_1));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i2.GSR = "DISABLED";
-    FD1P3AX rca_sw_i0_i3 (.D(cont_data_out_2), .SP(FCK_c_enable_27), .CK(FCK_c), 
-            .Q(C_c_2));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i3.GSR = "DISABLED";
-    FD1P3AX rca_sw_i0_i4 (.D(cont_data_out_3), .SP(FCK_c_enable_27), .CK(FCK_c), 
-            .Q(D_c_3));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i4.GSR = "DISABLED";
-    FD1P3AX rca_sw_i0_i5 (.D(cont_data_out_4), .SP(FCK_c_enable_27), .CK(FCK_c), 
-            .Q(E_c_4));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i5.GSR = "DISABLED";
-    FD1P3AX rca_sw_i0_i6 (.D(cont_data_out_5), .SP(FCK_c_enable_27), .CK(FCK_c), 
-            .Q(F_c_5));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i6.GSR = "DISABLED";
-    FD1P3AX rca_sw_i0_i7 (.D(cont_data_out_6), .SP(FCK_c_enable_27), .CK(FCK_c), 
-            .Q(G_c_6));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i7.GSR = "DISABLED";
-    FD1P3AX rca_sw_i0_i8 (.D(cont_data_out_7), .SP(FCK_c_enable_27), .CK(FCK_c), 
-            .Q(H_c_7));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rca_sw_i0_i8.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i2 (.D(cont_data_out_1), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(N_c_1));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i2.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i3 (.D(cont_data_out_2), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(O_c_2));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i3.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i4 (.D(cont_data_out_3), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(P_c_3));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i4.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i5 (.D(cont_data_out_4), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(Q_c_4));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i5.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i6 (.D(cont_data_out_5), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(R_c_5));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i6.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i7 (.D(cont_data_out_6), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(S_c_6));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i7.GSR = "DISABLED";
-    FD1P3AX rcb_sw_i0_i8 (.D(cont_data_out_7), .SP(FCK_c_enable_34), .CK(FCK_c), 
-            .Q(T_c_7));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam rcb_sw_i0_i8.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_0_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_41), .CK(FCK_c), 
-            .Q(daca_0[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_0_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_1_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_48), .CK(FCK_c), 
-            .Q(daca_1[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_1_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_2_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_55), .CK(FCK_c), 
-            .Q(daca_2[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_2_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_3_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_62), .CK(FCK_c), 
-            .Q(daca_3[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_3_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_4_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_69), .CK(FCK_c), 
-            .Q(daca_4[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_4_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_5_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_76), .CK(FCK_c), 
-            .Q(daca_5[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_5_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_6_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_83), .CK(FCK_c), 
-            .Q(daca_6[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_6_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_7_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_90), .CK(FCK_c), 
-            .Q(daca_7[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_7_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_8_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_97), .CK(FCK_c), 
-            .Q(daca_8[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_8_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_9_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_104), .CK(FCK_c), 
-            .Q(daca_9[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_9_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_10_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_111), .CK(FCK_c), 
-            .Q(daca_10[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_10_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_11_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_118), .CK(FCK_c), 
-            .Q(daca_11[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_11_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_12_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_125), .CK(FCK_c), 
-            .Q(daca_12[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_12_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_13_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_132), .CK(FCK_c), 
-            .Q(daca_13[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_13_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_14_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_139), .CK(FCK_c), 
-            .Q(daca_14[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_14_i0_i7.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i1.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i2.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i3.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i4.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i5.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i6.GSR = "DISABLED";
-    FD1P3AX daca_15_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_146), .CK(FCK_c), 
-            .Q(daca_15[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam daca_15_i0_i7.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i1 (.D(\RAM_write.count_9__N_520 [1]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[1]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i1.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i2 (.D(\RAM_write.count_9__N_520 [2]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[2]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i2.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i3 (.D(\RAM_write.count_9__N_520 [3]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[3]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i3.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i4 (.D(\RAM_write.count_9__N_520 [4]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[4]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i4.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i5 (.D(\RAM_write.count_9__N_520 [5]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[5]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i5.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i6 (.D(\RAM_write.count_9__N_520 [6]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[6]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i6.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i7 (.D(\RAM_write.count_9__N_520 [7]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[7]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i7.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i8 (.D(\RAM_write.count_9__N_520 [8]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[8]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i8.GSR = "DISABLED";
-    FD1P3AX wr_ram_addr_i0_i9 (.D(\RAM_write.count_9__N_520 [9]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(wr_ram_addr[9]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam wr_ram_addr_i0_i9.GSR = "DISABLED";
-    FD1P3AX cont_tst__i2 (.D(cont_data_out_1), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(cont_tst[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i2.GSR = "DISABLED";
-    FD1P3AX cont_tst__i3 (.D(cont_data_out_2), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(cont_tst[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i3.GSR = "DISABLED";
-    FD1P3AX cont_tst__i4 (.D(cont_data_out_3), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(cont_tst[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i4.GSR = "DISABLED";
-    FD1P3AX cont_tst__i5 (.D(cont_data_out_4), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(cont_tst[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i5.GSR = "DISABLED";
-    FD1P3AX cont_tst__i6 (.D(cont_data_out_5), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(cont_tst[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i6.GSR = "DISABLED";
-    FD1P3AX cont_tst__i7 (.D(cont_data_out_6), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(cont_tst[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i7.GSR = "DISABLED";
-    FD1P3AX cont_tst__i8 (.D(cont_data_out_7), .SP(FCK_c_enable_153), .CK(FCK_c), 
-            .Q(cont_tst[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_tst__i8.GSR = "DISABLED";
-    LUT4 i5875_3_lut (.A(daca_11[2]), .B(daca_12[2]), .C(cont_addr_c_0), 
-         .Z(n7280)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5875_3_lut.init = 16'hcaca;
-    FD1S3IX \Clock_Divider.count_i2  (.D(\Clock_Divider.count_12__N_386 [2]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [2]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i2 .GSR = "DISABLED";
-    FD1S3AX \Clock_Divider.count_i3  (.D(\Clock_Divider.count_12__N_373 [3]), 
-            .CK(FCK_c), .Q(\Clock_Divider.count [3]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i3 .GSR = "DISABLED";
-    FD1S3AX \Clock_Divider.count_i4  (.D(\Clock_Divider.count_12__N_373 [4]), 
-            .CK(FCK_c), .Q(\Clock_Divider.count [4]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i4 .GSR = "DISABLED";
-    FD1S3AX \Clock_Divider.count_i5  (.D(\Clock_Divider.count_12__N_373 [5]), 
-            .CK(FCK_c), .Q(\Clock_Divider.count [5]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i5 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i6  (.D(\Clock_Divider.count_12__N_386 [6]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [6]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i6 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i7  (.D(\Clock_Divider.count_12__N_386 [7]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [7]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i7 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i8  (.D(\Clock_Divider.count_12__N_386 [8]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [8]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i8 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i9  (.D(\Clock_Divider.count_12__N_386 [9]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [9]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i9 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i10  (.D(\Clock_Divider.count_12__N_386 [10]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [10]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i10 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i11  (.D(\Clock_Divider.count_12__N_386 [11]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [11]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i11 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i12  (.D(\Clock_Divider.count_12__N_386 [12]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [12]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i12 .GSR = "DISABLED";
-    FD1S3AX \RAM_write.count_i1  (.D(\RAM_write.count_9__N_520 [1]), .CK(FCK_c), 
-            .Q(\RAM_write.count [1])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i1 .GSR = "ENABLED";
-    LUT4 i1_2_lut_4_lut_adj_11 (.A(n7585), .B(cont_addr_c_3), .C(n7577), 
-         .D(n7583), .Z(FCK_c_enable_27)) /* synthesis lut_function=(!(A+(((D)+!C)+!B))) */ ;
-    defparam i1_2_lut_4_lut_adj_11.init = 16'h0040;
-    LUT4 n39_bdd_4_lut_then_3_lut_adj_12 (.A(daca_15[3]), .B(cont_addr_c_2), 
-         .C(cont_addr_c_0), .Z(n7606)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam n39_bdd_4_lut_then_3_lut_adj_12.init = 16'hfefe;
-    LUT4 n39_bdd_4_lut_else_3_lut_adj_13 (.A(daca_13[3]), .B(cont_addr_c_2), 
-         .C(daca_14[3]), .D(cont_addr_c_0), .Z(n7605)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;
-    defparam n39_bdd_4_lut_else_3_lut_adj_13.init = 16'hfcee;
-    PFUMX i5726 (.BLUT(n7126), .ALUT(n7127), .C0(\RAM_write.i [1]), .Z(n7131));
-    PFUMX i5771 (.BLUT(n7174), .ALUT(n7175), .C0(cont_addr_c_1), .Z(n7176));
-    LUT4 i5157_2_lut_rep_39 (.A(cont_addr_c_1), .B(cont_addr_c_2), .Z(n7583)) /* synthesis lut_function=(A+(B)) */ ;
-    defparam i5157_2_lut_rep_39.init = 16'heeee;
-    LUT4 i1_2_lut_3_lut (.A(cont_addr_c_1), .B(cont_addr_c_2), .C(cont_addr_c_3), 
-         .Z(n6962)) /* synthesis lut_function=(!(A+(B+!(C)))) */ ;
-    defparam i1_2_lut_3_lut.init = 16'h1010;
-    LUT4 n7195_bdd_4_lut_then_4_lut (.A(DIVI[17]), .B(DIVI[9]), .C(cont_addr_c_2), 
-         .D(cont_addr_c_0), .Z(n7609)) /* synthesis lut_function=(A (B (C)+!B (C (D)))+!A !(((D)+!C)+!B)) */ ;
-    defparam n7195_bdd_4_lut_then_4_lut.init = 16'ha0c0;
-    LUT4 n7195_bdd_4_lut_else_4_lut (.A(cont_tst[1]), .B(cont_addr_c_2), 
-         .C(DIVI[1]), .D(cont_addr_c_0), .Z(n7608)) /* synthesis lut_function=(A ((C+!(D))+!B)+!A ((C (D))+!B)) */ ;
-    defparam n7195_bdd_4_lut_else_4_lut.init = 16'hf3bb;
-    LUT4 i1_4_lut (.A(n7584), .B(n9), .C(n7578), .D(cont_addr_c_2), 
-         .Z(n6946)) /* synthesis lut_function=(!(((C+!(D))+!B)+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(195[2] 204[9])
-    defparam i1_4_lut.init = 16'h0800;
-    LUT4 i1_2_lut_rep_32_3_lut (.A(cont_addr_c_1), .B(cont_addr_c_2), .C(cont_addr_c_3), 
-         .Z(n7576)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam i1_2_lut_rep_32_3_lut.init = 16'hfefe;
-    LUT4 i1_2_lut (.A(cont_addr_c_1), .B(cont_addr_c_0), .Z(n9)) /* synthesis lut_function=(A+(B)) */ ;   // c:/firmware/p3050fg/main.vhd(195[2] 204[9])
-    defparam i1_2_lut.init = 16'heeee;
-    LUT4 n7186_bdd_4_lut_then_4_lut (.A(DIVI[18]), .B(DIVI[10]), .C(cont_addr_c_2), 
-         .D(cont_addr_c_0), .Z(n7612)) /* synthesis lut_function=(A (B (C)+!B (C (D)))+!A !(((D)+!C)+!B)) */ ;
-    defparam n7186_bdd_4_lut_then_4_lut.init = 16'ha0c0;
-    LUT4 n7186_bdd_4_lut_else_4_lut (.A(cont_tst[2]), .B(cont_addr_c_2), 
-         .C(DIVI[2]), .D(cont_addr_c_0), .Z(n7611)) /* synthesis lut_function=(A ((C+!(D))+!B)+!A ((C (D))+!B)) */ ;
-    defparam n7186_bdd_4_lut_else_4_lut.init = 16'hf3bb;
-    LUT4 n39_bdd_4_lut_then_3_lut_adj_14 (.A(daca_15[2]), .B(cont_addr_c_2), 
-         .C(cont_addr_c_0), .Z(n7615)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam n39_bdd_4_lut_then_3_lut_adj_14.init = 16'hfefe;
-    LUT4 i1_2_lut_rep_24_3_lut_4_lut (.A(cont_addr_c_1), .B(cont_addr_c_2), 
-         .C(cont_addr_c_0), .D(cont_addr_c_3), .Z(n7568)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
-    defparam i1_2_lut_rep_24_3_lut_4_lut.init = 16'hfffe;
-    LUT4 n39_bdd_4_lut_else_3_lut_adj_15 (.A(daca_13[2]), .B(cont_addr_c_2), 
-         .C(daca_14[2]), .D(cont_addr_c_0), .Z(n7614)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;
-    defparam n39_bdd_4_lut_else_3_lut_adj_15.init = 16'hfcee;
-    LUT4 i5834_3_lut (.A(daca_5[7]), .B(daca_6[7]), .C(cont_addr_c_0), 
-         .Z(n7239)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5834_3_lut.init = 16'hcaca;
-    LUT4 i5686_3_lut (.A(daca_2[3]), .B(daca_3[3]), .C(\RAM_write.i [0]), 
-         .Z(n7091)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5686_3_lut.init = 16'hcaca;
-    LUT4 i5685_3_lut (.A(daca_0[3]), .B(daca_1[3]), .C(\RAM_write.i [0]), 
-         .Z(n7090)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5685_3_lut.init = 16'hcaca;
-    LUT4 CDS_I_0_305_2_lut_rep_40 (.A(CDS), .B(CWR), .Z(n7584)) /* synthesis lut_function=(A (B)) */ ;   // c:/firmware/p3050fg/main.vhd(207[5:16])
-    defparam CDS_I_0_305_2_lut_rep_40.init = 16'h8888;
-    LUT4 n39_bdd_4_lut_then_3_lut_adj_16 (.A(daca_15[1]), .B(cont_addr_c_2), 
-         .C(cont_addr_c_0), .Z(n7618)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam n39_bdd_4_lut_then_3_lut_adj_16.init = 16'hfefe;
-    LUT4 n39_bdd_4_lut_else_3_lut_adj_17 (.A(daca_13[1]), .B(cont_addr_c_2), 
-         .C(daca_14[1]), .D(cont_addr_c_0), .Z(n7617)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;
-    defparam n39_bdd_4_lut_else_3_lut_adj_17.init = 16'hfcee;
-    LUT4 i1_2_lut_3_lut_adj_18 (.A(cont_addr_c_1), .B(n7571), .C(cont_addr_c_2), 
-         .Z(FCK_c_enable_41)) /* synthesis lut_function=(!(((C)+!B)+!A)) */ ;
-    defparam i1_2_lut_3_lut_adj_18.init = 16'h0808;
-    LUT4 i2_3_lut_rep_25_4_lut (.A(cont_addr_c_0), .B(n7584), .C(cont_addr_c_3), 
-         .D(n7580), .Z(n7569)) /* synthesis lut_function=(A+(((D)+!C)+!B)) */ ;   // c:/firmware/p3050fg/main.vhd(197[25:51])
-    defparam i2_3_lut_rep_25_4_lut.init = 16'hffbf;
-    LUT4 i5752_3_lut (.A(daca_3[6]), .B(daca_4[6]), .C(cont_addr_c_0), 
-         .Z(n7157)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5752_3_lut.init = 16'hcaca;
-    LUT4 i5628_3_lut (.A(daca_6[7]), .B(daca_7[7]), .C(\RAM_write.i [0]), 
-         .Z(n7033)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5628_3_lut.init = 16'hcaca;
-    LUT4 n7159_bdd_4_lut_then_4_lut (.A(DIVI[21]), .B(DIVI[13]), .C(cont_addr_c_2), 
-         .D(cont_addr_c_0), .Z(n7621)) /* synthesis lut_function=(A (B (C)+!B (C (D)))+!A !(((D)+!C)+!B)) */ ;
-    defparam n7159_bdd_4_lut_then_4_lut.init = 16'ha0c0;
-    LUT4 i1_3_lut_rep_30_4_lut (.A(CDS), .B(CWR), .C(cont_addr_c_1), .D(cont_addr_c_0), 
-         .Z(n7574)) /* synthesis lut_function=((((D)+!C)+!B)+!A) */ ;   // c:/firmware/p3050fg/main.vhd(207[5:16])
-    defparam i1_3_lut_rep_30_4_lut.init = 16'hff7f;
-    LUT4 i1_2_lut_rep_29_3_lut (.A(CDS), .B(CWR), .C(cont_addr_c_0), .Z(n7573)) /* synthesis lut_function=(((C)+!B)+!A) */ ;   // c:/firmware/p3050fg/main.vhd(207[5:16])
-    defparam i1_2_lut_rep_29_3_lut.init = 16'hf7f7;
-    LUT4 i5707_3_lut (.A(daca_14[2]), .B(daca_15[2]), .C(\RAM_write.i [0]), 
-         .Z(n7112)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5707_3_lut.init = 16'hcaca;
-    LUT4 n7159_bdd_4_lut_else_4_lut (.A(cont_tst[5]), .B(cont_addr_c_2), 
-         .C(DIVI[5]), .D(cont_addr_c_0), .Z(n7620)) /* synthesis lut_function=(A ((C+!(D))+!B)+!A ((C (D))+!B)) */ ;
-    defparam n7159_bdd_4_lut_else_4_lut.init = 16'hf3bb;
-    LUT4 i6038_3_lut_3_lut_4_lut (.A(cont_addr_c_0), .B(n7584), .C(n6293), 
-         .D(n7578), .Z(FCK_c_enable_153)) /* synthesis lut_function=(!(A+((C+(D))+!B))) */ ;   // c:/firmware/p3050fg/main.vhd(197[25:51])
-    defparam i6038_3_lut_3_lut_4_lut.init = 16'h0004;
-    LUT4 i5751_3_lut (.A(daca_1[6]), .B(daca_2[6]), .C(cont_addr_c_0), 
-         .Z(n7156)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5751_3_lut.init = 16'hcaca;
-    LUT4 n7168_bdd_4_lut_then_4_lut (.A(DIVI[20]), .B(DIVI[12]), .C(cont_addr_c_2), 
-         .D(cont_addr_c_0), .Z(n7624)) /* synthesis lut_function=(A (B (C)+!B (C (D)))+!A !(((D)+!C)+!B)) */ ;
-    defparam n7168_bdd_4_lut_then_4_lut.init = 16'ha0c0;
-    FD1S3AX \RAM_write.count_i2  (.D(\RAM_write.count_9__N_520 [2]), .CK(FCK_c), 
-            .Q(\RAM_write.count [2])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i2 .GSR = "ENABLED";
-    FD1S3AX \RAM_write.count_i3  (.D(\RAM_write.count_9__N_520 [3]), .CK(FCK_c), 
-            .Q(\RAM_write.count [3])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i3 .GSR = "ENABLED";
-    FD1S3AX \RAM_write.count_i4  (.D(\RAM_write.count_9__N_520 [4]), .CK(FCK_c), 
-            .Q(\RAM_write.count [4])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i4 .GSR = "ENABLED";
-    FD1S3AX \RAM_write.count_i5  (.D(\RAM_write.count_9__N_520 [5]), .CK(FCK_c), 
-            .Q(\RAM_write.count [5])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i5 .GSR = "ENABLED";
-    FD1S3AX \RAM_write.count_i6  (.D(\RAM_write.count_9__N_520 [6]), .CK(FCK_c), 
-            .Q(\RAM_write.count [6])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i6 .GSR = "ENABLED";
-    FD1S3AX \RAM_write.count_i7  (.D(\RAM_write.count_9__N_520 [7]), .CK(FCK_c), 
-            .Q(\RAM_write.count [7])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i7 .GSR = "ENABLED";
-    FD1S3AX \RAM_write.count_i8  (.D(\RAM_write.count_9__N_520 [8]), .CK(FCK_c), 
-            .Q(\RAM_write.count [8])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i8 .GSR = "ENABLED";
-    FD1S3AX \RAM_write.count_i9  (.D(\RAM_write.count_9__N_520 [9]), .CK(FCK_c), 
-            .Q(\RAM_write.count [9])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.count_i9 .GSR = "ENABLED";
-    FD1P3AX dac_ram_in_i0_i1 (.D(dac_ram_in_7__N_530[1]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[1]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i1.GSR = "DISABLED";
-    FD1P3AX dac_ram_in_i0_i2 (.D(dac_ram_in_7__N_530[2]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[2]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i2.GSR = "DISABLED";
-    FD1P3AX dac_ram_in_i0_i3 (.D(dac_ram_in_7__N_530[3]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[3]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i3.GSR = "DISABLED";
-    FD1P3AX dac_ram_in_i0_i4 (.D(dac_ram_in_7__N_530[4]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[4]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i4.GSR = "DISABLED";
-    FD1P3AX dac_ram_in_i0_i5 (.D(dac_ram_in_7__N_530[5]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[5]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i5.GSR = "DISABLED";
-    FD1P3AX dac_ram_in_i0_i6 (.D(dac_ram_in_7__N_530[6]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[6]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i6.GSR = "DISABLED";
-    FD1P3AX dac_ram_in_i0_i7 (.D(dac_ram_in_7__N_530[7]), .SP(NOT_RESET_c), 
-            .CK(FCK_c), .Q(dac_ram_in[7]));   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam dac_ram_in_i0_i7.GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i1  (.D(n159), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i1 .GSR = "DISABLED";
-    PFUMX i5855 (.BLUT(n7256), .ALUT(n7257), .C0(cont_addr_c_1), .Z(n7260));
-    FD1S3IX \Clock_Divider_2.count_1621__i2  (.D(n158), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [2])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i2 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i3  (.D(n157), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [3])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i3 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i4  (.D(n156), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [4])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i4 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i5  (.D(n155), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [5])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i5 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i6  (.D(n154), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [6])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i6 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i7  (.D(n153), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [7])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i7 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i8  (.D(n152), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [8])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i8 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i9  (.D(n151), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [9])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i9 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i10  (.D(n150), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [10])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i10 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i11  (.D(n149), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [11])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i11 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i12  (.D(n148), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [12])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i12 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i13  (.D(n147), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [13])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i13 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i14  (.D(n146), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [14])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i14 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i15  (.D(n145), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [15])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i15 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i16  (.D(n144), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [16])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i16 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i17  (.D(n143), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [17])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i17 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i18  (.D(n142), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [18])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i18 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i19  (.D(n141), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [19])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i19 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i20  (.D(n140), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [20])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i20 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i21  (.D(n139), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [21])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i21 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i22  (.D(n138), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [22])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i22 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i23  (.D(n137), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [23])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i23 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i24  (.D(n136), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [24])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i24 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i25  (.D(n135), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [25])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i25 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i26  (.D(n134), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [26])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i26 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i27  (.D(n133), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [27])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i27 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i28  (.D(n132), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [28])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i28 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i29  (.D(n131), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [29])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i29 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider_2.count_1621__i30  (.D(n130), .CK(FCK_c), .CD(\Clock_Divider_2.count_30__N_462 ), 
-            .Q(\Clock_Divider_2.count [30])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621__i30 .GSR = "DISABLED";
-    PFUMX mux_48_Mux_0_i63 (.BLUT(n30), .ALUT(n31), .C0(n7585), .Z(cont_data_7__N_365[0]));
-    LUT4 i2_3_lut_4_lut (.A(cont_addr_c_2), .B(n7572), .C(n6259), .D(cont_addr_c_0), 
-         .Z(FCK_c_enable_180)) /* synthesis lut_function=(A (B (C (D)))) */ ;
-    defparam i2_3_lut_4_lut.init = 16'h8000;
-    LUT4 i5347_2_lut_3_lut (.A(\RAM_write.i [1]), .B(\RAM_write.i [0]), 
-         .C(\RAM_write.i [2]), .Z(n23)) /* synthesis lut_function=(!(A (B (C)+!B !(C))+!A !(C))) */ ;   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam i5347_2_lut_3_lut.init = 16'h7878;
-    LUT4 i5788_3_lut (.A(daca_3[2]), .B(daca_4[2]), .C(cont_addr_c_0), 
-         .Z(n7193)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5788_3_lut.init = 16'hcaca;
-    PFUMX i5821 (.BLUT(n7219), .ALUT(n7220), .C0(\RAM_write.i [1]), .Z(n7226));
-    PFUMX i5777 (.BLUT(n7180), .ALUT(n7181), .C0(cont_addr_c_1), .Z(n7182));
-    PFUMX mux_48_Mux_1_i63 (.BLUT(n31_adj_615), .ALUT(n62_adj_616), .C0(cont_addr_c_5), 
-          .Z(cont_data_7__N_365[1]));
-    LUT4 i5135_4_lut (.A(n7269), .B(cont_addr_c_4), .C(n7604), .D(cont_addr_c_3), 
-         .Z(n62_adj_610)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5135_4_lut.init = 16'hfcee;
-    LUT4 i5142_4_lut_4_lut (.A(cont_addr_c_4), .B(cont_addr_c_3), .C(n7208), 
-         .D(n7610), .Z(n31_adj_615)) /* synthesis lut_function=((B (C)+!B (D))+!A) */ ;   // c:/firmware/p3050fg/main.vhd(201[25:51])
-    defparam i5142_4_lut_4_lut.init = 16'hf7d5;
-    LUT4 i5860_3_lut (.A(daca_9[4]), .B(daca_10[4]), .C(cont_addr_c_0), 
-         .Z(n7265)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5860_3_lut.init = 16'hcaca;
-    PFUMX i5780 (.BLUT(n7183), .ALUT(n7184), .C0(cont_addr_c_1), .Z(n7185));
-    PFUMX i5856 (.BLUT(n7258), .ALUT(n7259), .C0(cont_addr_c_1), .Z(n7261));
-    PFUMX mux_48_Mux_2_i63 (.BLUT(n31_adj_613), .ALUT(n62_adj_614), .C0(cont_addr_c_5), 
-          .Z(cont_data_7__N_365[2]));
-    LUT4 i5874_3_lut (.A(daca_9[2]), .B(daca_10[2]), .C(cont_addr_c_0), 
-         .Z(n7279)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5874_3_lut.init = 16'hcaca;
-    PFUMX i5822 (.BLUT(n7221), .ALUT(n7222), .C0(\RAM_write.i [1]), .Z(n7227));
-    LUT4 i5859_3_lut (.A(daca_7[4]), .B(daca_8[4]), .C(cont_addr_c_0), 
-         .Z(n7264)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5859_3_lut.init = 16'hcaca;
-    LUT4 i5817_3_lut (.A(daca_10[0]), .B(daca_11[0]), .C(\RAM_write.i [0]), 
-         .Z(n7222)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5817_3_lut.init = 16'hcaca;
-    PFUMX i5786 (.BLUT(n7189), .ALUT(n7190), .C0(cont_addr_c_1), .Z(n7191));
-    PFUMX mux_48_Mux_3_i63 (.BLUT(n31_adj_611), .ALUT(n62_adj_612), .C0(cont_addr_c_5), 
-          .Z(cont_data_7__N_365[3]));
-    LUT4 i5858_3_lut (.A(daca_5[4]), .B(daca_6[4]), .C(cont_addr_c_0), 
-         .Z(n7263)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5858_3_lut.init = 16'hcaca;
-    LUT4 i5787_3_lut (.A(daca_1[2]), .B(daca_2[2]), .C(cont_addr_c_0), 
-         .Z(n7192)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5787_3_lut.init = 16'hcaca;
-    LUT4 i5627_3_lut (.A(daca_4[7]), .B(daca_5[7]), .C(\RAM_write.i [0]), 
-         .Z(n7032)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5627_3_lut.init = 16'hcaca;
-    LUT4 i1_2_lut_adj_19 (.A(cont_addr_c_1), .B(cont_addr_c_2), .Z(n6293)) /* synthesis lut_function=(A+!(B)) */ ;   // c:/firmware/p3050fg/main.vhd(195[22:48])
-    defparam i1_2_lut_adj_19.init = 16'hbbbb;
-    FD1S3AX \RAM_read.count_1623__i1  (.D(n54), .CK(FCK_N_588), .Q(\RAM_read.count [1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i1 .GSR = "DISABLED";
-    LUT4 i5128_4_lut_4_lut (.A(cont_addr_c_4), .B(cont_addr_c_3), .C(n7142), 
-         .D(n7622), .Z(n31_adj_607)) /* synthesis lut_function=((B (C)+!B (D))+!A) */ ;   // c:/firmware/p3050fg/main.vhd(201[25:51])
-    defparam i5128_4_lut_4_lut.init = 16'hf7d5;
-    PFUMX i5862 (.BLUT(n7263), .ALUT(n7264), .C0(cont_addr_c_1), .Z(n7267));
-    FD1S3AX \RAM_read.count_1623__i2  (.D(n53), .CK(FCK_N_588), .Q(\RAM_read.count [2])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i2 .GSR = "DISABLED";
-    FD1S3AX \RAM_read.count_1623__i3  (.D(n52), .CK(FCK_N_588), .Q(\RAM_read.count [3])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i3 .GSR = "DISABLED";
-    FD1S3AX \RAM_read.count_1623__i4  (.D(n51), .CK(FCK_N_588), .Q(\RAM_read.count [4])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i4 .GSR = "DISABLED";
-    FD1S3AX \RAM_read.count_1623__i5  (.D(n50), .CK(FCK_N_588), .Q(\RAM_read.count [5])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i5 .GSR = "DISABLED";
-    FD1S3AX \RAM_read.count_1623__i6  (.D(n49), .CK(FCK_N_588), .Q(\RAM_read.count [6])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i6 .GSR = "DISABLED";
-    FD1S3AX \RAM_read.count_1623__i7  (.D(n48), .CK(FCK_N_588), .Q(\RAM_read.count [7])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i7 .GSR = "DISABLED";
-    FD1S3AX \RAM_read.count_1623__i8  (.D(n47), .CK(FCK_N_588), .Q(\RAM_read.count [8])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i8 .GSR = "DISABLED";
-    FD1S3AX \RAM_read.count_1623__i9  (.D(n46), .CK(FCK_N_588), .Q(\RAM_read.count [9])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623__i9 .GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i1 (.D(cont_data_out_1), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[1]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i1.GSR = "DISABLED";
-    PFUMX i5789 (.BLUT(n7192), .ALUT(n7193), .C0(cont_addr_c_1), .Z(n7194));
-    LUT4 n7168_bdd_4_lut_else_4_lut (.A(cont_tst[4]), .B(cont_addr_c_2), 
-         .C(DIVI[4]), .D(cont_addr_c_0), .Z(n7623)) /* synthesis lut_function=(A ((C+!(D))+!B)+!A ((C (D))+!B)) */ ;
-    defparam n7168_bdd_4_lut_else_4_lut.init = 16'hf3bb;
-    LUT4 i6055_2_lut_2_lut_3_lut_4_lut (.A(cont_addr_c_0), .B(n7584), .C(n7576), 
-         .D(n7582), .Z(FCK_c_enable_76)) /* synthesis lut_function=(!(A+((C+(D))+!B))) */ ;   // c:/firmware/p3050fg/main.vhd(197[25:51])
-    defparam i6055_2_lut_2_lut_3_lut_4_lut.init = 16'h0004;
-    LUT4 i2_3_lut (.A(cont_addr_c_2), .B(n7571), .C(cont_addr_c_1), .Z(FCK_c_enable_55)) /* synthesis lut_function=(!(((C)+!B)+!A)) */ ;
-    defparam i2_3_lut.init = 16'h0808;
-    LUT4 i5887_3_lut (.A(DIVI[8]), .B(DIVI[16]), .C(cont_addr_c_0), .Z(n7292)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5887_3_lut.init = 16'hcaca;
-    LUT4 n7177_bdd_4_lut_then_4_lut (.A(DIVI[19]), .B(DIVI[11]), .C(cont_addr_c_2), 
-         .D(cont_addr_c_0), .Z(n7627)) /* synthesis lut_function=(A (B (C)+!B (C (D)))+!A !(((D)+!C)+!B)) */ ;
-    defparam n7177_bdd_4_lut_then_4_lut.init = 16'ha0c0;
-    LUT4 n7177_bdd_4_lut_else_4_lut (.A(cont_tst[3]), .B(cont_addr_c_2), 
-         .C(DIVI[3]), .D(cont_addr_c_0), .Z(n7626)) /* synthesis lut_function=(A ((C+!(D))+!B)+!A ((C (D))+!B)) */ ;
-    defparam n7177_bdd_4_lut_else_4_lut.init = 16'hf3bb;
-    PFUMX mux_48_Mux_4_i63 (.BLUT(n31_adj_609), .ALUT(n62_adj_610), .C0(cont_addr_c_5), 
-          .Z(cont_data_7__N_365[4]));
-    LUT4 i5643_3_lut (.A(daca_6[6]), .B(daca_7[6]), .C(\RAM_write.i [0]), 
-         .Z(n7048)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5643_3_lut.init = 16'hcaca;
-    PFUMX i5863 (.BLUT(n7265), .ALUT(n7266), .C0(cont_addr_c_1), .Z(n7268));
-    PFUMX i5823 (.BLUT(n7223), .ALUT(n7224), .C0(\RAM_write.i [1]), .Z(n7228));
-    LUT4 i5626_3_lut (.A(daca_2[7]), .B(daca_3[7]), .C(\RAM_write.i [0]), 
-         .Z(n7031)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5626_3_lut.init = 16'hcaca;
-    PFUMX mux_48_Mux_5_i63 (.BLUT(n31_adj_607), .ALUT(n62_adj_608), .C0(cont_addr_c_5), 
-          .Z(cont_data_7__N_365[5]));
-    LUT4 i5625_3_lut (.A(daca_0[7]), .B(daca_1[7]), .C(\RAM_write.i [0]), 
-         .Z(n7030)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5625_3_lut.init = 16'hcaca;
-    LUT4 i5886_3_lut (.A(K_c_0), .B(DIVI[0]), .C(cont_addr_c_0), .Z(n7291)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5886_3_lut.init = 16'hcaca;
-    LUT4 CWR_in_I_0_1_lut (.A(CWR_in_c), .Z(CWR_in_N_587)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(191[10:22])
-    defparam CWR_in_I_0_1_lut.init = 16'h5555;
-    LUT4 i1_2_lut_rep_33_3_lut (.A(CDS), .B(CWR), .C(cont_addr_c_0), .Z(n7577)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(207[5:16])
-    defparam i1_2_lut_rep_33_3_lut.init = 16'h8080;
-    LUT4 i5138_4_lut (.A(n7276), .B(cont_addr_c_4), .C(n7607), .D(cont_addr_c_3), 
-         .Z(n62_adj_612)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5138_4_lut.init = 16'hfcee;
-    PFUMX i5795 (.BLUT(n7198), .ALUT(n7199), .C0(cont_addr_c_1), .Z(n7200));
-    PFUMX mux_48_Mux_0_i41 (.BLUT(n39), .ALUT(n40), .C0(cont_addr_c_1), 
-          .Z(n41));
-    LUT4 i1655_1_lut (.A(cont_data_7__N_9), .Z(n3105)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(184[1] 282[13])
-    defparam i1655_1_lut.init = 16'h5555;
-    PFUMX i5798 (.BLUT(n7201), .ALUT(n7202), .C0(cont_addr_c_1), .Z(n7203));
-    LUT4 i5785_3_lut (.A(O_c_2), .B(daca_0[2]), .C(cont_addr_c_0), .Z(n7190)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5785_3_lut.init = 16'hcaca;
-    LUT4 i5066_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [11]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [11])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5066_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5706_3_lut (.A(daca_12[2]), .B(daca_13[2]), .C(\RAM_write.i [0]), 
-         .Z(n7111)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5706_3_lut.init = 16'hcaca;
-    LUT4 i5059_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [4]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [4])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5059_2_lut_3_lut.init = 16'h2020;
-    PFUMX mux_48_Mux_6_i63 (.BLUT(n31_adj_605), .ALUT(n62_adj_606), .C0(cont_addr_c_5), 
-          .Z(cont_data_7__N_365[6]));
-    LUT4 i5642_3_lut (.A(daca_4[6]), .B(daca_5[6]), .C(\RAM_write.i [0]), 
-         .Z(n7047)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5642_3_lut.init = 16'hcaca;
-    PFUMX i5869 (.BLUT(n7270), .ALUT(n7271), .C0(cont_addr_c_1), .Z(n7274));
-    LUT4 i5054_2_lut_2_lut (.A(n7570), .B(\Clock_Divider.count_12__N_386 [4]), 
-         .Z(\Clock_Divider.count_12__N_373 [4])) /* synthesis lut_function=(!(A+!(B))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i5054_2_lut_2_lut.init = 16'h4444;
-    PFUMX i5831 (.BLUT(n7232), .ALUT(n7233), .C0(cont_addr_c_1), .Z(n7236));
-    PFUMX mux_48_Mux_7_i63 (.BLUT(n31_adj_604), .ALUT(n62), .C0(cont_addr_c_5), 
-          .Z(cont_data_7__N_365[7]));
-    LUT4 ETH_I_0_1_lut (.A(ETH_c), .Z(EYLW_c)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(442[9:17])
+    LUT4 mux_229_i18_3_lut (.A(data_addr_31__N_242[25]), .B(n3766), .C(n2633), 
+         .Z(data_addr_31__N_17[17])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i18_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i17_3_lut (.A(data_addr_31__N_242[24]), .B(n3767), .C(n2633), 
+         .Z(data_addr_31__N_17[16])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i17_3_lut.init = 16'hcaca;
+    LUT4 i33_4_lut_adj_25 (.A(n35), .B(n6632), .C(cont_addr_c_4), .D(n45), 
+         .Z(cont_data_7__N_310[3])) /* synthesis lut_function=(!(A (B)+!A (B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i33_4_lut_adj_25.init = 16'h3777;
+    LUT4 mux_229_i16_3_lut (.A(data_addr_31__N_242[31]), .B(n3768), .C(n2633), 
+         .Z(data_addr_31__N_17[15])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i16_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i15_3_lut (.A(data_addr_31__N_242[30]), .B(n3769), .C(n2633), 
+         .Z(data_addr_31__N_17[14])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i15_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i14_3_lut (.A(data_addr_31__N_242[29]), .B(n3770), .C(n2633), 
+         .Z(data_addr_31__N_17[13])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i14_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i13_3_lut (.A(data_addr_31__N_242[28]), .B(n3771), .C(n2633), 
+         .Z(data_addr_31__N_17[12])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i13_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i12_3_lut (.A(data_addr_31__N_242[27]), .B(n3772), .C(n2633), 
+         .Z(data_addr_31__N_17[11])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i12_3_lut.init = 16'hcaca;
+    LUT4 i3_3_lut_4_lut (.A(data_addr[2]), .B(n4818), .C(V_c_0), .D(n6628), 
+         .Z(n31)) /* synthesis lut_function=(A+(B+((D)+!C))) */ ;   // c:/firmware/p3050fg/main.vhd(200[10:53])
+    defparam i3_3_lut_4_lut.init = 16'hffef;
+    LUT4 mux_229_i11_3_lut (.A(data_addr_31__N_242[26]), .B(n3773), .C(n2633), 
+         .Z(data_addr_31__N_17[10])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i11_3_lut.init = 16'hcaca;
+    LUT4 i1_2_lut_rep_24 (.A(data_addr[2]), .B(n4818), .Z(n6621)) /* synthesis lut_function=(A+(B)) */ ;   // c:/firmware/p3050fg/main.vhd(200[10:53])
+    defparam i1_2_lut_rep_24.init = 16'heeee;
+    LUT4 i1_2_lut_3_lut_4_lut_adj_26 (.A(data_addr[3]), .B(n6618), .C(data_addr[2]), 
+         .D(n6619), .Z(FCK_c_enable_21)) /* synthesis lut_function=(A (B (C (D)))) */ ;
+    defparam i1_2_lut_3_lut_4_lut_adj_26.init = 16'h8000;
+    LUT4 mux_229_i32_3_lut (.A(data_addr_31__N_242[31]), .B(n3784), .C(n2633), 
+         .Z(data_addr_31__N_17[31])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i32_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i10_3_lut (.A(data_addr_31__N_242[25]), .B(n3774), .C(n2633), 
+         .Z(data_addr_31__N_17[9])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i10_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i9_3_lut (.A(data_addr_31__N_242[24]), .B(n3775), .C(n2633), 
+         .Z(data_addr_31__N_17[8])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i9_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i8_3_lut (.A(data_addr_31__N_242[31]), .B(n3776), .C(n2633), 
+         .Z(data_addr_31__N_17[7])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i8_3_lut.init = 16'hcaca;
+    LUT4 i33_4_lut_adj_27 (.A(n35), .B(n6632), .C(cont_addr_c_4), .D(n45_adj_669), 
+         .Z(cont_data_7__N_310[2])) /* synthesis lut_function=(!(A (B)+!A (B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i33_4_lut_adj_27.init = 16'h3777;
+    LUT4 mux_229_i7_3_lut (.A(data_addr_31__N_242[30]), .B(n3777), .C(n2633), 
+         .Z(data_addr_31__N_17[6])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i7_3_lut.init = 16'hcaca;
+    LUT4 i2524_2_lut (.A(data_addr_31__N_242[24]), .B(cont_data_7__N_320), 
+         .Z(n4109)) /* synthesis lut_function=(A (B)) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i2524_2_lut.init = 16'h8888;
+    LUT4 i39_4_lut (.A(cont_addr_c_3), .B(n6632), .C(n28), .D(n5595), 
+         .Z(cont_data_7__N_310[0])) /* synthesis lut_function=(!(A (B (C))+!A !(((D)+!C)+!B))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i39_4_lut.init = 16'h7f3f;
+    LUT4 i26_2_lut_4_lut_adj_28 (.A(n33_adj_678), .B(n29_adj_679), .C(cont_addr_c_1), 
+         .D(n6626), .Z(cont_data_7__N_310[5])) /* synthesis lut_function=(!(A (B (D)+!B !(C+!(D)))+!A (B (C (D))))) */ ;
+    defparam i26_2_lut_4_lut_adj_28.init = 16'h35ff;
+    LUT4 mux_229_i29_3_lut (.A(data_addr_31__N_242[28]), .B(n3755), .C(n2633), 
+         .Z(data_addr_31__N_17[28])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i29_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i6_3_lut (.A(data_addr_31__N_242[29]), .B(n3778), .C(n2633), 
+         .Z(data_addr_31__N_17[5])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i6_3_lut.init = 16'hcaca;
+    LUT4 mux_229_i5_3_lut (.A(data_addr_31__N_242[28]), .B(n3779), .C(n2633), 
+         .Z(data_addr_31__N_17[4])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i5_3_lut.init = 16'hcaca;
+    LUT4 i3_4_lut (.A(cont_addr_c_2), .B(cont_addr_c_3), .C(n5595), .D(n6455), 
+         .Z(data_addr_31__N_307)) /* synthesis lut_function=(A (B (C (D)))) */ ;
+    defparam i3_4_lut.init = 16'h8000;
+    CCU2D sub_670_add_2_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(\Clock_Divider_1.count [0]), .B1(n1713), .C1(DIVIA[0]), 
+          .D1(GND_net), .COUT(n6163));
+    defparam sub_670_add_2_1.INIT0 = 16'h0000;
+    defparam sub_670_add_2_1.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_1.INJECT1_0 = "NO";
+    defparam sub_670_add_2_1.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_31 (.A0(\Clock_Divider_1.count [29]), .B0(n1713), 
+          .C0(DIVIA[29]), .D0(GND_net), .A1(\Clock_Divider_1.count [30]), 
+          .B1(n1713), .C1(DIVIA[30]), .D1(GND_net), .CIN(n6177), .COUT(n6178));
+    defparam sub_670_add_2_31.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_31.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_31.INJECT1_0 = "NO";
+    defparam sub_670_add_2_31.INJECT1_1 = "NO";
+    LUT4 mux_229_i4_3_lut (.A(data_addr_31__N_242[27]), .B(n3780), .C(n2633), 
+         .Z(data_addr_31__N_17[3])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i4_3_lut.init = 16'hcaca;
+    LUT4 i1_2_lut_rep_34 (.A(data_addr[2]), .B(data_addr[3]), .Z(n6631)) /* synthesis lut_function=(!((B)+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i1_2_lut_rep_34.init = 16'h2222;
+    CCU2D sub_671_add_2_cout (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6162), .S0(\Clock_Divider_2.count_30__N_498 ));
+    defparam sub_671_add_2_cout.INIT0 = 16'h0000;
+    defparam sub_671_add_2_cout.INIT1 = 16'h0000;
+    defparam sub_671_add_2_cout.INJECT1_0 = "NO";
+    defparam sub_671_add_2_cout.INJECT1_1 = "NO";
+    LUT4 mux_229_i28_3_lut (.A(data_addr_31__N_242[27]), .B(n3756), .C(n2633), 
+         .Z(data_addr_31__N_17[27])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i28_3_lut.init = 16'hcaca;
+    CCU2D \Clock_Divider_1.count_722_add_4_13  (.A0(\Clock_Divider_1.count [11]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [12]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6207), .COUT(n6208), 
+          .S0(n149), .S1(n148));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_13 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_13 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_13 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_13 .INJECT1_1 = "NO";
+    CCU2D sub_672_add_2_7 (.A0(\RAM2_read.count [5]), .B0(spcb[5]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM2_read.count [6]), .B1(spcb[6]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6142), .COUT(n6143));
+    defparam sub_672_add_2_7.INIT0 = 16'h5999;
+    defparam sub_672_add_2_7.INIT1 = 16'h5999;
+    defparam sub_672_add_2_7.INJECT1_0 = "NO";
+    defparam sub_672_add_2_7.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_29 (.A0(\Clock_Divider_1.count [27]), .B0(n1713), 
+          .C0(DIVIA[27]), .D0(GND_net), .A1(\Clock_Divider_1.count [28]), 
+          .B1(n1713), .C1(DIVIA[28]), .D1(GND_net), .CIN(n6176), .COUT(n6177));
+    defparam sub_670_add_2_29.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_29.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_29.INJECT1_0 = "NO";
+    defparam sub_670_add_2_29.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_27 (.A0(\Clock_Divider_1.count [25]), .B0(n1713), 
+          .C0(DIVIA[25]), .D0(GND_net), .A1(\Clock_Divider_1.count [26]), 
+          .B1(n1713), .C1(DIVIA[26]), .D1(GND_net), .CIN(n6175), .COUT(n6176));
+    defparam sub_670_add_2_27.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_27.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_27.INJECT1_0 = "NO";
+    defparam sub_670_add_2_27.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_25 (.A0(\Clock_Divider_1.count [23]), .B0(n1713), 
+          .C0(DIVIA[23]), .D0(GND_net), .A1(\Clock_Divider_1.count [24]), 
+          .B1(n1713), .C1(DIVIA[24]), .D1(GND_net), .CIN(n6174), .COUT(n6175));
+    defparam sub_670_add_2_25.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_25.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_25.INJECT1_0 = "NO";
+    defparam sub_670_add_2_25.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_11  (.A0(\Clock_Divider_1.count [9]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [10]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6206), .COUT(n6207), 
+          .S0(n151), .S1(n150));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_11 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_11 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_11 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_11 .INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_31 (.A0(\Clock_Divider_2.count [29]), .B0(n1851), 
+          .C0(DIVIB[29]), .D0(GND_net), .A1(\Clock_Divider_2.count [30]), 
+          .B1(n1851), .C1(DIVIB[30]), .D1(GND_net), .CIN(n6161), .COUT(n6162));
+    defparam sub_671_add_2_31.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_31.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_31.INJECT1_0 = "NO";
+    defparam sub_671_add_2_31.INJECT1_1 = "NO";
+    FD1P3AX rca_sw_i0_i1 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(A_c_0));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i1.GSR = "ENABLED";
+    CCU2D sub_671_add_2_5 (.A0(\Clock_Divider_2.count [3]), .B0(n1851), 
+          .C0(DIVIB[3]), .D0(GND_net), .A1(\Clock_Divider_2.count [4]), 
+          .B1(n1851), .C1(DIVIB[4]), .D1(GND_net), .CIN(n6148), .COUT(n6149));
+    defparam sub_671_add_2_5.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_5.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_5.INJECT1_0 = "NO";
+    defparam sub_671_add_2_5.INJECT1_1 = "NO";
+    LUT4 mux_229_i3_3_lut (.A(data_addr_31__N_242[26]), .B(n3781), .C(n2633), 
+         .Z(data_addr_31__N_17[2])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i3_3_lut.init = 16'hcaca;
+    CCU2D \Clock_Divider_1.count_722_add_4_9  (.A0(\Clock_Divider_1.count [7]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [8]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6205), .COUT(n6206), 
+          .S0(n153), .S1(n152));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_9 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_9 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_9 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_9 .INJECT1_1 = "NO";
+    FD1S3IX ram2_we_471 (.D(ram2_we_N_649), .CK(FCK_c), .CD(n6248), .Q(ram2_we));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam ram2_we_471.GSR = "ENABLED";
+    FD1S3IX rstcd2_472 (.D(n6633), .CK(FCK_c), .CD(data_addr_15__N_639), 
+            .Q(rstcd2));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rstcd2_472.GSR = "ENABLED";
+    FD1S3IX rstcd1_473 (.D(n6633), .CK(FCK_c), .CD(data_addr[15]), .Q(rstcd1));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rstcd1_473.GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i0  (.D(n160), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i0 .GSR = "ENABLED";
+    CCU2D sub_671_add_2_29 (.A0(\Clock_Divider_2.count [27]), .B0(n1851), 
+          .C0(DIVIB[27]), .D0(GND_net), .A1(\Clock_Divider_2.count [28]), 
+          .B1(n1851), .C1(DIVIB[28]), .D1(GND_net), .CIN(n6160), .COUT(n6161));
+    defparam sub_671_add_2_29.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_29.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_29.INJECT1_0 = "NO";
+    defparam sub_671_add_2_29.INJECT1_1 = "NO";
+    LUT4 mux_229_i2_3_lut (.A(data_addr_31__N_242[25]), .B(n3782), .C(n2633), 
+         .Z(data_addr_31__N_17[1])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i2_3_lut.init = 16'hcaca;
+    LUT4 i1_2_lut_adj_29 (.A(V_c_0), .B(n6458), .Z(FCK_c_enable_142)) /* synthesis lut_function=(A (B)) */ ;
+    defparam i1_2_lut_adj_29.init = 16'h8888;
+    CCU2D sub_670_add_2_23 (.A0(\Clock_Divider_1.count [21]), .B0(n1713), 
+          .C0(DIVIA[21]), .D0(GND_net), .A1(\Clock_Divider_1.count [22]), 
+          .B1(n1713), .C1(DIVIA[22]), .D1(GND_net), .CIN(n6173), .COUT(n6174));
+    defparam sub_670_add_2_23.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_23.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_23.INJECT1_0 = "NO";
+    defparam sub_670_add_2_23.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_7  (.A0(\Clock_Divider_1.count [5]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [6]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6204), .COUT(n6205), 
+          .S0(n155), .S1(n154));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_7 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_7 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_7 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_7 .INJECT1_1 = "NO";
+    LUT4 ETH_I_0_1_lut (.A(ETH_c), .Z(EYLW_c)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(376[9:17])
     defparam ETH_I_0_1_lut.init = 16'h5555;
-    LUT4 i5749_3_lut (.A(S_c_6), .B(daca_0[6]), .C(cont_addr_c_0), .Z(n7154)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5749_3_lut.init = 16'hcaca;
-    LUT4 i5808_3_lut (.A(daca_3[0]), .B(daca_4[0]), .C(cont_addr_c_0), 
-         .Z(n7213)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5808_3_lut.init = 16'hcaca;
-    PFUMX i5870 (.BLUT(n7272), .ALUT(n7273), .C0(cont_addr_c_1), .Z(n7275));
-    LUT4 i5807_3_lut (.A(daca_1[0]), .B(daca_2[0]), .C(cont_addr_c_0), 
-         .Z(n7212)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5807_3_lut.init = 16'hcaca;
-    LUT4 n7294_bdd_4_lut_then_4_lut (.A(DIVI[23]), .B(DIVI[15]), .C(cont_addr_c_2), 
-         .D(cont_addr_c_0), .Z(n7588)) /* synthesis lut_function=(A (B (C)+!B (C (D)))+!A !(((D)+!C)+!B)) */ ;
-    defparam n7294_bdd_4_lut_then_4_lut.init = 16'ha0c0;
-    LUT4 n7294_bdd_4_lut_else_4_lut (.A(cont_tst[7]), .B(cont_addr_c_2), 
-         .C(DIVI[7]), .D(cont_addr_c_0), .Z(n7587)) /* synthesis lut_function=(A ((C+!(D))+!B)+!A ((C (D))+!B)) */ ;
-    defparam n7294_bdd_4_lut_else_4_lut.init = 16'hf3bb;
-    LUT4 n39_bdd_4_lut_then_3_lut_adj_20 (.A(daca_15[7]), .B(cont_addr_c_2), 
-         .C(cont_addr_c_0), .Z(n7591)) /* synthesis lut_function=(A+(B+(C))) */ ;
-    defparam n39_bdd_4_lut_then_3_lut_adj_20.init = 16'hfefe;
-    LUT4 i6064_2_lut_rep_41 (.A(cont_addr_c_4), .B(cont_addr_c_5), .Z(n7585)) /* synthesis lut_function=((B)+!A) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i6064_2_lut_rep_41.init = 16'hdddd;
-    L6MUX21 i5639 (.D0(n7042), .D1(n7043), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[7]));
-    LUT4 i5893_3_lut (.A(T_c_7), .B(daca_0[7]), .C(cont_addr_c_0), .Z(n7298)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5893_3_lut.init = 16'hcaca;
-    LUT4 i5797_3_lut (.A(daca_3[1]), .B(daca_4[1]), .C(cont_addr_c_0), 
-         .Z(n7202)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5797_3_lut.init = 16'hcaca;
-    LUT4 i5892_3_lut (.A(DIVI[31]), .B(H_c_7), .C(cont_addr_c_0), .Z(n7297)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5892_3_lut.init = 16'hcaca;
-    LUT4 mux_48_Mux_7_i31_3_lut_4_lut (.A(cont_addr_c_0), .B(n7576), .C(cont_addr_c_4), 
-         .D(n7137), .Z(n31_adj_604)) /* synthesis lut_function=(A ((D)+!C)+!A (B ((D)+!C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam mux_48_Mux_7_i31_3_lut_4_lut.init = 16'hfe0e;
-    L6MUX21 i5699 (.D0(n7102), .D1(n7103), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[3]));
-    LUT4 i5748_3_lut (.A(DIVI[30]), .B(G_c_6), .C(cont_addr_c_0), .Z(n7153)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5748_3_lut.init = 16'hcaca;
-    LUT4 i5806_3_lut (.A(M_c_0), .B(daca_0[0]), .C(cont_addr_c_0), .Z(n7211)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5806_3_lut.init = 16'hcaca;
-    LUT4 mux_48_Mux_6_i31_3_lut_4_lut (.A(cont_addr_c_0), .B(n7576), .C(cont_addr_c_4), 
-         .D(n7140), .Z(n31_adj_605)) /* synthesis lut_function=(A ((D)+!C)+!A (B ((D)+!C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam mux_48_Mux_6_i31_3_lut_4_lut.init = 16'hfe0e;
-    LUT4 i5805_3_lut (.A(DIVI[24]), .B(A_c_0), .C(cont_addr_c_0), .Z(n7210)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5805_3_lut.init = 16'hcaca;
-    LUT4 mux_48_Mux_3_i31_3_lut_4_lut (.A(cont_addr_c_0), .B(n7576), .C(cont_addr_c_4), 
-         .D(n7149), .Z(n31_adj_611)) /* synthesis lut_function=(A ((D)+!C)+!A (B ((D)+!C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam mux_48_Mux_3_i31_3_lut_4_lut.init = 16'hfe0e;
-    LUT4 mux_48_Mux_2_i31_3_lut_4_lut (.A(cont_addr_c_0), .B(n7576), .C(cont_addr_c_4), 
-         .D(n7206), .Z(n31_adj_613)) /* synthesis lut_function=(A ((D)+!C)+!A (B ((D)+!C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam mux_48_Mux_2_i31_3_lut_4_lut.init = 16'hfe0e;
-    LUT4 n39_bdd_4_lut_else_3_lut_adj_21 (.A(daca_13[7]), .B(cont_addr_c_2), 
-         .C(daca_14[7]), .D(cont_addr_c_0), .Z(n7590)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;
-    defparam n39_bdd_4_lut_else_3_lut_adj_21.init = 16'hfcee;
-    LUT4 i6032_2_lut_2_lut_4_lut (.A(n7580), .B(cont_addr_c_3), .C(n7573), 
-         .D(n7583), .Z(FCK_c_enable_188)) /* synthesis lut_function=(!(A+((C+(D))+!B))) */ ;
-    defparam i6032_2_lut_2_lut_4_lut.init = 16'h0004;
-    LUT4 i5882_3_lut (.A(daca_11[1]), .B(daca_12[1]), .C(cont_addr_c_0), 
-         .Z(n7287)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5882_3_lut.init = 16'hcaca;
-    PFUMX i5832 (.BLUT(n7234), .ALUT(n7235), .C0(cont_addr_c_1), .Z(n7237));
-    LUT4 n7150_bdd_4_lut_then_4_lut (.A(DIVI[22]), .B(DIVI[14]), .C(cont_addr_c_2), 
-         .D(cont_addr_c_0), .Z(n7594)) /* synthesis lut_function=(A (B (C)+!B (C (D)))+!A !(((D)+!C)+!B)) */ ;
-    defparam n7150_bdd_4_lut_then_4_lut.init = 16'ha0c0;
-    LUT4 i5873_3_lut (.A(daca_7[2]), .B(daca_8[2]), .C(cont_addr_c_0), 
-         .Z(n7278)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5873_3_lut.init = 16'hcaca;
-    LUT4 i5641_3_lut (.A(daca_2[6]), .B(daca_3[6]), .C(\RAM_write.i [0]), 
-         .Z(n7046)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5641_3_lut.init = 16'hcaca;
-    LUT4 i5872_3_lut (.A(daca_5[2]), .B(daca_6[2]), .C(cont_addr_c_0), 
-         .Z(n7277)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5872_3_lut.init = 16'hcaca;
-    PFUMX i5663 (.BLUT(n7060), .ALUT(n7061), .C0(\RAM_write.i [1]), .Z(n7068));
-    LUT4 i1_2_lut_rep_28_2_lut_3_lut_4_lut (.A(cont_addr_c_4), .B(cont_addr_c_5), 
-         .C(CWR), .D(CDS), .Z(n7572)) /* synthesis lut_function=(!((B+!(C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i1_2_lut_rep_28_2_lut_3_lut_4_lut.init = 16'h2000;
-    LUT4 i5881_3_lut (.A(daca_9[1]), .B(daca_10[1]), .C(cont_addr_c_0), 
-         .Z(n7286)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5881_3_lut.init = 16'hcaca;
-    LUT4 mux_48_Mux_0_i46_4_lut (.A(n7238), .B(n41), .C(cont_addr_c_3), 
-         .D(cont_addr_c_2), .Z(n46_adj_603)) /* synthesis lut_function=(A (B+((D)+!C))+!A (B (C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam mux_48_Mux_0_i46_4_lut.init = 16'hfaca;
-    LUT4 i5132_4_lut_4_lut (.A(cont_addr_c_4), .B(cont_addr_c_3), .C(n7145), 
-         .D(n7625), .Z(n31_adj_609)) /* synthesis lut_function=((B (C)+!B (D))+!A) */ ;   // c:/firmware/p3050fg/main.vhd(201[25:51])
-    defparam i5132_4_lut_4_lut.init = 16'hf7d5;
-    LUT4 i5662_3_lut (.A(daca_14[5]), .B(daca_15[5]), .C(\RAM_write.i [0]), 
-         .Z(n7067)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5662_3_lut.init = 16'hcaca;
-    L6MUX21 i5826 (.D0(n7229), .D1(n7230), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[0]));
-    L6MUX21 i5714 (.D0(n7117), .D1(n7118), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[2]));
-    LUT4 i2_3_lut_rep_27_4_lut (.A(cont_addr_c_0), .B(n7584), .C(cont_addr_c_3), 
-         .D(n7585), .Z(n7571)) /* synthesis lut_function=(!((((D)+!C)+!B)+!A)) */ ;
-    defparam i2_3_lut_rep_27_4_lut.init = 16'h0080;
-    LUT4 i6035_3_lut_4_lut_4_lut (.A(cont_addr_c_2), .B(n7574), .C(n7580), 
-         .D(cont_addr_c_3), .Z(FCK_c_enable_172)) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(195[22:48])
-    defparam i6035_3_lut_4_lut_4_lut.init = 16'h0002;
-    LUT4 i1_2_lut_rep_42 (.A(cont_addr_c_0), .B(cont_addr_c_1), .Z(n7586)) /* synthesis lut_function=(!((B)+!A)) */ ;
-    defparam i1_2_lut_rep_42.init = 16'h2222;
-    LUT4 mux_48_Mux_0_i30_4_lut_4_lut (.A(cont_addr_c_2), .B(cont_addr_c_3), 
-         .C(n7216), .D(n7293), .Z(n30)) /* synthesis lut_function=(A (B (C)+!B (D))+!A ((C)+!B)) */ ;   // c:/firmware/p3050fg/main.vhd(195[22:48])
-    defparam mux_48_Mux_0_i30_4_lut_4_lut.init = 16'hf3d1;
-    LUT4 i1_2_lut_rep_35 (.A(NOT_RESET_c), .B(wr_reset), .Z(n7579)) /* synthesis lut_function=(!((B)+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i1_2_lut_rep_35.init = 16'h2222;
-    LUT4 i5801_3_lut (.A(n7613), .B(n7205), .C(cont_addr_c_3), .Z(n7206)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5801_3_lut.init = 16'hcaca;
-    LUT4 i5031_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [0]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [0])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5031_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5784_3_lut (.A(DIVI[26]), .B(C_c_2), .C(cont_addr_c_0), .Z(n7189)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5784_3_lut.init = 16'hcaca;
-    LUT4 i5640_3_lut (.A(daca_0[6]), .B(daca_1[6]), .C(\RAM_write.i [0]), 
-         .Z(n7045)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5640_3_lut.init = 16'hcaca;
-    L6MUX21 i5729 (.D0(n7132), .D1(n7133), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[1]));
-    L6MUX21 i5669 (.D0(n7072), .D1(n7073), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[5]));
-    LUT4 i5074_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [19]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [19])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5074_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5056_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [1]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [1])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5056_2_lut_3_lut.init = 16'h2020;
-    L6MUX21 i5684 (.D0(n7087), .D1(n7088), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[4]));
-    L6MUX21 i5654 (.D0(n7057), .D1(n7058), .SD(\RAM_write.i [3]), .Z(dac_ram_in_7__N_530[6]));
-    LUT4 i5744_3_lut (.A(n7628), .B(n7148), .C(cont_addr_c_3), .Z(n7149)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5744_3_lut.init = 16'hcaca;
-    LUT4 i5705_3_lut (.A(daca_10[2]), .B(daca_11[2]), .C(\RAM_write.i [0]), 
-         .Z(n7110)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5705_3_lut.init = 16'hcaca;
-    LUT4 i5816_3_lut (.A(daca_8[0]), .B(daca_9[0]), .C(\RAM_write.i [0]), 
-         .Z(n7221)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5816_3_lut.init = 16'hcaca;
-    PFUMX i5664 (.BLUT(n7062), .ALUT(n7063), .C0(\RAM_write.i [1]), .Z(n7069));
-    LUT4 i5057_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [2]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [2])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5057_2_lut_3_lut.init = 16'h2020;
-    LUT4 i1_2_lut_3_lut_4_lut_adj_22 (.A(cont_addr_c_0), .B(n7584), .C(n6962), 
-         .D(n7581), .Z(FCK_c_enable_139)) /* synthesis lut_function=(A (B (C (D)))) */ ;
-    defparam i1_2_lut_3_lut_4_lut_adj_22.init = 16'h8000;
-    LUT4 i5058_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [3]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [3])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5058_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5079_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [24]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [24])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5079_2_lut_3_lut.init = 16'h2020;
-    LUT4 i1_2_lut_rep_31_3_lut (.A(cont_addr_c_0), .B(cont_addr_c_1), .C(cont_addr_c_3), 
-         .Z(n7575)) /* synthesis lut_function=(!((B+(C))+!A)) */ ;
-    defparam i1_2_lut_rep_31_3_lut.init = 16'h0202;
-    LUT4 i5080_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [25]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [25])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5080_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5661_3_lut (.A(daca_12[5]), .B(daca_13[5]), .C(\RAM_write.i [0]), 
-         .Z(n7066)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5661_3_lut.init = 16'hcaca;
-    L6MUX21 i5811 (.D0(n7214), .D1(n7215), .SD(cont_addr_c_2), .Z(n7216));
-    PFUMX i5708 (.BLUT(n7105), .ALUT(n7106), .C0(\RAM_write.i [1]), .Z(n7113));
-    LUT4 i5081_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [26]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [26])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5081_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5660_3_lut (.A(daca_10[5]), .B(daca_11[5]), .C(\RAM_write.i [0]), 
-         .Z(n7065)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5660_3_lut.init = 16'hcaca;
-    LUT4 i5082_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [27]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [27])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5082_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5659_3_lut (.A(daca_8[5]), .B(daca_9[5]), .C(\RAM_write.i [0]), 
-         .Z(n7064)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5659_3_lut.init = 16'hcaca;
-    LUT4 i5704_3_lut (.A(daca_8[2]), .B(daca_9[2]), .C(\RAM_write.i [0]), 
-         .Z(n7109)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5704_3_lut.init = 16'hcaca;
-    LUT4 i5067_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [12]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [12])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5067_2_lut_3_lut.init = 16'h2020;
-    LUT4 i1_2_lut_adj_23 (.A(cont_addr_c_1), .B(cont_addr_c_3), .Z(n6259)) /* synthesis lut_function=(!((B)+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam i1_2_lut_adj_23.init = 16'h2222;
-    LUT4 i1_2_lut_3_lut_adj_24 (.A(cont_addr_c_1), .B(n7571), .C(cont_addr_c_2), 
-         .Z(FCK_c_enable_69)) /* synthesis lut_function=(A (B (C))) */ ;
-    defparam i1_2_lut_3_lut_adj_24.init = 16'h8080;
-    LUT4 i5068_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [13]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [13])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5068_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5701_3_lut (.A(daca_2[2]), .B(daca_3[2]), .C(\RAM_write.i [0]), 
-         .Z(n7106)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5701_3_lut.init = 16'hcaca;
-    LUT4 i5069_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [14]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [14])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5069_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5070_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [15]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [15])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5070_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5735_3_lut (.A(n7595), .B(n7139), .C(cont_addr_c_3), .Z(n7140)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5735_3_lut.init = 16'hcaca;
-    L6MUX21 i5637 (.D0(n7038), .D1(n7039), .SD(\RAM_write.i [2]), .Z(n7042));
-    L6MUX21 i5638 (.D0(n7040), .D1(n7041), .SD(\RAM_write.i [2]), .Z(n7043));
-    LUT4 i5645_3_lut (.A(daca_10[6]), .B(daca_11[6]), .C(\RAM_write.i [0]), 
-         .Z(n7050)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5645_3_lut.init = 16'hcaca;
-    LUT4 i1_2_lut_3_lut_4_lut_4_lut (.A(n7585), .B(cont_addr_c_2), .C(n7575), 
-         .D(n7584), .Z(FCK_c_enable_164)) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i1_2_lut_3_lut_4_lut_4_lut.init = 16'h4000;
-    PFUMX i5665 (.BLUT(n7064), .ALUT(n7065), .C0(\RAM_write.i [1]), .Z(n7070));
-    L6MUX21 i5697 (.D0(n7098), .D1(n7099), .SD(\RAM_write.i [2]), .Z(n7102));
-    LUT4 i8_4_lut (.A(n15), .B(\Clock_Divider.count [2]), .C(n14), .D(\Clock_Divider.count [7]), 
-         .Z(n6819)) /* synthesis lut_function=(A+((C+(D))+!B)) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i8_4_lut.init = 16'hfffb;
-    L6MUX21 i5698 (.D0(n7100), .D1(n7101), .SD(\RAM_write.i [2]), .Z(n7103));
-    LUT4 i5644_3_lut (.A(daca_8[6]), .B(daca_9[6]), .C(\RAM_write.i [0]), 
-         .Z(n7049)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5644_3_lut.init = 16'hcaca;
-    PFUMX i5666 (.BLUT(n7066), .ALUT(n7067), .C0(\RAM_write.i [1]), .Z(n7071));
-    L6MUX21 i5824 (.D0(n7225), .D1(n7226), .SD(\RAM_write.i [2]), .Z(n7229));
-    PFUMX i5648 (.BLUT(n7045), .ALUT(n7046), .C0(\RAM_write.i [1]), .Z(n7053));
-    L6MUX21 i5825 (.D0(n7227), .D1(n7228), .SD(\RAM_write.i [2]), .Z(n7230));
-    LUT4 i5601_2_lut (.A(\Clock_Divider.count [6]), .B(\Clock_Divider.count [1]), 
-         .Z(n7006)) /* synthesis lut_function=(A (B)) */ ;
-    defparam i5601_2_lut.init = 16'h8888;
-    LUT4 i6_4_lut (.A(\Clock_Divider.count [5]), .B(\Clock_Divider.count [9]), 
-         .C(\Clock_Divider.count [4]), .D(\Clock_Divider.count [11]), .Z(n15)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i6_4_lut.init = 16'hfffe;
-    L6MUX21 i5833 (.D0(n7236), .D1(n7237), .SD(cont_addr_c_2), .Z(n7238));
-    LUT4 i5880_3_lut (.A(daca_7[1]), .B(daca_8[1]), .C(cont_addr_c_0), 
-         .Z(n7285)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5880_3_lut.init = 16'hcaca;
-    LUT4 i5083_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [28]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [28])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5083_2_lut_3_lut.init = 16'h2020;
-    L6MUX21 i5712 (.D0(n7113), .D1(n7114), .SD(\RAM_write.i [2]), .Z(n7117));
-    PFUMX i5876 (.BLUT(n7277), .ALUT(n7278), .C0(cont_addr_c_1), .Z(n7281));
-    LUT4 i5084_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [29]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [29])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5084_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5732_3_lut (.A(n7589), .B(n7136), .C(cont_addr_c_3), .Z(n7137)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5732_3_lut.init = 16'hcaca;
-    L6MUX21 i5840 (.D0(n7243), .D1(n7244), .SD(cont_addr_c_2), .Z(n7245));
-    L6MUX21 i5713 (.D0(n7115), .D1(n7116), .SD(\RAM_write.i [2]), .Z(n7118));
-    LUT4 i5085_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [30]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [30])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5085_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5075_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [20]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [20])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5075_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5879_3_lut (.A(daca_5[1]), .B(daca_6[1]), .C(cont_addr_c_0), 
-         .Z(n7284)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5879_3_lut.init = 16'hcaca;
-    LUT4 i5700_3_lut (.A(daca_0[2]), .B(daca_1[2]), .C(\RAM_write.i [0]), 
-         .Z(n7105)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5700_3_lut.init = 16'hcaca;
-    LUT4 i5658_3_lut (.A(daca_6[5]), .B(daca_7[5]), .C(\RAM_write.i [0]), 
-         .Z(n7063)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5658_3_lut.init = 16'hcaca;
-    LUT4 i5_3_lut (.A(\Clock_Divider.count [10]), .B(\Clock_Divider.count [8]), 
-         .C(\Clock_Divider.count [12]), .Z(n14)) /* synthesis lut_function=(A+(B+(C))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i5_3_lut.init = 16'hfefe;
-    LUT4 i5657_3_lut (.A(daca_4[5]), .B(daca_5[5]), .C(\RAM_write.i [0]), 
-         .Z(n7062)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5657_3_lut.init = 16'hcaca;
-    LUT4 i1_3_lut (.A(NOT_RESET_c), .B(\RAM_write.bstate ), .C(W_c), .Z(FCK_c_enable_158)) /* synthesis lut_function=(!((B (C)+!B !(C))+!A)) */ ;
-    defparam i1_3_lut.init = 16'h2828;
-    L6MUX21 i5847 (.D0(n7250), .D1(n7251), .SD(cont_addr_c_2), .Z(n7252));
-    PFUMX i5649 (.BLUT(n7047), .ALUT(n7048), .C0(\RAM_write.i [1]), .Z(n7054));
-    LUT4 i4_4_lut (.A(\RAM_write.i [1]), .B(FCK_c_enable_158), .C(\RAM_write.i [3]), 
-         .D(n6), .Z(n6669)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i4_4_lut.init = 16'h8000;
-    LUT4 i1_2_lut_adj_25 (.A(\RAM_write.i [2]), .B(\RAM_write.i [0]), .Z(n6)) /* synthesis lut_function=(A (B)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i1_2_lut_adj_25.init = 16'h8888;
-    LUT4 i5340_2_lut (.A(\RAM_write.i [1]), .B(\RAM_write.i [0]), .Z(n24)) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam i5340_2_lut.init = 16'h6666;
-    LUT4 i1_2_lut_rep_38 (.A(cont_addr_c_4), .B(cont_addr_c_5), .Z(n7582)) /* synthesis lut_function=(A+!(B)) */ ;
-    defparam i1_2_lut_rep_38.init = 16'hbbbb;
-    L6MUX21 i5727 (.D0(n7128), .D1(n7129), .SD(\RAM_write.i [2]), .Z(n7132));
-    L6MUX21 i5728 (.D0(n7130), .D1(n7131), .SD(\RAM_write.i [2]), .Z(n7133));
-    L6MUX21 i5857 (.D0(n7260), .D1(n7261), .SD(cont_addr_c_2), .Z(n7262));
-    LUT4 i5141_4_lut (.A(n7283), .B(cont_addr_c_4), .C(n7616), .D(cont_addr_c_3), 
-         .Z(n62_adj_614)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5141_4_lut.init = 16'hfcee;
-    LUT4 i5621_4_lut_4_lut (.A(n7570), .B(n7020), .C(n7000), .D(n7010), 
-         .Z(V_N_570)) /* synthesis lut_function=(!(A+!(B+(C+(D))))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i5621_4_lut_4_lut.init = 16'h5554;
-    LUT4 i5338_1_lut (.A(\RAM_write.i [0]), .Z(n25)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam i5338_1_lut.init = 16'h5555;
-    LUT4 i5830_3_lut (.A(daca_11[0]), .B(daca_12[0]), .C(cont_addr_c_0), 
-         .Z(n7235)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5830_3_lut.init = 16'hcaca;
-    LUT4 i5053_2_lut_2_lut (.A(n7570), .B(\Clock_Divider.count_12__N_386 [3]), 
-         .Z(\Clock_Divider.count_12__N_373 [3])) /* synthesis lut_function=(!(A+!(B))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i5053_2_lut_2_lut.init = 16'h4444;
-    PFUMX i5877 (.BLUT(n7279), .ALUT(n7280), .C0(cont_addr_c_1), .Z(n7282));
-    LUT4 i5076_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [21]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [21])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5076_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5829_3_lut (.A(daca_9[0]), .B(daca_10[0]), .C(cont_addr_c_0), 
-         .Z(n7234)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5829_3_lut.init = 16'hcaca;
-    L6MUX21 i5731 (.D0(n7299), .D1(n7255), .SD(cont_addr_c_2), .Z(n7136));
-    L6MUX21 i5864 (.D0(n7267), .D1(n7268), .SD(cont_addr_c_2), .Z(n7269));
-    LUT4 CDS_I_0_2_lut (.A(CDS), .B(CWR), .Z(cont_data_7__N_592)) /* synthesis lut_function=(!((B)+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(234[8:25])
-    defparam CDS_I_0_2_lut.init = 16'h2222;
-    LUT4 i5656_3_lut (.A(daca_2[5]), .B(daca_3[5]), .C(\RAM_write.i [0]), 
-         .Z(n7061)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5656_3_lut.init = 16'hcaca;
-    CCU2D add_173_7 (.A0(\Clock_Divider.count [5]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\Clock_Divider.count [6]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6734), .COUT(n6735), .S0(\Clock_Divider.count_12__N_386 [5]), 
-          .S1(\Clock_Divider.count_12__N_386 [6]));   // c:/firmware/p3050fg/main.vhd(295[13:18])
-    defparam add_173_7.INIT0 = 16'h5aaa;
-    defparam add_173_7.INIT1 = 16'h5aaa;
-    defparam add_173_7.INJECT1_0 = "NO";
-    defparam add_173_7.INJECT1_1 = "NO";
-    L6MUX21 i5734 (.D0(n7155), .D1(n7158), .SD(cont_addr_c_2), .Z(n7139));
-    LUT4 i5655_3_lut (.A(daca_0[5]), .B(daca_1[5]), .C(\RAM_write.i [0]), 
-         .Z(n7060)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5655_3_lut.init = 16'hcaca;
-    L6MUX21 i5871 (.D0(n7274), .D1(n7275), .SD(cont_addr_c_2), .Z(n7276));
-    PFUMX i5709 (.BLUT(n7107), .ALUT(n7108), .C0(\RAM_write.i [1]), .Z(n7114));
-    LUT4 i6068_2_lut (.A(W_c), .Z(n7345)) /* synthesis lut_function=(A) */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam i6068_2_lut.init = 16'haaaa;
-    LUT4 i5077_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [22]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [22])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5077_2_lut_3_lut.init = 16'h2020;
-    LUT4 i2_3_lut_4_lut_4_lut (.A(n7585), .B(n6962), .C(cont_addr_c_0), 
-         .D(n7584), .Z(wr_reset_N_576)) /* synthesis lut_function=(!(A+((C+!(D))+!B))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i2_3_lut_4_lut_4_lut.init = 16'h0400;
-    L6MUX21 i5737 (.D0(n7164), .D1(n7167), .SD(cont_addr_c_2), .Z(n7142));
-    L6MUX21 i5740 (.D0(n7173), .D1(n7176), .SD(cont_addr_c_2), .Z(n7145));
-    LUT4 i5078_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [23]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [23])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5078_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5029_2_lut_2_lut (.A(n7570), .B(\Clock_Divider.count_12__N_386 [0]), 
-         .Z(\Clock_Divider.count_12__N_373 [0])) /* synthesis lut_function=(!(A+!(B))) */ ;   // c:/firmware/p3050fg/main.vhd(292[6:25])
-    defparam i5029_2_lut_2_lut.init = 16'h4444;
-    LUT4 i5703_3_lut (.A(daca_6[2]), .B(daca_7[2]), .C(\RAM_write.i [0]), 
-         .Z(n7108)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5703_3_lut.init = 16'hcaca;
-    LUT4 i5854_3_lut (.A(daca_11[5]), .B(daca_12[5]), .C(cont_addr_c_0), 
-         .Z(n7259)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5854_3_lut.init = 16'hcaca;
-    L6MUX21 i5743 (.D0(n7182), .D1(n7185), .SD(cont_addr_c_2), .Z(n7148));
-    LUT4 i5868_3_lut (.A(daca_11[3]), .B(daca_12[3]), .C(cont_addr_c_0), 
-         .Z(n7273)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5868_3_lut.init = 16'hcaca;
-    L6MUX21 i5667 (.D0(n7068), .D1(n7069), .SD(\RAM_write.i [2]), .Z(n7072));
-    LUT4 i5828_3_lut (.A(daca_7[0]), .B(daca_8[0]), .C(cont_addr_c_0), 
-         .Z(n7233)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5828_3_lut.init = 16'hcaca;
-    LUT4 i5605_4_lut (.A(\Clock_Divider.count_12__N_386 [8]), .B(\Clock_Divider.count_12__N_386 [6]), 
-         .C(\Clock_Divider.count_12__N_386 [9]), .D(\Clock_Divider.count_12__N_386 [12]), 
-         .Z(n7010)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
-    defparam i5605_4_lut.init = 16'hfffe;
-    PFUMX i5883 (.BLUT(n7284), .ALUT(n7285), .C0(cont_addr_c_1), .Z(n7288));
-    LUT4 i5124_4_lut (.A(n7245), .B(cont_addr_c_4), .C(n7592), .D(cont_addr_c_3), 
-         .Z(n62)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5124_4_lut.init = 16'hfcee;
-    L6MUX21 i5668 (.D0(n7070), .D1(n7071), .SD(\RAM_write.i [2]), .Z(n7073));
-    L6MUX21 i5878 (.D0(n7281), .D1(n7282), .SD(cont_addr_c_2), .Z(n7283));
-    PFUMX i5650 (.BLUT(n7049), .ALUT(n7050), .C0(\RAM_write.i [1]), .Z(n7055));
-    L6MUX21 i5885 (.D0(n7288), .D1(n7289), .SD(cont_addr_c_2), .Z(n7290));
-    LUT4 i5867_3_lut (.A(daca_9[3]), .B(daca_10[3]), .C(cont_addr_c_0), 
-         .Z(n7272)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5867_3_lut.init = 16'hcaca;
-    LUT4 i5827_3_lut (.A(daca_5[0]), .B(daca_6[0]), .C(cont_addr_c_0), 
-         .Z(n7232)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5827_3_lut.init = 16'hcaca;
-    LUT4 i5063_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [8]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [8])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5063_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5866_3_lut (.A(daca_7[3]), .B(daca_8[3]), .C(cont_addr_c_0), 
-         .Z(n7271)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5866_3_lut.init = 16'hcaca;
-    LUT4 i5779_3_lut (.A(daca_3[3]), .B(daca_4[3]), .C(cont_addr_c_0), 
-         .Z(n7184)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5779_3_lut.init = 16'hcaca;
-    LUT4 i5865_3_lut (.A(daca_5[3]), .B(daca_6[3]), .C(cont_addr_c_0), 
-         .Z(n7270)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5865_3_lut.init = 16'hcaca;
-    LUT4 i5127_4_lut (.A(n7252), .B(cont_addr_c_4), .C(n7598), .D(cont_addr_c_3), 
-         .Z(n62_adj_606)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5127_4_lut.init = 16'hfcee;
-    LUT4 i5793_3_lut (.A(DIVI[25]), .B(B_c_1), .C(cont_addr_c_0), .Z(n7198)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5793_3_lut.init = 16'hcaca;
-    LUT4 i5853_3_lut (.A(daca_9[5]), .B(daca_10[5]), .C(cont_addr_c_0), 
-         .Z(n7258)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5853_3_lut.init = 16'hcaca;
-    L6MUX21 i5682 (.D0(n7083), .D1(n7084), .SD(\RAM_write.i [2]), .Z(n7087));
-    LUT4 i5794_3_lut (.A(N_c_1), .B(daca_0[1]), .C(cont_addr_c_0), .Z(n7199)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5794_3_lut.init = 16'hcaca;
-    L6MUX21 i5683 (.D0(n7085), .D1(n7086), .SD(\RAM_write.i [2]), .Z(n7088));
-    LUT4 mux_48_Mux_0_i39_3_lut (.A(daca_13[0]), .B(daca_14[0]), .C(cont_addr_c_0), 
-         .Z(n39)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam mux_48_Mux_0_i39_3_lut.init = 16'hcaca;
-    LUT4 i5778_3_lut (.A(daca_1[3]), .B(daca_2[3]), .C(cont_addr_c_0), 
-         .Z(n7183)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5778_3_lut.init = 16'hcaca;
-    LUT4 i5815_3_lut (.A(daca_6[0]), .B(daca_7[0]), .C(\RAM_write.i [0]), 
-         .Z(n7220)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5815_3_lut.init = 16'hcaca;
-    LUT4 i5064_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [9]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [9])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5064_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5145_4_lut (.A(n7290), .B(cont_addr_c_4), .C(n7619), .D(cont_addr_c_3), 
-         .Z(n62_adj_616)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5145_4_lut.init = 16'hfcee;
-    LUT4 i5131_4_lut (.A(n7262), .B(cont_addr_c_4), .C(n7601), .D(cont_addr_c_3), 
-         .Z(n62_adj_608)) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5131_4_lut.init = 16'hfcee;
-    LUT4 i5776_3_lut (.A(P_c_3), .B(daca_0[3]), .C(cont_addr_c_0), .Z(n7181)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5776_3_lut.init = 16'hcaca;
-    LUT4 i5814_3_lut (.A(daca_4[0]), .B(daca_5[0]), .C(\RAM_write.i [0]), 
-         .Z(n7219)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5814_3_lut.init = 16'hcaca;
-    LUT4 i5775_3_lut (.A(DIVI[27]), .B(D_c_3), .C(cont_addr_c_0), .Z(n7180)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5775_3_lut.init = 16'hcaca;
-    L6MUX21 i5652 (.D0(n7053), .D1(n7054), .SD(\RAM_write.i [2]), .Z(n7057));
-    LUT4 i6067_2_lut_3_lut (.A(cont_addr_c_1), .B(n7569), .C(cont_addr_c_2), 
-         .Z(FCK_c_enable_34)) /* synthesis lut_function=(!((B+(C))+!A)) */ ;
-    defparam i6067_2_lut_3_lut.init = 16'h0202;
-    LUT4 mux_48_Mux_0_i31_4_lut (.A(n7568), .B(n46_adj_603), .C(cont_addr_c_5), 
-         .D(cont_addr_c_4), .Z(n31)) /* synthesis lut_function=(A (B+((D)+!C))+!A (B (C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam mux_48_Mux_0_i31_4_lut.init = 16'hfaca;
-    LUT4 i5852_3_lut (.A(daca_7[5]), .B(daca_8[5]), .C(cont_addr_c_0), 
-         .Z(n7257)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5852_3_lut.init = 16'hcaca;
-    LUT4 i5851_3_lut (.A(daca_5[5]), .B(daca_6[5]), .C(cont_addr_c_0), 
-         .Z(n7256)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5851_3_lut.init = 16'hcaca;
-    L6MUX21 i5653 (.D0(n7055), .D1(n7056), .SD(\RAM_write.i [2]), .Z(n7058));
-    PFUMX i5710 (.BLUT(n7109), .ALUT(n7110), .C0(\RAM_write.i [1]), .Z(n7115));
-    LUT4 i5050_2_lut (.A(daca_15[0]), .B(cont_addr_c_0), .Z(n40)) /* synthesis lut_function=(A+(B)) */ ;   // c:/firmware/p3050fg/main.vhd(235[3] 274[12])
-    defparam i5050_2_lut.init = 16'heeee;
-    L6MUX21 i5800 (.D0(n7191), .D1(n7194), .SD(cont_addr_c_2), .Z(n7205));
-    LUT4 i5796_3_lut (.A(daca_1[1]), .B(daca_2[1]), .C(cont_addr_c_0), 
-         .Z(n7201)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5796_3_lut.init = 16'hcaca;
-    LUT4 i6057_2_lut_3_lut (.A(cont_addr_c_1), .B(n7569), .C(cont_addr_c_2), 
-         .Z(FCK_c_enable_62)) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;
-    defparam i6057_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5813_3_lut (.A(daca_2[0]), .B(daca_3[0]), .C(\RAM_write.i [0]), 
-         .Z(n7218)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5813_3_lut.init = 16'hcaca;
-    LUT4 i5770_3_lut (.A(daca_3[4]), .B(daca_4[4]), .C(cont_addr_c_0), 
-         .Z(n7175)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5770_3_lut.init = 16'hcaca;
-    LUT4 i5722_3_lut (.A(daca_14[1]), .B(daca_15[1]), .C(\RAM_write.i [0]), 
-         .Z(n7127)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5722_3_lut.init = 16'hcaca;
-    LUT4 i5769_3_lut (.A(daca_1[4]), .B(daca_2[4]), .C(cont_addr_c_0), 
-         .Z(n7174)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5769_3_lut.init = 16'hcaca;
-    LUT4 i5812_3_lut (.A(daca_0[0]), .B(daca_1[0]), .C(\RAM_write.i [0]), 
-         .Z(n7217)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5812_3_lut.init = 16'hcaca;
-    PFUMX i5884 (.BLUT(n7286), .ALUT(n7287), .C0(cont_addr_c_1), .Z(n7289));
-    L6MUX21 i5803 (.D0(n7200), .D1(n7203), .SD(cont_addr_c_2), .Z(n7208));
-    PFUMX i5809 (.BLUT(n7210), .ALUT(n7211), .C0(cont_addr_c_1), .Z(n7214));
-    LUT4 i5721_3_lut (.A(daca_12[1]), .B(daca_13[1]), .C(\RAM_write.i [0]), 
-         .Z(n7126)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5721_3_lut.init = 16'hcaca;
-    LUT4 i5767_3_lut (.A(Q_c_4), .B(daca_0[4]), .C(cont_addr_c_0), .Z(n7172)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5767_3_lut.init = 16'hcaca;
-    LUT4 i5766_3_lut (.A(DIVI[28]), .B(E_c_4), .C(cont_addr_c_0), .Z(n7171)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5766_3_lut.init = 16'hcaca;
-    LUT4 i5720_3_lut (.A(daca_10[1]), .B(daca_11[1]), .C(\RAM_write.i [0]), 
-         .Z(n7125)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5720_3_lut.init = 16'hcaca;
-    PFUMX i5711 (.BLUT(n7111), .ALUT(n7112), .C0(\RAM_write.i [1]), .Z(n7116));
-    LUT4 i5060_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [5]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [5])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5060_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5692_3_lut (.A(daca_14[3]), .B(daca_15[3]), .C(\RAM_write.i [0]), 
-         .Z(n7097)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5692_3_lut.init = 16'hcaca;
-    LUT4 i5719_3_lut (.A(daca_8[1]), .B(daca_9[1]), .C(\RAM_write.i [0]), 
-         .Z(n7124)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5719_3_lut.init = 16'hcaca;
-    PFUMX i5750 (.BLUT(n7153), .ALUT(n7154), .C0(cont_addr_c_1), .Z(n7155));
-    LUT4 i5849_3_lut (.A(daca_3[7]), .B(daca_4[7]), .C(cont_addr_c_0), 
-         .Z(n7254)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5849_3_lut.init = 16'hcaca;
-    LUT4 i5061_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [6]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [6])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5061_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5848_3_lut (.A(daca_1[7]), .B(daca_2[7]), .C(cont_addr_c_0), 
-         .Z(n7253)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5848_3_lut.init = 16'hcaca;
-    PFUMX i5810 (.BLUT(n7212), .ALUT(n7213), .C0(cont_addr_c_1), .Z(n7215));
-    LUT4 i5761_3_lut (.A(daca_3[5]), .B(daca_4[5]), .C(cont_addr_c_0), 
-         .Z(n7166)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5761_3_lut.init = 16'hcaca;
-    LUT4 i5691_3_lut (.A(daca_12[3]), .B(daca_13[3]), .C(\RAM_write.i [0]), 
-         .Z(n7096)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5691_3_lut.init = 16'hcaca;
-    LUT4 i5062_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [7]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [7])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5062_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5718_3_lut (.A(daca_6[1]), .B(daca_7[1]), .C(\RAM_write.i [0]), 
-         .Z(n7123)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5718_3_lut.init = 16'hcaca;
-    LUT4 i5071_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [16]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [16])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5071_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5760_3_lut (.A(daca_1[5]), .B(daca_2[5]), .C(cont_addr_c_0), 
-         .Z(n7165)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5760_3_lut.init = 16'hcaca;
-    LUT4 i5072_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [17]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [17])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5072_2_lut_3_lut.init = 16'h2020;
-    LUT4 i5717_3_lut (.A(daca_4[1]), .B(daca_5[1]), .C(\RAM_write.i [0]), 
-         .Z(n7122)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5717_3_lut.init = 16'hcaca;
-    LUT4 i5677_3_lut (.A(daca_14[4]), .B(daca_15[4]), .C(\RAM_write.i [0]), 
-         .Z(n7082)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5677_3_lut.init = 16'hcaca;
-    LUT4 i5632_3_lut (.A(daca_14[7]), .B(daca_15[7]), .C(\RAM_write.i [0]), 
-         .Z(n7037)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5632_3_lut.init = 16'hcaca;
-    LUT4 i5676_3_lut (.A(daca_12[4]), .B(daca_13[4]), .C(\RAM_write.i [0]), 
-         .Z(n7081)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5676_3_lut.init = 16'hcaca;
-    PFUMX i5888 (.BLUT(n7291), .ALUT(n7292), .C0(cont_addr_c_1), .Z(n7293));
-    LUT4 i5631_3_lut (.A(daca_12[7]), .B(daca_13[7]), .C(\RAM_write.i [0]), 
-         .Z(n7036)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5631_3_lut.init = 16'hcaca;
-    LUT4 i5675_3_lut (.A(daca_10[4]), .B(daca_11[4]), .C(\RAM_write.i [0]), 
-         .Z(n7080)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5675_3_lut.init = 16'hcaca;
-    PFUMX i5633 (.BLUT(n7030), .ALUT(n7031), .C0(\RAM_write.i [1]), .Z(n7038));
-    LUT4 i5690_3_lut (.A(daca_10[3]), .B(daca_11[3]), .C(\RAM_write.i [0]), 
-         .Z(n7095)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5690_3_lut.init = 16'hcaca;
-    LUT4 i5716_3_lut (.A(daca_2[1]), .B(daca_3[1]), .C(\RAM_write.i [0]), 
-         .Z(n7121)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5716_3_lut.init = 16'hcaca;
-    PFUMX i6226 (.BLUT(n7626), .ALUT(n7627), .C0(cont_addr_c_1), .Z(n7628));
-    CCU2D \RAM_read.count_1623_add_4_11  (.A0(\RAM_read.count [9]), .B0(GND_net), 
-          .C0(GND_net), .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6764), .S0(n46));   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623_add_4_11 .INIT0 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_11 .INIT1 = 16'h0000;
-    defparam \RAM_read.count_1623_add_4_11 .INJECT1_0 = "NO";
-    defparam \RAM_read.count_1623_add_4_11 .INJECT1_1 = "NO";
-    CCU2D \RAM_read.count_1623_add_4_9  (.A0(\RAM_read.count [7]), .B0(GND_net), 
-          .C0(GND_net), .D0(GND_net), .A1(\RAM_read.count [8]), .B1(GND_net), 
-          .C1(GND_net), .D1(GND_net), .CIN(n6763), .COUT(n6764), .S0(n48), 
-          .S1(n47));   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623_add_4_9 .INIT0 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_9 .INIT1 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_9 .INJECT1_0 = "NO";
-    defparam \RAM_read.count_1623_add_4_9 .INJECT1_1 = "NO";
-    CCU2D \RAM_read.count_1623_add_4_7  (.A0(\RAM_read.count [5]), .B0(GND_net), 
-          .C0(GND_net), .D0(GND_net), .A1(\RAM_read.count [6]), .B1(GND_net), 
-          .C1(GND_net), .D1(GND_net), .CIN(n6762), .COUT(n6763), .S0(n50), 
-          .S1(n49));   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623_add_4_7 .INIT0 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_7 .INIT1 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_7 .INJECT1_0 = "NO";
-    defparam \RAM_read.count_1623_add_4_7 .INJECT1_1 = "NO";
-    CCU2D \RAM_read.count_1623_add_4_5  (.A0(\RAM_read.count [3]), .B0(GND_net), 
-          .C0(GND_net), .D0(GND_net), .A1(\RAM_read.count [4]), .B1(GND_net), 
-          .C1(GND_net), .D1(GND_net), .CIN(n6761), .COUT(n6762), .S0(n52), 
-          .S1(n51));   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623_add_4_5 .INIT0 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_5 .INIT1 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_5 .INJECT1_0 = "NO";
-    defparam \RAM_read.count_1623_add_4_5 .INJECT1_1 = "NO";
-    CCU2D \RAM_read.count_1623_add_4_3  (.A0(\RAM_read.count [1]), .B0(GND_net), 
-          .C0(GND_net), .D0(GND_net), .A1(\RAM_read.count [2]), .B1(GND_net), 
-          .C1(GND_net), .D1(GND_net), .CIN(n6760), .COUT(n6761), .S0(n54), 
-          .S1(n53));   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623_add_4_3 .INIT0 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_3 .INIT1 = 16'hfaaa;
-    defparam \RAM_read.count_1623_add_4_3 .INJECT1_0 = "NO";
-    defparam \RAM_read.count_1623_add_4_3 .INJECT1_1 = "NO";
-    CCU2D \RAM_read.count_1623_add_4_1  (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\RAM_read.count [0]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .COUT(n6760), .S1(n55));   // c:/firmware/p3050fg/main.vhd(405[12:17])
-    defparam \RAM_read.count_1623_add_4_1 .INIT0 = 16'hF000;
-    defparam \RAM_read.count_1623_add_4_1 .INIT1 = 16'h0555;
-    defparam \RAM_read.count_1623_add_4_1 .INJECT1_0 = "NO";
-    defparam \RAM_read.count_1623_add_4_1 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_31  (.A0(\Clock_Divider_2.count [29]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [30]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6758), .S0(n131), 
-          .S1(n130));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_31 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_31 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_31 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_31 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_29  (.A0(\Clock_Divider_2.count [27]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [28]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6757), .COUT(n6758), 
-          .S0(n133), .S1(n132));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_29 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_29 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_29 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_29 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_27  (.A0(\Clock_Divider_2.count [25]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [26]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6756), .COUT(n6757), 
-          .S0(n135), .S1(n134));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_27 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_27 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_27 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_27 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_25  (.A0(\Clock_Divider_2.count [23]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [24]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6755), .COUT(n6756), 
-          .S0(n137), .S1(n136));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_25 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_25 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_25 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_25 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_23  (.A0(\Clock_Divider_2.count [21]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [22]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6754), .COUT(n6755), 
-          .S0(n139), .S1(n138));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_23 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_23 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_23 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_23 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_21  (.A0(\Clock_Divider_2.count [19]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [20]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6753), .COUT(n6754), 
-          .S0(n141), .S1(n140));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_21 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_21 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_21 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_21 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_19  (.A0(\Clock_Divider_2.count [17]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [18]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6752), .COUT(n6753), 
-          .S0(n143), .S1(n142));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_19 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_19 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_19 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_19 .INJECT1_1 = "NO";
-    LUT4 i5674_3_lut (.A(daca_8[4]), .B(daca_9[4]), .C(\RAM_write.i [0]), 
-         .Z(n7079)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5674_3_lut.init = 16'hcaca;
-    CCU2D DIVI_30__I_0_27 (.A0(\Clock_Divider_2.count_30__N_463 [11]), .B0(DIVI[11]), 
-          .C0(\Clock_Divider_2.count_30__N_463 [10]), .D0(DIVI[10]), .A1(\Clock_Divider_2.count_30__N_463 [9]), 
-          .B1(DIVI[9]), .C1(\Clock_Divider_2.count_30__N_463 [8]), .D1(DIVI[8]), 
-          .CIN(n6699), .COUT(n6700));
-    defparam DIVI_30__I_0_27.INIT0 = 16'h9009;
-    defparam DIVI_30__I_0_27.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_27.INJECT1_0 = "YES";
-    defparam DIVI_30__I_0_27.INJECT1_1 = "YES";
-    CCU2D DIVI_30__I_0_21 (.A0(\Clock_Divider_2.count_30__N_463 [23]), .B0(DIVI[23]), 
-          .C0(\Clock_Divider_2.count_30__N_463 [22]), .D0(DIVI[22]), .A1(\Clock_Divider_2.count_30__N_463 [21]), 
-          .B1(DIVI[21]), .C1(\Clock_Divider_2.count_30__N_463 [20]), .D1(DIVI[20]), 
-          .CIN(n6696), .COUT(n6697));
-    defparam DIVI_30__I_0_21.INIT0 = 16'h9009;
-    defparam DIVI_30__I_0_21.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_21.INJECT1_0 = "YES";
-    defparam DIVI_30__I_0_21.INJECT1_1 = "YES";
-    PFUMX i5753 (.BLUT(n7156), .ALUT(n7157), .C0(cont_addr_c_1), .Z(n7158));
-    CCU2D DIVI_30__I_0_0 (.A0(\Clock_Divider_2.count_30__N_463 [30]), .B0(DIVI[30]), 
-          .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count_30__N_463 [29]), 
-          .B1(DIVI[29]), .C1(\Clock_Divider_2.count_30__N_463 [28]), .D1(DIVI[28]), 
-          .COUT(n6695));   // c:/firmware/p3050fg/main.vhd(314[6:42])
-    defparam DIVI_30__I_0_0.INIT0 = 16'h9000;
-    defparam DIVI_30__I_0_0.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_0.INJECT1_0 = "NO";
-    defparam DIVI_30__I_0_0.INJECT1_1 = "YES";
-    PFUMX i6224 (.BLUT(n7623), .ALUT(n7624), .C0(cont_addr_c_1), .Z(n7625));
-    CCU2D DIVI_30__I_0_31 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
-          .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), .CIN(n6702), 
-          .S0(\Clock_Divider_2.count_30__N_462 ));
-    defparam DIVI_30__I_0_31.INIT0 = 16'hFFFF;
-    defparam DIVI_30__I_0_31.INIT1 = 16'h0000;
-    defparam DIVI_30__I_0_31.INJECT1_0 = "NO";
-    defparam DIVI_30__I_0_31.INJECT1_1 = "NO";
-    LUT4 i5715_3_lut (.A(daca_0[1]), .B(daca_1[1]), .C(\RAM_write.i [0]), 
-         .Z(n7120)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5715_3_lut.init = 16'hcaca;
-    PFUMX i5634 (.BLUT(n7032), .ALUT(n7033), .C0(\RAM_write.i [1]), .Z(n7039));
-    PFUMX i6222 (.BLUT(n7620), .ALUT(n7621), .C0(cont_addr_c_1), .Z(n7622));
-    CCU2D \Clock_Divider_2.count_1621_add_4_17  (.A0(\Clock_Divider_2.count [15]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [16]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6751), .COUT(n6752), 
-          .S0(n145), .S1(n144));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_17 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_17 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_17 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_17 .INJECT1_1 = "NO";
-    CCU2D add_173_9 (.A0(\Clock_Divider.count [7]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\Clock_Divider.count [8]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6735), .COUT(n6736), .S0(\Clock_Divider.count_12__N_386 [7]), 
-          .S1(\Clock_Divider.count_12__N_386 [8]));   // c:/firmware/p3050fg/main.vhd(295[13:18])
-    defparam add_173_9.INIT0 = 16'h5aaa;
-    defparam add_173_9.INIT1 = 16'h5aaa;
-    defparam add_173_9.INJECT1_0 = "NO";
-    defparam add_173_9.INJECT1_1 = "NO";
-    LUT4 i5647_3_lut (.A(daca_14[6]), .B(daca_15[6]), .C(\RAM_write.i [0]), 
-         .Z(n7052)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5647_3_lut.init = 16'hcaca;
-    CCU2D \Clock_Divider_2.count_1621_add_4_15  (.A0(\Clock_Divider_2.count [13]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [14]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6750), .COUT(n6751), 
-          .S0(n147), .S1(n146));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_15 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_15 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_15 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_15 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_13  (.A0(\Clock_Divider_2.count [11]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [12]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6749), .COUT(n6750), 
-          .S0(n149), .S1(n148));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_13 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_13 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_13 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_13 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_11  (.A0(\Clock_Divider_2.count [9]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [10]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6748), .COUT(n6749), 
-          .S0(n151), .S1(n150));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_11 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_11 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_11 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_11 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_9  (.A0(\Clock_Divider_2.count [7]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [8]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6747), .COUT(n6748), 
-          .S0(n153), .S1(n152));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_9 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_9 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_9 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_9 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_7  (.A0(\Clock_Divider_2.count [5]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [6]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6746), .COUT(n6747), 
-          .S0(n155), .S1(n154));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_7 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_7 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_7 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_7 .INJECT1_1 = "NO";
-    CCU2D \Clock_Divider_2.count_1621_add_4_5  (.A0(\Clock_Divider_2.count [3]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [4]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6745), .COUT(n6746), 
-          .S0(n157), .S1(n156));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_5 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_5 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_5 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_5 .INJECT1_1 = "NO";
-    PFUMX i6220 (.BLUT(n7617), .ALUT(n7618), .C0(cont_addr_c_1), .Z(n7619));
-    PFUMX i5693 (.BLUT(n7090), .ALUT(n7091), .C0(\RAM_write.i [1]), .Z(n7098));
-    PFUMX i5838 (.BLUT(n7239), .ALUT(n7240), .C0(cont_addr_c_1), .Z(n7243));
-    LUT4 i5646_3_lut (.A(daca_12[6]), .B(daca_13[6]), .C(\RAM_write.i [0]), 
-         .Z(n7051)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5646_3_lut.init = 16'hcaca;
-    LUT4 i5689_3_lut (.A(daca_8[3]), .B(daca_9[3]), .C(\RAM_write.i [0]), 
-         .Z(n7094)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5689_3_lut.init = 16'hcaca;
-    PFUMX i6218 (.BLUT(n7614), .ALUT(n7615), .C0(cont_addr_c_1), .Z(n7616));
-    LUT4 i5844_3_lut (.A(daca_11[6]), .B(daca_12[6]), .C(cont_addr_c_0), 
-         .Z(n7249)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5844_3_lut.init = 16'hcaca;
-    CCU2D DIVI_30__I_0_25 (.A0(\Clock_Divider_2.count_30__N_463 [15]), .B0(DIVI[15]), 
-          .C0(\Clock_Divider_2.count_30__N_463 [14]), .D0(DIVI[14]), .A1(\Clock_Divider_2.count_30__N_463 [13]), 
-          .B1(DIVI[13]), .C1(\Clock_Divider_2.count_30__N_463 [12]), .D1(DIVI[12]), 
-          .CIN(n6698), .COUT(n6699));
-    defparam DIVI_30__I_0_25.INIT0 = 16'h9009;
-    defparam DIVI_30__I_0_25.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_25.INJECT1_0 = "YES";
-    defparam DIVI_30__I_0_25.INJECT1_1 = "YES";
-    LUT4 i5073_2_lut_3_lut (.A(NOT_RESET_c), .B(wr_reset), .C(\Clock_Divider_2.count [18]), 
-         .Z(\Clock_Divider_2.count_30__N_463 [18])) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(19[3:12])
-    defparam i5073_2_lut_3_lut.init = 16'h2020;
-    FD1P3IX \RAM_write.i_1622__i3  (.D(n22), .SP(FCK_c_enable_158), .CD(n6669), 
-            .CK(FCK_c), .Q(\RAM_write.i [3]));   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam \RAM_write.i_1622__i3 .GSR = "DISABLED";
-    FD1P3IX \RAM_write.i_1622__i2  (.D(n23), .SP(FCK_c_enable_158), .CD(n6669), 
-            .CK(FCK_c), .Q(\RAM_write.i [2]));   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam \RAM_write.i_1622__i2 .GSR = "DISABLED";
-    FD1P3IX \RAM_write.i_1622__i1  (.D(n24), .SP(FCK_c_enable_158), .CD(n6669), 
-            .CK(FCK_c), .Q(\RAM_write.i [1]));   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam \RAM_write.i_1622__i1 .GSR = "DISABLED";
-    FD1S3IX \Clock_Divider.count_i1  (.D(\Clock_Divider.count_12__N_386 [1]), 
-            .CK(FCK_c), .CD(n7570), .Q(\Clock_Divider.count [1]));   // c:/firmware/p3050fg/main.vhd(291[2] 302[9])
-    defparam \Clock_Divider.count_i1 .GSR = "DISABLED";
-    FD1P3IX \RAM_write.i_1622__i0  (.D(n25), .SP(FCK_c_enable_158), .CD(n6669), 
-            .CK(FCK_c), .Q(\RAM_write.i [0]));   // c:/firmware/p3050fg/main.vhd(383[10:11])
-    defparam \RAM_write.i_1622__i0 .GSR = "DISABLED";
-    FD1S3AX cont_data_i0 (.D(cont_data_7__N_365[0]), .CK(FCK_c), .Q(cont_data_7__N_1[0]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam cont_data_i0.GSR = "DISABLED";
-    GSR GSR_INST (.GSR(NOT_RESET_c));
-    PFUMX i5635 (.BLUT(n7034), .ALUT(n7035), .C0(\RAM_write.i [1]), .Z(n7040));
-    PFUMX i6216 (.BLUT(n7611), .ALUT(n7612), .C0(cont_addr_c_1), .Z(n7613));
-    LUT4 i5673_3_lut (.A(daca_6[4]), .B(daca_7[4]), .C(\RAM_write.i [0]), 
-         .Z(n7078)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5673_3_lut.init = 16'hcaca;
-    CCU2D \Clock_Divider_2.count_1621_add_4_3  (.A0(\Clock_Divider_2.count [1]), 
-          .B0(n7579), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [2]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .CIN(n6744), .COUT(n6745), 
-          .S0(n159), .S1(n158));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_3 .INIT0 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_3 .INIT1 = 16'h7888;
-    defparam \Clock_Divider_2.count_1621_add_4_3 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_3 .INJECT1_1 = "NO";
-    PFUMX i6214 (.BLUT(n7608), .ALUT(n7609), .C0(cont_addr_c_1), .Z(n7610));
-    LUT4 i5843_3_lut (.A(daca_9[6]), .B(daca_10[6]), .C(cont_addr_c_0), 
-         .Z(n7248)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5843_3_lut.init = 16'hcaca;
-    CCU2D DIVI_30__I_0_19 (.A0(\Clock_Divider_2.count_30__N_463 [27]), .B0(DIVI[27]), 
-          .C0(\Clock_Divider_2.count_30__N_463 [26]), .D0(DIVI[26]), .A1(\Clock_Divider_2.count_30__N_463 [25]), 
-          .B1(DIVI[25]), .C1(\Clock_Divider_2.count_30__N_463 [24]), .D1(DIVI[24]), 
-          .CIN(n6695), .COUT(n6696));
-    defparam DIVI_30__I_0_19.INIT0 = 16'h9009;
-    defparam DIVI_30__I_0_19.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_19.INJECT1_0 = "YES";
-    defparam DIVI_30__I_0_19.INJECT1_1 = "YES";
-    PFUMX i6212 (.BLUT(n7605), .ALUT(n7606), .C0(cont_addr_c_1), .Z(n7607));
-    LUT4 i5672_3_lut (.A(daca_4[4]), .B(daca_5[4]), .C(\RAM_write.i [0]), 
-         .Z(n7077)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5672_3_lut.init = 16'hcaca;
-    PFUMX i6210 (.BLUT(n7602), .ALUT(n7603), .C0(cont_addr_c_1), .Z(n7604));
-    LUT4 i5758_3_lut (.A(R_c_5), .B(daca_0[5]), .C(cont_addr_c_0), .Z(n7163)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5758_3_lut.init = 16'hcaca;
-    LUT4 i5757_3_lut (.A(DIVI[29]), .B(F_c_5), .C(cont_addr_c_0), .Z(n7162)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5757_3_lut.init = 16'hcaca;
-    CCU2D \Clock_Divider_2.count_1621_add_4_1  (.A0(GND_net), .B0(GND_net), 
+    PFUMX i64 (.BLUT(n38_adj_671), .ALUT(n70_adj_670), .C0(cont_addr_c_1), 
+          .Z(n45_adj_672));
+    CCU2D sub_670_add_2_21 (.A0(\Clock_Divider_1.count [19]), .B0(n1713), 
+          .C0(DIVIA[19]), .D0(GND_net), .A1(\Clock_Divider_1.count [20]), 
+          .B1(n1713), .C1(DIVIA[20]), .D1(GND_net), .CIN(n6172), .COUT(n6173));
+    defparam sub_670_add_2_21.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_21.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_21.INJECT1_0 = "NO";
+    defparam sub_670_add_2_21.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_5  (.A0(\Clock_Divider_1.count [3]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [4]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6203), .COUT(n6204), 
+          .S0(n157), .S1(n156));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_5 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_5 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_5 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_5 .INJECT1_1 = "NO";
+    LUT4 i1_2_lut_adj_30 (.A(CDS), .B(CDS_delayed), .Z(K_c)) /* synthesis lut_function=(!(A+!(B))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i1_2_lut_adj_30.init = 16'h4444;
+    CCU2D sub_671_add_2_27 (.A0(\Clock_Divider_2.count [25]), .B0(n1851), 
+          .C0(DIVIB[25]), .D0(GND_net), .A1(\Clock_Divider_2.count [26]), 
+          .B1(n1851), .C1(DIVIB[26]), .D1(GND_net), .CIN(n6159), .COUT(n6160));
+    defparam sub_671_add_2_27.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_27.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_27.INJECT1_0 = "NO";
+    defparam sub_671_add_2_27.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_19 (.A0(\Clock_Divider_1.count [17]), .B0(n1713), 
+          .C0(DIVIA[17]), .D0(GND_net), .A1(\Clock_Divider_1.count [18]), 
+          .B1(n1713), .C1(DIVIA[18]), .D1(GND_net), .CIN(n6171), .COUT(n6172));
+    defparam sub_670_add_2_19.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_19.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_19.INJECT1_0 = "NO";
+    defparam sub_670_add_2_19.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_3  (.A0(\Clock_Divider_1.count [1]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [2]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6202), .COUT(n6203), 
+          .S0(n159), .S1(n158));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_3 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_3 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_3 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_3 .INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_1  (.A0(GND_net), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [0]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .COUT(n6202), .S1(n160));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_1 .INIT0 = 16'hF000;
+    defparam \Clock_Divider_1.count_722_add_4_1 .INIT1 = 16'hdddd;
+    defparam \Clock_Divider_1.count_722_add_4_1 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_1 .INJECT1_1 = "NO";
+    PFUMX i64_adj_31 (.BLUT(n38_adj_676), .ALUT(n70_adj_673), .C0(cont_addr_c_1), 
+          .Z(n45_adj_677));
+    CCU2D add_721_cout (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), .CIN(n6201), 
+          .S0(n3784));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_cout.INIT0 = 16'h0000;
+    defparam add_721_cout.INIT1 = 16'h0000;
+    defparam add_721_cout.INJECT1_0 = "NO";
+    defparam add_721_cout.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_17 (.A0(\Clock_Divider_1.count [15]), .B0(n1713), 
+          .C0(DIVIA[15]), .D0(GND_net), .A1(\Clock_Divider_1.count [16]), 
+          .B1(n1713), .C1(DIVIA[16]), .D1(GND_net), .CIN(n6170), .COUT(n6171));
+    defparam sub_670_add_2_17.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_17.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_17.INJECT1_0 = "NO";
+    defparam sub_670_add_2_17.INJECT1_1 = "NO";
+    CCU2D add_721_31 (.A0(data_addr[29]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[30]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6200), .COUT(n6201), .S0(n3754), .S1(n3753));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_31.INIT0 = 16'h5aaa;
+    defparam add_721_31.INIT1 = 16'h5aaa;
+    defparam add_721_31.INJECT1_0 = "NO";
+    defparam add_721_31.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_31  (.A0(\Clock_Divider_2.count [29]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [30]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6246), .S0(n131_adj_694), 
+          .S1(n130_adj_693));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_31 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_31 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_31 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_31 .INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_29  (.A0(\Clock_Divider_2.count [27]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [28]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6245), .COUT(n6246), 
+          .S0(n133_adj_696), .S1(n132_adj_695));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_29 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_29 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_29 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_29 .INJECT1_1 = "NO";
+    LUT4 data_addr_31__N_242_31__bdd_4_lut (.A(data_addr_31__N_242[31]), .B(cont_data_7__N_320), 
+         .C(cont_data_7__N_310[7]), .D(n6633), .Z(cont_data_7__N_308)) /* synthesis lut_function=(A (B (C+(D))+!B !((D)+!C))+!A !((D)+!C)) */ ;
+    defparam data_addr_31__N_242_31__bdd_4_lut.init = 16'h88f0;
+    CCU2D add_721_29 (.A0(data_addr[27]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[28]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6199), .COUT(n6200), .S0(n3756), .S1(n3755));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_29.INIT0 = 16'h5aaa;
+    defparam add_721_29.INIT1 = 16'h5aaa;
+    defparam add_721_29.INJECT1_0 = "NO";
+    defparam add_721_29.INJECT1_1 = "NO";
+    CCU2D add_721_27 (.A0(data_addr[25]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[26]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6198), .COUT(n6199), .S0(n3758), .S1(n3757));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_27.INIT0 = 16'h5aaa;
+    defparam add_721_27.INIT1 = 16'h5aaa;
+    defparam add_721_27.INJECT1_0 = "NO";
+    defparam add_721_27.INJECT1_1 = "NO";
+    LUT4 i73_3_lut (.A(data_addr[11]), .B(data_addr[3]), .C(cont_addr_c_0), 
+         .Z(n70_adj_666)) /* synthesis lut_function=(!(A (B+!(C))+!A (B (C)))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i73_3_lut.init = 16'h3535;
+    LUT4 i2_3_lut_rep_28_4_lut (.A(cont_addr_c_4), .B(n6632), .C(n6633), 
+         .D(cont_addr_c_3), .Z(n6625)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(161[2] 228[9])
+    defparam i2_3_lut_rep_28_4_lut.init = 16'h8000;
+    CCU2D \Clock_Divider_2.count_723_add_4_27  (.A0(\Clock_Divider_2.count [25]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [26]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6244), .COUT(n6245), 
+          .S0(n135_adj_698), .S1(n134_adj_697));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_27 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_27 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_27 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_27 .INJECT1_1 = "NO";
+    LUT4 i1_2_lut_rep_30 (.A(cont_addr_c_1), .B(cont_addr_c_2), .Z(n6627)) /* synthesis lut_function=(A (B)) */ ;   // c:/firmware/p3050fg/main.vhd(162[3] 208[12])
+    defparam i1_2_lut_rep_30.init = 16'h8888;
+    LUT4 i1_2_lut_3_lut (.A(cont_addr_c_1), .B(cont_addr_c_2), .C(cont_addr_c_0), 
+         .Z(n4869)) /* synthesis lut_function=(A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(162[3] 208[12])
+    defparam i1_2_lut_3_lut.init = 16'h8080;
+    LUT4 i1_2_lut_rep_31 (.A(data_addr[3]), .B(data_addr[1]), .Z(n6628)) /* synthesis lut_function=(A+!(B)) */ ;   // c:/firmware/p3050fg/main.vhd(200[10:53])
+    defparam i1_2_lut_rep_31.init = 16'hbbbb;
+    PFUMX i64_adj_32 (.BLUT(n38), .ALUT(n70_adj_666), .C0(cont_addr_c_1), 
+          .Z(n45));
+    LUT4 i1_3_lut (.A(cont_addr_c_4), .B(n35), .C(n51), .Z(n28)) /* synthesis lut_function=(A (B+(C))+!A (B)) */ ;
+    defparam i1_3_lut.init = 16'hecec;
+    CCU2D sub_671_add_2_3 (.A0(\Clock_Divider_2.count [1]), .B0(n1851), 
+          .C0(DIVIB[1]), .D0(GND_net), .A1(\Clock_Divider_2.count [2]), 
+          .B1(n1851), .C1(DIVIB[2]), .D1(GND_net), .CIN(n6147), .COUT(n6148));
+    defparam sub_671_add_2_3.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_3.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_3.INJECT1_0 = "NO";
+    defparam sub_671_add_2_3.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_15 (.A0(\Clock_Divider_1.count [13]), .B0(n1713), 
+          .C0(DIVIA[13]), .D0(GND_net), .A1(\Clock_Divider_1.count [14]), 
+          .B1(n1713), .C1(DIVIA[14]), .D1(GND_net), .CIN(n6169), .COUT(n6170));
+    defparam sub_670_add_2_15.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_15.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_15.INJECT1_0 = "NO";
+    defparam sub_670_add_2_15.INJECT1_1 = "NO";
+    CCU2D add_721_25 (.A0(data_addr[23]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[24]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6197), .COUT(n6198), .S0(n3760), .S1(n3759));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_25.INIT0 = 16'h5aaa;
+    defparam add_721_25.INIT1 = 16'h5aaa;
+    defparam add_721_25.INJECT1_0 = "NO";
+    defparam add_721_25.INJECT1_1 = "NO";
+    LUT4 i3369_2_lut_3_lut_4_lut (.A(data_addr[3]), .B(data_addr[1]), .C(n6752), 
+         .D(n6622), .Z(FCK_c_enable_43)) /* synthesis lut_function=(!(A+(((D)+!C)+!B))) */ ;   // c:/firmware/p3050fg/main.vhd(200[10:53])
+    defparam i3369_2_lut_3_lut_4_lut.init = 16'h0040;
+    PFUMX i72 (.BLUT(n44), .ALUT(n74), .C0(cont_addr_c_1), .Z(n51));
+    LUT4 data_addr_31__N_242_26__bdd_4_lut (.A(data_addr_31__N_242[26]), .B(cont_data_7__N_320), 
+         .C(cont_data_7__N_310[2]), .D(n6633), .Z(cont_data_7__N_333)) /* synthesis lut_function=(A (B (C+(D))+!B !((D)+!C))+!A !((D)+!C)) */ ;
+    defparam data_addr_31__N_242_26__bdd_4_lut.init = 16'h88f0;
+    LUT4 i1_4_lut_adj_33 (.A(cont_addr_c_3), .B(data_addr[26]), .C(data_addr[18]), 
+         .D(cont_addr_c_0), .Z(n38_adj_668)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_33.init = 16'h0a22;
+    FD1P3AX spcb_i0_i15 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[15]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i15.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i14 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[14]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i14.GSR = "ENABLED";
+    CCU2D \Clock_Divider_2.count_723_add_4_25  (.A0(\Clock_Divider_2.count [23]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [24]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6243), .COUT(n6244), 
+          .S0(n137_adj_700), .S1(n136_adj_699));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_25 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_25 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_25 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_25 .INJECT1_1 = "NO";
+    LUT4 i1_4_lut_adj_34 (.A(cont_addr_c_3), .B(cont_addr_c_0), .C(cont_addr_c_1), 
+         .D(cont_addr_c_4), .Z(n35)) /* synthesis lut_function=(!(A+!(B (C (D))+!B (C (D)+!C !(D))))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_34.init = 16'h5001;
+    FD1P3AX spcb_i0_i13 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[13]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i13.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i12 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[12]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i12.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i11 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[11]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i11.GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i0  (.D(n70), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i0 .GSR = "ENABLED";
+    FD1P3AX spcb_i0_i10 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[10]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i10.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i9 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[9]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i9.GSR = "ENABLED";
+    LUT4 i2_3_lut_rep_32 (.A(data_addr[14]), .B(data_addr[4]), .C(data_addr[6]), 
+         .Z(n6629)) /* synthesis lut_function=(A+(B+(C))) */ ;
+    defparam i2_3_lut_rep_32.init = 16'hfefe;
+    LUT4 i1_2_lut_4_lut (.A(data_addr[14]), .B(data_addr[4]), .C(data_addr[6]), 
+         .D(data_addr[3]), .Z(n6424)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
+    defparam i1_2_lut_4_lut.init = 16'hfffe;
+    LUT4 i3356_2_lut_rep_33 (.A(data_addr[15]), .B(data_addr[14]), .Z(n6630)) /* synthesis lut_function=(!(A+(B))) */ ;
+    defparam i3356_2_lut_rep_33.init = 16'h1111;
+    FD1P3AX spcb_i0_i8 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_14), 
+            .CK(FCK_c), .Q(spcb[8]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i8.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i7 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[7]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i7.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i6 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[6]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i6.GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i0  (.D(n70_adj_692), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i0 .GSR = "ENABLED";
+    FD1P3AX spcb_i0_i5 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[5]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i5.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i4 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[4]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i4.GSR = "ENABLED";
+    LUT4 i1_4_lut_adj_35 (.A(cont_addr_c_3), .B(data_addr[27]), .C(data_addr[19]), 
+         .D(cont_addr_c_0), .Z(n38)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_35.init = 16'h0a22;
+    FD1P3AX spcb_i0_i3 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[3]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i3.GSR = "ENABLED";
+    FD1P3AX spcb_i0_i2 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[2]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i2.GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i0  (.D(n160_adj_723), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i0 .GSR = "ENABLED";
+    FD1P3AX spcb_i0_i1 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_21), 
+            .CK(FCK_c), .Q(spcb[1]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spcb_i0_i1.GSR = "ENABLED";
+    BB cont_data_pad_5 (.I(cont_data_7__N_1[5]), .T(n3860), .B(cont_data[5]), 
+       .O(data_addr_31__N_242[29]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    CCU2D \Clock_Divider_2.count_723_add_4_23  (.A0(\Clock_Divider_2.count [21]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [22]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6242), .COUT(n6243), 
+          .S0(n139_adj_702), .S1(n138_adj_701));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_23 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_23 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_23 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_23 .INJECT1_1 = "NO";
+    FD1P3AX spca_i0_i15 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[15]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i15.GSR = "ENABLED";
+    FD1P3AX spca_i0_i14 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[14]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i14.GSR = "ENABLED";
+    FD1P3AX spca_i0_i13 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[13]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i13.GSR = "ENABLED";
+    FD1P3AX spca_i0_i12 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[12]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i12.GSR = "ENABLED";
+    FD1P3AX spca_i0_i11 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[11]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i11.GSR = "ENABLED";
+    FD1P3AX spca_i0_i10 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[10]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i10.GSR = "ENABLED";
+    FD1P3AX spca_i0_i9 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[9]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i9.GSR = "ENABLED";
+    FD1P3AX spca_i0_i8 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_29), 
+            .CK(FCK_c), .Q(spca[8]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i8.GSR = "ENABLED";
+    FD1P3AX spca_i0_i7 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[7]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i7.GSR = "ENABLED";
+    FD1P3AX spca_i0_i6 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[6]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i6.GSR = "ENABLED";
+    FD1P3AX spca_i0_i5 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[5]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i5.GSR = "ENABLED";
+    FD1P3AX spca_i0_i4 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[4]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i4.GSR = "ENABLED";
+    FD1P3AX spca_i0_i3 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[3]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i3.GSR = "ENABLED";
+    FD1P3AX spca_i0_i2 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[2]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i2.GSR = "ENABLED";
+    FD1P3AX spca_i0_i1 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_36), 
+            .CK(FCK_c), .Q(spca[1]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam spca_i0_i1.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i30 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_43), 
+            .CK(FCK_c), .Q(DIVIB[30])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i30.GSR = "ENABLED";
+    LUT4 i3332_4_lut (.A(n11), .B(data_addr[5]), .C(n10), .D(data_addr[10]), 
+         .Z(n6499)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
+    defparam i3332_4_lut.init = 16'hfffe;
+    FD1P3AX DIVIB_i0_i29 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_43), 
+            .CK(FCK_c), .Q(DIVIB[29])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i29.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i28 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_43), 
+            .CK(FCK_c), .Q(DIVIB[28])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i28.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i27 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_43), 
+            .CK(FCK_c), .Q(DIVIB[27])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i27.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i26 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_43), 
+            .CK(FCK_c), .Q(DIVIB[26])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i26.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i25 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_43), 
+            .CK(FCK_c), .Q(DIVIB[25])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i25.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i24 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_43), 
+            .CK(FCK_c), .Q(DIVIB[24])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i24.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i23 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[23])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i23.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i22 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[22])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i22.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i21 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[21])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i21.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i20 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[20])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i20.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i19 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[19])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i19.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i18 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[18])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i18.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i17 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[17])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i17.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i16 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_51), 
+            .CK(FCK_c), .Q(DIVIB[16])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i16.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i15 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[15])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i15.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i14 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[14])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i14.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i13 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[13])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i13.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i12 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[12])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i12.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i11 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[11])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i11.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i10 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[10])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i10.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i9 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[9])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i9.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i8 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_59), 
+            .CK(FCK_c), .Q(DIVIB[8])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i8.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i7 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[7])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i7.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i6 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[6])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i6.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i5 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[5])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i5.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i4 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[4])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i4.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i3 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[3])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i3.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i2 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[2])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i2.GSR = "ENABLED";
+    FD1P3AX DIVIB_i0_i1 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_66), 
+            .CK(FCK_c), .Q(DIVIB[1])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIB_i0_i1.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i30 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_73), 
+            .CK(FCK_c), .Q(DIVIA[30])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i30.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i29 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_73), 
+            .CK(FCK_c), .Q(DIVIA[29])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i29.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i28 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_73), 
+            .CK(FCK_c), .Q(DIVIA[28])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i28.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i27 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_73), 
+            .CK(FCK_c), .Q(DIVIA[27])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i27.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i26 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_73), 
+            .CK(FCK_c), .Q(DIVIA[26])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i26.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i25 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_73), 
+            .CK(FCK_c), .Q(DIVIA[25])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i25.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i24 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_73), 
+            .CK(FCK_c), .Q(DIVIA[24])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i24.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i23 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[23])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i23.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i22 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[22])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i22.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i21 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[21])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i21.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i20 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[20])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i20.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i19 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[19])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i19.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i18 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[18])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i18.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i17 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[17])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i17.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i16 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_81), 
+            .CK(FCK_c), .Q(DIVIA[16])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i16.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i15 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[15])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i15.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i14 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[14])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i14.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i13 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[13])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i13.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i12 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[12])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i12.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i11 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[11])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i11.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i10 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[10])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i10.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i9 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[9])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i9.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i8 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_89), 
+            .CK(FCK_c), .Q(DIVIA[8])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i8.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i7 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[7])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i7.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i6 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[6])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i6.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i5 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[5])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i5.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i4 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[4])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i4.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i3 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[3])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i3.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i2 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[2])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i2.GSR = "ENABLED";
+    FD1P3AX DIVIA_i0_i1 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_96), 
+            .CK(FCK_c), .Q(DIVIA[1])) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam DIVIA_i0_i1.GSR = "ENABLED";
+    FD1P3AX data_addr_i32 (.D(data_addr_31__N_17[31]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[31]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i32.GSR = "ENABLED";
+    FD1P3AX data_addr_i31 (.D(data_addr_31__N_17[30]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[30]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i31.GSR = "ENABLED";
+    FD1P3AX data_addr_i30 (.D(data_addr_31__N_17[29]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[29]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i30.GSR = "ENABLED";
+    FD1P3AX data_addr_i29 (.D(data_addr_31__N_17[28]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[28]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i29.GSR = "ENABLED";
+    FD1P3AX data_addr_i28 (.D(data_addr_31__N_17[27]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[27]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i28.GSR = "ENABLED";
+    FD1P3AX data_addr_i27 (.D(data_addr_31__N_17[26]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[26]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i27.GSR = "ENABLED";
+    FD1P3AX data_addr_i26 (.D(data_addr_31__N_17[25]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[25]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i26.GSR = "ENABLED";
+    FD1P3AX data_addr_i25 (.D(data_addr_31__N_17[24]), .SP(FCK_c_enable_104), 
+            .CK(FCK_c), .Q(data_addr[24]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i25.GSR = "ENABLED";
+    FD1P3AX data_addr_i24 (.D(data_addr_31__N_17[23]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[23]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i24.GSR = "ENABLED";
+    FD1P3AX data_addr_i23 (.D(data_addr_31__N_17[22]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[22]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i23.GSR = "ENABLED";
+    FD1P3AX data_addr_i22 (.D(data_addr_31__N_17[21]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[21]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i22.GSR = "ENABLED";
+    FD1P3AX data_addr_i21 (.D(data_addr_31__N_17[20]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[20]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i21.GSR = "ENABLED";
+    FD1P3AX data_addr_i20 (.D(data_addr_31__N_17[19]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[19]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i20.GSR = "ENABLED";
+    FD1P3AX data_addr_i19 (.D(data_addr_31__N_17[18]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[18]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i19.GSR = "ENABLED";
+    FD1P3AX data_addr_i18 (.D(data_addr_31__N_17[17]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[17]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i18.GSR = "ENABLED";
+    FD1P3AX data_addr_i17 (.D(data_addr_31__N_17[16]), .SP(FCK_c_enable_112), 
+            .CK(FCK_c), .Q(data_addr[16]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i17.GSR = "ENABLED";
+    FD1P3AX data_addr_i16 (.D(data_addr_31__N_17[15]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[15]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i16.GSR = "ENABLED";
+    FD1P3AX data_addr_i15 (.D(data_addr_31__N_17[14]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[14]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i15.GSR = "ENABLED";
+    FD1P3AX data_addr_i14 (.D(data_addr_31__N_17[13]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[13]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i14.GSR = "ENABLED";
+    FD1P3AX data_addr_i13 (.D(data_addr_31__N_17[12]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[12]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i13.GSR = "ENABLED";
+    FD1P3AX data_addr_i12 (.D(data_addr_31__N_17[11]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[11]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i12.GSR = "ENABLED";
+    FD1P3AX data_addr_i11 (.D(data_addr_31__N_17[10]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[10]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i11.GSR = "ENABLED";
+    FD1P3AX data_addr_i10 (.D(data_addr_31__N_17[9]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[9]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i10.GSR = "ENABLED";
+    FD1P3AX data_addr_i9 (.D(data_addr_31__N_17[8]), .SP(FCK_c_enable_120), 
+            .CK(FCK_c), .Q(data_addr[8]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i9.GSR = "ENABLED";
+    FD1P3AX data_addr_i8 (.D(data_addr_31__N_17[7]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(data_addr[7]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i8.GSR = "ENABLED";
+    FD1P3AX data_addr_i7 (.D(data_addr_31__N_17[6]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(data_addr[6]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i7.GSR = "ENABLED";
+    FD1P3AX data_addr_i6 (.D(data_addr_31__N_17[5]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(data_addr[5]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i6.GSR = "ENABLED";
+    FD1P3AX data_addr_i5 (.D(data_addr_31__N_17[4]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(data_addr[4]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i5.GSR = "ENABLED";
+    FD1P3AX data_addr_i4 (.D(data_addr_31__N_17[3]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(data_addr[3]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i4.GSR = "ENABLED";
+    FD1P3AX data_addr_i3 (.D(data_addr_31__N_17[2]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(data_addr[2]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i3.GSR = "ENABLED";
+    FD1P3AX data_addr_i2 (.D(data_addr_31__N_17[1]), .SP(FCK_c_enable_127), 
+            .CK(FCK_c), .Q(data_addr[1]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam data_addr_i2.GSR = "ENABLED";
+    FD1S3AX cont_data_i7 (.D(cont_data_7__N_308), .CK(FCK_c), .Q(cont_data_7__N_1[7]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i7.GSR = "ENABLED";
+    FD1S3AX cont_data_i6 (.D(cont_data_7__N_321), .CK(FCK_c), .Q(cont_data_7__N_1[6]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i6.GSR = "ENABLED";
+    FD1S3AX cont_data_i5 (.D(cont_data_7__N_324), .CK(FCK_c), .Q(cont_data_7__N_1[5]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i5.GSR = "ENABLED";
+    FD1S3AX cont_data_i4 (.D(cont_data_7__N_327), .CK(FCK_c), .Q(cont_data_7__N_1[4]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i4.GSR = "ENABLED";
+    FD1S3AX cont_data_i3 (.D(cont_data_7__N_330), .CK(FCK_c), .Q(cont_data_7__N_1[3]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i3.GSR = "ENABLED";
+    FD1S3AX cont_data_i2 (.D(cont_data_7__N_333), .CK(FCK_c), .Q(cont_data_7__N_1[2]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i2.GSR = "ENABLED";
+    FD1S3AX cont_data_i1 (.D(cont_data_7__N_336), .CK(FCK_c), .Q(cont_data_7__N_1[1]));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam cont_data_i1.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i8 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(T_c_7));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i8.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i7 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(S_c_6));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i7.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i6 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(R_c_5));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i6.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i5 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(Q_c_4));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i5.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i4 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(P_c_3));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i4.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i3 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(O_c_2));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i3.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i2 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(N_c_1));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i2.GSR = "ENABLED";
+    FD1P3AX rca_sw_i0_i2 (.D(data_addr_31__N_242[25]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(B_c_1));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i2.GSR = "ENABLED";
+    BB cont_data_pad_4 (.I(cont_data_7__N_1[4]), .T(n3860), .B(cont_data[4]), 
+       .O(data_addr_31__N_242[28]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    BB cont_data_pad_3 (.I(cont_data_7__N_1[3]), .T(n3860), .B(cont_data[3]), 
+       .O(data_addr_31__N_242[27]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    BB cont_data_pad_2 (.I(cont_data_7__N_1[2]), .T(n3860), .B(cont_data[2]), 
+       .O(data_addr_31__N_242[26]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    CCU2D \Clock_Divider_2.count_723_add_4_21  (.A0(\Clock_Divider_2.count [19]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [20]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6241), .COUT(n6242), 
+          .S0(n141_adj_704), .S1(n140_adj_703));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_21 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_21 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_21 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_21 .INJECT1_1 = "NO";
+    BB cont_data_pad_1 (.I(cont_data_7__N_1[1]), .T(n3860), .B(cont_data[1]), 
+       .O(data_addr_31__N_242[25]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    BB cont_data_pad_0 (.I(cont_data_7__N_1[0]), .T(n3860), .B(cont_data[0]), 
+       .O(data_addr_31__N_242[24]));   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    OB EGRN_pad (.I(VCC_net), .O(EGRN));   // c:/firmware/p3050fg/main.vhd(20[3:7])
+    OB EYLW_pad (.I(EYLW_c), .O(EYLW));   // c:/firmware/p3050fg/main.vhd(20[9:13])
+    OB DACA_OUT_pad_7 (.I(DACA_OUT_c_7), .O(DACA_OUT[7]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACA_OUT_pad_6 (.I(DACA_OUT_c_6), .O(DACA_OUT[6]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACA_OUT_pad_5 (.I(DACA_OUT_c_5), .O(DACA_OUT[5]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACA_OUT_pad_4 (.I(DACA_OUT_c_4), .O(DACA_OUT[4]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACA_OUT_pad_3 (.I(DACA_OUT_c_3), .O(DACA_OUT[3]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACA_OUT_pad_2 (.I(DACA_OUT_c_2), .O(DACA_OUT[2]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACA_OUT_pad_1 (.I(DACA_OUT_c_1), .O(DACA_OUT[1]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACA_OUT_pad_0 (.I(DACA_OUT_c_0), .O(DACA_OUT[0]));   // c:/firmware/p3050fg/main.vhd(21[3:11])
+    OB DACB_OUT_pad_7 (.I(DACB_OUT_c_7), .O(DACB_OUT[7]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB DACB_OUT_pad_6 (.I(DACB_OUT_c_6), .O(DACB_OUT[6]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB DACB_OUT_pad_5 (.I(DACB_OUT_c_5), .O(DACB_OUT[5]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB DACB_OUT_pad_4 (.I(DACB_OUT_c_4), .O(DACB_OUT[4]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB DACB_OUT_pad_3 (.I(DACB_OUT_c_3), .O(DACB_OUT[3]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB DACB_OUT_pad_2 (.I(DACB_OUT_c_2), .O(DACB_OUT[2]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB DACB_OUT_pad_1 (.I(DACB_OUT_c_1), .O(DACB_OUT[1]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB DACB_OUT_pad_0 (.I(DACB_OUT_c_0), .O(DACB_OUT[0]));   // c:/firmware/p3050fg/main.vhd(22[3:11])
+    OB A_pad (.I(A_c_0), .O(A));   // c:/firmware/p3050fg/main.vhd(23[3:4])
+    OB B_pad (.I(B_c_1), .O(B));   // c:/firmware/p3050fg/main.vhd(24[3:4])
+    OB C_pad (.I(C_c_2), .O(C));   // c:/firmware/p3050fg/main.vhd(25[3:4])
+    OB D_pad (.I(D_c_3), .O(D));   // c:/firmware/p3050fg/main.vhd(26[3:4])
+    OB E_pad (.I(E_c_4), .O(E));   // c:/firmware/p3050fg/main.vhd(27[3:4])
+    OB F_pad (.I(F_c_5), .O(F));   // c:/firmware/p3050fg/main.vhd(28[3:4])
+    OB G_pad (.I(G_c_6), .O(G));   // c:/firmware/p3050fg/main.vhd(29[3:4])
+    OB H_pad (.I(H_c_7), .O(H));   // c:/firmware/p3050fg/main.vhd(30[3:4])
+    OB I_pad (.I(I_c), .O(I));   // c:/firmware/p3050fg/main.vhd(31[3:4])
+    OB J_pad (.I(J_c), .O(J));   // c:/firmware/p3050fg/main.vhd(32[3:4])
+    OB K_pad (.I(K_c), .O(K));   // c:/firmware/p3050fg/main.vhd(33[3:4])
+    OB L_pad (.I(GND_net), .O(L));   // c:/firmware/p3050fg/main.vhd(34[3:4])
+    OB M_pad (.I(M_c_0), .O(M));   // c:/firmware/p3050fg/main.vhd(35[3:4])
+    OB N_pad (.I(N_c_1), .O(N));   // c:/firmware/p3050fg/main.vhd(36[3:4])
+    OB O_pad (.I(O_c_2), .O(O));   // c:/firmware/p3050fg/main.vhd(37[3:4])
+    OB P_pad (.I(P_c_3), .O(P));   // c:/firmware/p3050fg/main.vhd(38[3:4])
+    OB Q_pad (.I(Q_c_4), .O(Q));   // c:/firmware/p3050fg/main.vhd(39[3:4])
+    OB R_pad (.I(R_c_5), .O(R));   // c:/firmware/p3050fg/main.vhd(40[3:4])
+    OB S_pad (.I(S_c_6), .O(S));   // c:/firmware/p3050fg/main.vhd(41[3:4])
+    OB T_pad (.I(T_c_7), .O(T));   // c:/firmware/p3050fg/main.vhd(42[3:4])
+    OB V_pad (.I(V_c_0), .O(V));   // c:/firmware/p3050fg/main.vhd(43[3:4])
+    OB W_pad (.I(W_c_c), .O(W));   // c:/firmware/p3050fg/main.vhd(44[3:4])
+    IB W_c_pad (.I(CK), .O(W_c_c));   // c:/firmware/p3050fg/main.vhd(12[3:5])
+    IB FCK_pad (.I(FCK), .O(FCK_c));   // c:/firmware/p3050fg/main.vhd(13[3:6])
+    IB cont_addr_pad_5 (.I(cont_addr[5]), .O(cont_addr_c_5));   // c:/firmware/p3050fg/main.vhd(15[3:12])
+    IB cont_addr_pad_4 (.I(cont_addr[4]), .O(cont_addr_c_4));   // c:/firmware/p3050fg/main.vhd(15[3:12])
+    IB cont_addr_pad_3 (.I(cont_addr[3]), .O(cont_addr_c_3));   // c:/firmware/p3050fg/main.vhd(15[3:12])
+    IB cont_addr_pad_2 (.I(cont_addr[2]), .O(cont_addr_c_2));   // c:/firmware/p3050fg/main.vhd(15[3:12])
+    IB cont_addr_pad_1 (.I(cont_addr[1]), .O(cont_addr_c_1));   // c:/firmware/p3050fg/main.vhd(15[3:12])
+    IB cont_addr_pad_0 (.I(cont_addr[0]), .O(cont_addr_c_0));   // c:/firmware/p3050fg/main.vhd(15[3:12])
+    IB CWR_in_pad (.I(CWR_in), .O(CWR_in_c));   // c:/firmware/p3050fg/main.vhd(16[3:9])
+    IB CDS_in_pad (.I(CDS_in), .O(CDS_in_c));   // c:/firmware/p3050fg/main.vhd(17[3:9])
+    IB ETH_pad (.I(ETH), .O(ETH_c));   // c:/firmware/p3050fg/main.vhd(18[3:6])
+    IB NOT_RESET_pad (.I(NOT_RESET), .O(NOT_RESET_c));   // c:/firmware/p3050fg/main.vhd(19[3:12])
+    CCU2D add_721_23 (.A0(data_addr[21]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[22]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6196), .COUT(n6197), .S0(n3762), .S1(n3761));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_23.INIT0 = 16'h5aaa;
+    defparam add_721_23.INIT1 = 16'h5aaa;
+    defparam add_721_23.INJECT1_0 = "NO";
+    defparam add_721_23.INJECT1_1 = "NO";
+    FD1P3AX rca_sw_i0_i3 (.D(data_addr_31__N_242[26]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(C_c_2));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i3.GSR = "ENABLED";
+    FD1P3AX rca_sw_i0_i4 (.D(data_addr_31__N_242[27]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(D_c_3));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i4.GSR = "ENABLED";
+    FD1P3AX rca_sw_i0_i5 (.D(data_addr_31__N_242[28]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(E_c_4));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i5.GSR = "ENABLED";
+    FD1P3AX rca_sw_i0_i6 (.D(data_addr_31__N_242[29]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(F_c_5));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i6.GSR = "ENABLED";
+    FD1P3AX rca_sw_i0_i7 (.D(data_addr_31__N_242[30]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(G_c_6));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i7.GSR = "ENABLED";
+    FD1P3AX rca_sw_i0_i8 (.D(data_addr_31__N_242[31]), .SP(FCK_c_enable_141), 
+            .CK(FCK_c), .Q(H_c_7));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rca_sw_i0_i8.GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i1  (.D(n159), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i1 .GSR = "ENABLED";
+    LUT4 i1_2_lut_3_lut_4_lut_adj_36 (.A(data_addr[2]), .B(data_addr[3]), 
+         .C(n4818), .D(V_c_0), .Z(n6432)) /* synthesis lut_function=(!((B+(C+!(D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i1_2_lut_3_lut_4_lut_adj_36.init = 16'h0200;
+    LUT4 i1_4_lut_else_1_lut (.A(n6752), .B(data_addr[1]), .C(n4818), 
+         .D(data_addr[2]), .Z(n6634)) /* synthesis lut_function=(A (B+(C+(D)))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i1_4_lut_else_1_lut.init = 16'haaa8;
+    CCU2D \Clock_Divider_2.count_723_add_4_19  (.A0(\Clock_Divider_2.count [17]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [18]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6240), .COUT(n6241), 
+          .S0(n143_adj_706), .S1(n142_adj_705));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_19 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_19 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_19 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_19 .INJECT1_1 = "NO";
+    CCU2D add_721_21 (.A0(data_addr[19]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[20]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6195), .COUT(n6196), .S0(n3764), .S1(n3763));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_21.INIT0 = 16'h5aaa;
+    defparam add_721_21.INIT1 = 16'h5aaa;
+    defparam add_721_21.INJECT1_0 = "NO";
+    defparam add_721_21.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_17  (.A0(\Clock_Divider_2.count [15]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [16]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6239), .COUT(n6240), 
+          .S0(n145_adj_708), .S1(n144_adj_707));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_17 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_17 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_17 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_17 .INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(\Clock_Divider_2.count [0]), .B1(n1851), .C1(DIVIB[0]), 
+          .D1(GND_net), .COUT(n6147));
+    defparam sub_671_add_2_1.INIT0 = 16'h0000;
+    defparam sub_671_add_2_1.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_1.INJECT1_0 = "NO";
+    defparam sub_671_add_2_1.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_15  (.A0(\Clock_Divider_2.count [13]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [14]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6238), .COUT(n6239), 
+          .S0(n147_adj_710), .S1(n146_adj_709));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_15 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_15 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_15 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_15 .INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_25 (.A0(\Clock_Divider_2.count [23]), .B0(n1851), 
+          .C0(DIVIB[23]), .D0(GND_net), .A1(\Clock_Divider_2.count [24]), 
+          .B1(n1851), .C1(DIVIB[24]), .D1(GND_net), .CIN(n6158), .COUT(n6159));
+    defparam sub_671_add_2_25.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_25.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_25.INJECT1_0 = "NO";
+    defparam sub_671_add_2_25.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_13  (.A0(\Clock_Divider_2.count [11]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [12]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6237), .COUT(n6238), 
+          .S0(n149_adj_712), .S1(n148_adj_711));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_13 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_13 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_13 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_13 .INJECT1_1 = "NO";
+    CCU2D add_721_19 (.A0(data_addr[17]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[18]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6194), .COUT(n6195), .S0(n3766), .S1(n3765));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_19.INIT0 = 16'h5aaa;
+    defparam add_721_19.INIT1 = 16'h5aaa;
+    defparam add_721_19.INJECT1_0 = "NO";
+    defparam add_721_19.INJECT1_1 = "NO";
+    LUT4 i73_3_lut_adj_37 (.A(data_addr[14]), .B(data_addr[6]), .C(cont_addr_c_0), 
+         .Z(n70_adj_673)) /* synthesis lut_function=(!(A (B+!(C))+!A (B (C)))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i73_3_lut_adj_37.init = 16'h3535;
+    CCU2D sub_672_add_2_5 (.A0(\RAM2_read.count [3]), .B0(spcb[3]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM2_read.count [4]), .B1(spcb[4]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6141), .COUT(n6142));
+    defparam sub_672_add_2_5.INIT0 = 16'h5999;
+    defparam sub_672_add_2_5.INIT1 = 16'h5999;
+    defparam sub_672_add_2_5.INJECT1_0 = "NO";
+    defparam sub_672_add_2_5.INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_23 (.A0(\Clock_Divider_2.count [21]), .B0(n1851), 
+          .C0(DIVIB[21]), .D0(GND_net), .A1(\Clock_Divider_2.count [22]), 
+          .B1(n1851), .C1(DIVIB[22]), .D1(GND_net), .CIN(n6157), .COUT(n6158));
+    defparam sub_671_add_2_23.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_23.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_23.INJECT1_0 = "NO";
+    defparam sub_671_add_2_23.INJECT1_1 = "NO";
+    FD1S3IX \Clock_Divider_1.count_722__i2  (.D(n158), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [2])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i2 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i3  (.D(n157), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [3])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i3 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i4  (.D(n156), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [4])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i4 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i5  (.D(n155), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [5])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i5 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i6  (.D(n154), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [6])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i6 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i7  (.D(n153), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [7])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i7 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i8  (.D(n152), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [8])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i8 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i9  (.D(n151), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [9])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i9 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i10  (.D(n150), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [10])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i10 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i11  (.D(n149), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [11])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i11 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i12  (.D(n148), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [12])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i12 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i13  (.D(n147), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [13])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i13 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i14  (.D(n146), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [14])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i14 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i15  (.D(n145), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [15])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i15 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i16  (.D(n144), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [16])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i16 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i17  (.D(n143), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [17])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i17 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i18  (.D(n142), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [18])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i18 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i19  (.D(n141), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [19])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i19 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i20  (.D(n140), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [20])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i20 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i21  (.D(n139), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [21])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i21 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i22  (.D(n138), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [22])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i22 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i23  (.D(n137), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [23])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i23 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i24  (.D(n136), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [24])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i24 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i25  (.D(n135), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [25])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i25 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i26  (.D(n134), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [26])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i26 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i27  (.D(n133), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [27])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i27 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i28  (.D(n132), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [28])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i28 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i29  (.D(n131), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [29])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i29 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_1.count_722__i30  (.D(n130), .CK(FCK_c), .CD(\Clock_Divider_1.count_30__N_404 ), 
+            .Q(\Clock_Divider_1.count [30])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722__i30 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i1  (.D(n69), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i1 .GSR = "ENABLED";
+    LUT4 i3372_3_lut_3_lut_4_lut (.A(data_addr[15]), .B(data_addr[14]), 
+         .C(n6633), .D(data_addr_31__N_307), .Z(n6248)) /* synthesis lut_function=(!(A (C (D))+!A (B (C (D))))) */ ;
+    defparam i3372_3_lut_3_lut_4_lut.init = 16'h1fff;
+    CCU2D add_721_17 (.A0(data_addr[15]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[16]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6193), .COUT(n6194), .S0(n3768), .S1(n3767));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_17.INIT0 = 16'h5aaa;
+    defparam add_721_17.INIT1 = 16'h5aaa;
+    defparam add_721_17.INJECT1_0 = "NO";
+    defparam add_721_17.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_11  (.A0(\Clock_Divider_2.count [9]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [10]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6236), .COUT(n6237), 
+          .S0(n151_adj_714), .S1(n150_adj_713));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_11 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_11 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_11 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_11 .INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_21 (.A0(\Clock_Divider_2.count [19]), .B0(n1851), 
+          .C0(DIVIB[19]), .D0(GND_net), .A1(\Clock_Divider_2.count [20]), 
+          .B1(n1851), .C1(DIVIB[20]), .D1(GND_net), .CIN(n6156), .COUT(n6157));
+    defparam sub_671_add_2_21.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_21.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_21.INJECT1_0 = "NO";
+    defparam sub_671_add_2_21.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_9  (.A0(\Clock_Divider_2.count [7]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [8]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6235), .COUT(n6236), 
+          .S0(n153_adj_716), .S1(n152_adj_715));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_9 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_9 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_9 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_9 .INJECT1_1 = "NO";
+    CCU2D add_721_15 (.A0(data_addr[13]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[14]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6192), .COUT(n6193), .S0(n3770), .S1(n3769));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_15.INIT0 = 16'h5aaa;
+    defparam add_721_15.INIT1 = 16'h5aaa;
+    defparam add_721_15.INJECT1_0 = "NO";
+    defparam add_721_15.INJECT1_1 = "NO";
+    CCU2D sub_672_add_2_cout (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6146), .S0(n3631));
+    defparam sub_672_add_2_cout.INIT0 = 16'h0000;
+    defparam sub_672_add_2_cout.INIT1 = 16'h0000;
+    defparam sub_672_add_2_cout.INJECT1_0 = "NO";
+    defparam sub_672_add_2_cout.INJECT1_1 = "NO";
+    FD1S3IX \RAM1_read.count_725__i2  (.D(n68), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [2])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i2 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i3  (.D(n67), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [3])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i3 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i4  (.D(n66), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [4])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i4 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i5  (.D(n65), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [5])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i5 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i6  (.D(n64), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [6])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i6 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i7  (.D(n63), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [7])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i7 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i8  (.D(n62), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [8])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i8 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i9  (.D(n61), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [9])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i9 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i10  (.D(n60), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [10])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i10 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i11  (.D(n59), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [11])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i11 .GSR = "ENABLED";
+    FD1S3IX \RAM1_read.count_725__i12  (.D(n58), .CK(I_N_544), .CD(\RAM1_read.count_12__N_572 ), 
+            .Q(\RAM1_read.count [12])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725__i12 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i1  (.D(n69_adj_691), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i1 .GSR = "ENABLED";
+    CCU2D \Clock_Divider_2.count_723_add_4_7  (.A0(\Clock_Divider_2.count [5]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [6]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6234), .COUT(n6235), 
+          .S0(n155_adj_718), .S1(n154_adj_717));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_7 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_7 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_7 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_7 .INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_5  (.A0(\Clock_Divider_2.count [3]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [4]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6233), .COUT(n6234), 
+          .S0(n157_adj_720), .S1(n156_adj_719));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_5 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_5 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_5 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_5 .INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_2.count_723_add_4_3  (.A0(\Clock_Divider_2.count [1]), 
+          .B0(n1851), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [2]), 
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .CIN(n6232), .COUT(n6233), 
+          .S0(n159_adj_722), .S1(n158_adj_721));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_3 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_3 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_2.count_723_add_4_3 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_3 .INJECT1_1 = "NO";
+    CCU2D add_721_13 (.A0(data_addr[11]), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(data_addr[12]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6191), .COUT(n6192), .S0(n3772), .S1(n3771));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_13.INIT0 = 16'h5aaa;
+    defparam add_721_13.INIT1 = 16'h5aaa;
+    defparam add_721_13.INJECT1_0 = "NO";
+    defparam add_721_13.INJECT1_1 = "NO";
+    FD1S3IX \RAM2_read.count_727__i2  (.D(n68_adj_690), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [2])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i2 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i3  (.D(n67_adj_689), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [3])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i3 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i4  (.D(n66_adj_688), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [4])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i4 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i5  (.D(n65_adj_687), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [5])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i5 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i6  (.D(n64_adj_686), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [6])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i6 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i7  (.D(n63_adj_685), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [7])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i7 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i8  (.D(n62_adj_684), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [8])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i8 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i9  (.D(n61_adj_683), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [9])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i9 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i10  (.D(n60_adj_682), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [10])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i10 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i11  (.D(n59_adj_681), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [11])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i11 .GSR = "ENABLED";
+    FD1S3IX \RAM2_read.count_727__i12  (.D(n58_adj_680), .CK(J_N_587), .CD(\RAM2_read.count_12__N_615 ), 
+            .Q(\RAM2_read.count [12])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727__i12 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i1  (.D(n159_adj_722), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i1 .GSR = "ENABLED";
+    LUT4 i1_4_lut_then_1_lut_4_lut (.A(n6633), .B(n4870), .C(n6627), .D(n6455), 
+         .Z(n6752)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i1_4_lut_then_1_lut_4_lut.init = 16'h8000;
+    PFUMX i1045 (.BLUT(cont_data_7__N_310[0]), .ALUT(n4109), .C0(n6633), 
+          .Z(cont_data_7__N_339));
+    LUT4 i2380_4_lut (.A(cont_addr_c_3), .B(data_addr[12]), .C(data_addr[4]), 
+         .D(cont_addr_c_0), .Z(n29)) /* synthesis lut_function=(!(A (B (C+!(D))+!B (C (D))))) */ ;
+    defparam i2380_4_lut.init = 16'h5f77;
+    LUT4 i1_4_lut_adj_38 (.A(cont_addr_c_3), .B(data_addr[30]), .C(data_addr[22]), 
+         .D(cont_addr_c_0), .Z(n38_adj_676)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_38.init = 16'h0a22;
+    LUT4 i3359_2_lut_rep_35 (.A(cont_addr_c_5), .B(cont_addr_c_2), .Z(n6632)) /* synthesis lut_function=(!(A+(B))) */ ;
+    defparam i3359_2_lut_rep_35.init = 16'h1111;
+    CCU2D sub_670_add_2_13 (.A0(\Clock_Divider_1.count [11]), .B0(n1713), 
+          .C0(DIVIA[11]), .D0(GND_net), .A1(\Clock_Divider_1.count [12]), 
+          .B1(n1713), .C1(DIVIA[12]), .D1(GND_net), .CIN(n6168), .COUT(n6169));
+    defparam sub_670_add_2_13.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_13.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_13.INJECT1_0 = "NO";
+    defparam sub_670_add_2_13.INJECT1_1 = "NO";
+    LUT4 i73_3_lut_adj_39 (.A(data_addr[15]), .B(data_addr[7]), .C(cont_addr_c_0), 
+         .Z(n70_adj_670)) /* synthesis lut_function=(!(A (B+!(C))+!A (B (C)))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i73_3_lut_adj_39.init = 16'h3535;
+    LUT4 i1_4_lut_adj_40 (.A(cont_addr_c_3), .B(data_addr[28]), .C(data_addr[20]), 
+         .D(cont_addr_c_0), .Z(n33)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_40.init = 16'h0a22;
+    CCU2D add_721_11 (.A0(data_addr[9]), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(data_addr[10]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6190), .COUT(n6191), .S0(n3774), .S1(n3773));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_11.INIT0 = 16'h5aaa;
+    defparam add_721_11.INIT1 = 16'h5aaa;
+    defparam add_721_11.INJECT1_0 = "NO";
+    defparam add_721_11.INJECT1_1 = "NO";
+    LUT4 data_addr_31__N_242_25__bdd_4_lut (.A(data_addr_31__N_242[25]), .B(cont_data_7__N_320), 
+         .C(cont_data_7__N_310[1]), .D(n6633), .Z(cont_data_7__N_336)) /* synthesis lut_function=(A (B (C+(D))+!B !((D)+!C))+!A !((D)+!C)) */ ;
+    defparam data_addr_31__N_242_25__bdd_4_lut.init = 16'h88f0;
+    CCU2D \Clock_Divider_2.count_723_add_4_1  (.A0(GND_net), .B0(GND_net), 
           .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_2.count [0]), 
-          .B1(n7579), .C1(GND_net), .D1(GND_net), .COUT(n6744), .S1(n160));   // c:/firmware/p3050fg/main.vhd(318[13:18])
-    defparam \Clock_Divider_2.count_1621_add_4_1 .INIT0 = 16'hF000;
-    defparam \Clock_Divider_2.count_1621_add_4_1 .INIT1 = 16'h7777;
-    defparam \Clock_Divider_2.count_1621_add_4_1 .INJECT1_0 = "NO";
-    defparam \Clock_Divider_2.count_1621_add_4_1 .INJECT1_1 = "NO";
-    FD1P3AX DIVI_i0_i2 (.D(cont_data_out_2), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[2]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i2.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i3 (.D(cont_data_out_3), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[3]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i3.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i4 (.D(cont_data_out_4), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[4]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i4.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i5 (.D(cont_data_out_5), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[5]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i5.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i6 (.D(cont_data_out_6), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[6]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i6.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i7 (.D(cont_data_out_7), .SP(FCK_c_enable_164), .CK(FCK_c), 
-            .Q(DIVI[7]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i7.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i8 (.D(cont_data_out_0), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[8]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i8.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i9 (.D(cont_data_out_1), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[9]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i9.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i10 (.D(cont_data_out_2), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[10]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i10.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i11 (.D(cont_data_out_3), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[11]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i11.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i12 (.D(cont_data_out_4), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[12]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i12.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i13 (.D(cont_data_out_5), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[13]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i13.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i14 (.D(cont_data_out_6), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[14]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i14.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i15 (.D(cont_data_out_7), .SP(FCK_c_enable_172), .CK(FCK_c), 
-            .Q(DIVI[15]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i15.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i16 (.D(cont_data_out_0), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[16]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i16.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i17 (.D(cont_data_out_1), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[17]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i17.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i18 (.D(cont_data_out_2), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[18]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i18.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i19 (.D(cont_data_out_3), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[19]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i19.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i20 (.D(cont_data_out_4), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[20]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i20.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i21 (.D(cont_data_out_5), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[21]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i21.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i22 (.D(cont_data_out_6), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[22]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i22.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i23 (.D(cont_data_out_7), .SP(FCK_c_enable_180), .CK(FCK_c), 
-            .Q(DIVI[23]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i23.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i24 (.D(cont_data_out_0), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[24]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i24.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i25 (.D(cont_data_out_1), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[25]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i25.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i26 (.D(cont_data_out_2), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[26]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i26.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i27 (.D(cont_data_out_3), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[27]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i27.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i28 (.D(cont_data_out_4), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[28]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i28.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i29 (.D(cont_data_out_5), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[29]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i29.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i30 (.D(cont_data_out_6), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[30]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i30.GSR = "DISABLED";
-    FD1P3AX DIVI_i0_i31 (.D(cont_data_out_7), .SP(FCK_c_enable_188), .CK(FCK_c), 
-            .Q(DIVI[31]));   // c:/firmware/p3050fg/main.vhd(189[1] 276[8])
-    defparam DIVI_i0_i31.GSR = "DISABLED";
-    PFUMX i5894 (.BLUT(n7297), .ALUT(n7298), .C0(cont_addr_c_1), .Z(n7299));
-    LUT4 i5688_3_lut (.A(daca_6[3]), .B(daca_7[3]), .C(\RAM_write.i [0]), 
-         .Z(n7093)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5688_3_lut.init = 16'hcaca;
-    LUT4 i5687_3_lut (.A(daca_4[3]), .B(daca_5[3]), .C(\RAM_write.i [0]), 
-         .Z(n7092)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5687_3_lut.init = 16'hcaca;
-    PFUMX i6208 (.BLUT(n7599), .ALUT(n7600), .C0(cont_addr_c_1), .Z(n7601));
-    LUT4 i1_2_lut_rep_36 (.A(cont_addr_c_5), .B(cont_addr_c_4), .Z(n7580)) /* synthesis lut_function=(A+!(B)) */ ;
-    defparam i1_2_lut_rep_36.init = 16'hbbbb;
-    LUT4 i5842_3_lut (.A(daca_7[6]), .B(daca_8[6]), .C(cont_addr_c_0), 
-         .Z(n7247)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5842_3_lut.init = 16'hcaca;
-    LUT4 i5841_3_lut (.A(daca_5[6]), .B(daca_6[6]), .C(cont_addr_c_0), 
-         .Z(n7246)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5841_3_lut.init = 16'hcaca;
-    LUT4 i1_2_lut_rep_34_3_lut (.A(cont_addr_c_5), .B(cont_addr_c_4), .C(cont_addr_c_3), 
-         .Z(n7578)) /* synthesis lut_function=(A+((C)+!B)) */ ;
-    defparam i1_2_lut_rep_34_3_lut.init = 16'hfbfb;
-    LUT4 i5837_3_lut (.A(daca_11[7]), .B(daca_12[7]), .C(cont_addr_c_0), 
-         .Z(n7242)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5837_3_lut.init = 16'hcaca;
-    LUT4 i5836_3_lut (.A(daca_9[7]), .B(daca_10[7]), .C(cont_addr_c_0), 
-         .Z(n7241)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5836_3_lut.init = 16'hcaca;
-    LUT4 i5671_3_lut (.A(daca_2[4]), .B(daca_3[4]), .C(\RAM_write.i [0]), 
-         .Z(n7076)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5671_3_lut.init = 16'hcaca;
-    LUT4 CDS_in_I_0_1_lut (.A(CDS_in_c), .Z(CDS_in_N_585)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(192[10:22])
+          .B1(n1851), .C1(GND_net), .D1(GND_net), .COUT(n6232), .S1(n160_adj_723));   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723_add_4_1 .INIT0 = 16'hF000;
+    defparam \Clock_Divider_2.count_723_add_4_1 .INIT1 = 16'hdddd;
+    defparam \Clock_Divider_2.count_723_add_4_1 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_2.count_723_add_4_1 .INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_19 (.A0(\Clock_Divider_2.count [17]), .B0(n1851), 
+          .C0(DIVIB[17]), .D0(GND_net), .A1(\Clock_Divider_2.count [18]), 
+          .B1(n1851), .C1(DIVIB[18]), .D1(GND_net), .CIN(n6155), .COUT(n6156));
+    defparam sub_671_add_2_19.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_19.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_19.INJECT1_0 = "NO";
+    defparam sub_671_add_2_19.INJECT1_1 = "NO";
+    CCU2D sub_672_add_2_3 (.A0(\RAM2_read.count [1]), .B0(spcb[1]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM2_read.count [2]), .B1(spcb[2]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6140), .COUT(n6141));
+    defparam sub_672_add_2_3.INIT0 = 16'h5999;
+    defparam sub_672_add_2_3.INIT1 = 16'h5999;
+    defparam sub_672_add_2_3.INJECT1_0 = "NO";
+    defparam sub_672_add_2_3.INJECT1_1 = "NO";
+    CCU2D sub_672_add_2_13 (.A0(\RAM2_read.count [11]), .B0(spcb[11]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM2_read.count [12]), .B1(spcb[12]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6145), .COUT(n6146));
+    defparam sub_672_add_2_13.INIT0 = 16'h5999;
+    defparam sub_672_add_2_13.INIT1 = 16'h5999;
+    defparam sub_672_add_2_13.INJECT1_0 = "NO";
+    defparam sub_672_add_2_13.INJECT1_1 = "NO";
+    CCU2D sub_672_add_2_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(\RAM2_read.count [0]), .B1(spcb[0]), .C1(GND_net), .D1(GND_net), 
+          .COUT(n6140));
+    defparam sub_672_add_2_1.INIT0 = 16'h0000;
+    defparam sub_672_add_2_1.INIT1 = 16'h5999;
+    defparam sub_672_add_2_1.INJECT1_0 = "NO";
+    defparam sub_672_add_2_1.INJECT1_1 = "NO";
+    CCU2D \RAM2_read.count_727_add_4_13  (.A0(\RAM2_read.count [11]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM2_read.count [12]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6230), .S0(n59_adj_681), 
+          .S1(n58_adj_680));   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727_add_4_13 .INIT0 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_13 .INIT1 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_13 .INJECT1_0 = "NO";
+    defparam \RAM2_read.count_727_add_4_13 .INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_17 (.A0(\Clock_Divider_2.count [15]), .B0(n1851), 
+          .C0(DIVIB[15]), .D0(GND_net), .A1(\Clock_Divider_2.count [16]), 
+          .B1(n1851), .C1(DIVIB[16]), .D1(GND_net), .CIN(n6154), .COUT(n6155));
+    defparam sub_671_add_2_17.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_17.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_17.INJECT1_0 = "NO";
+    defparam sub_671_add_2_17.INJECT1_1 = "NO";
+    CCU2D \RAM2_read.count_727_add_4_11  (.A0(\RAM2_read.count [9]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM2_read.count [10]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6229), .COUT(n6230), .S0(n61_adj_683), 
+          .S1(n60_adj_682));   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727_add_4_11 .INIT0 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_11 .INIT1 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_11 .INJECT1_0 = "NO";
+    defparam \RAM2_read.count_727_add_4_11 .INJECT1_1 = "NO";
+    CCU2D \RAM2_read.count_727_add_4_9  (.A0(\RAM2_read.count [7]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM2_read.count [8]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6228), .COUT(n6229), .S0(n63_adj_685), 
+          .S1(n62_adj_684));   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727_add_4_9 .INIT0 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_9 .INIT1 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_9 .INJECT1_0 = "NO";
+    defparam \RAM2_read.count_727_add_4_9 .INJECT1_1 = "NO";
+    FD1S3IX \Clock_Divider_2.count_723__i2  (.D(n158_adj_721), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [2])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i2 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i3  (.D(n157_adj_720), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [3])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i3 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i4  (.D(n156_adj_719), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [4])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i4 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i5  (.D(n155_adj_718), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [5])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i5 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i6  (.D(n154_adj_717), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [6])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i6 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i7  (.D(n153_adj_716), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [7])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i7 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i8  (.D(n152_adj_715), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [8])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i8 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i9  (.D(n151_adj_714), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [9])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i9 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i10  (.D(n150_adj_713), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [10])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i10 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i11  (.D(n149_adj_712), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [11])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i11 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i12  (.D(n148_adj_711), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [12])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i12 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i13  (.D(n147_adj_710), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [13])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i13 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i14  (.D(n146_adj_709), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [14])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i14 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i15  (.D(n145_adj_708), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [15])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i15 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i16  (.D(n144_adj_707), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [16])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i16 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i17  (.D(n143_adj_706), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [17])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i17 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i18  (.D(n142_adj_705), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [18])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i18 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i19  (.D(n141_adj_704), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [19])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i19 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i20  (.D(n140_adj_703), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [20])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i20 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i21  (.D(n139_adj_702), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [21])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i21 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i22  (.D(n138_adj_701), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [22])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i22 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i23  (.D(n137_adj_700), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [23])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i23 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i24  (.D(n136_adj_699), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [24])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i24 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i25  (.D(n135_adj_698), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [25])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i25 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i26  (.D(n134_adj_697), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [26])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i26 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i27  (.D(n133_adj_696), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [27])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i27 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i28  (.D(n132_adj_695), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [28])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i28 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i29  (.D(n131_adj_694), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [29])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i29 .GSR = "ENABLED";
+    FD1S3IX \Clock_Divider_2.count_723__i30  (.D(n130_adj_693), .CK(FCK_c), 
+            .CD(\Clock_Divider_2.count_30__N_498 ), .Q(\Clock_Divider_2.count [30])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/firmware/p3050fg/main.vhd(275[13:18])
+    defparam \Clock_Divider_2.count_723__i30 .GSR = "ENABLED";
+    CCU2D sub_671_add_2_15 (.A0(\Clock_Divider_2.count [13]), .B0(n1851), 
+          .C0(DIVIB[13]), .D0(GND_net), .A1(\Clock_Divider_2.count [14]), 
+          .B1(n1851), .C1(DIVIB[14]), .D1(GND_net), .CIN(n6153), .COUT(n6154));
+    defparam sub_671_add_2_15.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_15.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_15.INJECT1_0 = "NO";
+    defparam sub_671_add_2_15.INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_13 (.A0(\Clock_Divider_2.count [11]), .B0(n1851), 
+          .C0(DIVIB[11]), .D0(GND_net), .A1(\Clock_Divider_2.count [12]), 
+          .B1(n1851), .C1(DIVIB[12]), .D1(GND_net), .CIN(n6152), .COUT(n6153));
+    defparam sub_671_add_2_13.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_13.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_13.INJECT1_0 = "NO";
+    defparam sub_671_add_2_13.INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_11 (.A0(\Clock_Divider_2.count [9]), .B0(n1851), 
+          .C0(DIVIB[9]), .D0(GND_net), .A1(\Clock_Divider_2.count [10]), 
+          .B1(n1851), .C1(DIVIB[10]), .D1(GND_net), .CIN(n6151), .COUT(n6152));
+    defparam sub_671_add_2_11.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_11.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_11.INJECT1_0 = "NO";
+    defparam sub_671_add_2_11.INJECT1_1 = "NO";
+    LUT4 i1_4_lut_adj_41 (.A(cont_addr_c_3), .B(data_addr[31]), .C(data_addr[23]), 
+         .D(cont_addr_c_0), .Z(n38_adj_671)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_41.init = 16'h0a22;
+    CCU2D \RAM2_read.count_727_add_4_7  (.A0(\RAM2_read.count [5]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM2_read.count [6]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6227), .COUT(n6228), .S0(n65_adj_687), 
+          .S1(n64_adj_686));   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727_add_4_7 .INIT0 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_7 .INIT1 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_7 .INJECT1_0 = "NO";
+    defparam \RAM2_read.count_727_add_4_7 .INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_11 (.A0(\Clock_Divider_1.count [9]), .B0(n1713), 
+          .C0(DIVIA[9]), .D0(GND_net), .A1(\Clock_Divider_1.count [10]), 
+          .B1(n1713), .C1(DIVIA[10]), .D1(GND_net), .CIN(n6167), .COUT(n6168));
+    defparam sub_670_add_2_11.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_11.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_11.INJECT1_0 = "NO";
+    defparam sub_670_add_2_11.INJECT1_1 = "NO";
+    LUT4 data_addr_31__N_242_28__bdd_4_lut (.A(data_addr_31__N_242[28]), .B(cont_data_7__N_320), 
+         .C(cont_data_7__N_310[4]), .D(n6633), .Z(cont_data_7__N_327)) /* synthesis lut_function=(A (B (C+(D))+!B !((D)+!C))+!A !((D)+!C)) */ ;
+    defparam data_addr_31__N_242_28__bdd_4_lut.init = 16'h88f0;
+    LUT4 i73_3_lut_adj_42 (.A(data_addr[10]), .B(data_addr[2]), .C(cont_addr_c_0), 
+         .Z(n70_adj_667)) /* synthesis lut_function=(!(A (B+!(C))+!A (B (C)))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i73_3_lut_adj_42.init = 16'h3535;
+    LUT4 CDS_in_I_0_1_lut (.A(CDS_in_c), .Z(CDS_in_N_628)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(142[10:22])
     defparam CDS_in_I_0_1_lut.init = 16'h5555;
-    LUT4 i5670_3_lut (.A(daca_0[4]), .B(daca_1[4]), .C(\RAM_write.i [0]), 
-         .Z(n7075)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5670_3_lut.init = 16'hcaca;
-    LUT4 i1_2_lut_rep_37 (.A(cont_addr_c_5), .B(cont_addr_c_4), .Z(n7581)) /* synthesis lut_function=(!((B)+!A)) */ ;
-    defparam i1_2_lut_rep_37.init = 16'h2222;
-    INV i6361 (.A(FCK_c), .Z(FCK_N_588));   // c:/firmware/p3050fg/main.vhd(13[3:6])
-    PFUMX i6206 (.BLUT(n7596), .ALUT(n7597), .C0(cont_addr_c_1), .Z(n7598));
+    LUT4 i1_2_lut_rep_29_3_lut (.A(cont_addr_c_5), .B(cont_addr_c_2), .C(cont_addr_c_4), 
+         .Z(n6626)) /* synthesis lut_function=(!(A+(B+!(C)))) */ ;
+    defparam i1_2_lut_rep_29_3_lut.init = 16'h1010;
+    LUT4 i1_2_lut_rep_21_3_lut_4_lut (.A(data_addr[2]), .B(n4818), .C(n6752), 
+         .D(V_c_0), .Z(n6618)) /* synthesis lut_function=(A (C)+!A (B (C)+!B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(200[10:53])
+    defparam i1_2_lut_rep_21_3_lut_4_lut.init = 16'hf0e0;
+    LUT4 i2533_2_lut (.A(cont_addr_c_1), .B(cont_addr_c_4), .Z(n5595)) /* synthesis lut_function=(A (B)) */ ;
+    defparam i2533_2_lut.init = 16'h8888;
+    LUT4 data_addr_31__N_242_29__bdd_4_lut (.A(data_addr_31__N_242[29]), .B(cont_data_7__N_320), 
+         .C(cont_data_7__N_310[5]), .D(n6633), .Z(cont_data_7__N_324)) /* synthesis lut_function=(A (B (C+(D))+!B !((D)+!C))+!A !((D)+!C)) */ ;
+    defparam data_addr_31__N_242_29__bdd_4_lut.init = 16'h88f0;
+    CCU2D \RAM2_read.count_727_add_4_5  (.A0(\RAM2_read.count [3]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM2_read.count [4]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6226), .COUT(n6227), .S0(n67_adj_689), 
+          .S1(n66_adj_688));   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727_add_4_5 .INIT0 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_5 .INIT1 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_5 .INJECT1_0 = "NO";
+    defparam \RAM2_read.count_727_add_4_5 .INJECT1_1 = "NO";
+    CCU2D add_721_9 (.A0(data_addr[7]), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(data_addr[8]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6189), .COUT(n6190), .S0(n3776), .S1(n3775));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_9.INIT0 = 16'h5aaa;
+    defparam add_721_9.INIT1 = 16'h5aaa;
+    defparam add_721_9.INJECT1_0 = "NO";
+    defparam add_721_9.INJECT1_1 = "NO";
+    CCU2D add_721_7 (.A0(data_addr[5]), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(data_addr[6]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6188), .COUT(n6189), .S0(n3778), .S1(n3777));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_7.INIT0 = 16'h5aaa;
+    defparam add_721_7.INIT1 = 16'h5aaa;
+    defparam add_721_7.INJECT1_0 = "NO";
+    defparam add_721_7.INJECT1_1 = "NO";
+    LUT4 i1_2_lut_rep_36 (.A(CDS), .B(CWR), .Z(n6633)) /* synthesis lut_function=(A (B)) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i1_2_lut_rep_36.init = 16'h8888;
+    LUT4 i1_3_lut_4_lut_adj_43 (.A(cont_addr_c_0), .B(n6625), .C(n2633), 
+         .D(cont_addr_c_1), .Z(FCK_c_enable_104)) /* synthesis lut_function=(A (C)+!A (B (C+!(D))+!B (C))) */ ;
+    defparam i1_3_lut_4_lut_adj_43.init = 16'hf0f4;
+    LUT4 i1_2_lut_3_lut_4_lut_adj_44 (.A(n6620), .B(n6628), .C(n31), .D(n2), 
+         .Z(FCK_c_enable_81)) /* synthesis lut_function=(!(A (C+!(D))+!A ((C+!(D))+!B))) */ ;   // c:/firmware/p3050fg/main.vhd(182[10:53])
+    defparam i1_2_lut_3_lut_4_lut_adj_44.init = 16'h0e00;
+    LUT4 i1_2_lut_adj_45 (.A(cont_addr_c_0), .B(cont_addr_c_5), .Z(n6455)) /* synthesis lut_function=(A (B)) */ ;
+    defparam i1_2_lut_adj_45.init = 16'h8888;
+    LUT4 mux_229_i1_3_lut (.A(data_addr_31__N_242[24]), .B(n3783), .C(n2633), 
+         .Z(data_addr_31__N_17[0])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i1_3_lut.init = 16'hcaca;
+    LUT4 i3_4_lut_adj_46 (.A(CDS), .B(CWR), .C(data_addr_31__N_307), .D(CDS_delayed), 
+         .Z(n2633)) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i3_4_lut_adj_46.init = 16'h4000;
+    LUT4 i3367_2_lut_2_lut_3_lut (.A(CDS), .B(CWR), .C(data_addr_31__N_307), 
+         .Z(n4105)) /* synthesis lut_function=(!(A (B (C)))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i3367_2_lut_2_lut_3_lut.init = 16'h7f7f;
+    LUT4 i2_3_lut_rep_25 (.A(n4818), .B(V_c_0), .C(data_addr[2]), .Z(n6622)) /* synthesis lut_function=(A+(B+!(C))) */ ;   // c:/firmware/p3050fg/main.vhd(192[10:53])
+    defparam i2_3_lut_rep_25.init = 16'hefef;
+    LUT4 i1_2_lut_rep_23_3_lut (.A(data_addr[2]), .B(n4818), .C(V_c_0), 
+         .Z(n6620)) /* synthesis lut_function=(A+(B+(C))) */ ;   // c:/firmware/p3050fg/main.vhd(200[10:53])
+    defparam i1_2_lut_rep_23_3_lut.init = 16'hfefe;
+    LUT4 i8_4_lut (.A(n11), .B(n16), .C(data_addr[15]), .D(data_addr[5]), 
+         .Z(n4818)) /* synthesis lut_function=(A+(B+((D)+!C))) */ ;   // c:/firmware/p3050fg/main.vhd(182[10:53])
+    defparam i8_4_lut.init = 16'hffef;
+    LUT4 mux_229_i31_3_lut (.A(data_addr_31__N_242[30]), .B(n3753), .C(n2633), 
+         .Z(data_addr_31__N_17[30])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i31_3_lut.init = 16'hcaca;
+    LUT4 i7_4_lut_adj_47 (.A(data_addr[10]), .B(n6478), .C(n6629), .D(n10), 
+         .Z(n16)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // c:/firmware/p3050fg/main.vhd(182[10:53])
+    defparam i7_4_lut_adj_47.init = 16'hfffe;
+    LUT4 i2_2_lut (.A(data_addr[11]), .B(data_addr[12]), .Z(n11)) /* synthesis lut_function=(A+(B)) */ ;   // c:/firmware/p3050fg/main.vhd(182[10:53])
+    defparam i2_2_lut.init = 16'heeee;
+    CCU2D \RAM2_read.count_727_add_4_3  (.A0(\RAM2_read.count [1]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM2_read.count [2]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6225), .COUT(n6226), .S0(n69_adj_691), 
+          .S1(n68_adj_690));   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727_add_4_3 .INIT0 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_3 .INIT1 = 16'hfaaa;
+    defparam \RAM2_read.count_727_add_4_3 .INJECT1_0 = "NO";
+    defparam \RAM2_read.count_727_add_4_3 .INJECT1_1 = "NO";
+    LUT4 i1_2_lut_4_lut_adj_48 (.A(n4818), .B(V_c_0), .C(data_addr[2]), 
+         .D(data_addr[3]), .Z(n4)) /* synthesis lut_function=(A+(B+((D)+!C))) */ ;   // c:/firmware/p3050fg/main.vhd(192[10:53])
+    defparam i1_2_lut_4_lut_adj_48.init = 16'hffef;
+    LUT4 i2382_4_lut (.A(cont_addr_c_3), .B(data_addr[13]), .C(data_addr[5]), 
+         .D(cont_addr_c_0), .Z(n29_adj_679)) /* synthesis lut_function=(!(A (B (C+!(D))+!B (C (D))))) */ ;
+    defparam i2382_4_lut.init = 16'h5f77;
+    LUT4 i1_3_lut_4_lut_adj_49 (.A(cont_addr_c_0), .B(n6625), .C(n2633), 
+         .D(cont_addr_c_1), .Z(FCK_c_enable_120)) /* synthesis lut_function=(A (C)+!A (B (C+(D))+!B (C))) */ ;
+    defparam i1_3_lut_4_lut_adj_49.init = 16'hf4f0;
+    LUT4 i2374_4_lut (.A(cont_addr_c_3), .B(data_addr[9]), .C(data_addr[1]), 
+         .D(cont_addr_c_0), .Z(n29_adj_675)) /* synthesis lut_function=(!(A (B (C+!(D))+!B (C (D))))) */ ;
+    defparam i2374_4_lut.init = 16'h5f77;
+    LUT4 data_addr_15__N_639_I_0_2_lut (.A(data_addr[15]), .B(data_addr[14]), 
+         .Z(ram2_we_N_649)) /* synthesis lut_function=(!(A+!(B))) */ ;   // c:/firmware/p3050fg/main.vhd(171[10:57])
+    defparam data_addr_15__N_639_I_0_2_lut.init = 16'h4444;
+    LUT4 i1_4_lut_adj_50 (.A(cont_addr_c_3), .B(data_addr[25]), .C(data_addr[17]), 
+         .D(cont_addr_c_0), .Z(n33_adj_674)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_50.init = 16'h0a22;
+    LUT4 i844_1_lut (.A(data_addr[15]), .Z(data_addr_15__N_639)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(204[10:53])
+    defparam i844_1_lut.init = 16'h5555;
+    CCU2D \RAM2_read.count_727_add_4_1  (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM2_read.count [0]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .COUT(n6225), .S1(n70_adj_692));   // c:/firmware/p3050fg/main.vhd(337[13:18])
+    defparam \RAM2_read.count_727_add_4_1 .INIT0 = 16'hF000;
+    defparam \RAM2_read.count_727_add_4_1 .INIT1 = 16'h0555;
+    defparam \RAM2_read.count_727_add_4_1 .INJECT1_0 = "NO";
+    defparam \RAM2_read.count_727_add_4_1 .INJECT1_1 = "NO";
+    LUT4 i1_2_lut_adj_51 (.A(data_addr[9]), .B(data_addr[13]), .Z(n6478)) /* synthesis lut_function=(A+(B)) */ ;
+    defparam i1_2_lut_adj_51.init = 16'heeee;
+    LUT4 i78_3_lut (.A(data_addr[8]), .B(V_c_0), .C(cont_addr_c_0), .Z(n74)) /* synthesis lut_function=(!(A (B+!(C))+!A (B (C)))) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i78_3_lut.init = 16'h3535;
+    LUT4 i3376_4_lut (.A(n6622), .B(n6752), .C(data_addr[1]), .D(data_addr[3]), 
+         .Z(FCK_c_enable_14)) /* synthesis lut_function=(!(A+((C+!(D))+!B))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i3376_4_lut.init = 16'h0400;
+    LUT4 i1_2_lut_rep_26 (.A(V_c_0), .B(n4818), .Z(n6623)) /* synthesis lut_function=(!((B)+!A)) */ ;
+    defparam i1_2_lut_rep_26.init = 16'h2222;
+    LUT4 i1_4_lut_adj_52 (.A(cont_addr_c_3), .B(data_addr[24]), .C(data_addr[16]), 
+         .D(cont_addr_c_0), .Z(n44)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_52.init = 16'h0a22;
+    LUT4 i2_3_lut_4_lut_adj_53 (.A(data_addr[1]), .B(n6620), .C(n6752), 
+         .D(data_addr[3]), .Z(FCK_c_enable_59)) /* synthesis lut_function=(!(A+(B+!(C (D))))) */ ;
+    defparam i2_3_lut_4_lut_adj_53.init = 16'h1000;
+    LUT4 i3_4_lut_adj_54 (.A(n3549), .B(spca[13]), .C(spca[14]), .D(spca[15]), 
+         .Z(\RAM1_read.count_12__N_572 )) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;
+    defparam i3_4_lut_adj_54.init = 16'h0002;
+    LUT4 i1_2_lut_adj_55 (.A(data_addr[8]), .B(data_addr[7]), .Z(n10)) /* synthesis lut_function=(A+(B)) */ ;   // c:/firmware/p3050fg/main.vhd(182[10:53])
+    defparam i1_2_lut_adj_55.init = 16'heeee;
+    LUT4 i3_4_lut_adj_56 (.A(n3631), .B(spcb[13]), .C(spcb[14]), .D(spcb[15]), 
+         .Z(\RAM2_read.count_12__N_615 )) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;
+    defparam i3_4_lut_adj_56.init = 16'h0002;
+    LUT4 i3374_4_lut (.A(n6620), .B(n6752), .C(data_addr[1]), .D(data_addr[3]), 
+         .Z(FCK_c_enable_29)) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i3374_4_lut.init = 16'h4000;
+    CCU2D add_721_5 (.A0(data_addr[3]), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(data_addr[4]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6187), .COUT(n6188), .S0(n3780), .S1(n3779));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_5.INIT0 = 16'h5aaa;
+    defparam add_721_5.INIT1 = 16'h5aaa;
+    defparam add_721_5.INJECT1_0 = "NO";
+    defparam add_721_5.INJECT1_1 = "NO";
+    LUT4 i1_2_lut_rep_22_3_lut (.A(V_c_0), .B(n4818), .C(data_addr[1]), 
+         .Z(n6619)) /* synthesis lut_function=(!((B+(C))+!A)) */ ;
+    defparam i1_2_lut_rep_22_3_lut.init = 16'h0202;
+    LUT4 i3_4_lut_adj_57 (.A(n6624), .B(n6432), .C(data_addr[1]), .D(n6618), 
+         .Z(FCK_c_enable_51)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i3_4_lut_adj_57.init = 16'h8000;
+    LUT4 i1_4_lut_adj_58 (.A(data_addr[1]), .B(n6616), .C(data_addr[2]), 
+         .D(n6623), .Z(FCK_c_enable_36)) /* synthesis lut_function=(!(((C+!(D))+!B)+!A)) */ ;
+    defparam i1_4_lut_adj_58.init = 16'h0800;
+    LUT4 i1_2_lut_adj_59 (.A(cont_addr_c_3), .B(cont_addr_c_4), .Z(n4870)) /* synthesis lut_function=(A (B)) */ ;   // c:/firmware/p3050fg/main.vhd(162[3] 208[12])
+    defparam i1_2_lut_adj_59.init = 16'h8888;
+    FD1S3IX ram1_we_470 (.D(n6630), .CK(FCK_c), .CD(n4105), .Q(ram1_we));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam ram1_we_470.GSR = "ENABLED";
+    FD1P3AX rcb_sw_i0_i1 (.D(data_addr_31__N_242[24]), .SP(FCK_c_enable_142), 
+            .CK(FCK_c), .Q(M_c_0));   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam rcb_sw_i0_i1.GSR = "ENABLED";
+    GSR GSR_INST (.GSR(VCC_net));
+    LUT4 i1_4_lut_adj_60 (.A(cont_addr_c_3), .B(data_addr[29]), .C(data_addr[21]), 
+         .D(cont_addr_c_0), .Z(n33_adj_678)) /* synthesis lut_function=(!((B (C+!(D))+!B (C (D)))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(210[3] 227[12])
+    defparam i1_4_lut_adj_60.init = 16'h0a22;
+    CCU2D add_721_3 (.A0(data_addr[1]), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(data_addr[2]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6186), .COUT(n6187), .S0(n3782), .S1(n3781));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_3.INIT0 = 16'h5aaa;
+    defparam add_721_3.INIT1 = 16'h5aaa;
+    defparam add_721_3.INJECT1_0 = "NO";
+    defparam add_721_3.INJECT1_1 = "NO";
+    LUT4 I_I_0_505_2_lut (.A(I_c), .B(\Clock_Divider_1.count_30__N_404 ), 
+         .Z(I_N_545)) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/firmware/p3050fg/main.vhd(252[3] 257[10])
+    defparam I_I_0_505_2_lut.init = 16'h6666;
+    CCU2D sub_670_add_2_9 (.A0(\Clock_Divider_1.count [7]), .B0(n1713), 
+          .C0(DIVIA[7]), .D0(GND_net), .A1(\Clock_Divider_1.count [8]), 
+          .B1(n1713), .C1(DIVIA[8]), .D1(GND_net), .CIN(n6166), .COUT(n6167));
+    defparam sub_670_add_2_9.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_9.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_9.INJECT1_0 = "NO";
+    defparam sub_670_add_2_9.INJECT1_1 = "NO";
+    CCU2D \RAM1_read.count_725_add_4_13  (.A0(\RAM1_read.count [11]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM1_read.count [12]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6223), .S0(n59), .S1(n58));   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725_add_4_13 .INIT0 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_13 .INIT1 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_13 .INJECT1_0 = "NO";
+    defparam \RAM1_read.count_725_add_4_13 .INJECT1_1 = "NO";
+    CCU2D \RAM1_read.count_725_add_4_11  (.A0(\RAM1_read.count [9]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM1_read.count [10]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6222), .COUT(n6223), .S0(n61), 
+          .S1(n60));   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725_add_4_11 .INIT0 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_11 .INIT1 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_11 .INJECT1_0 = "NO";
+    defparam \RAM1_read.count_725_add_4_11 .INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_9 (.A0(\Clock_Divider_2.count [7]), .B0(n1851), 
+          .C0(DIVIB[7]), .D0(GND_net), .A1(\Clock_Divider_2.count [8]), 
+          .B1(n1851), .C1(DIVIB[8]), .D1(GND_net), .CIN(n6150), .COUT(n6151));
+    defparam sub_671_add_2_9.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_9.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_9.INJECT1_0 = "NO";
+    defparam sub_671_add_2_9.INJECT1_1 = "NO";
+    CCU2D \RAM1_read.count_725_add_4_9  (.A0(\RAM1_read.count [7]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM1_read.count [8]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6221), .COUT(n6222), .S0(n63), 
+          .S1(n62));   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725_add_4_9 .INIT0 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_9 .INIT1 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_9 .INJECT1_0 = "NO";
+    defparam \RAM1_read.count_725_add_4_9 .INJECT1_1 = "NO";
+    CCU2D \RAM1_read.count_725_add_4_7  (.A0(\RAM1_read.count [5]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM1_read.count [6]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6220), .COUT(n6221), .S0(n65), 
+          .S1(n64));   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725_add_4_7 .INIT0 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_7 .INIT1 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_7 .INJECT1_0 = "NO";
+    defparam \RAM1_read.count_725_add_4_7 .INJECT1_1 = "NO";
+    LUT4 i805_1_lut (.A(cont_data_2__N_12), .Z(n3860)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(131[1] 239[13])
+    defparam i805_1_lut.init = 16'h5555;
+    LUT4 J_I_0_507_2_lut (.A(J_c), .B(\Clock_Divider_2.count_30__N_498 ), 
+         .Z(J_N_588)) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/firmware/p3050fg/main.vhd(271[3] 276[10])
+    defparam J_I_0_507_2_lut.init = 16'h6666;
+    LUT4 i2_4_lut (.A(n6615), .B(data_addr[1]), .C(n31), .D(n4), .Z(FCK_c_enable_89)) /* synthesis lut_function=(!((B+((D)+!C))+!A)) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i2_4_lut.init = 16'h0020;
+    CCU2D \RAM1_read.count_725_add_4_5  (.A0(\RAM1_read.count [3]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM1_read.count [4]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6219), .COUT(n6220), .S0(n67), 
+          .S1(n66));   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725_add_4_5 .INIT0 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_5 .INIT1 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_5 .INJECT1_0 = "NO";
+    defparam \RAM1_read.count_725_add_4_5 .INJECT1_1 = "NO";
+    CCU2D sub_672_add_2_11 (.A0(\RAM2_read.count [9]), .B0(spcb[9]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM2_read.count [10]), .B1(spcb[10]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6144), .COUT(n6145));
+    defparam sub_672_add_2_11.INIT0 = 16'h5999;
+    defparam sub_672_add_2_11.INIT1 = 16'h5999;
+    defparam sub_672_add_2_11.INJECT1_0 = "NO";
+    defparam sub_672_add_2_11.INJECT1_1 = "NO";
+    CCU2D \RAM1_read.count_725_add_4_3  (.A0(\RAM1_read.count [1]), .B0(GND_net), 
+          .C0(GND_net), .D0(GND_net), .A1(\RAM1_read.count [2]), .B1(GND_net), 
+          .C1(GND_net), .D1(GND_net), .CIN(n6218), .COUT(n6219), .S0(n69), 
+          .S1(n68));   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725_add_4_3 .INIT0 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_3 .INIT1 = 16'hfaaa;
+    defparam \RAM1_read.count_725_add_4_3 .INJECT1_0 = "NO";
+    defparam \RAM1_read.count_725_add_4_3 .INJECT1_1 = "NO";
+    CCU2D add_721_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .D0(GND_net), 
+          .A1(V_c_0), .B1(GND_net), .C1(GND_net), .D1(GND_net), .COUT(n6186), 
+          .S1(n3783));   // c:/firmware/p3050fg/main.vhd(232[48:79])
+    defparam add_721_1.INIT0 = 16'hF000;
+    defparam add_721_1.INIT1 = 16'h5555;
+    defparam add_721_1.INJECT1_0 = "NO";
+    defparam add_721_1.INJECT1_1 = "NO";
+    CCU2D \RAM1_read.count_725_add_4_1  (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM1_read.count [0]), .B1(GND_net), .C1(GND_net), 
+          .D1(GND_net), .COUT(n6218), .S1(n70));   // c:/firmware/p3050fg/main.vhd(322[13:18])
+    defparam \RAM1_read.count_725_add_4_1 .INIT0 = 16'hF000;
+    defparam \RAM1_read.count_725_add_4_1 .INIT1 = 16'h0555;
+    defparam \RAM1_read.count_725_add_4_1 .INJECT1_0 = "NO";
+    defparam \RAM1_read.count_725_add_4_1 .INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_31  (.A0(\Clock_Divider_1.count [29]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [30]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6216), .S0(n131), 
+          .S1(n130));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_31 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_31 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_31 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_31 .INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_29  (.A0(\Clock_Divider_1.count [27]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [28]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6215), .COUT(n6216), 
+          .S0(n133), .S1(n132));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_29 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_29 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_29 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_29 .INJECT1_1 = "NO";
+    INV i3457 (.A(FCK_c), .Z(FCK_N_652));   // c:/firmware/p3050fg/main.vhd(13[3:6])
+    CCU2D sub_668_add_2_cout (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
+          .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
+          .CIN(n6185), .S0(n3549));
+    defparam sub_668_add_2_cout.INIT0 = 16'h0000;
+    defparam sub_668_add_2_cout.INIT1 = 16'h0000;
+    defparam sub_668_add_2_cout.INJECT1_0 = "NO";
+    defparam sub_668_add_2_cout.INJECT1_1 = "NO";
+    CCU2D sub_668_add_2_13 (.A0(\RAM1_read.count [11]), .B0(spca[11]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM1_read.count [12]), .B1(spca[12]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6184), .COUT(n6185));
+    defparam sub_668_add_2_13.INIT0 = 16'h5999;
+    defparam sub_668_add_2_13.INIT1 = 16'h5999;
+    defparam sub_668_add_2_13.INJECT1_0 = "NO";
+    defparam sub_668_add_2_13.INJECT1_1 = "NO";
+    CCU2D sub_671_add_2_7 (.A0(\Clock_Divider_2.count [5]), .B0(n1851), 
+          .C0(DIVIB[5]), .D0(GND_net), .A1(\Clock_Divider_2.count [6]), 
+          .B1(n1851), .C1(DIVIB[6]), .D1(GND_net), .CIN(n6149), .COUT(n6150));
+    defparam sub_671_add_2_7.INIT0 = 16'hdd2d;
+    defparam sub_671_add_2_7.INIT1 = 16'hdd2d;
+    defparam sub_671_add_2_7.INJECT1_0 = "NO";
+    defparam sub_671_add_2_7.INJECT1_1 = "NO";
+    INV i3455 (.A(J_c), .Z(J_N_587));
+    CCU2D sub_670_add_2_7 (.A0(\Clock_Divider_1.count [5]), .B0(n1713), 
+          .C0(DIVIA[5]), .D0(GND_net), .A1(\Clock_Divider_1.count [6]), 
+          .B1(n1713), .C1(DIVIA[6]), .D1(GND_net), .CIN(n6165), .COUT(n6166));
+    defparam sub_670_add_2_7.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_7.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_7.INJECT1_0 = "NO";
+    defparam sub_670_add_2_7.INJECT1_1 = "NO";
+    CCU2D sub_668_add_2_11 (.A0(\RAM1_read.count [9]), .B0(spca[9]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM1_read.count [10]), .B1(spca[10]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6183), .COUT(n6184));
+    defparam sub_668_add_2_11.INIT0 = 16'h5999;
+    defparam sub_668_add_2_11.INIT1 = 16'h5999;
+    defparam sub_668_add_2_11.INJECT1_0 = "NO";
+    defparam sub_668_add_2_11.INJECT1_1 = "NO";
+    LUT4 CWR_in_I_0_1_lut (.A(CWR_in_c), .Z(CWR_in_N_651)) /* synthesis lut_function=(!(A)) */ ;   // c:/firmware/p3050fg/main.vhd(141[10:22])
+    defparam CWR_in_I_0_1_lut.init = 16'h5555;
+    PFUMX i64_adj_61 (.BLUT(n38_adj_668), .ALUT(n70_adj_667), .C0(cont_addr_c_1), 
+          .Z(n45_adj_669));
+    CCU2D sub_668_add_2_9 (.A0(\RAM1_read.count [7]), .B0(spca[7]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM1_read.count [8]), .B1(spca[8]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6182), .COUT(n6183));
+    defparam sub_668_add_2_9.INIT0 = 16'h5999;
+    defparam sub_668_add_2_9.INIT1 = 16'h5999;
+    defparam sub_668_add_2_9.INJECT1_0 = "NO";
+    defparam sub_668_add_2_9.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_27  (.A0(\Clock_Divider_1.count [25]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [26]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6214), .COUT(n6215), 
+          .S0(n135), .S1(n134));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_27 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_27 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_27 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_27 .INJECT1_1 = "NO";
     VLO i1 (.Z(GND_net));
-    PFUMX i6204 (.BLUT(n7593), .ALUT(n7594), .C0(cont_addr_c_1), .Z(n7595));
     TSALL TSALL_INST (.TSALL(GND_net));
+    CCU2D sub_668_add_2_7 (.A0(\RAM1_read.count [5]), .B0(spca[5]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM1_read.count [6]), .B1(spca[6]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6181), .COUT(n6182));
+    defparam sub_668_add_2_7.INIT0 = 16'h5999;
+    defparam sub_668_add_2_7.INIT1 = 16'h5999;
+    defparam sub_668_add_2_7.INJECT1_0 = "NO";
+    defparam sub_668_add_2_7.INJECT1_1 = "NO";
+    CCU2D sub_670_add_2_5 (.A0(\Clock_Divider_1.count [3]), .B0(n1713), 
+          .C0(DIVIA[3]), .D0(GND_net), .A1(\Clock_Divider_1.count [4]), 
+          .B1(n1713), .C1(DIVIA[4]), .D1(GND_net), .CIN(n6164), .COUT(n6165));
+    defparam sub_670_add_2_5.INIT0 = 16'hdd2d;
+    defparam sub_670_add_2_5.INIT1 = 16'hdd2d;
+    defparam sub_670_add_2_5.INJECT1_0 = "NO";
+    defparam sub_670_add_2_5.INJECT1_1 = "NO";
+    CCU2D sub_668_add_2_5 (.A0(\RAM1_read.count [3]), .B0(spca[3]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM1_read.count [4]), .B1(spca[4]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6180), .COUT(n6181));
+    defparam sub_668_add_2_5.INIT0 = 16'h5999;
+    defparam sub_668_add_2_5.INIT1 = 16'h5999;
+    defparam sub_668_add_2_5.INJECT1_0 = "NO";
+    defparam sub_668_add_2_5.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_25  (.A0(\Clock_Divider_1.count [23]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [24]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6213), .COUT(n6214), 
+          .S0(n137), .S1(n136));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_25 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_25 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_25 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_25 .INJECT1_1 = "NO";
     PUR PUR_INST (.PUR(VCC_net));
     defparam PUR_INST.RST_PULSE = 1;
-    PFUMX i6202 (.BLUT(n7590), .ALUT(n7591), .C0(cont_addr_c_1), .Z(n7592));
-    LUT4 i5835_3_lut (.A(daca_7[7]), .B(daca_8[7]), .C(cont_addr_c_0), 
-         .Z(n7240)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
-    defparam i5835_3_lut.init = 16'hcaca;
-    CCU2D add_173_13 (.A0(\Clock_Divider.count [11]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\Clock_Divider.count [12]), .B1(GND_net), 
-          .C1(GND_net), .D1(GND_net), .CIN(n6737), .S0(\Clock_Divider.count_12__N_386 [11]), 
-          .S1(\Clock_Divider.count_12__N_386 [12]));   // c:/firmware/p3050fg/main.vhd(295[13:18])
-    defparam add_173_13.INIT0 = 16'h5aaa;
-    defparam add_173_13.INIT1 = 16'h5aaa;
-    defparam add_173_13.INJECT1_0 = "NO";
-    defparam add_173_13.INJECT1_1 = "NO";
-    CCU2D add_197_11 (.A0(\RAM_write.count [9]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
-          .CIN(n6743), .S0(\RAM_write.count_9__N_520 [9]));   // c:/firmware/p3050fg/main.vhd(367[13:18])
-    defparam add_197_11.INIT0 = 16'h5aaa;
-    defparam add_197_11.INIT1 = 16'h0000;
-    defparam add_197_11.INJECT1_0 = "NO";
-    defparam add_197_11.INJECT1_1 = "NO";
-    CCU2D add_197_9 (.A0(\RAM_write.count [7]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\RAM_write.count [8]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6742), .COUT(n6743), .S0(\RAM_write.count_9__N_520 [7]), 
-          .S1(\RAM_write.count_9__N_520 [8]));   // c:/firmware/p3050fg/main.vhd(367[13:18])
-    defparam add_197_9.INIT0 = 16'h5aaa;
-    defparam add_197_9.INIT1 = 16'h5aaa;
-    defparam add_197_9.INJECT1_0 = "NO";
-    defparam add_197_9.INJECT1_1 = "NO";
-    CCU2D add_197_7 (.A0(\RAM_write.count [5]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\RAM_write.count [6]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6741), .COUT(n6742), .S0(\RAM_write.count_9__N_520 [5]), 
-          .S1(\RAM_write.count_9__N_520 [6]));   // c:/firmware/p3050fg/main.vhd(367[13:18])
-    defparam add_197_7.INIT0 = 16'h5aaa;
-    defparam add_197_7.INIT1 = 16'h5aaa;
-    defparam add_197_7.INJECT1_0 = "NO";
-    defparam add_197_7.INJECT1_1 = "NO";
-    PFUMX i6200 (.BLUT(n7587), .ALUT(n7588), .C0(cont_addr_c_1), .Z(n7589));
-    CCU2D DIVI_30__I_0_31_5330 (.A0(\Clock_Divider_2.count_30__N_463 [3]), 
-          .B0(DIVI[3]), .C0(\Clock_Divider_2.count_30__N_463 [2]), .D0(DIVI[2]), 
-          .A1(\Clock_Divider_2.count_30__N_463 [1]), .B1(DIVI[1]), .C1(\Clock_Divider_2.count_30__N_463 [0]), 
-          .D1(DIVI[0]), .CIN(n6701), .COUT(n6702));
-    defparam DIVI_30__I_0_31_5330.INIT0 = 16'h9009;
-    defparam DIVI_30__I_0_31_5330.INIT1 = 16'h9009;
-    defparam DIVI_30__I_0_31_5330.INJECT1_0 = "YES";
-    defparam DIVI_30__I_0_31_5330.INJECT1_1 = "YES";
-    DAC_RAM RAM (.wr_ram_addr({wr_ram_addr}), .\RAM_read.count ({\RAM_read.count }), 
-            .dac_ram_in({dac_ram_in}), .VCC_net(VCC_net), .FCK_c(FCK_c), 
-            .GND_net(GND_net), .FCK_N_588(FCK_N_588), .DACB_c(DACB_c), 
-            .n3110(n3110), .n3111(n3111), .n3112(n3112), .n3113(n3113), 
-            .n3114(n3114), .n3115(n3115), .n3116(n3116)) /* synthesis NGD_DRC_MASK=1 */ ;   // c:/firmware/p3050fg/main.vhd(328[8:22])
-    CCU2D add_197_5 (.A0(\RAM_write.count [3]), .B0(GND_net), .C0(GND_net), 
-          .D0(GND_net), .A1(\RAM_write.count [4]), .B1(GND_net), .C1(GND_net), 
-          .D1(GND_net), .CIN(n6740), .COUT(n6741), .S0(\RAM_write.count_9__N_520 [3]), 
-          .S1(\RAM_write.count_9__N_520 [4]));   // c:/firmware/p3050fg/main.vhd(367[13:18])
-    defparam add_197_5.INIT0 = 16'h5aaa;
-    defparam add_197_5.INIT1 = 16'h5aaa;
-    defparam add_197_5.INJECT1_0 = "NO";
-    defparam add_197_5.INJECT1_1 = "NO";
-    FD1S3AY \RAM_write.bstate_289  (.D(n7345), .CK(FCK_c), .Q(\RAM_write.bstate )) /* synthesis lse_init_val=0 */ ;   // c:/firmware/p3050fg/main.vhd(363[2] 394[9])
-    defparam \RAM_write.bstate_289 .GSR = "DISABLED";
+    LUT4 i1_4_lut_adj_62 (.A(CDS), .B(CWR), .C(cont_data_2__N_12), .D(cont_data_7__N_320), 
+         .Z(n4068)) /* synthesis lut_function=(A ((C (D))+!B)) */ ;   // c:/firmware/p3050fg/main.vhd(139[1] 236[8])
+    defparam i1_4_lut_adj_62.init = 16'ha222;
+    PFUMX i3405 (.BLUT(n6634), .ALUT(n6752), .C0(data_addr[3]), .Z(n2));
+    CCU2D sub_668_add_2_3 (.A0(\RAM1_read.count [1]), .B0(spca[1]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM1_read.count [2]), .B1(spca[2]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6179), .COUT(n6180));
+    defparam sub_668_add_2_3.INIT0 = 16'h5999;
+    defparam sub_668_add_2_3.INIT1 = 16'h5999;
+    defparam sub_668_add_2_3.INJECT1_0 = "NO";
+    defparam sub_668_add_2_3.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_23  (.A0(\Clock_Divider_1.count [21]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [22]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6212), .COUT(n6213), 
+          .S0(n139), .S1(n138));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_23 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_23 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_23 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_23 .INJECT1_1 = "NO";
+    CCU2D sub_672_add_2_9 (.A0(\RAM2_read.count [7]), .B0(spcb[7]), .C0(GND_net), 
+          .D0(GND_net), .A1(\RAM2_read.count [8]), .B1(spcb[8]), .C1(GND_net), 
+          .D1(GND_net), .CIN(n6143), .COUT(n6144));
+    defparam sub_672_add_2_9.INIT0 = 16'h5999;
+    defparam sub_672_add_2_9.INIT1 = 16'h5999;
+    defparam sub_672_add_2_9.INJECT1_0 = "NO";
+    defparam sub_672_add_2_9.INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_21  (.A0(\Clock_Divider_1.count [19]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [20]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6211), .COUT(n6212), 
+          .S0(n141), .S1(n140));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_21 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_21 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_21 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_21 .INJECT1_1 = "NO";
+    LUT4 i3362_4_lut (.A(cont_addr_c_2), .B(n4870), .C(n4869), .D(cont_addr_c_5), 
+         .Z(cont_data_7__N_320)) /* synthesis lut_function=(!(A (B (C (D)))+!A (B (C+!(D))))) */ ;   // c:/firmware/p3050fg/main.vhd(162[3] 208[12])
+    defparam i3362_4_lut.init = 16'h3fbb;
+    CCU2D \Clock_Divider_1.count_722_add_4_19  (.A0(\Clock_Divider_1.count [17]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [18]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6210), .COUT(n6211), 
+          .S0(n143), .S1(n142));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_19 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_19 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_19 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_19 .INJECT1_1 = "NO";
+    CCU2D \Clock_Divider_1.count_722_add_4_17  (.A0(\Clock_Divider_1.count [15]), 
+          .B0(n1713), .C0(GND_net), .D0(GND_net), .A1(\Clock_Divider_1.count [16]), 
+          .B1(n1713), .C1(GND_net), .D1(GND_net), .CIN(n6209), .COUT(n6210), 
+          .S0(n145), .S1(n144));   // c:/firmware/p3050fg/main.vhd(256[13:18])
+    defparam \Clock_Divider_1.count_722_add_4_17 .INIT0 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_17 .INIT1 = 16'hd222;
+    defparam \Clock_Divider_1.count_722_add_4_17 .INJECT1_0 = "NO";
+    defparam \Clock_Divider_1.count_722_add_4_17 .INJECT1_1 = "NO";
+    LUT4 mux_229_i30_3_lut (.A(data_addr_31__N_242[29]), .B(n3754), .C(n2633), 
+         .Z(data_addr_31__N_17[29])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // c:/firmware/p3050fg/main.vhd(231[3] 233[10])
+    defparam mux_229_i30_3_lut.init = 16'hcaca;
+    DAQ_RAM RAM2 (.\data_addr[12] (data_addr[12]), .\data_addr[11] (data_addr[11]), 
+            .\data_addr[10] (data_addr[10]), .\data_addr[9] (data_addr[9]), 
+            .\data_addr[8] (data_addr[8]), .\data_addr[7] (data_addr[7]), 
+            .\data_addr[6] (data_addr[6]), .\data_addr[5] (data_addr[5]), 
+            .\data_addr[4] (data_addr[4]), .\data_addr[3] (data_addr[3]), 
+            .\data_addr[2] (data_addr[2]), .\data_addr[1] (data_addr[1]), 
+            .V_c_0(V_c_0), .\RAM2_read.count ({\RAM2_read.count }), .\data_addr_31__N_242[31] (data_addr_31__N_242[31]), 
+            .ram2_we(ram2_we), .FCK_c(FCK_c), .VCC_net(VCC_net), .GND_net(GND_net), 
+            .FCK_N_652(FCK_N_652), .DACB_OUT_c_7(DACB_OUT_c_7), .\data_addr_31__N_242[24] (data_addr_31__N_242[24]), 
+            .DACB_OUT_c_0(DACB_OUT_c_0), .\data_addr_31__N_242[25] (data_addr_31__N_242[25]), 
+            .DACB_OUT_c_1(DACB_OUT_c_1), .\data_addr_31__N_242[26] (data_addr_31__N_242[26]), 
+            .DACB_OUT_c_2(DACB_OUT_c_2), .\data_addr_31__N_242[27] (data_addr_31__N_242[27]), 
+            .DACB_OUT_c_3(DACB_OUT_c_3), .\data_addr_31__N_242[28] (data_addr_31__N_242[28]), 
+            .DACB_OUT_c_4(DACB_OUT_c_4), .\data_addr_31__N_242[29] (data_addr_31__N_242[29]), 
+            .DACB_OUT_c_5(DACB_OUT_c_5), .\data_addr_31__N_242[30] (data_addr_31__N_242[30]), 
+            .DACB_OUT_c_6(DACB_OUT_c_6)) /* synthesis NGD_DRC_MASK=1 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    
+endmodule
+//
+// Verilog Description of module DAQ_RAM_U0
+//
+
+module DAQ_RAM_U0 (\data_addr[12] , \data_addr[11] , \data_addr[10] , 
+            \data_addr[9] , \data_addr[8] , \data_addr[7] , \data_addr[6] , 
+            \data_addr[5] , \data_addr[4] , \data_addr[3] , \data_addr[2] , 
+            \data_addr[1] , V_c_0, \RAM1_read.count , \data_addr_31__N_242[26] , 
+            ram1_we, FCK_c, VCC_net, GND_net, FCK_N_652, DACA_OUT_c_2, 
+            \data_addr_31__N_242[31] , DACA_OUT_c_7, \data_addr_31__N_242[25] , 
+            DACA_OUT_c_1, \data_addr_31__N_242[24] , DACA_OUT_c_0, \data_addr_31__N_242[27] , 
+            DACA_OUT_c_3, \data_addr_31__N_242[28] , DACA_OUT_c_4, \data_addr_31__N_242[29] , 
+            DACA_OUT_c_5, \data_addr_31__N_242[30] , DACA_OUT_c_6) /* synthesis NGD_DRC_MASK=1 */ ;
+    input \data_addr[12] ;
+    input \data_addr[11] ;
+    input \data_addr[10] ;
+    input \data_addr[9] ;
+    input \data_addr[8] ;
+    input \data_addr[7] ;
+    input \data_addr[6] ;
+    input \data_addr[5] ;
+    input \data_addr[4] ;
+    input \data_addr[3] ;
+    input \data_addr[2] ;
+    input \data_addr[1] ;
+    input V_c_0;
+    input [12:0]\RAM1_read.count ;
+    input \data_addr_31__N_242[26] ;
+    input ram1_we;
+    input FCK_c;
+    input VCC_net;
+    input GND_net;
+    input FCK_N_652;
+    output DACA_OUT_c_2;
+    input \data_addr_31__N_242[31] ;
+    output DACA_OUT_c_7;
+    input \data_addr_31__N_242[25] ;
+    output DACA_OUT_c_1;
+    input \data_addr_31__N_242[24] ;
+    output DACA_OUT_c_0;
+    input \data_addr_31__N_242[27] ;
+    output DACA_OUT_c_3;
+    input \data_addr_31__N_242[28] ;
+    output DACA_OUT_c_4;
+    input \data_addr_31__N_242[29] ;
+    output DACA_OUT_c_5;
+    input \data_addr_31__N_242[30] ;
+    output DACA_OUT_c_6;
+    
+    wire FCK_c /* synthesis SET_AS_NETWORK=FCK_c, is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(13[3:6])
+    wire FCK_N_652 /* synthesis is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(118[9:13])
+    
+    DP8KC DAQ_RAM_0_0_2_5 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[26] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_2)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_2_5.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_2_5.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_2_5.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_2_5.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_2_5.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_2_5.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_2_5.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_2_5.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_2_5.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_2_5.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_2_5.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_2_5.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_7_0 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[31] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_7)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_7_0.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_7_0.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_7_0.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_7_0.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_7_0.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_7_0.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_7_0.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_7_0.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_7_0.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_7_0.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_7_0.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_7_0.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_1_6 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[25] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_1)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_1_6.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_1_6.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_1_6.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_1_6.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_1_6.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_1_6.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_1_6.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_1_6.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_1_6.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_1_6.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_1_6.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_1_6.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_0_7 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[24] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_0)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_0_7.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_0_7.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_0_7.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_0_7.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_0_7.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_0_7.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_0_7.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_0_7.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_0_7.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_0_7.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_0_7.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_0_7.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_3_4 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[27] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_3)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_3_4.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_3_4.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_3_4.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_3_4.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_3_4.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_3_4.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_3_4.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_3_4.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_3_4.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_3_4.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_3_4.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_3_4.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_4_3 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[28] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_4)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_4_3.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_4_3.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_4_3.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_4_3.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_4_3.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_4_3.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_4_3.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_4_3.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_4_3.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_4_3.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_4_3.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_4_3.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_5_2 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[29] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_5)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_5_2.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_5_2.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_5_2.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_5_2.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_5_2.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_5_2.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_5_2.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_5_2.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_5_2.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_5_2.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_5_2.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_5_2.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_6_1 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[30] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram1_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM1_read.count [0]), .ADB1(\RAM1_read.count [1]), 
+          .ADB2(\RAM1_read.count [2]), .ADB3(\RAM1_read.count [3]), .ADB4(\RAM1_read.count [4]), 
+          .ADB5(\RAM1_read.count [5]), .ADB6(\RAM1_read.count [6]), .ADB7(\RAM1_read.count [7]), 
+          .ADB8(\RAM1_read.count [8]), .ADB9(\RAM1_read.count [9]), .ADB10(\RAM1_read.count [10]), 
+          .ADB11(\RAM1_read.count [11]), .ADB12(\RAM1_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACA_OUT_c_6)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=285, LSE_RLINE=285 */ ;   // c:/firmware/p3050fg/main.vhd(285[8:22])
+    defparam DAQ_RAM_0_0_6_1.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_6_1.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_6_1.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_6_1.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_6_1.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_6_1.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_6_1.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_6_1.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_6_1.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_6_1.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_6_1.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_6_1.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
     
 endmodule
 //
@@ -2394,94 +2778,560 @@ endmodule
 //
 
 //
-// Verilog Description of module DAC_RAM
+// Verilog Description of module DAQ_RAM
 //
 
-module DAC_RAM (wr_ram_addr, \RAM_read.count , dac_ram_in, VCC_net, 
-            FCK_c, GND_net, FCK_N_588, DACB_c, n3110, n3111, n3112, 
-            n3113, n3114, n3115, n3116) /* synthesis NGD_DRC_MASK=1 */ ;
-    input [9:0]wr_ram_addr;
-    input [9:0]\RAM_read.count ;
-    input [7:0]dac_ram_in;
-    input VCC_net;
+module DAQ_RAM (\data_addr[12] , \data_addr[11] , \data_addr[10] , \data_addr[9] , 
+            \data_addr[8] , \data_addr[7] , \data_addr[6] , \data_addr[5] , 
+            \data_addr[4] , \data_addr[3] , \data_addr[2] , \data_addr[1] , 
+            V_c_0, \RAM2_read.count , \data_addr_31__N_242[31] , ram2_we, 
+            FCK_c, VCC_net, GND_net, FCK_N_652, DACB_OUT_c_7, \data_addr_31__N_242[24] , 
+            DACB_OUT_c_0, \data_addr_31__N_242[25] , DACB_OUT_c_1, \data_addr_31__N_242[26] , 
+            DACB_OUT_c_2, \data_addr_31__N_242[27] , DACB_OUT_c_3, \data_addr_31__N_242[28] , 
+            DACB_OUT_c_4, \data_addr_31__N_242[29] , DACB_OUT_c_5, \data_addr_31__N_242[30] , 
+            DACB_OUT_c_6) /* synthesis NGD_DRC_MASK=1 */ ;
+    input \data_addr[12] ;
+    input \data_addr[11] ;
+    input \data_addr[10] ;
+    input \data_addr[9] ;
+    input \data_addr[8] ;
+    input \data_addr[7] ;
+    input \data_addr[6] ;
+    input \data_addr[5] ;
+    input \data_addr[4] ;
+    input \data_addr[3] ;
+    input \data_addr[2] ;
+    input \data_addr[1] ;
+    input V_c_0;
+    input [12:0]\RAM2_read.count ;
+    input \data_addr_31__N_242[31] ;
+    input ram2_we;
     input FCK_c;
+    input VCC_net;
     input GND_net;
-    input FCK_N_588;
-    output DACB_c;
-    output n3110;
-    output n3111;
-    output n3112;
-    output n3113;
-    output n3114;
-    output n3115;
-    output n3116;
+    input FCK_N_652;
+    output DACB_OUT_c_7;
+    input \data_addr_31__N_242[24] ;
+    output DACB_OUT_c_0;
+    input \data_addr_31__N_242[25] ;
+    output DACB_OUT_c_1;
+    input \data_addr_31__N_242[26] ;
+    output DACB_OUT_c_2;
+    input \data_addr_31__N_242[27] ;
+    output DACB_OUT_c_3;
+    input \data_addr_31__N_242[28] ;
+    output DACB_OUT_c_4;
+    input \data_addr_31__N_242[29] ;
+    output DACB_OUT_c_5;
+    input \data_addr_31__N_242[30] ;
+    output DACB_OUT_c_6;
     
     wire FCK_c /* synthesis SET_AS_NETWORK=FCK_c, is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(13[3:6])
-    wire FCK_N_588 /* synthesis is_inv_clock=1, is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(145[9:13])
+    wire FCK_N_652 /* synthesis is_clock=1 */ ;   // c:/firmware/p3050fg/main.vhd(118[9:13])
     
-    DP8KC DAC_RAM_0_0_0_0 (.DIA0(dac_ram_in[0]), .DIA1(dac_ram_in[1]), .DIA2(dac_ram_in[2]), 
-          .DIA3(dac_ram_in[3]), .DIA4(dac_ram_in[4]), .DIA5(dac_ram_in[5]), 
-          .DIA6(dac_ram_in[6]), .DIA7(dac_ram_in[7]), .DIA8(GND_net), 
-          .ADA0(VCC_net), .ADA1(GND_net), .ADA2(GND_net), .ADA3(wr_ram_addr[0]), 
-          .ADA4(wr_ram_addr[1]), .ADA5(wr_ram_addr[2]), .ADA6(wr_ram_addr[3]), 
-          .ADA7(wr_ram_addr[4]), .ADA8(wr_ram_addr[5]), .ADA9(wr_ram_addr[6]), 
-          .ADA10(wr_ram_addr[7]), .ADA11(wr_ram_addr[8]), .ADA12(wr_ram_addr[9]), 
-          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_588), .WEA(VCC_net), 
+    DP8KC DAQ_RAM_0_0_7_0 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[31] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
           .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
           .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
           .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
-          .DIB8(GND_net), .ADB0(GND_net), .ADB1(GND_net), .ADB2(GND_net), 
-          .ADB3(\RAM_read.count [0]), .ADB4(\RAM_read.count [1]), .ADB5(\RAM_read.count [2]), 
-          .ADB6(\RAM_read.count [3]), .ADB7(\RAM_read.count [4]), .ADB8(\RAM_read.count [5]), 
-          .ADB9(\RAM_read.count [6]), .ADB10(\RAM_read.count [7]), .ADB11(\RAM_read.count [8]), 
-          .ADB12(\RAM_read.count [9]), .CEB(VCC_net), .OCEB(VCC_net), 
-          .CLKB(FCK_c), .WEB(GND_net), .CSB0(GND_net), .CSB1(GND_net), 
-          .CSB2(GND_net), .RSTB(GND_net), .DOB0(n3116), .DOB1(n3115), 
-          .DOB2(n3114), .DOB3(n3113), .DOB4(n3112), .DOB5(n3111), .DOB6(n3110), 
-          .DOB7(DACB_c)) /* synthesis MEM_LPC_FILE="DAC_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=328, LSE_RLINE=328 */ ;   // c:/firmware/p3050fg/main.vhd(328[8:22])
-    defparam DAC_RAM_0_0_0_0.DATA_WIDTH_A = 9;
-    defparam DAC_RAM_0_0_0_0.DATA_WIDTH_B = 9;
-    defparam DAC_RAM_0_0_0_0.REGMODE_A = "NOREG";
-    defparam DAC_RAM_0_0_0_0.REGMODE_B = "NOREG";
-    defparam DAC_RAM_0_0_0_0.CSDECODE_A = "0b000";
-    defparam DAC_RAM_0_0_0_0.CSDECODE_B = "0b000";
-    defparam DAC_RAM_0_0_0_0.WRITEMODE_A = "NORMAL";
-    defparam DAC_RAM_0_0_0_0.WRITEMODE_B = "NORMAL";
-    defparam DAC_RAM_0_0_0_0.GSR = "ENABLED";
-    defparam DAC_RAM_0_0_0_0.RESETMODE = "ASYNC";
-    defparam DAC_RAM_0_0_0_0.ASYNC_RESET_RELEASE = "SYNC";
-    defparam DAC_RAM_0_0_0_0.INIT_DATA = "STATIC";
-    defparam DAC_RAM_0_0_0_0.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    defparam DAC_RAM_0_0_0_0.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_7)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_7_0.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_7_0.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_7_0.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_7_0.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_7_0.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_7_0.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_7_0.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_7_0.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_7_0.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_7_0.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_7_0.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_7_0.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_7_0.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_0_7 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[24] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_0)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_0_7.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_0_7.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_0_7.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_0_7.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_0_7.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_0_7.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_0_7.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_0_7.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_0_7.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_0_7.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_0_7.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_0_7.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_0_7.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_1_6 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[25] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_1)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_1_6.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_1_6.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_1_6.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_1_6.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_1_6.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_1_6.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_1_6.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_1_6.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_1_6.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_1_6.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_1_6.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_1_6.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_1_6.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_2_5 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[26] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_2)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_2_5.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_2_5.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_2_5.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_2_5.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_2_5.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_2_5.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_2_5.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_2_5.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_2_5.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_2_5.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_2_5.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_2_5.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_2_5.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_3_4 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[27] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_3)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_3_4.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_3_4.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_3_4.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_3_4.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_3_4.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_3_4.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_3_4.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_3_4.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_3_4.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_3_4.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_3_4.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_3_4.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_3_4.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_4_3 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[28] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_4)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_4_3.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_4_3.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_4_3.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_4_3.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_4_3.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_4_3.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_4_3.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_4_3.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_4_3.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_4_3.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_4_3.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_4_3.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_4_3.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_5_2 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[29] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_5)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_5_2.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_5_2.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_5_2.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_5_2.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_5_2.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_5_2.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_5_2.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_5_2.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_5_2.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_5_2.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_5_2.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_5_2.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_5_2.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    DP8KC DAQ_RAM_0_0_6_1 (.DIA0(GND_net), .DIA1(\data_addr_31__N_242[30] ), 
+          .DIA2(GND_net), .DIA3(GND_net), .DIA4(GND_net), .DIA5(GND_net), 
+          .DIA6(GND_net), .DIA7(GND_net), .DIA8(GND_net), .ADA0(V_c_0), 
+          .ADA1(\data_addr[1] ), .ADA2(\data_addr[2] ), .ADA3(\data_addr[3] ), 
+          .ADA4(\data_addr[4] ), .ADA5(\data_addr[5] ), .ADA6(\data_addr[6] ), 
+          .ADA7(\data_addr[7] ), .ADA8(\data_addr[8] ), .ADA9(\data_addr[9] ), 
+          .ADA10(\data_addr[10] ), .ADA11(\data_addr[11] ), .ADA12(\data_addr[12] ), 
+          .CEA(VCC_net), .OCEA(VCC_net), .CLKA(FCK_N_652), .WEA(ram2_we), 
+          .CSA0(GND_net), .CSA1(GND_net), .CSA2(GND_net), .RSTA(GND_net), 
+          .DIB0(GND_net), .DIB1(GND_net), .DIB2(GND_net), .DIB3(GND_net), 
+          .DIB4(GND_net), .DIB5(GND_net), .DIB6(GND_net), .DIB7(GND_net), 
+          .DIB8(GND_net), .ADB0(\RAM2_read.count [0]), .ADB1(\RAM2_read.count [1]), 
+          .ADB2(\RAM2_read.count [2]), .ADB3(\RAM2_read.count [3]), .ADB4(\RAM2_read.count [4]), 
+          .ADB5(\RAM2_read.count [5]), .ADB6(\RAM2_read.count [6]), .ADB7(\RAM2_read.count [7]), 
+          .ADB8(\RAM2_read.count [8]), .ADB9(\RAM2_read.count [9]), .ADB10(\RAM2_read.count [10]), 
+          .ADB11(\RAM2_read.count [11]), .ADB12(\RAM2_read.count [12]), 
+          .CEB(VCC_net), .OCEB(VCC_net), .CLKB(FCK_c), .WEB(GND_net), 
+          .CSB0(GND_net), .CSB1(GND_net), .CSB2(GND_net), .RSTB(GND_net), 
+          .DOB0(DACB_OUT_c_6)) /* synthesis MEM_LPC_FILE="DAQ_RAM.lpc", MEM_INIT_FILE="INIT_ALL_0s", syn_instantiated=1, LSE_LINE_FILE_ID=21, LSE_LCOL=8, LSE_RCOL=22, LSE_LLINE=298, LSE_RLINE=298 */ ;   // c:/firmware/p3050fg/main.vhd(298[8:22])
+    defparam DAQ_RAM_0_0_6_1.DATA_WIDTH_A = 1;
+    defparam DAQ_RAM_0_0_6_1.DATA_WIDTH_B = 1;
+    defparam DAQ_RAM_0_0_6_1.REGMODE_A = "NOREG";
+    defparam DAQ_RAM_0_0_6_1.REGMODE_B = "NOREG";
+    defparam DAQ_RAM_0_0_6_1.CSDECODE_A = "0b000";
+    defparam DAQ_RAM_0_0_6_1.CSDECODE_B = "0b000";
+    defparam DAQ_RAM_0_0_6_1.WRITEMODE_A = "NORMAL";
+    defparam DAQ_RAM_0_0_6_1.WRITEMODE_B = "NORMAL";
+    defparam DAQ_RAM_0_0_6_1.GSR = "ENABLED";
+    defparam DAQ_RAM_0_0_6_1.RESETMODE = "ASYNC";
+    defparam DAQ_RAM_0_0_6_1.ASYNC_RESET_RELEASE = "SYNC";
+    defparam DAQ_RAM_0_0_6_1.INIT_DATA = "STATIC";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_00 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_01 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_02 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_03 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_04 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_05 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_06 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_07 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_08 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_09 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_0F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_10 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_11 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_12 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_13 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_14 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_15 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_16 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_17 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_18 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_19 = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1A = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1B = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1C = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1D = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1E = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    defparam DAQ_RAM_0_0_6_1.INITVAL_1F = "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000";
     
 endmodule

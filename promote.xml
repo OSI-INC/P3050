@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<userSetting name="C:/Firmware/P3050FG/promote.xml" version="Diamond (64-bit) 3.12.0.240.2" date="Wed Nov 08 20:18:33 2023" vendor="Lattice Semiconductor Corporation" >
+<userSetting name="C:/Firmware/P3050FG/promote.xml" version="Diamond (64-bit) 3.12.0.240.2" date="Tue Dec 19 14:23:38 2023" vendor="Lattice Semiconductor Corporation" >
   <msg mid="35921504" type="Info" />
   <msg mid="35931002" type="Warning" />
   <msg mid="35921205" type="Warning" />
+  <msg mid="35921077" type="Error" />
   <msg mid="35921052" type="Error" />
   <msg mid="35921128" type="Error" />
   <msg mid="35921251" type="Warning" />

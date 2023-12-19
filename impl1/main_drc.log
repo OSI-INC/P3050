@@ -7,18 +7,16 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
-WARNING - synthesis: logical net 'CK' has no load.
-WARNING - synthesis: input pad net 'CK' has no legal load.
 WARNING - synthesis: logical net 'UPLOAD' has no load.
 WARNING - synthesis: input pad net 'UPLOAD' has no legal load.
 WARNING - synthesis: logical net 'EMPTY' has no load.
 WARNING - synthesis: input pad net 'EMPTY' has no legal load.
 WARNING - synthesis: logical net 'ACTIV' has no load.
 WARNING - synthesis: input pad net 'ACTIV' has no legal load.
-WARNING - synthesis: DRC complete with 8 warnings.
+WARNING - synthesis: DRC complete with 6 warnings.
 
 Design Results:
-    808 blocks expanded
+    590 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file P3050FG_impl1.ngd.

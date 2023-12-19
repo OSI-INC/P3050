@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 08 16:05:29 2023
+Mon Dec 18 15:13:45 2023
 
 
 Command Line:  synthesis -f P3050FG_impl1_lattice.synproj -gui -msgset C:/Firmware/P3050FG/promote.xml 
@@ -80,46 +80,28 @@ Compile design.
 Compile Design Begin
 INFO - synthesis: The default VHDL library search path is now "C:/Firmware/P3050FG/impl1". VHDL-1504
 Analyzing VHDL file c:/firmware/p3050fg/daq_ram.vhd. VHDL-1481
-INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(14): analyzing entity dac_ram. VHDL-1012
+INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(14): analyzing entity daq_ram. VHDL-1012
 INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(28): analyzing architecture structure. VHDL-1010
 unit main is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/firmware/p3050fg/daq_ram.vhd. VHDL-1481
-INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(14): analyzing entity dac_ram. VHDL-1012
+INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(14): analyzing entity daq_ram. VHDL-1012
 INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(28): analyzing architecture structure. VHDL-1010
 unit main is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/firmware/p3050fg/main.vhd. VHDL-1481
 INFO - synthesis: c:/firmware/p3050fg/main.vhd(10): analyzing entity main. VHDL-1012
-INFO - synthesis: c:/firmware/p3050fg/main.vhd(135): analyzing architecture behavior. VHDL-1010
+INFO - synthesis: c:/firmware/p3050fg/main.vhd(104): analyzing architecture behavior. VHDL-1010
 unit main is not yet analyzed. VHDL-1485
 unit main is not yet analyzed. VHDL-1485
 c:/firmware/p3050fg/main.vhd(10): executing main(behavior)
 
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(115): using initial value 'U' for reset since it is never assigned. VHDL-1303
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(187): cont_addr should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(282): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(343): using initial value 0 for next_state since it is never assigned. VHDL-1303
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(346): daca_0 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(347): daca_1 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(348): daca_2 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(349): daca_3 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(350): daca_4 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(351): daca_5 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(352): daca_6 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(353): daca_7 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(354): daca_8 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(355): daca_9 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(356): daca_10 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(357): daca_11 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(358): daca_12 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(359): daca_13 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(360): daca_14 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(361): daca_15 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(361): using initial value (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) for sine since it is never assigned. VHDL-1303
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(363): not_reset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(397): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-Removed duplicate sequential element rd_ram_addr(10 bit), because it is equivalent to RAM_read.count
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(84): using initial value 'U' for reset since it is never assigned. VHDL-1303
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(137): cont_addr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(239): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+Removed duplicate sequential element rd_ram1_addr(13 bit), because it is equivalent to RAM1_read.count
 
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(132): replacing existing netlist main(behavior). VHDL-1205
+Removed duplicate sequential element rd_ram2_addr(13 bit), because it is equivalent to RAM2_read.count
+
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(101): replacing existing netlist main(behavior). VHDL-1205
 Top module name (VHDL): main
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -128,8 +110,8 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = main.
-WARNING - synthesis: Initial value found on net n704 will be ignored due to unrecognized driver type
 WARNING - synthesis: I/O Port CK 's net has no driver and is unused.
+WARNING - synthesis: I/O Port W 's net has no driver and is unused.
 WARNING - synthesis: I/O Port UPLOAD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port EMPTY 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
@@ -137,11 +119,11 @@ WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
 
 
 WARNING - synthesis: I/O Port CK 's net has no driver and is unused.
+WARNING - synthesis: I/O Port W 's net has no driver and is unused.
 WARNING - synthesis: I/O Port UPLOAD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port EMPTY 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
-GSR instance connected to net NOT_RESET_c.
-WARNING - synthesis: Initial value found on instance RAM_write.bstate_289 will be ignored.
+GSR will not be inferred because no asynchronous signal was found in the netlist.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -150,36 +132,30 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'CK' has no load.
-WARNING - synthesis: input pad net 'CK' has no legal load.
 WARNING - synthesis: logical net 'UPLOAD' has no load.
 WARNING - synthesis: input pad net 'UPLOAD' has no legal load.
 WARNING - synthesis: logical net 'EMPTY' has no load.
 WARNING - synthesis: input pad net 'EMPTY' has no legal load.
 WARNING - synthesis: logical net 'ACTIV' has no load.
 WARNING - synthesis: input pad net 'ACTIV' has no legal load.
-WARNING - synthesis: DRC complete with 8 warnings.
+WARNING - synthesis: DRC complete with 6 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file P3050FG_impl1.ngd.
 
 ################### Begin Area Report (main)######################
-Number of register bits => 285 of 7209 (3 % )
+Number of register bits => 248 of 7209 (3 % )
 BB => 8
-CCU2D => 44
-DP8KC => 1
-FD1P3AX => 202
-FD1P3IX => 4
-FD1S3AX => 36
-FD1S3AY => 1
-FD1S3IX => 41
-FD1S3JX => 1
+CCU2D => 113
+DP8KC => 16
+FD1P3AX => 142
+FD1S3AX => 14
+FD1S3IX => 92
 GSR => 1
-IB => 11
-INV => 1
-L6MUX21 => 40
-LUT4 => 288
-OB => 38
-PFUMX => 88
+IB => 12
+INV => 3
+LUT4 => 139
+OB => 40
+PFUMX => 7
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -188,34 +164,36 @@ TSALL => 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : FCK_c, loads : 277
-  Net : FCK_N_588, loads : 11
+Number of Clocks: 4
+  Net : FCK_c, loads : 239
+  Net : FCK_N_652, loads : 16
+  Net : I_c, loads : 3
+  Net : J_c, loads : 3
 Clock Enable Nets
-Number of Clock Enables: 26
+Number of Clock Enables: 18
 Top 10 highest fanout Clock Enables:
-  Net : NOT_RESET_c, loads : 52
-  Net : FCK_c_enable_111, loads : 8
-  Net : FCK_c_enable_118, loads : 8
-  Net : FCK_c_enable_125, loads : 8
-  Net : FCK_c_enable_48, loads : 8
-  Net : FCK_c_enable_132, loads : 8
-  Net : FCK_c_enable_62, loads : 8
-  Net : FCK_c_enable_139, loads : 8
-  Net : FCK_c_enable_76, loads : 8
-  Net : FCK_c_enable_146, loads : 8
+  Net : FCK_c_enable_29, loads : 8
+  Net : FCK_c_enable_127, loads : 8
+  Net : FCK_c_enable_96, loads : 8
+  Net : FCK_c_enable_51, loads : 8
+  Net : FCK_c_enable_36, loads : 8
+  Net : FCK_c_enable_59, loads : 8
+  Net : FCK_c_enable_141, loads : 8
+  Net : FCK_c_enable_81, loads : 8
+  Net : FCK_c_enable_142, loads : 8
+  Net : FCK_c_enable_89, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : cont_addr_c_0, loads : 114
-  Net : RAM_write.i_0, loads : 69
-  Net : cont_addr_c_2, loads : 68
-  Net : cont_addr_c_1, loads : 63
-  Net : NOT_RESET_c, loads : 52
-  Net : RAM_write.i_1, loads : 36
-  Net : cont_addr_c_3, loads : 34
-  Net : wr_reset, loads : 32
-  Net : Clock_Divider_2.count_30__N_462, loads : 32
-  Net : n7579, loads : 31
+  Net : n1713, loads : 62
+  Net : n1851, loads : 62
+  Net : n2633, loads : 36
+  Net : V_c_0, loads : 33
+  Net : Clock_Divider_1.count_30__N_404, loads : 32
+  Net : Clock_Divider_2.count_30__N_498, loads : 32
+  Net : data_addr_3, loads : 31
+  Net : data_addr_2, loads : 31
+  Net : data_addr_1, loads : 31
+  Net : cont_addr_c_0, loads : 23
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -225,19 +203,25 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets FCK_N_588]               |  200.000 MHz|  232.180 MHz|     7  
+clk3 [get_nets J_c]                     |  200.000 MHz|  143.410 MHz|    10 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets FCK_c]                   |  200.000 MHz|  108.460 MHz|    12 *
+clk2 [get_nets I_c]                     |  200.000 MHz|  143.410 MHz|    10 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets FCK_N_652]               |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets FCK_c]                   |  200.000 MHz|   87.306 MHz|     8 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+3 constraints not met.
 
 
-Peak Memory Usage: 92.051  MB
+Peak Memory Usage: 90.504  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.391  secs
+Elapsed CPU time for LSE flow : 1.375  secs
 --------------------------------------------------------------

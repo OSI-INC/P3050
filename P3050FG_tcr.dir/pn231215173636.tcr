@@ -1,0 +1,8 @@
+#Start recording tcl command: 12/15/2023 16:35:07
+#Project Location: C:/Firmware/P3050FG; Project name: P3050FG
+prj_project open "C:/Firmware/P3050FG/P3050FG.ldf"
+prj_run Export -impl impl1 -task Jedecgen
+prj_run Export -impl impl1 -task Jedecgen
+prj_run Export -impl impl1 -task Jedecgen
+prj_run Export -impl impl1 -task Jedecgen
+#Stop recording: 12/15/2023 17:36:36

@@ -3,18 +3,25 @@ Report for cell main
    Instance path: main
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     229.00        100.0
-                                  LUT4	     288.00        100.0
-                                 IOBUF	         57        100.0
-                                PFUREG	        285        100.0
-                                RIPPLE	         44        100.0
-                                   EBR	          1        100.0
+                                  SLIC	     186.00        100.0
+                                  LUT4	     140.00        100.0
+                                 IOBUF	         60        100.0
+                                PFUREG	        248        100.0
+                                RIPPLE	        113        100.0
+                                   EBR	         16        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                               DAC_RAM	          1         0.0
+                            DAQ_RAM_U0	          1         0.0
+                               DAQ_RAM	          1         0.0
 ---------------------------------------------------
-Report for cell DAC_RAM
-   Instance path: main/RAM
+Report for cell DAQ_RAM_U0
+   Instance path: main/RAM1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                   EBR	          1        100.0
+                                   EBR	          8        50.0
+---------------------------------------------------
+Report for cell DAQ_RAM
+   Instance path: main/RAM2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          8        50.0

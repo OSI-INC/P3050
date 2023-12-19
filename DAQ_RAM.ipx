@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="DAQ_RAM" module="RAM_DP" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2023 10 24 09:36:17.185" version="6.5" type="Module" synthesis="lse" source_format="VHDL">
+<DiamondModule name="DAQ_RAM" module="DAQ_RAM" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2023 12 15 16:42:47.717" version="6.5" type="Module" synthesis="lse" source_format="VHDL">
   <Package>
-		<File name="" type="" modified="2023 10 24 09:36:17.050"/>
-		<File name="DAQ_RAM.lpc" type="lpc" modified="2023 10 24 09:36:15.100"/>
-		<File name="DAQ_RAM.vhd" type="top_level_vhdl" modified="2023 10 24 09:36:15.169"/>
-		<File name="DAQ_RAM_tmpl.vhd" type="template_vhdl" modified="2023 10 24 09:36:15.169"/>
-		<File name="tb_DAQ_RAM_tmpl.vhd" type="testbench_vhdl" modified="2023 10 24 09:36:15.177"/>
+		<File name="" type="" modified="2023 12 15 16:42:47.560"/>
+		<File name="DAQ_RAM.lpc" type="lpc" modified="2023 12 15 16:42:42.773"/>
+		<File name="DAQ_RAM.vhd" type="top_level_vhdl" modified="2023 12 15 16:42:42.846"/>
+		<File name="DAQ_RAM_tmpl.vhd" type="template_vhdl" modified="2023 12 15 16:42:42.846"/>
+		<File name="tb_DAQ_RAM_tmpl.vhd" type="testbench_vhdl" modified="2023 12 15 16:42:42.846"/>
   </Package>
 </DiamondModule>

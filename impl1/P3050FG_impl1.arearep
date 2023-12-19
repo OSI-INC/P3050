@@ -1,32 +1,36 @@
 ----------------------------------------------------------------------
 Report for cell main.TECH
-Register bits:  285 of 7209 (3.953%)
-I/O cells:      57
+Register bits:  248 of 7209 (3.440%)
+I/O cells:      60
                                   Cell usage:
                                cell     count   Res Usage(%)
                                  BB         8          100.0
-                              CCU2D        44          100.0
-                              DP8KC         1          100.0
-                            FD1P3AX       202          100.0
-                            FD1P3IX         4          100.0
-                            FD1S3AX        36          100.0
-                            FD1S3AY         1          100.0
-                            FD1S3IX        41          100.0
-                            FD1S3JX         1          100.0
+                              CCU2D       113          100.0
+                              DP8KC        16          100.0
+                            FD1P3AX       142          100.0
+                            FD1S3AX        14          100.0
+                            FD1S3IX        92          100.0
                                 GSR         1          100.0
-                                 IB        11          100.0
-                                INV         1          100.0
-                            L6MUX21        40          100.0
-                               LUT4       288          100.0
-                                 OB        38          100.0
-                              PFUMX        88          100.0
+                                 IB        12          100.0
+                                INV         3          100.0
+                               LUT4       139          100.0
+                                 OB        40          100.0
+                              PFUMX         7          100.0
 SUB MODULES
-                            DAC_RAM         1
-                              TOTAL       806
+                            DAQ_RAM         1
+                         DAQ_RAM_U0         1
+                              TOTAL       589
 ----------------------------------------------------------------------
-Report for cell DAC_RAM.v1
-Instance Path : RAM
+Report for cell DAQ_RAM_U0.v1
+Instance Path : RAM1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              DP8KC         1          100.0
-                              TOTAL         1
+                              DP8KC         8           50.0
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell DAQ_RAM.v1
+Instance Path : RAM2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              DP8KC         8           50.0
+                              TOTAL         8

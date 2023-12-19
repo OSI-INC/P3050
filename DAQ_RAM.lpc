@@ -16,8 +16,8 @@ CoreRevision=6.5
 ModuleName=DAQ_RAM
 SourceFormat=VHDL
 ParameterFileVersion=1.0
-Date=10/24/2023
-Time=09:36:15
+Date=12/15/2023
+Time=16:42:42
 
 [Parameters]
 Verilog=0
@@ -27,9 +27,9 @@ Destination=Synplicity
 Expression=BusA(0 to 7)
 Order=Big Endian [MSB:LSB]
 IO=0
-RAddress=1024
+RAddress=8192
 RData=8
-WAddress=1024
+WAddress=8192
 WData=8
 enByte=0
 ByteSize=9
@@ -50,4 +50,4 @@ no_init=0
 =mem
 
 [Command]
-cmd_line= -w -n DAQ_RAM -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type ramdps -device LCMXO2-7000HC -raddr_width 10 -rwidth 8 -waddr_width 10 -wwidth 8 -rnum_words 1024 -wnum_words 1024 -cascade 11 -mem_init0
+cmd_line= -w -n DAQ_RAM -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type ramdps -device LCMXO2-7000HC -raddr_width 13 -rwidth 8 -waddr_width 13 -wwidth 8 -rnum_words 8192 -wnum_words 8192 -cascade 11 -mem_init0
