@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
-Mon Dec 18 15:13:58 2023
+Wed Jan 03 16:42:17 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -48,481 +48,539 @@ VCCIO Voltage:
 
 
 ================================================================================
-Preference: FREQUENCY PORT "FCK" 80.000000 MHz ;
+Preference: FREQUENCY PORT "CK2" 80.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 5.840ns
+         The internal maximum frequency of the following component is 150.150 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            CK2
+
+   Delay:               6.660ns -- based on Minimum Pulse Width
+
+Report:  150.150MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "CK1" 80.000000 MHz ;
             4096 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.290ns (weighted slack = 0.580ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM1_read.count_744__i12  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_2_5(ASIC)  (to CK1_c_derived_238 +)
+
+   Delay:               3.754ns  (10.9% logic, 89.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.754ns physical path delay SLICE_84 to RAM1/DAQ_RAM_0_0_2_5 meets
+      6.250ns delay constraint less
+      2.327ns skew and
+     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.290ns
+
+ Physical Path Details:
+
+      Data path SLICE_84 to RAM1/DAQ_RAM_0_0_2_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R17C28C.CLK to     R17C28C.Q1 SLICE_84 (from I_c)
+ROUTE        10     3.345     R17C28C.Q1 to *_R13C10.ADB12 RAM1_read.count_12 (to CK1_c_derived_238)
+                  --------
+                    3.754   (10.9% logic, 89.1% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CK1 to SLICE_84:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C28C.CLK I_c
+                  --------
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
+
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_2_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R13C10.CLKB CK1_c_derived_238
+                  --------
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+Passed: The following path meets requirements by 0.294ns (weighted slack = 0.588ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM1_read.count_744__i1  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_5_2(ASIC)  (to CK1_c_derived_238 +)
+
+   Delay:               3.750ns  (10.9% logic, 89.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.750ns physical path delay SLICE_91 to RAM1/DAQ_RAM_0_0_5_2 meets
+      6.250ns delay constraint less
+      2.327ns skew and
+     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.294ns
+
+ Physical Path Details:
+
+      Data path SLICE_91 to RAM1/DAQ_RAM_0_0_5_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R17C27B.CLK to     R17C27B.Q0 SLICE_91 (from I_c)
+ROUTE        10     3.341     R17C27B.Q0 to *R_R20C10.ADB1 RAM1_read.count_1 (to CK1_c_derived_238)
+                  --------
+                    3.750   (10.9% logic, 89.1% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CK1 to SLICE_91:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C27B.CLK I_c
+                  --------
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
+
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_5_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R20C10.CLKB CK1_c_derived_238
+                  --------
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+Passed: The following path meets requirements by 0.308ns (weighted slack = 0.616ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              RAM1_read.count_744__i10  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_5_2(ASIC)  (to CK1_c_derived_238 +)
+
+   Delay:               3.736ns  (10.9% logic, 89.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.736ns physical path delay SLICE_85 to RAM1/DAQ_RAM_0_0_5_2 meets
+      6.250ns delay constraint less
+      2.327ns skew and
+     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.308ns
+
+ Physical Path Details:
+
+      Data path SLICE_85 to RAM1/DAQ_RAM_0_0_5_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R17C28B.CLK to     R17C28B.Q1 SLICE_85 (from I_c)
+ROUTE        10     3.327     R17C28B.Q1 to *_R20C10.ADB10 RAM1_read.count_10 (to CK1_c_derived_238)
+                  --------
+                    3.736   (10.9% logic, 89.1% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CK1 to SLICE_85:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C28B.CLK I_c
+                  --------
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
+
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_5_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R20C10.CLKB CK1_c_derived_238
+                  --------
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
 
 Passed: The following path meets requirements by 0.310ns (weighted slack = 0.620ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              RAM1_read.count_725__i9  (from I_c -)
-   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_1_6(ASIC)  (to FCK_c +)
+   Source:         FF         Q              RAM1_read.count_744__i7  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_5_2(ASIC)  (to CK1_c_derived_238 +)
 
    Delay:               3.734ns  (11.0% logic, 89.0% route), 1 logic levels.
 
  Constraint Details:
 
-      3.734ns physical path delay SLICE_85 to RAM1/DAQ_RAM_0_0_1_6 meets
+      3.734ns physical path delay SLICE_87 to RAM1/DAQ_RAM_0_0_5_2 meets
       6.250ns delay constraint less
       2.327ns skew and
      -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.310ns
 
  Physical Path Details:
 
-      Data path SLICE_85 to RAM1/DAQ_RAM_0_0_1_6:
+      Data path SLICE_87 to RAM1/DAQ_RAM_0_0_5_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R18C27B.CLK to     R18C27B.Q0 SLICE_85 (from I_c)
-ROUTE        10     3.325     R18C27B.Q0 to *R_R13C13.ADB9 RAM1_read.count_9 (to FCK_c)
+REG_DEL     ---     0.409    R17C28A.CLK to     R17C28A.Q0 SLICE_87 (from I_c)
+ROUTE        10     3.325     R17C28A.Q0 to *R_R20C10.ADB7 RAM1_read.count_7 (to CK1_c_derived_238)
                   --------
                     3.734   (11.0% logic, 89.0% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_85:
+      Source Clock Path CK1 to SLICE_87:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C20B.CLK FCK_c
-REG_DEL     ---     0.409    R21C20B.CLK to     R21C20B.Q0 SLICE_156
-ROUTE         9     2.107     R21C20B.Q0 to    R18C27B.CLK I_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C28A.CLK I_c
                   --------
-                    8.148   (18.9% logic, 81.1% route), 2 logic levels.
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
 
-      Destination Clock Path FCK to RAM1/DAQ_RAM_0_0_1_6:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_5_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R13C13.CLKB FCK_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R20C10.CLKB CK1_c_derived_238
                   --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.392ns (weighted slack = 0.784ns)
+Passed: The following path meets requirements by 0.330ns (weighted slack = 0.660ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              RAM2_read.count_727__i4  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_1_6(ASIC)  (to FCK_c +)
+   Source:         FF         Q              RAM1_read.count_744__i12  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_5_2(ASIC)  (to CK1_c_derived_238 +)
 
-   Delay:               2.980ns  (13.7% logic, 86.3% route), 1 logic levels.
-
- Constraint Details:
-
-      2.980ns physical path delay SLICE_76 to RAM2/DAQ_RAM_0_0_1_6 meets
-      6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.392ns
-
- Physical Path Details:
-
-      Data path SLICE_76 to RAM2/DAQ_RAM_0_0_1_6:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30C.CLK to     R17C30C.Q1 SLICE_76 (from J_c)
-ROUTE        10     2.571     R17C30C.Q1 to *R_R13C27.ADB4 RAM2_read.count_4 (to FCK_c)
-                  --------
-                    2.980   (13.7% logic, 86.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path FCK to SLICE_76:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30C.CLK J_c
-                  --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
-
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_1_6:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R13C27.CLKB FCK_c
-                  --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
-
-
-Passed: The following path meets requirements by 0.402ns (weighted slack = 0.804ns)
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              RAM2_read.count_727__i5  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_4_3(ASIC)  (to FCK_c +)
-
-   Delay:               2.970ns  (13.8% logic, 86.2% route), 1 logic levels.
+   Delay:               3.714ns  (11.0% logic, 89.0% route), 1 logic levels.
 
  Constraint Details:
 
-      2.970ns physical path delay SLICE_74 to RAM2/DAQ_RAM_0_0_4_3 meets
-      6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.402ns
-
- Physical Path Details:
-
-      Data path SLICE_74 to RAM2/DAQ_RAM_0_0_4_3:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30D.CLK to     R17C30D.Q0 SLICE_74 (from J_c)
-ROUTE        10     2.561     R17C30D.Q0 to *R_R20C36.ADB5 RAM2_read.count_5 (to FCK_c)
-                  --------
-                    2.970   (13.8% logic, 86.2% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path FCK to SLICE_74:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30D.CLK J_c
-                  --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
-
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_4_3:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R20C36.CLKB FCK_c
-                  --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
-
-
-Passed: The following path meets requirements by 0.402ns (weighted slack = 0.804ns)
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              RAM2_read.count_727__i5  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_5_2(ASIC)  (to FCK_c +)
-
-   Delay:               2.970ns  (13.8% logic, 86.2% route), 1 logic levels.
-
- Constraint Details:
-
-      2.970ns physical path delay SLICE_74 to RAM2/DAQ_RAM_0_0_5_2 meets
-      6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.402ns
-
- Physical Path Details:
-
-      Data path SLICE_74 to RAM2/DAQ_RAM_0_0_5_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30D.CLK to     R17C30D.Q0 SLICE_74 (from J_c)
-ROUTE        10     2.561     R17C30D.Q0 to *R_R20C33.ADB5 RAM2_read.count_5 (to FCK_c)
-                  --------
-                    2.970   (13.8% logic, 86.2% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path FCK to SLICE_74:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30D.CLK J_c
-                  --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
-
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_5_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R20C33.CLKB FCK_c
-                  --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
-
-
-Passed: The following path meets requirements by 0.444ns (weighted slack = 0.888ns)
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              RAM1_read.count_725__i10  (from I_c -)
-   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_1_6(ASIC)  (to FCK_c +)
-
-   Delay:               3.600ns  (11.4% logic, 88.6% route), 1 logic levels.
-
- Constraint Details:
-
-      3.600ns physical path delay SLICE_85 to RAM1/DAQ_RAM_0_0_1_6 meets
+      3.714ns physical path delay SLICE_84 to RAM1/DAQ_RAM_0_0_5_2 meets
       6.250ns delay constraint less
       2.327ns skew and
-     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.444ns
+     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.330ns
 
  Physical Path Details:
 
-      Data path SLICE_85 to RAM1/DAQ_RAM_0_0_1_6:
+      Data path SLICE_84 to RAM1/DAQ_RAM_0_0_5_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R18C27B.CLK to     R18C27B.Q1 SLICE_85 (from I_c)
-ROUTE        10     3.191     R18C27B.Q1 to *_R13C13.ADB10 RAM1_read.count_10 (to FCK_c)
+REG_DEL     ---     0.409    R17C28C.CLK to     R17C28C.Q1 SLICE_84 (from I_c)
+ROUTE        10     3.305     R17C28C.Q1 to *_R20C10.ADB12 RAM1_read.count_12 (to CK1_c_derived_238)
                   --------
-                    3.600   (11.4% logic, 88.6% route), 1 logic levels.
+                    3.714   (11.0% logic, 89.0% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_85:
+      Source Clock Path CK1 to SLICE_84:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C20B.CLK FCK_c
-REG_DEL     ---     0.409    R21C20B.CLK to     R21C20B.Q0 SLICE_156
-ROUTE         9     2.107     R21C20B.Q0 to    R18C27B.CLK I_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C28C.CLK I_c
                   --------
-                    8.148   (18.9% logic, 81.1% route), 2 logic levels.
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
 
-      Destination Clock Path FCK to RAM1/DAQ_RAM_0_0_1_6:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_5_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R13C13.CLKB FCK_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R20C10.CLKB CK1_c_derived_238
                   --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.504ns (weighted slack = 1.008ns)
+Passed: The following path meets requirements by 0.373ns (weighted slack = 0.746ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              RAM2_read.count_727__i6  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_1_6(ASIC)  (to FCK_c +)
+   Source:         FF         Q              RAM1_read.count_744__i7  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_2_5(ASIC)  (to CK1_c_derived_238 +)
 
-   Delay:               2.868ns  (14.3% logic, 85.7% route), 1 logic levels.
+   Delay:               3.671ns  (11.1% logic, 88.9% route), 1 logic levels.
 
  Constraint Details:
 
-      2.868ns physical path delay SLICE_74 to RAM2/DAQ_RAM_0_0_1_6 meets
+      3.671ns physical path delay SLICE_87 to RAM1/DAQ_RAM_0_0_2_5 meets
       6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.504ns
+      2.327ns skew and
+     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.373ns
 
  Physical Path Details:
 
-      Data path SLICE_74 to RAM2/DAQ_RAM_0_0_1_6:
+      Data path SLICE_87 to RAM1/DAQ_RAM_0_0_2_5:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30D.CLK to     R17C30D.Q1 SLICE_74 (from J_c)
-ROUTE        10     2.459     R17C30D.Q1 to *R_R13C27.ADB6 RAM2_read.count_6 (to FCK_c)
+REG_DEL     ---     0.409    R17C28A.CLK to     R17C28A.Q0 SLICE_87 (from I_c)
+ROUTE        10     3.262     R17C28A.Q0 to *R_R13C10.ADB7 RAM1_read.count_7 (to CK1_c_derived_238)
                   --------
-                    2.868   (14.3% logic, 85.7% route), 1 logic levels.
+                    3.671   (11.1% logic, 88.9% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_74:
+      Source Clock Path CK1 to SLICE_87:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30D.CLK J_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C28A.CLK I_c
                   --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
 
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_1_6:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_2_5:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R13C27.CLKB FCK_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R13C10.CLKB CK1_c_derived_238
                   --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.510ns (weighted slack = 1.020ns)
+Passed: The following path meets requirements by 0.373ns (weighted slack = 0.746ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              RAM2_read.count_727__i0  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_1_6(ASIC)  (to FCK_c +)
+   Source:         FF         Q              RAM1_read.count_744__i7  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_0_7(ASIC)  (to CK1_c_derived_238 +)
 
-   Delay:               2.862ns  (14.3% logic, 85.7% route), 1 logic levels.
+   Delay:               3.671ns  (11.1% logic, 88.9% route), 1 logic levels.
 
  Constraint Details:
 
-      2.862ns physical path delay SLICE_80 to RAM2/DAQ_RAM_0_0_1_6 meets
+      3.671ns physical path delay SLICE_87 to RAM1/DAQ_RAM_0_0_0_7 meets
       6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.510ns
+      2.327ns skew and
+     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.373ns
 
  Physical Path Details:
 
-      Data path SLICE_80 to RAM2/DAQ_RAM_0_0_1_6:
+      Data path SLICE_87 to RAM1/DAQ_RAM_0_0_0_7:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30A.CLK to     R17C30A.Q1 SLICE_80 (from J_c)
-ROUTE        10     2.453     R17C30A.Q1 to *R_R13C27.ADB0 RAM2_read.count_0 (to FCK_c)
+REG_DEL     ---     0.409    R17C28A.CLK to     R17C28A.Q0 SLICE_87 (from I_c)
+ROUTE        10     3.262     R17C28A.Q0 to *R_R13C13.ADB7 RAM1_read.count_7 (to CK1_c_derived_238)
                   --------
-                    2.862   (14.3% logic, 85.7% route), 1 logic levels.
+                    3.671   (11.1% logic, 88.9% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_80:
+      Source Clock Path CK1 to SLICE_87:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30A.CLK J_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C28A.CLK I_c
                   --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
 
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_1_6:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_0_7:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R13C27.CLKB FCK_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R13C13.CLKB CK1_c_derived_238
                   --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.524ns (weighted slack = 1.048ns)
+Passed: The following path meets requirements by 0.431ns (weighted slack = 0.862ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              RAM2_read.count_727__i1  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_5_2(ASIC)  (to FCK_c +)
+   Source:         FF         Q              RAM1_read.count_744__i1  (from I_c -)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_2_5(ASIC)  (to CK1_c_derived_238 +)
 
-   Delay:               2.848ns  (14.4% logic, 85.6% route), 1 logic levels.
+   Delay:               3.613ns  (11.3% logic, 88.7% route), 1 logic levels.
 
  Constraint Details:
 
-      2.848ns physical path delay SLICE_79 to RAM2/DAQ_RAM_0_0_5_2 meets
+      3.613ns physical path delay SLICE_91 to RAM1/DAQ_RAM_0_0_2_5 meets
       6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.524ns
+      2.327ns skew and
+     -0.121ns ADDR_SET requirement (totaling 4.044ns) by 0.431ns
 
  Physical Path Details:
 
-      Data path SLICE_79 to RAM2/DAQ_RAM_0_0_5_2:
+      Data path SLICE_91 to RAM1/DAQ_RAM_0_0_2_5:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30B.CLK to     R17C30B.Q0 SLICE_79 (from J_c)
-ROUTE        10     2.439     R17C30B.Q0 to *R_R20C33.ADB1 RAM2_read.count_1 (to FCK_c)
+REG_DEL     ---     0.409    R17C27B.CLK to     R17C27B.Q0 SLICE_91 (from I_c)
+ROUTE        10     3.204     R17C27B.Q0 to *R_R13C10.ADB1 RAM1_read.count_1 (to CK1_c_derived_238)
                   --------
-                    2.848   (14.4% logic, 85.6% route), 1 logic levels.
+                    3.613   (11.3% logic, 88.7% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_79:
+      Source Clock Path CK1 to SLICE_91:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30B.CLK J_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.726      R2C19A.F0 to    R21C20D.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R21C20D.CLK to     R21C20D.Q0 SLICE_148
+ROUTE         9     2.107     R21C20D.Q0 to    R17C27B.CLK I_c
                   --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
+                   10.909   (18.3% logic, 81.7% route), 3 logic levels.
 
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_5_2:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_2_5:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R20C33.CLKB FCK_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R13C10.CLKB CK1_c_derived_238
                   --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.524ns (weighted slack = 1.048ns)
+Passed: The following path meets requirements by 0.543ns (weighted slack = 1.086ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              RAM2_read.count_727__i1  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_4_3(ASIC)  (to FCK_c +)
+   Source:         FF         Q              RAM2_read.count_746__i10  (from J_c -)
+   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_1_6(ASIC)  (to CK1_c_derived_238 +)
 
-   Delay:               2.848ns  (14.4% logic, 85.6% route), 1 logic levels.
+   Delay:               3.448ns  (11.9% logic, 88.1% route), 1 logic levels.
 
  Constraint Details:
 
-      2.848ns physical path delay SLICE_79 to RAM2/DAQ_RAM_0_0_4_3 meets
+      3.448ns physical path delay SLICE_69 to RAM2/DAQ_RAM_0_0_1_6 meets
       6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.524ns
+      2.380ns skew and
+     -0.121ns ADDR_SET requirement (totaling 3.991ns) by 0.543ns
 
  Physical Path Details:
 
-      Data path SLICE_79 to RAM2/DAQ_RAM_0_0_4_3:
+      Data path SLICE_69 to RAM2/DAQ_RAM_0_0_1_6:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30B.CLK to     R17C30B.Q0 SLICE_79 (from J_c)
-ROUTE        10     2.439     R17C30B.Q0 to *R_R20C36.ADB1 RAM2_read.count_1 (to FCK_c)
+REG_DEL     ---     0.409    R17C30B.CLK to     R17C30B.Q1 SLICE_69 (from J_c)
+ROUTE        10     3.039     R17C30B.Q1 to *_R13C27.ADB10 RAM2_read.count_10 (to CK1_c_derived_238)
                   --------
-                    2.848   (14.4% logic, 85.6% route), 1 logic levels.
+                    3.448   (11.9% logic, 88.1% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_79:
+      Source Clock Path CK1 to SLICE_69:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30B.CLK J_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.762      R2C19A.F0 to    R14C18B.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R14C18B.CLK to     R14C18B.Q0 SLICE_149
+ROUTE         9     2.124     R14C18B.Q0 to    R17C30B.CLK J_c
                   --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
+                   10.962   (18.2% logic, 81.8% route), 3 logic levels.
 
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_4_3:
+      Destination Clock Path CK1 to RAM2/DAQ_RAM_0_0_1_6:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R20C36.CLKB FCK_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R13C27.CLKB CK1_c_derived_238
                   --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.553ns (weighted slack = 1.106ns)
+Passed: The following path meets requirements by 0.543ns (weighted slack = 1.086ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              RAM2_read.count_727__i6  (from J_c -)
-   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_2_5(ASIC)  (to FCK_c +)
+   Source:         FF         Q              RAM2_read.count_746__i10  (from J_c -)
+   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_3_4(ASIC)  (to CK1_c_derived_238 +)
 
-   Delay:               2.819ns  (14.5% logic, 85.5% route), 1 logic levels.
+   Delay:               3.448ns  (11.9% logic, 88.1% route), 1 logic levels.
 
  Constraint Details:
 
-      2.819ns physical path delay SLICE_74 to RAM2/DAQ_RAM_0_0_2_5 meets
+      3.448ns physical path delay SLICE_69 to RAM2/DAQ_RAM_0_0_3_4 meets
       6.250ns delay constraint less
-      2.999ns skew and
-     -0.121ns ADDR_SET requirement (totaling 3.372ns) by 0.553ns
+      2.380ns skew and
+     -0.121ns ADDR_SET requirement (totaling 3.991ns) by 0.543ns
 
  Physical Path Details:
 
-      Data path SLICE_74 to RAM2/DAQ_RAM_0_0_2_5:
+      Data path SLICE_69 to RAM2/DAQ_RAM_0_0_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C30D.CLK to     R17C30D.Q1 SLICE_74 (from J_c)
-ROUTE        10     2.410     R17C30D.Q1 to *R_R13C36.ADB6 RAM2_read.count_6 (to FCK_c)
+REG_DEL     ---     0.409    R17C30B.CLK to     R17C30B.Q1 SLICE_69 (from J_c)
+ROUTE        10     3.039     R17C30B.Q1 to *_R13C24.ADB10 RAM2_read.count_10 (to CK1_c_derived_238)
                   --------
-                    2.819   (14.5% logic, 85.5% route), 1 logic levels.
+                    3.448   (11.9% logic, 88.1% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_74:
+      Source Clock Path CK1 to SLICE_69:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.500       39.PADDI to    R21C18D.CLK FCK_c
-REG_DEL     ---     0.409    R21C18D.CLK to     R21C18D.Q0 SLICE_157
-ROUTE         9     2.779     R21C18D.Q0 to    R17C30D.CLK J_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.762      R2C19A.F0 to    R14C18B.CLK CK1_c_derived_238
+REG_DEL     ---     0.409    R14C18B.CLK to     R14C18B.Q0 SLICE_149
+ROUTE         9     2.124     R14C18B.Q0 to    R17C30B.CLK J_c
                   --------
-                    8.820   (17.5% logic, 82.5% route), 2 logic levels.
+                   10.962   (18.2% logic, 81.8% route), 3 logic levels.
 
-      Destination Clock Path FCK to RAM2/DAQ_RAM_0_0_2_5:
+      Destination Clock Path CK1 to RAM2/DAQ_RAM_0_0_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.132         39.PAD to       39.PADDI FCK
-ROUTE       151     4.689       39.PADDI to *R_R13C36.CLKB FCK_c
+PADI_DEL    ---     1.132         39.PAD to       39.PADDI CK1
+ROUTE         2     4.083       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.452      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     2.915      R2C19A.F0 to *R_R13C24.CLKB CK1_c_derived_238
                   --------
-                    5.821   (19.4% logic, 80.6% route), 1 logic levels.
+                    8.582   (18.5% logic, 81.5% route), 2 logic levels.
 
-Report:   84.175MHz is the maximum frequency for this preference.
+Report:   83.893MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -530,7 +588,9 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY PORT "FCK" 80.000000 MHz ;    |   80.000 MHz|   84.175 MHz|   1  
+FREQUENCY PORT "CK2" 80.000000 MHz ;    |   80.000 MHz|  150.150 MHz|   0  
+                                        |             |             |
+FREQUENCY PORT "CK1" 80.000000 MHz ;    |   80.000 MHz|   83.893 MHz|   1  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -541,31 +601,38 @@ All preferences were met.
 Clock Domains Analysis
 ------------------------
 
-Found 3 clocks:
+Found 4 clocks:
 
-Clock Domain: J_c   Source: SLICE_157.Q0   Loads: 9
-   Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;
-
-   Data transfers from:
-   Clock Domain: FCK_c   Source: FCK.PAD
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 16
-
-Clock Domain: I_c   Source: SLICE_156.Q0   Loads: 9
-   Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;
+Clock Domain: J_c   Source: SLICE_149.Q0   Loads: 9
+   Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: FCK_c   Source: FCK.PAD
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 16
+   Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 16
 
-Clock Domain: FCK_c   Source: FCK.PAD   Loads: 151
-   Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;
+Clock Domain: I_c   Source: SLICE_148.Q0   Loads: 9
+   Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: J_c   Source: SLICE_157.Q0
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 13
+   Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 16
 
-   Clock Domain: I_c   Source: SLICE_156.Q0
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 13
+Clock Domain: FCK_N_684   Source: SLICE_237.F1   Loads: 16
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 15
+
+Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0   Loads: 136
+   Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: J_c   Source: SLICE_149.Q0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 13
+
+   Clock Domain: I_c   Source: SLICE_148.Q0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 13
 
 
 Timing summary (Setup):
@@ -574,11 +641,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 8904 paths, 3 nets, and 1681 connections (83.26% coverage)
+Constraints cover 8904 paths, 6 nets, and 1686 connections (82.65% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
-Mon Dec 18 15:13:58 2023
+Wed Jan 03 16:42:17 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -613,459 +680,505 @@ VCCIO Voltage:
 
 
 ================================================================================
-Preference: FREQUENCY PORT "FCK" 80.000000 MHz ;
+Preference: FREQUENCY PORT "CK2" 80.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY PORT "CK1" 80.000000 MHz ;
             4096 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.076ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i13  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i13  (to FCK_c +)
+   Source:         FF         Q              data_addr_i11  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_6_1(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.417ns  (31.9% logic, 68.1% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_0 to SLICE_0 meets
-     -0.013ns DIN_HLD and
+      0.417ns physical path delay SLICE_162 to RAM1/DAQ_RAM_0_0_6_1 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.076ns
 
  Physical Path Details:
 
-      Data path SLICE_0 to SLICE_0:
+      Data path SLICE_162 to RAM1/DAQ_RAM_0_0_6_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C20D.CLK to     R18C20D.Q0 SLICE_0 (from FCK_c)
-ROUTE         2     0.132     R18C20D.Q0 to     R18C20D.A0 Clock_Divider_1.count_13
-CTOF_DEL    ---     0.101     R18C20D.A0 to     R18C20D.F0 SLICE_0
-ROUTE         1     0.000     R18C20D.F0 to    R18C20D.DI0 n147 (to FCK_c)
+REG_DEL     ---     0.133    R18C20C.CLK to     R18C20C.Q0 SLICE_162 (from CK1_c_derived_238)
+ROUTE        20     0.284     R18C20C.Q0 to *_R20C21.ADA10 data_addr_10 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.417   (31.9% logic, 68.1% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_0:
+      Source Clock Path CK1 to SLICE_162:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C20D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R18C20C.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_0:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_6_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C20D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C21.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.077ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i14  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i14  (to FCK_c +)
+   Source:         FF         Q              data_addr_i10  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_6_1(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.418ns  (31.8% logic, 68.2% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_0 to SLICE_0 meets
-     -0.013ns DIN_HLD and
+      0.418ns physical path delay SLICE_161 to RAM1/DAQ_RAM_0_0_6_1 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.077ns
 
  Physical Path Details:
 
-      Data path SLICE_0 to SLICE_0:
+      Data path SLICE_161 to RAM1/DAQ_RAM_0_0_6_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C20D.CLK to     R18C20D.Q1 SLICE_0 (from FCK_c)
-ROUTE         2     0.132     R18C20D.Q1 to     R18C20D.A1 Clock_Divider_1.count_14
-CTOF_DEL    ---     0.101     R18C20D.A1 to     R18C20D.F1 SLICE_0
-ROUTE         1     0.000     R18C20D.F1 to    R18C20D.DI1 n146 (to FCK_c)
+REG_DEL     ---     0.133    R18C20B.CLK to     R18C20B.Q1 SLICE_161 (from CK1_c_derived_238)
+ROUTE        19     0.285     R18C20B.Q1 to *R_R20C21.ADA9 data_addr_9 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.418   (31.8% logic, 68.2% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_0:
+      Source Clock Path CK1 to SLICE_161:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C20D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R18C20B.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_0:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_6_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C20D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C21.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.090ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i26  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i26  (to FCK_c +)
+   Source:         FF         Q              data_addr_i3  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_7_0(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.431ns  (30.9% logic, 69.1% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_102 to SLICE_102 meets
-     -0.013ns DIN_HLD and
+      0.431ns physical path delay SLICE_157 to RAM1/DAQ_RAM_0_0_7_0 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.090ns
 
  Physical Path Details:
 
-      Data path SLICE_102 to SLICE_102:
+      Data path SLICE_157 to RAM1/DAQ_RAM_0_0_7_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C22B.CLK to     R18C22B.Q1 SLICE_102 (from FCK_c)
-ROUTE         2     0.132     R18C22B.Q1 to     R18C22B.A1 Clock_Divider_1.count_26
-CTOF_DEL    ---     0.101     R18C22B.A1 to     R18C22B.F1 SLICE_102
-ROUTE         1     0.000     R18C22B.F1 to    R18C22B.DI1 n134 (to FCK_c)
+REG_DEL     ---     0.133    R19C18A.CLK to     R19C18A.Q1 SLICE_157 (from CK1_c_derived_238)
+ROUTE        31     0.298     R19C18A.Q1 to *R_R20C16.ADA2 data_addr_2 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.431   (30.9% logic, 69.1% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_102:
+      Source Clock Path CK1 to SLICE_157:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22B.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R19C18A.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_102:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_7_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22B.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C16.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.114ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i25  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i25  (to FCK_c +)
+   Source:         FF         Q              data_addr_i2  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_3_4(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.455ns  (29.2% logic, 70.8% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_102 to SLICE_102 meets
-     -0.013ns DIN_HLD and
+      0.455ns physical path delay SLICE_157 to RAM1/DAQ_RAM_0_0_3_4 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.114ns
 
  Physical Path Details:
 
-      Data path SLICE_102 to SLICE_102:
+      Data path SLICE_157 to RAM1/DAQ_RAM_0_0_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C22B.CLK to     R18C22B.Q0 SLICE_102 (from FCK_c)
-ROUTE         2     0.132     R18C22B.Q0 to     R18C22B.A0 Clock_Divider_1.count_25
-CTOF_DEL    ---     0.101     R18C22B.A0 to     R18C22B.F0 SLICE_102
-ROUTE         1     0.000     R18C22B.F0 to    R18C22B.DI0 n135 (to FCK_c)
+REG_DEL     ---     0.133    R19C18A.CLK to     R19C18A.Q0 SLICE_157 (from CK1_c_derived_238)
+ROUTE        31     0.322     R19C18A.Q0 to *R_R13C16.ADA1 data_addr_1 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.455   (29.2% logic, 70.8% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_102:
+      Source Clock Path CK1 to SLICE_157:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22B.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R19C18A.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_102:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22B.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R13C16.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.117ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i24  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i24  (to FCK_c +)
+   Source:         FF         Q              data_addr_i2  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_7_0(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.458ns  (29.0% logic, 71.0% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_106 to SLICE_106 meets
-     -0.013ns DIN_HLD and
+      0.458ns physical path delay SLICE_157 to RAM1/DAQ_RAM_0_0_7_0 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.117ns
 
  Physical Path Details:
 
-      Data path SLICE_106 to SLICE_106:
+      Data path SLICE_157 to RAM1/DAQ_RAM_0_0_7_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C22A.CLK to     R18C22A.Q1 SLICE_106 (from FCK_c)
-ROUTE         2     0.132     R18C22A.Q1 to     R18C22A.A1 Clock_Divider_1.count_24
-CTOF_DEL    ---     0.101     R18C22A.A1 to     R18C22A.F1 SLICE_106
-ROUTE         1     0.000     R18C22A.F1 to    R18C22A.DI1 n136 (to FCK_c)
+REG_DEL     ---     0.133    R19C18A.CLK to     R19C18A.Q0 SLICE_157 (from CK1_c_derived_238)
+ROUTE        31     0.325     R19C18A.Q0 to *R_R20C16.ADA1 data_addr_1 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.458   (29.0% logic, 71.0% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_106:
+      Source Clock Path CK1 to SLICE_157:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22A.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R19C18A.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_106:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_7_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22A.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C16.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.121ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i23  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i23  (to FCK_c +)
+   Source:         FF         Q              data_addr_i6  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_7_0(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.462ns  (28.8% logic, 71.2% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_106 to SLICE_106 meets
-     -0.013ns DIN_HLD and
+      0.462ns physical path delay SLICE_159 to RAM1/DAQ_RAM_0_0_7_0 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.121ns
 
  Physical Path Details:
 
-      Data path SLICE_106 to SLICE_106:
+      Data path SLICE_159 to RAM1/DAQ_RAM_0_0_7_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C22A.CLK to     R18C22A.Q0 SLICE_106 (from FCK_c)
-ROUTE         2     0.132     R18C22A.Q0 to     R18C22A.A0 Clock_Divider_1.count_23
-CTOF_DEL    ---     0.101     R18C22A.A0 to     R18C22A.F0 SLICE_106
-ROUTE         1     0.000     R18C22A.F0 to    R18C22A.DI0 n137 (to FCK_c)
+REG_DEL     ---     0.133    R19C18D.CLK to     R19C18D.Q0 SLICE_159 (from CK1_c_derived_238)
+ROUTE        20     0.329     R19C18D.Q0 to *R_R20C16.ADA5 data_addr_5 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.462   (28.8% logic, 71.2% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_106:
+      Source Clock Path CK1 to SLICE_159:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22A.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R19C18D.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_106:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_7_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C22A.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C16.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.182ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i21  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i21  (to FCK_c +)
+   Source:         FF         Q              data_addr_i10  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_4_3(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.523ns  (25.4% logic, 74.6% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_108 to SLICE_108 meets
-     -0.013ns DIN_HLD and
+      0.523ns physical path delay SLICE_161 to RAM2/DAQ_RAM_0_0_4_3 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.182ns
 
  Physical Path Details:
 
-      Data path SLICE_108 to SLICE_108:
+      Data path SLICE_161 to RAM2/DAQ_RAM_0_0_4_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C21D.CLK to     R18C21D.Q0 SLICE_108 (from FCK_c)
-ROUTE         2     0.132     R18C21D.Q0 to     R18C21D.A0 Clock_Divider_1.count_21
-CTOF_DEL    ---     0.101     R18C21D.A0 to     R18C21D.F0 SLICE_108
-ROUTE         1     0.000     R18C21D.F0 to    R18C21D.DI0 n139 (to FCK_c)
+REG_DEL     ---     0.133    R18C20B.CLK to     R18C20B.Q1 SLICE_161 (from CK1_c_derived_238)
+ROUTE        19     0.390     R18C20B.Q1 to *R_R20C24.ADA9 data_addr_9 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.523   (25.4% logic, 74.6% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_108:
+      Source Clock Path CK1 to SLICE_161:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R18C20B.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_108:
+      Destination Clock Path CK1 to RAM2/DAQ_RAM_0_0_4_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C24.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.185ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i22  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i22  (to FCK_c +)
+   Source:         FF         Q              data_addr_i13  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_6_1(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.526ns  (25.3% logic, 74.7% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_108 to SLICE_108 meets
-     -0.013ns DIN_HLD and
+      0.526ns physical path delay SLICE_163 to RAM1/DAQ_RAM_0_0_6_1 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.185ns
 
  Physical Path Details:
 
-      Data path SLICE_108 to SLICE_108:
+      Data path SLICE_163 to RAM1/DAQ_RAM_0_0_6_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C21D.CLK to     R18C21D.Q1 SLICE_108 (from FCK_c)
-ROUTE         2     0.132     R18C21D.Q1 to     R18C21D.A1 Clock_Divider_1.count_22
-CTOF_DEL    ---     0.101     R18C21D.A1 to     R18C21D.F1 SLICE_108
-ROUTE         1     0.000     R18C21D.F1 to    R18C21D.DI1 n138 (to FCK_c)
+REG_DEL     ---     0.133    R18C20D.CLK to     R18C20D.Q0 SLICE_163 (from CK1_c_derived_238)
+ROUTE        19     0.393     R18C20D.Q0 to *_R20C21.ADA12 data_addr_12 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.526   (25.3% logic, 74.7% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_108:
+      Source Clock Path CK1 to SLICE_163:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R18C20D.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_108:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_6_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21D.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C21.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.191ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i20  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i20  (to FCK_c +)
+   Source:         FF         Q              data_addr_i6  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM1/DAQ_RAM_0_0_3_4(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.532ns  (25.0% logic, 75.0% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_110 to SLICE_110 meets
-     -0.013ns DIN_HLD and
+      0.532ns physical path delay SLICE_159 to RAM1/DAQ_RAM_0_0_3_4 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.191ns
 
  Physical Path Details:
 
-      Data path SLICE_110 to SLICE_110:
+      Data path SLICE_159 to RAM1/DAQ_RAM_0_0_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C21C.CLK to     R18C21C.Q1 SLICE_110 (from FCK_c)
-ROUTE         2     0.132     R18C21C.Q1 to     R18C21C.A1 Clock_Divider_1.count_20
-CTOF_DEL    ---     0.101     R18C21C.A1 to     R18C21C.F1 SLICE_110
-ROUTE         1     0.000     R18C21C.F1 to    R18C21C.DI1 n140 (to FCK_c)
+REG_DEL     ---     0.133    R19C18D.CLK to     R19C18D.Q0 SLICE_159 (from CK1_c_derived_238)
+ROUTE        20     0.399     R19C18D.Q0 to *R_R13C16.ADA5 data_addr_5 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.532   (25.0% logic, 75.0% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_110:
+      Source Clock Path CK1 to SLICE_159:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21C.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R19C18D.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_110:
+      Destination Clock Path CK1 to RAM1/DAQ_RAM_0_0_3_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21C.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R13C16.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 
-Passed: The following path meets requirements by 0.379ns
+Passed: The following path meets requirements by 0.191ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Clock_Divider_1.count_722__i19  (from FCK_c +)
-   Destination:    FF         Data in        Clock_Divider_1.count_722__i19  (to FCK_c +)
+   Source:         FF         Q              data_addr_i11  (from CK1_c_derived_238 +)
+   Destination:    DP8KC      Port           RAM2/DAQ_RAM_0_0_4_3(ASIC)  (to FCK_N_684 +)
 
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+   Delay:               0.532ns  (25.0% logic, 75.0% route), 1 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_110 to SLICE_110 meets
-     -0.013ns DIN_HLD and
+      0.532ns physical path delay SLICE_162 to RAM2/DAQ_RAM_0_0_4_3 meets
+      0.052ns ADDR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+     -0.289ns skew requirement (totaling 0.341ns) by 0.191ns
 
  Physical Path Details:
 
-      Data path SLICE_110 to SLICE_110:
+      Data path SLICE_162 to RAM2/DAQ_RAM_0_0_4_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C21C.CLK to     R18C21C.Q0 SLICE_110 (from FCK_c)
-ROUTE         2     0.132     R18C21C.Q0 to     R18C21C.A0 Clock_Divider_1.count_19
-CTOF_DEL    ---     0.101     R18C21C.A0 to     R18C21C.F0 SLICE_110
-ROUTE         1     0.000     R18C21C.F0 to    R18C21C.DI0 n141 (to FCK_c)
+REG_DEL     ---     0.133    R18C20C.CLK to     R18C20C.Q0 SLICE_162 (from CK1_c_derived_238)
+ROUTE        20     0.399     R18C20C.Q0 to *_R20C24.ADA10 data_addr_10 (to FCK_N_684)
                   --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+                    0.532   (25.0% logic, 75.0% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path FCK to SLICE_110:
+      Source Clock Path CK1 to SLICE_162:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21C.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D0 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D0 to      R2C19A.F0 SLICE_237
+ROUTE       136     1.113      R2C19A.F0 to    R18C20C.CLK CK1_c_derived_238
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.203   (19.5% logic, 80.5% route), 2 logic levels.
 
-      Destination Clock Path FCK to SLICE_110:
+      Destination Clock Path CK1 to RAM2/DAQ_RAM_0_0_4_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       151     1.733       39.PADDI to    R18C21C.CLK FCK_c
+PADI_DEL    ---     0.449         39.PAD to       39.PADDI CK1
+ROUTE         2     1.464       39.PADDI to      R2C19A.D1 CK1_c
+CTOF_DEL    ---     0.177      R2C19A.D1 to      R2C19A.F1 SLICE_237
+ROUTE        16     1.402      R2C19A.F1 to *R_R20C24.CLKA FCK_N_684
                   --------
-                    1.733   (0.0% logic, 100.0% route), 0 logic levels.
+                    3.492   (17.9% logic, 82.1% route), 2 logic levels.
 
 Report Summary
 --------------
@@ -1073,7 +1186,9 @@ Report Summary
 Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY PORT "FCK" 80.000000 MHz ;    |            -|            -|   2  
+FREQUENCY PORT "CK2" 80.000000 MHz ;    |            -|            -|   0  
+                                        |             |             |
+FREQUENCY PORT "CK1" 80.000000 MHz ;    |            -|            -|   1  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -1084,31 +1199,38 @@ All preferences were met.
 Clock Domains Analysis
 ------------------------
 
-Found 3 clocks:
+Found 4 clocks:
 
-Clock Domain: J_c   Source: SLICE_157.Q0   Loads: 9
-   Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;
-
-   Data transfers from:
-   Clock Domain: FCK_c   Source: FCK.PAD
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 16
-
-Clock Domain: I_c   Source: SLICE_156.Q0   Loads: 9
-   Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;
+Clock Domain: J_c   Source: SLICE_149.Q0   Loads: 9
+   Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: FCK_c   Source: FCK.PAD
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 16
+   Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 16
 
-Clock Domain: FCK_c   Source: FCK.PAD   Loads: 151
-   Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;
+Clock Domain: I_c   Source: SLICE_148.Q0   Loads: 9
+   Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: J_c   Source: SLICE_157.Q0
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 13
+   Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 16
 
-   Clock Domain: I_c   Source: SLICE_156.Q0
-      Covered under: FREQUENCY PORT "FCK" 80.000000 MHz ;   Transfers: 13
+Clock Domain: FCK_N_684   Source: SLICE_237.F1   Loads: 16
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 15
+
+Clock Domain: CK1_c_derived_238   Source: SLICE_237.F0   Loads: 136
+   Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: J_c   Source: SLICE_149.Q0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 13
+
+   Clock Domain: I_c   Source: SLICE_148.Q0
+      Covered under: FREQUENCY PORT "CK1" 80.000000 MHz ;   Transfers: 13
 
 
 Timing summary (Hold):
@@ -1117,7 +1239,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 8904 paths, 3 nets, and 1681 connections (83.26% coverage)
+Constraints cover 8904 paths, 6 nets, and 1686 connections (82.65% coverage)
 
 
 

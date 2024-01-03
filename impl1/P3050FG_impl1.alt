@@ -1,6 +1,6 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Mon Dec 18 15:14:02 2023 *
+NOTE DATE CREATED: Wed Jan 03 16:42:21 2024 *
 NOTE DESIGN NAME: main *
 NOTE DEVICE NAME: LCMXO2-7000HC-5TQFP144 *
 NOTE PIN ASSIGNMENTS *
@@ -53,7 +53,8 @@ NOTE PINS T : 112 : out *
 NOTE PINS V : 21 : out *
 NOTE PINS W : 22 : out *
 NOTE PINS CK : 38 : in *
-NOTE PINS FCK : 39 : in *
+NOTE PINS CK1 : 39 : in *
+NOTE PINS CK2 : 44 : in *
 NOTE PINS cont_addr[5] : 55 : in *
 NOTE PINS cont_addr[4] : 58 : in *
 NOTE PINS cont_addr[3] : 54 : in *

@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec 18 15:13:45 2023
+Wed Jan 03 16:42:04 2024
 
 
 Command Line:  synthesis -f P3050FG_impl1_lattice.synproj -gui -msgset C:/Firmware/P3050FG/promote.xml 
@@ -89,19 +89,20 @@ INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(28): analyzing architecture st
 unit main is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/firmware/p3050fg/main.vhd. VHDL-1481
 INFO - synthesis: c:/firmware/p3050fg/main.vhd(10): analyzing entity main. VHDL-1012
-INFO - synthesis: c:/firmware/p3050fg/main.vhd(104): analyzing architecture behavior. VHDL-1010
+INFO - synthesis: c:/firmware/p3050fg/main.vhd(105): analyzing architecture behavior. VHDL-1010
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(130): possible infinite loop process does not have a wait statement. VHDL-1196
 unit main is not yet analyzed. VHDL-1485
 unit main is not yet analyzed. VHDL-1485
 c:/firmware/p3050fg/main.vhd(10): executing main(behavior)
 
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(84): using initial value 'U' for reset since it is never assigned. VHDL-1303
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(137): cont_addr should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(239): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(85): using initial value 'U' for reset since it is never assigned. VHDL-1303
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(139): cont_addr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(241): incomplete sensitivity list specified, assuming completeness. VHDL-1613
 Removed duplicate sequential element rd_ram1_addr(13 bit), because it is equivalent to RAM1_read.count
 
 Removed duplicate sequential element rd_ram2_addr(13 bit), because it is equivalent to RAM2_read.count
 
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(101): replacing existing netlist main(behavior). VHDL-1205
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(102): replacing existing netlist main(behavior). VHDL-1205
 Top module name (VHDL): main
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -151,9 +152,9 @@ FD1P3AX => 142
 FD1S3AX => 14
 FD1S3IX => 92
 GSR => 1
-IB => 12
-INV => 3
-LUT4 => 139
+IB => 13
+INV => 2
+LUT4 => 157
 OB => 40
 PFUMX => 7
 ################### End Area Report ##################
@@ -165,31 +166,31 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 4
-  Net : FCK_c, loads : 239
-  Net : FCK_N_652, loads : 16
-  Net : I_c, loads : 3
+  Net : CK1_c_derived_238, loads : 238
+  Net : FCK_N_684, loads : 16
   Net : J_c, loads : 3
+  Net : I_c, loads : 3
 Clock Enable Nets
 Number of Clock Enables: 18
 Top 10 highest fanout Clock Enables:
-  Net : FCK_c_enable_29, loads : 8
-  Net : FCK_c_enable_127, loads : 8
-  Net : FCK_c_enable_96, loads : 8
-  Net : FCK_c_enable_51, loads : 8
-  Net : FCK_c_enable_36, loads : 8
-  Net : FCK_c_enable_59, loads : 8
-  Net : FCK_c_enable_141, loads : 8
-  Net : FCK_c_enable_81, loads : 8
-  Net : FCK_c_enable_142, loads : 8
-  Net : FCK_c_enable_89, loads : 8
+  Net : CK1_c_derived_238_enable_29, loads : 8
+  Net : CK1_c_derived_238_enable_127, loads : 8
+  Net : CK1_c_derived_238_enable_96, loads : 8
+  Net : CK1_c_derived_238_enable_51, loads : 8
+  Net : CK1_c_derived_238_enable_36, loads : 8
+  Net : CK1_c_derived_238_enable_59, loads : 8
+  Net : CK1_c_derived_238_enable_141, loads : 8
+  Net : CK1_c_derived_238_enable_81, loads : 8
+  Net : CK1_c_derived_238_enable_142, loads : 8
+  Net : CK1_c_derived_238_enable_89, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n1713, loads : 62
-  Net : n1851, loads : 62
-  Net : n2633, loads : 36
+  Net : n1714, loads : 62
+  Net : n1852, loads : 62
+  Net : n2650, loads : 36
   Net : V_c_0, loads : 33
-  Net : Clock_Divider_1.count_30__N_404, loads : 32
-  Net : Clock_Divider_2.count_30__N_498, loads : 32
+  Net : Clock_Divider_1.count_30__N_436, loads : 32
+  Net : Clock_Divider_2.count_30__N_530, loads : 32
   Net : data_addr_3, loads : 31
   Net : data_addr_2, loads : 31
   Net : data_addr_1, loads : 31
@@ -209,10 +210,10 @@ create_clock -period 5.000000 -name     |             |             |
 clk2 [get_nets I_c]                     |  200.000 MHz|  143.410 MHz|    10 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets FCK_N_652]               |            -|            -|     0  
+clk1 [get_nets FCK_N_684]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets FCK_c]                   |  200.000 MHz|   87.306 MHz|     8 *
+clk0 [get_nets CK1_c_derived_238]       |  200.000 MHz|   87.306 MHz|     8 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -220,8 +221,8 @@ clk0 [get_nets FCK_c]                   |  200.000 MHz|   87.306 MHz|     8 *
 3 constraints not met.
 
 
-Peak Memory Usage: 90.504  MB
+Peak Memory Usage: 89.965  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.375  secs
+Elapsed CPU time for LSE flow : 1.313  secs
 --------------------------------------------------------------

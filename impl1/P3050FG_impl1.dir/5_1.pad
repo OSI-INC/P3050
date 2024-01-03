@@ -6,7 +6,7 @@ Performance Grade:      5
 PACKAGE:          TQFP144
 Package Status:                     Final          Version 1.39
 
-Mon Dec 18 15:13:52 2023
+Wed Jan 03 16:42:10 2024
 
 Pinout by Port Name:
 +--------------+----------+---------------+-------+-----------+-----------+--------------------------------------------------------+
@@ -17,6 +17,8 @@ Pinout by Port Name:
 | C            | 98/1     | LVCMOS33_OUT  | PR7A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | CDS_in       | 2/5      | LVCMOS33_IN   | PL3B  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | CK           | 38/2     | LVCMOS33_IN   | PB4A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
+| CK1          | 39/2     | LVCMOS33_IN   | PB4B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
+| CK2          | 44/2     | LVCMOS33_IN   | PB12A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
 | CWR_in       | 1/5      | LVCMOS33_IN   | PL3A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | D            | 99/1     | LVCMOS33_OUT  | PR5B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | DACA_OUT[0]  | 17/4     | LVCMOS33_OUT  | PL11B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
@@ -40,7 +42,6 @@ Pinout by Port Name:
 | ETH          | 3/5      | LVCMOS33_IN   | PL4A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | EYLW         | 128/0    | LVCMOS33_OUT  | PT18A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | F            | 103/1    | LVCMOS33_OUT  | PR4C  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| FCK          | 39/2     | LVCMOS33_IN   | PB4B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
 | G            | 77/1     | LVCMOS33_OUT  | PR21B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | H            | 78/1     | LVCMOS33_OUT  | PR21A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | I            | 76/1     | LVCMOS33_OUT  | PR23A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
@@ -126,12 +127,12 @@ Pinout by Pin Number:
 | 34/3     |     unused, PULL:DOWN |            |               | PL25A |                |           |           |
 | 35/3     |     unused, PULL:DOWN |            |               | PL25B |                |           |           |
 | 38/2     | CK                    | LOCATED    | LVCMOS33_IN   | PB4A  |                |           |           |
-| 39/2     | FCK                   | LOCATED    | LVCMOS33_IN   | PB4B  |                |           |           |
+| 39/2     | CK1                   | LOCATED    | LVCMOS33_IN   | PB4B  |                |           |           |
 | 40/2     | NOT_RESET             | LOCATED    | LVCMOS33_IN   | PB6A  | CSSPIN         |           |           |
 | 41/2     |     unused, PULL:DOWN |            |               | PB6B  |                |           |           |
 | 42/2     |     unused, PULL:DOWN |            |               | PB9A  |                |           |           |
 | 43/2     |     unused, PULL:DOWN |            |               | PB9B  |                |           |           |
-| 44/2     |     unused, PULL:DOWN |            |               | PB12A | MCLK/CCLK      |           |           |
+| 44/2     | CK2                   | LOCATED    | LVCMOS33_IN   | PB12A | MCLK/CCLK      |           |           |
 | 45/2     |     unused, PULL:DOWN |            |               | PB12B | SO/SPISO       |           |           |
 | 47/2     |     unused, PULL:DOWN |            |               | PB13A |                |           |           |
 | 48/2     |     unused, PULL:DOWN |            |               | PB13B |                |           |           |
@@ -455,6 +456,8 @@ LOCATE  COMP  "B"  SITE  "97";
 LOCATE  COMP  "C"  SITE  "98";
 LOCATE  COMP  "CDS_in"  SITE  "2";
 LOCATE  COMP  "CK"  SITE  "38";
+LOCATE  COMP  "CK1"  SITE  "39";
+LOCATE  COMP  "CK2"  SITE  "44";
 LOCATE  COMP  "CWR_in"  SITE  "1";
 LOCATE  COMP  "D"  SITE  "99";
 LOCATE  COMP  "DACA_OUT[0]"  SITE  "17";
@@ -478,7 +481,6 @@ LOCATE  COMP  "EGRN"  SITE  "127";
 LOCATE  COMP  "ETH"  SITE  "3";
 LOCATE  COMP  "EYLW"  SITE  "128";
 LOCATE  COMP  "F"  SITE  "103";
-LOCATE  COMP  "FCK"  SITE  "39";
 LOCATE  COMP  "G"  SITE  "77";
 LOCATE  COMP  "H"  SITE  "78";
 LOCATE  COMP  "I"  SITE  "76";
@@ -521,5 +523,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec 18 15:13:54 2023
+Wed Jan 03 16:42:12 2024
 

@@ -10,7 +10,8 @@ use ieee.numeric_std.all;
 entity main is 
 	port (
 		CK : in std_logic; -- 32.768kHz Clock
-		FCK : in std_logic; -- 80MHz Clock
+		CK1 : in std_logic; -- 80MHz Clock
+		CK2 : in std_logic; -- 80MHz Clock 2
 		cont_data : inout std_logic_vector(7 downto 0);
 		cont_addr : in std_logic_vector(5 downto 0);
 		CWR_in : in std_logic;
@@ -116,13 +117,14 @@ architecture behavior of main is
 	signal rd_ram1_addr, rd_ram2_addr : std_logic_vector(ram_addr_len-1 downto 0); -- RAM Address
 	signal DACRWR : std_logic; -- DAC Ram Write
 	signal NFCK : std_logic; -- Inverse of Fast Clock
+	signal FCK : std_logic; -- Fast Clock
 
 	
 begin
 
-Clock_Inverter: process (FCK) is
+Clock_Inverter: process is
 begin
-
+	FCK <= CK1 xor CK2;
 	NFCK <= not(FCK);
 	
 end process;
@@ -344,22 +346,22 @@ end process;
 
 
 
-A <= rca_sw(0);
-B <= rca_sw(1);
-C <= rca_sw(2);
-D <= rca_sw(3);
-E <= rca_sw(4);
-F <= rca_sw(5);
-G <= rca_sw(6);
-H <= rca_sw(7);
-M <= rcb_sw(0);
-N <= rcb_sw(1);
-O <= rcb_sw(2);
-P <= rcb_sw(3);
-Q <= rcb_sw(4);
-R <= rcb_sw(5);
-S <= rcb_sw(6);
-T <= rcb_sw(7);
+A <= not(rca_sw(0));
+B <= not(rca_sw(1));
+C <= not(rca_sw(2));
+D <= not(rca_sw(3));
+E <= not(rca_sw(4));
+F <= not(rca_sw(5));
+G <= not(rca_sw(6));
+H <= not(rca_sw(7));
+M <= not(rcb_sw(0));
+N <= not(rcb_sw(1));
+O <= not(rcb_sw(2));
+P <= not(rcb_sw(3));
+Q <= not(rcb_sw(4));
+R <= not(rcb_sw(5));
+S <= not(rcb_sw(6));
+T <= not(rcb_sw(7));
 
 
 I <= DIVCKA;

@@ -117,43 +117,50 @@
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(104): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(105): </Dynamic>
             <Dynamic>behavior</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>104</Navigation>
+            <Navigation>105</Navigation>
+        </Message>
+        <Message>
+            <ID>35921196</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(130): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>130</Navigation>
         </Message>
         <Message>
             <ID>35921303</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(84): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(85): </Dynamic>
             <Dynamic>'U'</Dynamic>
             <Dynamic>reset</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>84</Navigation>
+            <Navigation>85</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(137): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(139): </Dynamic>
             <Dynamic>cont_addr</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>137</Navigation>
+            <Navigation>139</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(239): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(241): </Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>239</Navigation>
+            <Navigation>241</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(101): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(102): </Dynamic>
             <Dynamic>main</Dynamic>
             <Dynamic>behavior</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>101</Navigation>
+            <Navigation>102</Navigation>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -252,22 +259,6 @@
             <ID>1163101</ID>
             <Severity>Warning</Severity>
             <Dynamic>6</Dynamic>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>61061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>FCK_c</Dynamic>
-            <Dynamic>Primary</Dynamic>
-            <Dynamic>FCK</Dynamic>
-            <Dynamic>39</Dynamic>
-            <Dynamic>Primary</Dynamic>
-        </Message>
-        <Message>
-            <ID>62061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>FCK_c</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

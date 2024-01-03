@@ -22,23 +22,23 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-7000HCTQFP144
 Target Performance:   5
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  12/18/23  15:13:47
+Mapped on:  01/03/24  16:42:05
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
    Number of registers:    248 out of  7209 (3%)
       PFU registers:          248 out of  6864 (4%)
       PIO registers:            0 out of   345 (0%)
-   Number of SLICEs:       186 out of  3432 (5%)
-      SLICEs as Logic/ROM:    186 out of  3432 (5%)
+   Number of SLICEs:       194 out of  3432 (6%)
+      SLICEs as Logic/ROM:    194 out of  3432 (6%)
       SLICEs as RAM:            0 out of  2574 (0%)
       SLICEs as Carry:        113 out of  3432 (3%)
-   Number of LUT4s:        366 out of  6864 (5%)
-      Number used as logic LUTs:        140
+   Number of LUT4s:        384 out of  6864 (6%)
+      Number used as logic LUTs:        158
       Number used as distributed RAM:     0
       Number used as ripple logic:      226
       Number used as shift registers:     0
-   Number of PIO sites used: 60 + 4(JTAG) out of 115 (56%)
+   Number of PIO sites used: 61 + 4(JTAG) out of 115 (57%)
    Number of block RAMs:  16 out of 26 (62%)
    Number of GSRs:        0 out of 1 (0%)
    EFB used :        No
@@ -63,50 +63,53 @@ Mapped on:  12/18/23  15:13:47
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  3
-     Net FCK_c: 151 loads, 135 rising, 16 falling (Driver: PIO FCK )
-     Net I_c: 7 loads, 0 rising, 7 falling (Driver: DIVCKA_490 )
-     Net J_c: 7 loads, 0 rising, 7 falling (Driver: DIVCKB_492 )
+   Number of clocks:  4
+     Net CK1_c_derived_238: 136 loads, 136 rising, 0 falling (Driver:
+     CK1_I_0_2_lut_rep_36 )
+     Net I_c: 7 loads, 0 rising, 7 falling (Driver: DIVCKA_507 )
 
+     Net J_c: 7 loads, 0 rising, 7 falling (Driver: DIVCKB_509 )
+     Net FCK_N_684: 16 loads, 16 rising, 0 falling (Driver: FCK_I_0_1_lut_2_lut
+     )
    Number of Clock Enables:  18
-     Net FCK_c_enable_141: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_127: 5 loads, 5 LSLICEs
-     Net FCK_c_enable_96: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_112: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_66: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_36: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_21: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_73: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_142: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_43: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_14: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_29: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_51: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_59: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_81: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_89: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_104: 4 loads, 4 LSLICEs
-     Net FCK_c_enable_120: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_127: 5 loads, 5 LSLICEs
+     Net CK1_c_derived_238_enable_96: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_66: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_36: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_21: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_142: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_43: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_141: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_14: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_29: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_51: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_59: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_73: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_81: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_89: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_104: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_112: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_238_enable_120: 4 loads, 4 LSLICEs
    Number of LSRs:  7
-     Net Clock_Divider_1.count_30__N_404: 16 loads, 16 LSLICEs
+     Net Clock_Divider_1.count_30__N_436: 16 loads, 16 LSLICEs
      Net data_addr_15: 2 loads, 2 LSLICEs
-     Net Clock_Divider_2.count_30__N_498: 16 loads, 16 LSLICEs
-     Net n6248: 1 loads, 1 LSLICEs
-     Net RAM1_read.count_12__N_572: 7 loads, 7 LSLICEs
-     Net RAM2_read.count_12__N_615: 7 loads, 7 LSLICEs
-     Net n4105: 1 loads, 1 LSLICEs
+     Net Clock_Divider_2.count_30__N_530: 16 loads, 16 LSLICEs
+     Net n6265: 1 loads, 1 LSLICEs
+     Net RAM1_read.count_12__N_604: 7 loads, 7 LSLICEs
+     Net RAM2_read.count_12__N_647: 7 loads, 7 LSLICEs
+     Net n4124: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n1713: 62 loads
-     Net n1851: 62 loads
-     Net n2633: 36 loads
+     Net n1714: 62 loads
+     Net n1852: 62 loads
+     Net n2650: 36 loads
      Net V_c_0: 33 loads
      Net data_addr_1: 31 loads
      Net data_addr_2: 31 loads
      Net data_addr_3: 31 loads
      Net cont_addr_c_0: 23 loads
-     Net data_addr_31_N_242_24: 21 loads
-     Net data_addr_31_N_242_25: 21 loads
+     Net data_addr_31_N_274_24: 21 loads
+     Net data_addr_31_N_274_25: 21 loads
 
 
 
@@ -123,10 +126,10 @@ Mapped on:  12/18/23  15:13:47
 WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(47): Semantic error in "IOBUF
      PORT "UPLOAD" IO_TYPE=LVCMOS33 PULLMODE=UP ;": Port "UPLOAD" does not exist
      in the design. This preference has been disabled.
+
 WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(48): Semantic error in "IOBUF
      PORT "ACTIV" IO_TYPE=LVCMOS33 PULLMODE=UP ;": Port "ACTIV" does not exist
      in the design. This preference has been disabled.
-
 WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(49): Semantic error in "IOBUF
      PORT "EMPTY" IO_TYPE=LVCMOS33 PULLMODE=UP ;": Port "EMPTY" does not exist
      in the design. This preference has been disabled.
@@ -181,10 +184,10 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 | DACA_OUT[2]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | DACA_OUT[1]         | OUTPUT    | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 | DACA_OUT[0]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
 | DACB_OUT[7]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | DACB_OUT[6]         | OUTPUT    | LVCMOS33  |            |
@@ -238,17 +241,19 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 | R                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | S                   | OUTPUT    | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 | T                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
 | V                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | W                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | CK                  | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| FCK                 | INPUT     | LVCMOS33  |            |
+| CK1                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CK2                 | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | cont_addr[5]        | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -276,151 +281,149 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block GSR_INST undriven or does not drive anything - clipped.
-Signal J_N_587 was merged into signal J_c
-Signal FCK_N_652 was merged into signal FCK_c
-Signal I_N_544 was merged into signal I_c
-Signal n3860 was merged into signal cont_data_2__N_12
-Signal data_addr_15__N_639 was merged into signal data_addr_15
-Signal sub_672_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal J_N_619 was merged into signal J_c
+Signal I_N_576 was merged into signal I_c
+Signal data_addr_15__N_671 was merged into signal data_addr_15
+Signal n3877 was merged into signal cont_data_2__N_12
+Signal sub_691_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_11/S0 undriven or does not drive anything - clipped.
 
-Signal sub_668_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal Clock_Divider_1.count_722_add_4_31/CO undriven or does not drive anything
+Signal sub_689_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal Clock_Divider_1.count_741_add_4_31/CO undriven or does not drive anything
      - clipped.
-Signal RAM1_read.count_725_add_4_1/S0 undriven or does not drive anything -
+Signal RAM1_read.count_744_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal RAM1_read.count_725_add_4_1/CI undriven or does not drive anything -
+Signal RAM1_read.count_744_add_4_1/CI undriven or does not drive anything -
      clipped.
-Signal add_721_1/S0 undriven or does not drive anything - clipped.
-Signal add_721_1/CI undriven or does not drive anything - clipped.
-Signal sub_672_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal RAM1_read.count_725_add_4_13/CO undriven or does not drive anything -
+Signal add_740_1/S0 undriven or does not drive anything - clipped.
+Signal add_740_1/CI undriven or does not drive anything - clipped.
+Signal sub_691_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal RAM1_read.count_744_add_4_13/CO undriven or does not drive anything -
      clipped.
-Signal sub_670_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal RAM2_read.count_727_add_4_1/S0 undriven or does not drive anything -
+Signal sub_689_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal RAM2_read.count_746_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal RAM2_read.count_727_add_4_1/CI undriven or does not drive anything -
+Signal RAM2_read.count_746_add_4_1/CI undriven or does not drive anything -
      clipped.
-Signal sub_670_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_15/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_15/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_17/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_17/S0 undriven or does not drive anything - clipped.
-Signal RAM2_read.count_727_add_4_13/CO undriven or does not drive anything -
+Signal sub_689_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_17/S0 undriven or does not drive anything - clipped.
+Signal RAM2_read.count_746_add_4_13/CO undriven or does not drive anything -
      clipped.
-Signal sub_672_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_672_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_19/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_19/S0 undriven or does not drive anything - clipped.
-Signal Clock_Divider_2.count_723_add_4_1/S0 undriven or does not drive anything
+Signal sub_691_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_691_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_19/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_19/S0 undriven or does not drive anything - clipped.
+Signal Clock_Divider_2.count_742_add_4_1/S0 undriven or does not drive anything
      - clipped.
-Signal Clock_Divider_2.count_723_add_4_1/CI undriven or does not drive anything
+Signal Clock_Divider_2.count_742_add_4_1/CI undriven or does not drive anything
      - clipped.
-Signal sub_670_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal sub_671_add_2_21/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_21/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_23/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_cout/S1 undriven or does not drive anything - clipped.
 
-Signal sub_671_add_2_23/S0 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_25/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_25/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_670_add_2_15/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_15/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal Clock_Divider_2.count_723_add_4_31/CO undriven or does not drive anything
+Signal sub_691_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal sub_690_add_2_21/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_21/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_23/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_23/S0 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_25/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_25/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_689_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal Clock_Divider_2.count_742_add_4_31/CO undriven or does not drive anything
      - clipped.
-Signal sub_670_add_2_17/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_17/S0 undriven or does not drive anything - clipped.
-Signal add_721_cout/S1 undriven or does not drive anything - clipped.
-Signal add_721_cout/CO undriven or does not drive anything - clipped.
-Signal Clock_Divider_1.count_722_add_4_1/S0 undriven or does not drive anything
+Signal sub_689_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_17/S0 undriven or does not drive anything - clipped.
+Signal add_740_cout/S1 undriven or does not drive anything - clipped.
+Signal add_740_cout/CO undriven or does not drive anything - clipped.
+Signal Clock_Divider_1.count_741_add_4_1/S0 undriven or does not drive anything
      - clipped.
-Signal Clock_Divider_1.count_722_add_4_1/CI undriven or does not drive anything
+Signal Clock_Divider_1.count_741_add_4_1/CI undriven or does not drive anything
      - clipped.
-Signal sub_670_add_2_19/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_19/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_27/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_27/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_21/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_21/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_23/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_23/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_29/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_29/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_31/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_31/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_25/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_25/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_27/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_27/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_29/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_29/S0 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_672_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_671_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal sub_670_add_2_31/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_31/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_670_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal sub_668_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_668_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_689_add_2_19/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_19/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_27/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_27/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_21/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_21/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_23/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_23/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_29/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_29/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_31/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_31/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_25/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_25/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_27/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_27/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_29/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_29/S0 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_691_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_690_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal sub_689_add_2_31/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_31/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_689_add_2_cout/S1 undriven or does not drive anything - clipped.
 
-Signal sub_670_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_670_add_2_3/S0 undriven or does not drive anything - clipped.
-Block i3455 was optimized away.
-Block i3457 was optimized away.
-Block i3456 was optimized away.
-Block i805_1_lut was optimized away.
-Block i844_1_lut was optimized away.
+Signal sub_689_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal sub_687_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_687_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_689_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_689_add_2_3/S0 undriven or does not drive anything - clipped.
+Block i3474 was optimized away.
+Block i3475 was optimized away.
+Block i863_1_lut was optimized away.
+Block i824_1_lut was optimized away.
 
 
 
@@ -468,10 +471,10 @@ Block i844_1_lut was optimized away.
     RAM SLICEs: 0
     Logic SLICEs: 0
     PFU Registers: 0
+
     -Contains EBR DAQ_RAM_0_0_7_0:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
          Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
-
          GSR= DISABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAQ_RAM.lpc
     -Contains EBR DAQ_RAM_0_0_0_7:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
          Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
@@ -527,10 +530,10 @@ Instance Name: RAM1/DAQ_RAM_0_0_6_1
          Type: DP8KC
 Instance Name: RAM2/DAQ_RAM_0_0_7_0
          Type: DP8KC
+
 Instance Name: RAM2/DAQ_RAM_0_0_0_7
          Type: DP8KC
 Instance Name: RAM2/DAQ_RAM_0_0_1_6
-
          Type: DP8KC
 Instance Name: RAM2/DAQ_RAM_0_0_2_5
          Type: DP8KC
@@ -552,9 +555,6 @@ Instance Name: RAM2/DAQ_RAM_0_0_6_1
    Total REAL Time: 0 secs  
    Peak Memory Usage: 64 MB
         
-
-
-
 
 
 

@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 Report for cell main.TECH
 Register bits:  248 of 7209 (3.440%)
-I/O cells:      60
+I/O cells:      61
                                   Cell usage:
                                cell     count   Res Usage(%)
                                  BB         8          100.0
@@ -11,15 +11,15 @@ I/O cells:      60
                             FD1S3AX        14          100.0
                             FD1S3IX        92          100.0
                                 GSR         1          100.0
-                                 IB        12          100.0
-                                INV         3          100.0
-                               LUT4       139          100.0
+                                 IB        13          100.0
+                                INV         2          100.0
+                               LUT4       157          100.0
                                  OB        40          100.0
                               PFUMX         7          100.0
 SUB MODULES
                             DAQ_RAM         1
                          DAQ_RAM_U0         1
-                              TOTAL       589
+                              TOTAL       607
 ----------------------------------------------------------------------
 Report for cell DAQ_RAM_U0.v1
 Instance Path : RAM1

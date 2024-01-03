@@ -1,135 +1,134 @@
 [ START MERGED ]
-n3860 cont_data_2__N_12
-FCK_N_652 FCK_c
-data_addr_15__N_639 data_addr_15
-I_N_544 I_c
-J_N_587 J_c
+n3877 cont_data_2__N_12
+data_addr_15__N_671 data_addr_15
+I_N_576 I_c
+J_N_619 J_c
 [ END MERGED ]
 [ START CLIPPED ]
-sub_672_add_2_9/S1
-sub_672_add_2_9/S0
-sub_668_add_2_3/S1
-sub_668_add_2_3/S0
-sub_668_add_2_5/S1
-sub_668_add_2_5/S0
-sub_670_add_2_5/S1
-sub_670_add_2_5/S0
-sub_668_add_2_7/S1
-sub_668_add_2_7/S0
-sub_668_add_2_9/S1
-sub_668_add_2_9/S0
-sub_668_add_2_11/S1
-sub_668_add_2_11/S0
-sub_670_add_2_7/S1
-sub_670_add_2_7/S0
-sub_671_add_2_7/S1
-sub_671_add_2_7/S0
-sub_668_add_2_13/S1
-sub_668_add_2_13/S0
-sub_668_add_2_cout/S1
-sub_668_add_2_cout/CO
-Clock_Divider_1.count_722_add_4_31/CO
-RAM1_read.count_725_add_4_1/S0
-RAM1_read.count_725_add_4_1/CI
-add_721_1/S0
-add_721_1/CI
-sub_672_add_2_11/S1
-sub_672_add_2_11/S0
-sub_671_add_2_9/S1
-sub_671_add_2_9/S0
-RAM1_read.count_725_add_4_13/CO
-sub_670_add_2_9/S1
-sub_670_add_2_9/S0
-RAM2_read.count_727_add_4_1/S0
-RAM2_read.count_727_add_4_1/CI
-sub_670_add_2_11/S1
-sub_670_add_2_11/S0
-sub_671_add_2_11/S1
-sub_671_add_2_11/S0
-sub_671_add_2_13/S1
-sub_671_add_2_13/S0
-sub_671_add_2_15/S1
-sub_671_add_2_15/S0
-sub_671_add_2_17/S1
-sub_671_add_2_17/S0
-RAM2_read.count_727_add_4_13/CO
-sub_672_add_2_1/S1
-sub_672_add_2_1/S0
-sub_672_add_2_1/CI
-sub_672_add_2_13/S1
-sub_672_add_2_13/S0
-sub_672_add_2_3/S1
-sub_672_add_2_3/S0
-sub_671_add_2_19/S1
-sub_671_add_2_19/S0
-Clock_Divider_2.count_723_add_4_1/S0
-Clock_Divider_2.count_723_add_4_1/CI
-sub_670_add_2_13/S1
-sub_670_add_2_13/S0
-sub_672_add_2_cout/S1
-sub_672_add_2_cout/CO
-sub_671_add_2_21/S1
-sub_671_add_2_21/S0
-sub_671_add_2_23/S1
-sub_671_add_2_23/S0
-sub_672_add_2_5/S1
-sub_672_add_2_5/S0
-sub_671_add_2_25/S1
-sub_671_add_2_25/S0
-sub_671_add_2_1/S1
-sub_671_add_2_1/S0
-sub_671_add_2_1/CI
-sub_670_add_2_15/S1
-sub_670_add_2_15/S0
-sub_671_add_2_3/S1
-sub_671_add_2_3/S0
-Clock_Divider_2.count_723_add_4_31/CO
-sub_670_add_2_17/S1
-sub_670_add_2_17/S0
-add_721_cout/S1
-add_721_cout/CO
-Clock_Divider_1.count_722_add_4_1/S0
-Clock_Divider_1.count_722_add_4_1/CI
-sub_670_add_2_19/S1
-sub_670_add_2_19/S0
-sub_671_add_2_27/S1
-sub_671_add_2_27/S0
-sub_670_add_2_21/S1
-sub_670_add_2_21/S0
-sub_670_add_2_23/S1
-sub_670_add_2_23/S0
-sub_671_add_2_29/S1
-sub_671_add_2_29/S0
-sub_671_add_2_5/S1
-sub_671_add_2_5/S0
-sub_671_add_2_31/S1
-sub_671_add_2_31/S0
-sub_670_add_2_25/S1
-sub_670_add_2_25/S0
-sub_670_add_2_27/S1
-sub_670_add_2_27/S0
-sub_670_add_2_29/S1
-sub_670_add_2_29/S0
-sub_672_add_2_7/S1
-sub_672_add_2_7/S0
-sub_671_add_2_cout/S1
-sub_671_add_2_cout/CO
-sub_670_add_2_31/S1
-sub_670_add_2_31/S0
-sub_670_add_2_1/S1
-sub_670_add_2_1/S0
-sub_670_add_2_1/CI
-sub_670_add_2_cout/S1
-sub_670_add_2_cout/CO
-sub_668_add_2_1/S1
-sub_668_add_2_1/S0
-sub_668_add_2_1/CI
-sub_670_add_2_3/S1
-sub_670_add_2_3/S0
+sub_691_add_2_9/S1
+sub_691_add_2_9/S0
+sub_687_add_2_3/S1
+sub_687_add_2_3/S0
+sub_687_add_2_5/S1
+sub_687_add_2_5/S0
+sub_689_add_2_5/S1
+sub_689_add_2_5/S0
+sub_687_add_2_7/S1
+sub_687_add_2_7/S0
+sub_687_add_2_9/S1
+sub_687_add_2_9/S0
+sub_687_add_2_11/S1
+sub_687_add_2_11/S0
+sub_689_add_2_7/S1
+sub_689_add_2_7/S0
+sub_690_add_2_7/S1
+sub_690_add_2_7/S0
+sub_687_add_2_13/S1
+sub_687_add_2_13/S0
+sub_687_add_2_cout/S1
+sub_687_add_2_cout/CO
+Clock_Divider_1.count_741_add_4_31/CO
+RAM1_read.count_744_add_4_1/S0
+RAM1_read.count_744_add_4_1/CI
+add_740_1/S0
+add_740_1/CI
+sub_691_add_2_11/S1
+sub_691_add_2_11/S0
+sub_690_add_2_9/S1
+sub_690_add_2_9/S0
+RAM1_read.count_744_add_4_13/CO
+sub_689_add_2_9/S1
+sub_689_add_2_9/S0
+RAM2_read.count_746_add_4_1/S0
+RAM2_read.count_746_add_4_1/CI
+sub_689_add_2_11/S1
+sub_689_add_2_11/S0
+sub_690_add_2_11/S1
+sub_690_add_2_11/S0
+sub_690_add_2_13/S1
+sub_690_add_2_13/S0
+sub_690_add_2_15/S1
+sub_690_add_2_15/S0
+sub_690_add_2_17/S1
+sub_690_add_2_17/S0
+RAM2_read.count_746_add_4_13/CO
+sub_691_add_2_1/S1
+sub_691_add_2_1/S0
+sub_691_add_2_1/CI
+sub_691_add_2_13/S1
+sub_691_add_2_13/S0
+sub_691_add_2_3/S1
+sub_691_add_2_3/S0
+sub_690_add_2_19/S1
+sub_690_add_2_19/S0
+Clock_Divider_2.count_742_add_4_1/S0
+Clock_Divider_2.count_742_add_4_1/CI
+sub_689_add_2_13/S1
+sub_689_add_2_13/S0
+sub_691_add_2_cout/S1
+sub_691_add_2_cout/CO
+sub_690_add_2_21/S1
+sub_690_add_2_21/S0
+sub_690_add_2_23/S1
+sub_690_add_2_23/S0
+sub_691_add_2_5/S1
+sub_691_add_2_5/S0
+sub_690_add_2_25/S1
+sub_690_add_2_25/S0
+sub_690_add_2_1/S1
+sub_690_add_2_1/S0
+sub_690_add_2_1/CI
+sub_689_add_2_15/S1
+sub_689_add_2_15/S0
+sub_690_add_2_3/S1
+sub_690_add_2_3/S0
+Clock_Divider_2.count_742_add_4_31/CO
+sub_689_add_2_17/S1
+sub_689_add_2_17/S0
+add_740_cout/S1
+add_740_cout/CO
+Clock_Divider_1.count_741_add_4_1/S0
+Clock_Divider_1.count_741_add_4_1/CI
+sub_689_add_2_19/S1
+sub_689_add_2_19/S0
+sub_690_add_2_27/S1
+sub_690_add_2_27/S0
+sub_689_add_2_21/S1
+sub_689_add_2_21/S0
+sub_689_add_2_23/S1
+sub_689_add_2_23/S0
+sub_690_add_2_29/S1
+sub_690_add_2_29/S0
+sub_690_add_2_5/S1
+sub_690_add_2_5/S0
+sub_690_add_2_31/S1
+sub_690_add_2_31/S0
+sub_689_add_2_25/S1
+sub_689_add_2_25/S0
+sub_689_add_2_27/S1
+sub_689_add_2_27/S0
+sub_689_add_2_29/S1
+sub_689_add_2_29/S0
+sub_691_add_2_7/S1
+sub_691_add_2_7/S0
+sub_690_add_2_cout/S1
+sub_690_add_2_cout/CO
+sub_689_add_2_31/S1
+sub_689_add_2_31/S0
+sub_689_add_2_1/S1
+sub_689_add_2_1/S0
+sub_689_add_2_1/CI
+sub_689_add_2_cout/S1
+sub_689_add_2_cout/CO
+sub_687_add_2_1/S1
+sub_687_add_2_1/S0
+sub_687_add_2_1/CI
+sub_689_add_2_3/S1
+sub_689_add_2_3/S0
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Mon Dec 18 15:13:48 2023
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Wed Jan 03 16:42:06 2024
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "cont_data[6]" SITE "71" ;
@@ -181,7 +180,8 @@ LOCATE COMP "T" SITE "112" ;
 LOCATE COMP "V" SITE "21" ;
 LOCATE COMP "W" SITE "22" ;
 LOCATE COMP "CK" SITE "38" ;
-LOCATE COMP "FCK" SITE "39" ;
+LOCATE COMP "CK1" SITE "39" ;
+LOCATE COMP "CK2" SITE "44" ;
 LOCATE COMP "cont_addr[5]" SITE "55" ;
 LOCATE COMP "cont_addr[4]" SITE "58" ;
 LOCATE COMP "cont_addr[3]" SITE "54" ;
@@ -192,6 +192,7 @@ LOCATE COMP "CWR_in" SITE "1" ;
 LOCATE COMP "CDS_in" SITE "2" ;
 LOCATE COMP "ETH" SITE "3" ;
 LOCATE COMP "NOT_RESET" SITE "40" ;
-FREQUENCY PORT "FCK" 80.000000 MHz ;
+FREQUENCY PORT "CK2" 80.000000 MHz ;
+FREQUENCY PORT "CK1" 80.000000 MHz ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

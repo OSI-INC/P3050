@@ -3,14 +3,14 @@ Device = LCMXO2-7000HC;
 Package = TQFP144;
 Performance = 5;
 LUTS_avail = 6864;
-LUTS_used = 366;
+LUTS_used = 384;
 FF_avail = 6979;
 FF_used = 248;
-INPUT_LVCMOS33 = 12;
+INPUT_LVCMOS33 = 13;
 OUTPUT_LVCMOS33 = 40;
 BIDI_LVCMOS33 = 8;
 IO_avail = 115;
-IO_used = 60;
+IO_used = 61;
 EBR_avail = 26;
 EBR_used = 16;
 ; Begin EBR Section
