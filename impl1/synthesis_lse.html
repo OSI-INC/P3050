@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 03 16:42:04 2024
+Tue Jan 16 16:20:39 2024
 
 
 Command Line:  synthesis -f P3050FG_impl1_lattice.synproj -gui -msgset C:/Firmware/P3050FG/promote.xml 
@@ -99,14 +99,24 @@ unit main is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/firmware/p3050fg/main.vhd. VHDL-1481
 INFO - synthesis: c:/firmware/p3050fg/main.vhd(10): analyzing entity main. VHDL-1012
 INFO - synthesis: c:/firmware/p3050fg/main.vhd(105): analyzing architecture behavior. VHDL-1010
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(130): possible infinite loop process does not have a wait statement. VHDL-1196
 unit main is not yet analyzed. VHDL-1485
 unit main is not yet analyzed. VHDL-1485
 c:/firmware/p3050fg/main.vhd(10): executing main(behavior)
 
 WARNING - synthesis: c:/firmware/p3050fg/main.vhd(85): using initial value 'U' for reset since it is never assigned. VHDL-1303
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(139): cont_addr should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(241): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(129): fck should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(131): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(140): cont_addr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(142): hwreset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(253): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(260): not_reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(260): rstcd1 should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(260): hwreset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(270): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(276): not_reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(276): rstcd2 should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(276): hwreset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(286): incomplete sensitivity list specified, assuming completeness. VHDL-1613
 Removed duplicate sequential element rd_ram1_addr(13 bit), because it is equivalent to RAM1_read.count
 
 Removed duplicate sequential element rd_ram2_addr(13 bit), because it is equivalent to RAM2_read.count
@@ -120,20 +130,16 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = main.
-WARNING - synthesis: I/O Port CK 's net has no driver and is unused.
-WARNING - synthesis: I/O Port W 's net has no driver and is unused.
 WARNING - synthesis: I/O Port UPLOAD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port EMPTY 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
 
 
 
-WARNING - synthesis: I/O Port CK 's net has no driver and is unused.
-WARNING - synthesis: I/O Port W 's net has no driver and is unused.
 WARNING - synthesis: I/O Port UPLOAD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port EMPTY 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
-GSR will not be inferred because no asynchronous signal was found in the netlist.
+GSR instance connected to net NOTHWRESET_c.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -153,19 +159,23 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file P3050FG_impl1.ngd.
 
 ################### Begin Area Report (main)######################
-Number of register bits => 248 of 7209 (3 % )
+Number of register bits => 254 of 7209 (3 % )
 BB => 8
 CCU2D => 113
 DP8KC => 16
-FD1P3AX => 142
-FD1S3AX => 14
-FD1S3IX => 92
+FD1P3AX => 145
+FD1P3AY => 2
+FD1P3IX => 2
+FD1S3AX => 13
+FD1S3AY => 4
+FD1S3DX => 62
+FD1S3IX => 26
 GSR => 1
-IB => 13
+IB => 15
 INV => 2
-LUT4 => 157
+LUT4 => 227
 OB => 40
-PFUMX => 7
+PFUMX => 17
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -175,35 +185,35 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 4
-  Net : CK1_c_derived_238, loads : 238
-  Net : FCK_N_684, loads : 16
-  Net : J_c, loads : 3
-  Net : I_c, loads : 3
+  Net : CK1_c_derived_244, loads : 244
+  Net : FCK_N_605, loads : 16
+  Net : DIVCKB, loads : 2
+  Net : DIVCKA, loads : 2
 Clock Enable Nets
-Number of Clock Enables: 18
+Number of Clock Enables: 21
 Top 10 highest fanout Clock Enables:
-  Net : CK1_c_derived_238_enable_29, loads : 8
-  Net : CK1_c_derived_238_enable_127, loads : 8
-  Net : CK1_c_derived_238_enable_96, loads : 8
-  Net : CK1_c_derived_238_enable_51, loads : 8
-  Net : CK1_c_derived_238_enable_36, loads : 8
-  Net : CK1_c_derived_238_enable_59, loads : 8
-  Net : CK1_c_derived_238_enable_141, loads : 8
-  Net : CK1_c_derived_238_enable_81, loads : 8
-  Net : CK1_c_derived_238_enable_142, loads : 8
-  Net : CK1_c_derived_238_enable_89, loads : 8
+  Net : NOTHWRESET_c, loads : 17
+  Net : CK1_c_derived_244_enable_59, loads : 8
+  Net : CK1_c_derived_244_enable_67, loads : 8
+  Net : CK1_c_derived_244_enable_82, loads : 8
+  Net : CK1_c_derived_244_enable_75, loads : 8
+  Net : CK1_c_derived_244_enable_12, loads : 8
+  Net : CK1_c_derived_244_enable_33, loads : 8
+  Net : CK1_c_derived_244_enable_135, loads : 8
+  Net : CK1_c_derived_244_enable_51, loads : 8
+  Net : CK1_c_derived_244_enable_50, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n1714, loads : 62
-  Net : n1852, loads : 62
-  Net : n2650, loads : 36
-  Net : V_c_0, loads : 33
-  Net : Clock_Divider_1.count_30__N_436, loads : 32
-  Net : Clock_Divider_2.count_30__N_530, loads : 32
-  Net : data_addr_3, loads : 31
-  Net : data_addr_2, loads : 31
-  Net : data_addr_1, loads : 31
-  Net : cont_addr_c_0, loads : 23
+  Net : n2644, loads : 35
+  Net : Clock_Divider_1.count_30__N_407, loads : 32
+  Net : Clock_Divider_2.count_30__N_472, loads : 32
+  Net : n6640, loads : 31
+  Net : n6639, loads : 31
+  Net : cont_addr_c_0, loads : 29
+  Net : data_addr_0, loads : 29
+  Net : data_addr_1, loads : 28
+  Net : cont_addr_c_3, loads : 27
+  Net : data_addr_2, loads : 27
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -213,16 +223,16 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk3 [get_nets J_c]                     |  200.000 MHz|  143.410 MHz|    10 *
+clk3 [get_nets DIVCKA]                  |  200.000 MHz|  143.410 MHz|    10 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets I_c]                     |  200.000 MHz|  143.410 MHz|    10 *
+clk2 [get_nets DIVCKB]                  |  200.000 MHz|  143.410 MHz|    10 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets FCK_N_684]               |            -|            -|     0  
+clk1 [get_nets CK1_c_derived_244]       |  200.000 MHz|  104.417 MHz|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets CK1_c_derived_238]       |  200.000 MHz|   87.306 MHz|     8 *
+clk0 [get_nets FCK_N_605]               |            -|            -|     0  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -230,10 +240,10 @@ clk0 [get_nets CK1_c_derived_238]       |  200.000 MHz|   87.306 MHz|     8 *
 3 constraints not met.
 
 
-Peak Memory Usage: 89.965  MB
+Peak Memory Usage: 88.848  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.313  secs
+Elapsed CPU time for LSE flow : 1.453  secs
 --------------------------------------------------------------
 
 

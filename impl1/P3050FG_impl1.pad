@@ -6,7 +6,7 @@ Performance Grade:      5
 PACKAGE:          TQFP144
 Package Status:                     Final          Version 1.39
 
-Wed Jan 03 16:42:10 2024
+Tue Jan 16 16:20:47 2024
 
 Pinout by Port Name:
 +--------------+----------+---------------+-------+-----------+-----------+--------------------------------------------------------+
@@ -19,6 +19,7 @@ Pinout by Port Name:
 | CK           | 38/2     | LVCMOS33_IN   | PB4A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
 | CK1          | 39/2     | LVCMOS33_IN   | PB4B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
 | CK2          | 44/2     | LVCMOS33_IN   | PB12A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
+| CONFIG       | 48/2     | LVCMOS33_IN   | PB13B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | CWR_in       | 1/5      | LVCMOS33_IN   | PL3A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | D            | 99/1     | LVCMOS33_OUT  | PR5B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | DACA_OUT[0]  | 17/4     | LVCMOS33_OUT  | PL11B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
@@ -50,6 +51,7 @@ Pinout by Port Name:
 | L            | 84/1     | LVCMOS33_OUT  | PR17A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | M            | 96/1     | LVCMOS33_OUT  | PR9A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | N            | 122/0    | LVCMOS33_OUT  | PT25A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| NOTHWRESET   | 47/2     | LVCMOS33_IN   | PB13A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | NOT_RESET    | 40/2     | LVCMOS33_IN   | PB6A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | O            | 121/0    | LVCMOS33_OUT  | PT25B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | P            | 117/0    | LVCMOS33_OUT  | PT28A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
@@ -134,8 +136,8 @@ Pinout by Pin Number:
 | 43/2     |     unused, PULL:DOWN |            |               | PB9B  |                |           |           |
 | 44/2     | CK2                   | LOCATED    | LVCMOS33_IN   | PB12A | MCLK/CCLK      |           |           |
 | 45/2     |     unused, PULL:DOWN |            |               | PB12B | SO/SPISO       |           |           |
-| 47/2     |     unused, PULL:DOWN |            |               | PB13A |                |           |           |
-| 48/2     |     unused, PULL:DOWN |            |               | PB13B |                |           |           |
+| 47/2     | NOTHWRESET            | LOCATED    | LVCMOS33_IN   | PB13A |                |           |           |
+| 48/2     | CONFIG                | LOCATED    | LVCMOS33_IN   | PB13B |                |           |           |
 | 49/2     |     unused, PULL:DOWN |            |               | PB16A | PCLKT2_0       |           |           |
 | 50/2     |     unused, PULL:DOWN |            |               | PB16B | PCLKC2_0       |           |           |
 | 52/2     | cont_addr[1]          | LOCATED    | LVCMOS33_IN   | PB18A |                |           |           |
@@ -458,6 +460,7 @@ LOCATE  COMP  "CDS_in"  SITE  "2";
 LOCATE  COMP  "CK"  SITE  "38";
 LOCATE  COMP  "CK1"  SITE  "39";
 LOCATE  COMP  "CK2"  SITE  "44";
+LOCATE  COMP  "CONFIG"  SITE  "48";
 LOCATE  COMP  "CWR_in"  SITE  "1";
 LOCATE  COMP  "D"  SITE  "99";
 LOCATE  COMP  "DACA_OUT[0]"  SITE  "17";
@@ -489,6 +492,7 @@ LOCATE  COMP  "K"  SITE  "82";
 LOCATE  COMP  "L"  SITE  "84";
 LOCATE  COMP  "M"  SITE  "96";
 LOCATE  COMP  "N"  SITE  "122";
+LOCATE  COMP  "NOTHWRESET"  SITE  "47";
 LOCATE  COMP  "NOT_RESET"  SITE  "40";
 LOCATE  COMP  "O"  SITE  "121";
 LOCATE  COMP  "P"  SITE  "117";
@@ -523,5 +527,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 03 16:42:12 2024
+Tue Jan 16 16:20:49 2024
 
