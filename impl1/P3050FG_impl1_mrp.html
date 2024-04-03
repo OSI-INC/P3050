@@ -22,23 +22,23 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-7000HCTQFP144
 Target Performance:   5
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  01/16/24  16:20:41
+Mapped on:  03/15/24  12:00:59
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    254 out of  7209 (4%)
-      PFU registers:          254 out of  6864 (4%)
+   Number of registers:    281 out of  7209 (4%)
+      PFU registers:          281 out of  6864 (4%)
       PIO registers:            0 out of   345 (0%)
-   Number of SLICEs:       231 out of  3432 (7%)
-      SLICEs as Logic/ROM:    231 out of  3432 (7%)
+   Number of SLICEs:       239 out of  3432 (7%)
+      SLICEs as Logic/ROM:    239 out of  3432 (7%)
       SLICEs as RAM:            0 out of  2574 (0%)
       SLICEs as Carry:        113 out of  3432 (3%)
-   Number of LUT4s:        453 out of  6864 (7%)
-      Number used as logic LUTs:        227
+   Number of LUT4s:        470 out of  6864 (7%)
+      Number used as logic LUTs:        244
       Number used as distributed RAM:     0
       Number used as ripple logic:      226
       Number used as shift registers:     0
-   Number of PIO sites used: 63 + 4(JTAG) out of 115 (58%)
+   Number of PIO sites used: 71 + 4(JTAG) out of 115 (65%)
    Number of block RAMs:  16 out of 26 (62%)
    Number of GSRs:        1 out of 1 (100%)
    EFB used :        No
@@ -64,54 +64,55 @@ Mapped on:  01/16/24  16:20:41
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  4
-     Net CK1_c_derived_244: 143 loads, 143 rising, 0 falling (Driver:
-     CK1_I_0_2_lut_rep_94 )
-     Net FCK_N_605: 16 loads, 16 rising, 0 falling (Driver: FCK_I_0_1_lut_2_lut
+     Net CK1_c_derived_245: 142 loads, 142 rising, 0 falling (Driver:
+     CK1_I_0_2_lut_rep_119 )
+     Net FCK_N_630: 16 loads, 16 rising, 0 falling (Driver: FCK_I_0_1_lut_2_lut
 
      )
-     Net DIVCKA: 7 loads, 0 rising, 7 falling (Driver: DIVCKA_525 )
-     Net DIVCKB: 7 loads, 0 rising, 7 falling (Driver: DIVCKB_527 )
-   Number of Clock Enables:  21
-     Net CK1_c_derived_244_enable_142: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_112: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_82: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_127: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_33: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_12: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_51: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_26: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_42: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_50: 4 loads, 4 LSLICEs
-     Net NOTHWRESET_c: 5 loads, 5 LSLICEs
-     Net CK1_c_derived_244_enable_119: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_105: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_89: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_59: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_67: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_75: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_97: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_135: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_244_enable_144: 1 loads, 1 LSLICEs
-     Net CK1_c_derived_244_enable_143: 1 loads, 1 LSLICEs
+     Net DIVCKA: 14 loads, 0 rising, 14 falling (Driver: DIVCKA_552 )
+     Net DIVCKB: 14 loads, 0 rising, 14 falling (Driver: DIVCKB_554 )
+   Number of Clock Enables:  22
+     Net CWR: 14 loads, 14 LSLICEs
+     Net CK1_c_derived_245_enable_11: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_56: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_101: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_71: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_34: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_19: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_27: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_108: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_41: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_123: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_48: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_64: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_78: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_86: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_94: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_131: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_149: 1 loads, 1 LSLICEs
+     Net CK1_c_derived_245_enable_139: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_116: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_147: 4 loads, 4 LSLICEs
+     Net CK1_c_derived_245_enable_148: 1 loads, 1 LSLICEs
    Number of LSRs:  6
-     Net RAM2_read.count_12__N_560: 7 loads, 7 LSLICEs
-     Net RAM1_read.count_12__N_516: 7 loads, 7 LSLICEs
-     Net n3874: 1 loads, 1 LSLICEs
-     Net n3876: 1 loads, 1 LSLICEs
-     Net n6640: 16 loads, 16 LSLICEs
-     Net n6639: 16 loads, 16 LSLICEs
+     Net CWR: 14 loads, 14 LSLICEs
+     Net n7492: 32 loads, 0 LSLICEs
+     Net n4003: 1 loads, 1 LSLICEs
+     Net n4005: 1 loads, 1 LSLICEs
+     Net n7489: 16 loads, 16 LSLICEs
+     Net n7488: 16 loads, 16 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n2644: 35 loads
-     Net Clock_Divider_1.count_30__N_407: 32 loads
-     Net Clock_Divider_2.count_30__N_472: 32 loads
-     Net cont_addr_c_0: 29 loads
+     Net n2701: 36 loads
+     Net CWR: 35 loads
+     Net n7492: 33 loads
+     Net DIVCKA_N_178: 32 loads
+     Net DIVCKB_N_197: 32 loads
+     Net data_addr_1: 30 loads
+     Net data_addr_2: 30 loads
      Net data_addr_0: 29 loads
-     Net data_addr_1: 28 loads
-     Net cont_addr_c_3: 27 loads
-     Net data_addr_2: 27 loads
-     Net n6634: 26 loads
-     Net data_addr_3: 25 loads
+     Net cont_addr_c_0: 27 loads
+     Net data_addr_3: 26 loads
 
 
 
@@ -123,10 +124,13 @@ Mapped on:  01/16/24  16:20:41
 
 
 
+
+
+
+
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
 WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(47): Semantic error in "IOBUF
-
      PORT "UPLOAD" IO_TYPE=LVCMOS33 PULLMODE=UP ;": Port "UPLOAD" does not exist
      in the design. This preference has been disabled.
 WARNING - map: C:/Firmware/P3050FG/P3050FG.lpf(48): Semantic error in "IOBUF
@@ -153,9 +157,9 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-| cont_data[6]        | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
 | cont_data[7]        | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cont_data[6]        | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | cont_data[5]        | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -169,6 +173,8 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 +---------------------+-----------+-----------+------------+
 | cont_data[0]        | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| NOT_RESET           | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
 | EGRN                | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | EYLW                | OUTPUT    | LVCMOS33  |            |
@@ -180,11 +186,11 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 | DACA_OUT[5]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | DACA_OUT[4]         | OUTPUT    | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 | DACA_OUT[3]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | DACA_OUT[2]         | OUTPUT    | LVCMOS33  |            |
-
 +---------------------+-----------+-----------+------------+
 | DACA_OUT[1]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -206,6 +212,22 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 +---------------------+-----------+-----------+------------+
 | DACB_OUT[0]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| AA                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| AB                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| AC                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| AE                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| BA                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| BB                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| BC                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| BD                  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
 | A                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | B                   | OUTPUT    | LVCMOS33  |            |
@@ -221,6 +243,7 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 | G                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | H                   | OUTPUT    | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 | I                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -241,7 +264,6 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 | Q                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | R                   | OUTPUT    | LVCMOS33  |            |
-
 +---------------------+-----------+-----------+------------+
 | S                   | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -277,158 +299,152 @@ WARNING - map: IO buffer missing for top level port ACTIV...logic will be
 +---------------------+-----------+-----------+------------+
 | NOTHWRESET          | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| NOT_RESET           | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
 | CONFIG              | INPUT     | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
 
 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Signal DIVCKB_N_531 was merged into signal DIVCKB
-Signal DIVCKA_N_487 was merged into signal DIVCKA
-Signal n3917 was merged into signal cont_data_6__N_4
-Signal GND_net undriven or does not drive anything - clipped.
-Signal sub_726_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal sub_727_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal DIVCKB_N_194 was merged into signal DIVCKB
+Signal DIVCKA_N_175 was merged into signal DIVCKA
+Signal n4041 was merged into signal cont_data_5__N_6
+Signal n4051 was merged into signal cont_data_0__N_16
+Signal DIVCKA_N_175_enable_13 was merged into signal CWR
+Signal sub_778_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_29/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_29/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_31/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_31/S0 undriven or does not drive anything - clipped.
+Signal Clock_Divider_2.count_829_add_4_31/CO undriven or does not drive anything
+     - clipped.
+Signal sub_775_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal sub_774_add_2_25/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_25/S0 undriven or does not drive anything - clipped.
+Signal add_755_1/S0 undriven or does not drive anything - clipped.
+Signal add_755_1/CI undriven or does not drive anything - clipped.
+Signal sub_774_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_774_add_2_27/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_27/S0 undriven or does not drive anything - clipped.
+Signal add_755_13/CO undriven or does not drive anything - clipped.
+Signal add_751_1/S0 undriven or does not drive anything - clipped.
+Signal add_751_1/CI undriven or does not drive anything - clipped.
+Signal add_827_cout/S1 undriven or does not drive anything - clipped.
+Signal add_827_cout/CO undriven or does not drive anything - clipped.
+Signal sub_774_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_29/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_29/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_31/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_31/S0 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal sub_775_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_1/CI undriven or does not drive anything - clipped.
+Signal add_751_13/CO undriven or does not drive anything - clipped.
 
-Signal sub_727_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_15/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_15/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_17/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_17/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_19/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_19/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal add_778_1/S0 undriven or does not drive anything - clipped.
-Signal add_778_1/CI undriven or does not drive anything - clipped.
-Signal sub_725_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_21/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_21/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_23/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_23/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_25/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_25/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_725_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_15/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_15/S0 undriven or does not drive anything - clipped.
-Signal Clock_Divider_1.count_779_add_4_31/CO undriven or does not drive anything
+Signal Clock_Divider_1.count_828_add_4_1/S0 undriven or does not drive anything
      - clipped.
-Signal sub_726_add_2_27/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_27/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_29/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_29/S0 undriven or does not drive anything - clipped.
-Signal Clock_Divider_2.count_780_add_4_1/S0 undriven or does not drive anything
+Signal Clock_Divider_1.count_828_add_4_1/CI undriven or does not drive anything
      - clipped.
-Signal Clock_Divider_2.count_780_add_4_1/CI undriven or does not drive anything
-     - clipped.
-Signal sub_726_add_2_31/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_31/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_17/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_17/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_19/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_19/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal sub_729_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_729_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal sub_776_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_775_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_17/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_19/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_19/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_21/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_21/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_17/S0 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_776_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal sub_774_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_19/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_19/S0 undriven or does not drive anything - clipped.
+Signal add_827_1/S0 undriven or does not drive anything - clipped.
+Signal add_827_1/CI undriven or does not drive anything - clipped.
+Signal sub_778_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_775_add_2_21/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_21/S0 undriven or does not drive anything - clipped.
 
-Signal sub_726_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal RAM2_read.count_784_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal RAM2_read.count_784_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal sub_725_add_2_21/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_21/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_23/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_23/S0 undriven or does not drive anything - clipped.
-Signal RAM2_read.count_784_add_4_13/CO undriven or does not drive anything -
-     clipped.
-Signal sub_725_add_2_25/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_25/S0 undriven or does not drive anything - clipped.
-Signal RAM1_read.count_782_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal RAM1_read.count_782_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal sub_725_add_2_27/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_27/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_29/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_29/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_31/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_31/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal sub_726_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_726_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal RAM1_read.count_782_add_4_13/CO undriven or does not drive anything -
-     clipped.
-Signal sub_726_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal Clock_Divider_1.count_779_add_4_1/S0 undriven or does not drive anything
+Signal sub_778_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_23/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_23/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_23/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_23/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_25/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_25/S0 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_778_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_27/S1 undriven or does not drive anything - clipped.
+Signal sub_775_add_2_27/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_774_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal Clock_Divider_1.count_828_add_4_31/CO undriven or does not drive anything
      - clipped.
-Signal Clock_Divider_1.count_779_add_4_1/CI undriven or does not drive anything
+Signal Clock_Divider_2.count_829_add_4_1/S0 undriven or does not drive anything
      - clipped.
-Signal sub_726_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal add_778_cout/S1 undriven or does not drive anything - clipped.
-Signal add_778_cout/CO undriven or does not drive anything - clipped.
-Signal sub_726_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_726_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_726_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_727_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_3/S1 undriven or does not drive anything - clipped.
-
-Signal sub_725_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal Clock_Divider_2.count_780_add_4_31/CO undriven or does not drive anything
+Signal Clock_Divider_2.count_829_add_4_1/CI undriven or does not drive anything
      - clipped.
-Signal sub_729_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_729_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_725_add_2_5/S0 undriven or does not drive anything - clipped.
-Block i3422 was optimized away.
-Block i3423 was optimized away.
-Block i893_1_lut was optimized away.
-Block i1 was optimized away.
+Block i4181 was optimized away.
+Block i4182 was optimized away.
+Block i919_1_lut was optimized away.
+Block i920_1_lut was optimized away.
+Block CWR_I_0_1_lut_rep_118 was optimized away.
 
 
 
@@ -443,6 +459,10 @@ Block i1 was optimized away.
     RAM SLICEs: 0
     Logic SLICEs: 0
     PFU Registers: 0
+    -Contains EBR DAQ_RAM_0_0_1_6:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
+         Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAQ_RAM.lpc
     -Contains EBR DAQ_RAM_0_0_7_0:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
          Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
@@ -451,12 +471,9 @@ Block i1 was optimized away.
          Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
          GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAQ_RAM.lpc
-    -Contains EBR DAQ_RAM_0_0_1_6:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
-         Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
-         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
-         GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAQ_RAM.lpc
     -Contains EBR DAQ_RAM_0_0_0_7:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
          Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
          GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAQ_RAM.lpc
     -Contains EBR DAQ_RAM_0_0_3_4:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
@@ -471,7 +488,6 @@ Block i1 was optimized away.
          Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
          GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAQ_RAM.lpc
-
     -Contains EBR DAQ_RAM_0_0_6_1:  TYPE= DP8KC,  Width_B= 1,  Depth_A= 8192,
          Depth_B= 8192,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
@@ -514,6 +530,7 @@ Block i1 was optimized away.
          ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
          GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE= DAQ_RAM.lpc
 
+
      
 
 
@@ -521,16 +538,15 @@ Block i1 was optimized away.
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 ---------------
 
+Instance Name: RAM1/DAQ_RAM_0_0_1_6
+         Type: DP8KC
 Instance Name: RAM1/DAQ_RAM_0_0_7_0
          Type: DP8KC
 Instance Name: RAM1/DAQ_RAM_0_0_2_5
          Type: DP8KC
-Instance Name: RAM1/DAQ_RAM_0_0_1_6
-         Type: DP8KC
 Instance Name: RAM1/DAQ_RAM_0_0_0_7
          Type: DP8KC
 Instance Name: RAM1/DAQ_RAM_0_0_3_4
-
          Type: DP8KC
 Instance Name: RAM1/DAQ_RAM_0_0_4_3
          Type: DP8KC
@@ -562,7 +578,8 @@ Instance Name: RAM2/DAQ_RAM_0_0_6_1
 
 GSR Component:
    The Global Set Reset (GSR) resource has been used to implement a global reset
-        of the design. The reset signal used for GSR control is 'NOTHWRESET_c'.
+        of the design. The reset signal used for GSR control is
+        'CK1_c_derived_245_enable_41'.
         
 
      GSR Property:
@@ -574,164 +591,192 @@ GSR Component:
      Components with disabled GSR Property
 -------------------------------------
 
+
      These components have the GSR property set to DISABLED. The components will
-     not respond to the reset signal 'NOTHWRESET_c' via the GSR component.
+     not respond to the reset signal 'CK1_c_derived_245_enable_41' via the GSR
+     component.
 
      Type and number of components of the type: 
-   Register = 133 
+   Register = 159 
 
      Type and instance name of component: 
-   Register : RAM2_read.count_784__i11
-   Register : RAM2_read.count_784__i10
-   Register : RAM2_read.count_784__i9
-   Register : RAM2_read.count_784__i8
-   Register : RAM2_read.count_784__i7
-   Register : RAM2_read.count_784__i6
-   Register : RAM2_read.count_784__i5
-   Register : RAM2_read.count_784__i4
-
-   Register : RAM2_read.count_784__i3
-   Register : RAM2_read.count_784__i2
-   Register : RAM2_read.count_784__i1
+   Register : RAM2_read.count_i5
+   Register : RAM2_read.count_i4
+   Register : RAM2_read.count_i3
+   Register : RAM2_read.count_i2
+   Register : RAM2_read.count_i1
+   Register : rd_ram2_addr_i0_i0
+   Register : RAM1_read.count_i0
+   Register : RAM2_read.count_i12
+   Register : RAM2_read.count_i11
+   Register : RAM2_read.count_i10
+   Register : RAM2_read.count_i9
+   Register : RAM2_read.count_i8
+   Register : RAM2_read.count_i7
+   Register : RAM2_read.count_i0
+   Register : I_559
+   Register : J_560
+   Register : L_561
+   Register : K_562
+   Register : V_563
+   Register : W_564
+   Register : CDS_delayed_539
+   Register : CWR_537
    Register : data_addr_i0_i0
-   Register : RAM1_read.count_782__i1
-   Register : I_532
-   Register : J_533
-   Register : L_534
-   Register : K_535
-   Register : V_536
-   Register : W_537
-   Register : CWR_510
-   Register : CDS_511
-   Register : CDS_delayed_512
-   Register : rstcd1_514
-   Register : rstcd2_513
-   Register : RAM2_read.count_784__i0
-   Register : RAM1_read.count_782__i0
-   Register : Clock_Divider_1.count_779__i0
-   Register : Clock_Divider_2.count_780__i0
-   Register : data_addr_i0_i31
-   Register : data_addr_i0_i30
-   Register : data_addr_i0_i29
-   Register : data_addr_i0_i28
-   Register : data_addr_i0_i27
-   Register : data_addr_i0_i26
-   Register : data_addr_i0_i25
-   Register : data_addr_i0_i24
-   Register : data_addr_i0_i23
-   Register : data_addr_i0_i22
-   Register : data_addr_i0_i21
-   Register : data_addr_i0_i20
-   Register : data_addr_i0_i19
-   Register : data_addr_i0_i18
-   Register : data_addr_i0_i17
-   Register : data_addr_i0_i16
-   Register : data_addr_i0_i15
-   Register : data_addr_i0_i14
-   Register : data_addr_i0_i13
-   Register : data_addr_i0_i12
-   Register : data_addr_i0_i11
-   Register : data_addr_i0_i10
-   Register : data_addr_i0_i9
-   Register : data_addr_i0_i8
-   Register : data_addr_i0_i7
-   Register : data_addr_i0_i6
-   Register : data_addr_i0_i5
-   Register : data_addr_i0_i4
-   Register : data_addr_i0_i3
-   Register : data_addr_i0_i2
+   Register : rd_ram1_addr_i0_i0
+   Register : CDS_538
+   Register : rstcd1_541
+   Register : rstcd2_540
+   Register : RAM1_read.count_i12
+   Register : RAM1_read.count_i11
+   Register : RAM1_read.count_i10
+   Register : RAM1_read.count_i9
+   Register : RAM1_read.count_i8
+   Register : RAM1_read.count_i7
+   Register : RAM1_read.count_i6
+   Register : RAM1_read.count_i5
+   Register : RAM1_read.count_i4
+   Register : RAM1_read.count_i3
+   Register : RAM1_read.count_i2
+   Register : RAM1_read.count_i1
+   Register : rd_ram2_addr_i0_i12
+   Register : rd_ram2_addr_i0_i11
+   Register : rd_ram2_addr_i0_i10
+   Register : rd_ram2_addr_i0_i9
+   Register : rd_ram2_addr_i0_i8
+   Register : rd_ram2_addr_i0_i7
+   Register : rd_ram2_addr_i0_i6
+   Register : rd_ram2_addr_i0_i5
+   Register : rd_ram2_addr_i0_i4
+
+   Register : rd_ram2_addr_i0_i3
+   Register : rd_ram2_addr_i0_i2
+   Register : rd_ram2_addr_i0_i1
+   Register : Clock_Divider_1.count_828__i0
+   Register : Clock_Divider_2.count_829__i0
    Register : data_addr_i0_i1
-   Register : RAM1_read.count_782__i2
-   Register : RAM1_read.count_782__i3
-   Register : RAM1_read.count_782__i4
-   Register : RAM1_read.count_782__i5
-   Register : RAM1_read.count_782__i6
+   Register : data_addr_i0_i2
+   Register : data_addr_i0_i3
+   Register : data_addr_i0_i4
+   Register : data_addr_i0_i5
+   Register : data_addr_i0_i6
+   Register : data_addr_i0_i7
+   Register : data_addr_i0_i8
+   Register : data_addr_i0_i9
+   Register : data_addr_i0_i10
+   Register : data_addr_i0_i11
+   Register : data_addr_i0_i12
+   Register : data_addr_i0_i13
+   Register : data_addr_i0_i14
+   Register : data_addr_i0_i15
+   Register : data_addr_i0_i16
+   Register : data_addr_i0_i17
+   Register : data_addr_i0_i18
+   Register : data_addr_i0_i19
+   Register : data_addr_i0_i20
+   Register : data_addr_i0_i21
+   Register : data_addr_i0_i22
+   Register : data_addr_i0_i23
+   Register : data_addr_i0_i24
+   Register : data_addr_i0_i25
+   Register : data_addr_i0_i26
+   Register : data_addr_i0_i27
+   Register : data_addr_i0_i28
+   Register : data_addr_i0_i29
+   Register : data_addr_i0_i30
+   Register : data_addr_i0_i31
+   Register : rd_ram1_addr_i0_i1
+   Register : rd_ram1_addr_i0_i2
+   Register : rd_ram1_addr_i0_i3
+   Register : rd_ram1_addr_i0_i4
+   Register : rd_ram1_addr_i0_i5
+   Register : rd_ram1_addr_i0_i6
+   Register : rd_ram1_addr_i0_i7
+   Register : rd_ram1_addr_i0_i8
+   Register : rd_ram1_addr_i0_i9
+   Register : rd_ram1_addr_i0_i10
+   Register : rd_ram1_addr_i0_i11
+   Register : rd_ram1_addr_i0_i12
+   Register : Clock_Divider_1.count_828__i1
+   Register : Clock_Divider_1.count_828__i2
+   Register : Clock_Divider_1.count_828__i3
+   Register : Clock_Divider_1.count_828__i4
+   Register : Clock_Divider_1.count_828__i5
+   Register : Clock_Divider_1.count_828__i6
+   Register : Clock_Divider_1.count_828__i7
+   Register : Clock_Divider_1.count_828__i8
 
-   Register : RAM1_read.count_782__i7
-   Register : RAM1_read.count_782__i8
-   Register : RAM1_read.count_782__i9
-   Register : RAM1_read.count_782__i10
-   Register : RAM1_read.count_782__i11
-   Register : RAM1_read.count_782__i12
-   Register : Clock_Divider_1.count_779__i1
-   Register : Clock_Divider_1.count_779__i2
-   Register : Clock_Divider_1.count_779__i3
-   Register : Clock_Divider_1.count_779__i4
-   Register : Clock_Divider_1.count_779__i5
-   Register : Clock_Divider_1.count_779__i6
-   Register : Clock_Divider_1.count_779__i7
-   Register : Clock_Divider_1.count_779__i8
-   Register : Clock_Divider_1.count_779__i9
-   Register : Clock_Divider_1.count_779__i10
-   Register : Clock_Divider_1.count_779__i11
-   Register : Clock_Divider_1.count_779__i12
-   Register : Clock_Divider_1.count_779__i13
-   Register : Clock_Divider_1.count_779__i14
-   Register : Clock_Divider_1.count_779__i15
-   Register : Clock_Divider_1.count_779__i16
-   Register : Clock_Divider_1.count_779__i17
-   Register : Clock_Divider_1.count_779__i18
-   Register : Clock_Divider_1.count_779__i19
-   Register : Clock_Divider_1.count_779__i20
-   Register : Clock_Divider_1.count_779__i21
-   Register : Clock_Divider_1.count_779__i22
-   Register : Clock_Divider_1.count_779__i23
-   Register : Clock_Divider_1.count_779__i24
-   Register : Clock_Divider_1.count_779__i25
-   Register : Clock_Divider_1.count_779__i26
-   Register : Clock_Divider_1.count_779__i27
-   Register : Clock_Divider_1.count_779__i28
-   Register : Clock_Divider_1.count_779__i29
-   Register : Clock_Divider_1.count_779__i30
-   Register : Clock_Divider_2.count_780__i1
-   Register : Clock_Divider_2.count_780__i2
-   Register : Clock_Divider_2.count_780__i3
-   Register : Clock_Divider_2.count_780__i4
-   Register : Clock_Divider_2.count_780__i5
-   Register : Clock_Divider_2.count_780__i6
-   Register : Clock_Divider_2.count_780__i7
-   Register : Clock_Divider_2.count_780__i8
-   Register : Clock_Divider_2.count_780__i9
-   Register : Clock_Divider_2.count_780__i10
-   Register : Clock_Divider_2.count_780__i11
-   Register : Clock_Divider_2.count_780__i12
-   Register : Clock_Divider_2.count_780__i13
-   Register : Clock_Divider_2.count_780__i14
-   Register : Clock_Divider_2.count_780__i15
-   Register : Clock_Divider_2.count_780__i16
-   Register : Clock_Divider_2.count_780__i17
-   Register : Clock_Divider_2.count_780__i18
-   Register : Clock_Divider_2.count_780__i19
-   Register : Clock_Divider_2.count_780__i20
+   Register : Clock_Divider_1.count_828__i9
+   Register : Clock_Divider_1.count_828__i10
+   Register : Clock_Divider_1.count_828__i11
+   Register : Clock_Divider_1.count_828__i12
+   Register : Clock_Divider_1.count_828__i13
+   Register : Clock_Divider_1.count_828__i14
+   Register : Clock_Divider_1.count_828__i15
+   Register : Clock_Divider_1.count_828__i16
+   Register : Clock_Divider_1.count_828__i17
+   Register : Clock_Divider_1.count_828__i18
+   Register : Clock_Divider_1.count_828__i19
+   Register : Clock_Divider_1.count_828__i20
+   Register : Clock_Divider_1.count_828__i21
+   Register : Clock_Divider_1.count_828__i22
+   Register : Clock_Divider_1.count_828__i23
+   Register : Clock_Divider_1.count_828__i24
+   Register : Clock_Divider_1.count_828__i25
+   Register : Clock_Divider_1.count_828__i26
+   Register : Clock_Divider_1.count_828__i27
+   Register : Clock_Divider_1.count_828__i28
+   Register : Clock_Divider_1.count_828__i29
+   Register : Clock_Divider_1.count_828__i30
+   Register : Clock_Divider_2.count_829__i1
+   Register : Clock_Divider_2.count_829__i2
+   Register : Clock_Divider_2.count_829__i3
+   Register : Clock_Divider_2.count_829__i4
+   Register : Clock_Divider_2.count_829__i5
+   Register : Clock_Divider_2.count_829__i6
+   Register : Clock_Divider_2.count_829__i7
+   Register : Clock_Divider_2.count_829__i8
+   Register : Clock_Divider_2.count_829__i9
+   Register : Clock_Divider_2.count_829__i10
+   Register : Clock_Divider_2.count_829__i11
+   Register : Clock_Divider_2.count_829__i12
+   Register : Clock_Divider_2.count_829__i13
+   Register : Clock_Divider_2.count_829__i14
+   Register : Clock_Divider_2.count_829__i15
+   Register : Clock_Divider_2.count_829__i16
+   Register : Clock_Divider_2.count_829__i17
+   Register : Clock_Divider_2.count_829__i18
+   Register : Clock_Divider_2.count_829__i19
+   Register : Clock_Divider_2.count_829__i20
+   Register : Clock_Divider_2.count_829__i21
+   Register : Clock_Divider_2.count_829__i22
+   Register : Clock_Divider_2.count_829__i23
+   Register : Clock_Divider_2.count_829__i24
+   Register : Clock_Divider_2.count_829__i25
+   Register : Clock_Divider_2.count_829__i26
+   Register : Clock_Divider_2.count_829__i27
+   Register : Clock_Divider_2.count_829__i28
+   Register : Clock_Divider_2.count_829__i29
+   Register : Clock_Divider_2.count_829__i30
+   Register : DIVCKA_552
+   Register : DIVCKB_554
+   Register : RAM2_read.count_i6
 
-   Register : Clock_Divider_2.count_780__i21
-   Register : Clock_Divider_2.count_780__i22
-   Register : Clock_Divider_2.count_780__i23
-   Register : Clock_Divider_2.count_780__i24
-   Register : Clock_Divider_2.count_780__i25
-   Register : Clock_Divider_2.count_780__i26
-   Register : Clock_Divider_2.count_780__i27
-   Register : Clock_Divider_2.count_780__i28
-   Register : Clock_Divider_2.count_780__i29
-   Register : Clock_Divider_2.count_780__i30
-   Register : DIVCKA_525
-   Register : DIVCKB_527
-   Register : RAM2_read.count_784__i12
 
      EBR components with enabled GSR
 -------------------------------
 
      These EBR components have the GSR property set to ENABLED. The components
-     will respond to the asynchronous reset signal 'NOTHWRESET_c' via the GSR
-     component.
+     will respond to the asynchronous reset signal 'CK1_c_derived_245_enable_41'
+     via the GSR component.
 
      Type and number of components of the type: 
    DP8KC = 16
 
      Type and instance name of component: 
+   DP8KC : RAM1/DAQ_RAM_0_0_1_6
    DP8KC : RAM1/DAQ_RAM_0_0_7_0
    DP8KC : RAM1/DAQ_RAM_0_0_2_5
-   DP8KC : RAM1/DAQ_RAM_0_0_1_6
    DP8KC : RAM1/DAQ_RAM_0_0_0_7
    DP8KC : RAM1/DAQ_RAM_0_0_3_4
    DP8KC : RAM1/DAQ_RAM_0_0_4_3
@@ -755,6 +800,20 @@ GSR Component:
    Total REAL Time: 0 secs  
    Peak Memory Usage: 65 MB
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

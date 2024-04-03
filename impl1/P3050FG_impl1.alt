@@ -1,17 +1,18 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Tue Jan 16 16:20:58 2024 *
+NOTE DATE CREATED: Fri Mar 15 12:01:21 2024 *
 NOTE DESIGN NAME: main *
 NOTE DEVICE NAME: LCMXO2-7000HC-5TQFP144 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS cont_data[6] : 71 : inout *
 NOTE PINS cont_data[7] : 69 : inout *
+NOTE PINS cont_data[6] : 71 : inout *
 NOTE PINS cont_data[5] : 65 : inout *
 NOTE PINS cont_data[4] : 70 : inout *
 NOTE PINS cont_data[3] : 63 : inout *
 NOTE PINS cont_data[2] : 68 : inout *
 NOTE PINS cont_data[1] : 62 : inout *
 NOTE PINS cont_data[0] : 67 : inout *
+NOTE PINS NOT_RESET : 40 : inout *
 NOTE PINS EGRN : 127 : out *
 NOTE PINS EYLW : 128 : out *
 NOTE PINS DACA_OUT[7] : 9 : out *
@@ -30,6 +31,14 @@ NOTE PINS DACB_OUT[3] : 92 : out *
 NOTE PINS DACB_OUT[2] : 93 : out *
 NOTE PINS DACB_OUT[1] : 94 : out *
 NOTE PINS DACB_OUT[0] : 95 : out *
+NOTE PINS AA : 42 : out *
+NOTE PINS AB : 24 : out *
+NOTE PINS AC : 50 : out *
+NOTE PINS AE : 35 : out *
+NOTE PINS BA : 33 : out *
+NOTE PINS BB : 25 : out *
+NOTE PINS BC : 41 : out *
+NOTE PINS BD : 31 : out *
 NOTE PINS A : 83 : out *
 NOTE PINS B : 97 : out *
 NOTE PINS C : 98 : out *
@@ -65,7 +74,6 @@ NOTE PINS CWR_in : 1 : in *
 NOTE PINS CDS_in : 2 : in *
 NOTE PINS ETH : 3 : in *
 NOTE PINS NOTHWRESET : 47 : in *
-NOTE PINS NOT_RESET : 40 : in *
 NOTE PINS CONFIG : 48 : in *
 NOTE CONFIGURATION MODE: NONE *
 NOTE COMPRESSION: on *

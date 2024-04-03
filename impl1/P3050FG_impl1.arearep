@@ -1,29 +1,28 @@
 ----------------------------------------------------------------------
 Report for cell main.TECH
-Register bits:  254 of 7209 (3.523%)
-I/O cells:      63
+Register bits:  281 of 7209 (3.898%)
+I/O cells:      71
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                 BB         8          100.0
+                                 BB         9          100.0
                               CCU2D       113          100.0
                               DP8KC        16          100.0
-                            FD1P3AX       145          100.0
+                            FD1P3AX       171          100.0
                             FD1P3AY         2          100.0
                             FD1P3IX         2          100.0
                             FD1S3AX        13          100.0
-                            FD1S3AY         4          100.0
-                            FD1S3DX        62          100.0
-                            FD1S3IX        26          100.0
+                            FD1S3AY         5          100.0
+                            FD1S3DX        88          100.0
                                 GSR         1          100.0
-                                 IB        15          100.0
+                                 IB        14          100.0
                                 INV         2          100.0
-                               LUT4       227          100.0
-                                 OB        40          100.0
-                              PFUMX        17          100.0
+                               LUT4       245          100.0
+                                 OB        48          100.0
+                              PFUMX        16          100.0
 SUB MODULES
                             DAQ_RAM         1
                          DAQ_RAM_U0         1
-                              TOTAL       695
+                              TOTAL       747
 ----------------------------------------------------------------------
 Report for cell DAQ_RAM_U0.v1
 Instance Path : RAM1

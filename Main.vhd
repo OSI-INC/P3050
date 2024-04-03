@@ -18,11 +18,19 @@ entity main is
 		CDS_in : in std_logic;
 		ETH : in std_logic;
 		NOTHWRESET : in std_logic; -- Reset Button
-		NOT_RESET : in std_logic; -- RCM6700 reset line
+		NOT_RESET : inout std_logic; -- RCM6700 reset line
 		CONFIG : in std_logic; -- Config Button
 		EGRN, EYLW : out std_logic;
 		DACA_OUT : out std_logic_vector(7 downto 0);
 		DACB_OUT : out std_logic_vector(7 downto 0);
+		AA, -- S5 Config
+		AB, -- S5 Config
+		AC, -- S5 Config
+		AE, -- S5 Config
+		BA, -- S6 Config
+		BB, -- S6 Config
+		BC, -- S6 Config
+		BD, -- S6 Config
 		A, -- S1 Config
 		B, -- S1 Config
 		C, -- S1 Config
@@ -75,6 +83,7 @@ entity main is
 		constant data_addr_2: integer := 25; -- Data Address Space 2 (Write)
 		constant data_addr_3: integer := 26; -- Data Address Space 3 (Write)
 		constant data_addr_4: integer := 27; -- Data Address Space 4 (Write)
+		constant cont_cfsw_addr : integer := 40; -- Relay Configuration
 		constant ram_portal : integer := 63; -- Ram Portal
 		
 		-- Configuration of OSR8.
@@ -82,7 +91,7 @@ entity main is
 		constant ram_addr_len : integer := 13;
 			
 		-- Reset signals.
-		signal RESET : std_logic;
+		signal RESET : boolean;
 		
 		-- Synchronized, delayed, and inverted inputs.
 		signal CDS, CWR : boolean;
@@ -115,7 +124,6 @@ architecture behavior of main is
 	signal DIVIA : std_logic_vector(31 downto 0) := (others => '0'); -- Clock Divisor for DACA
 	signal DIVIB : std_logic_vector(31 downto 0) := (others => '0'); -- Clock Divisor for DACB
 	signal rd_ram1_addr, rd_ram2_addr : std_logic_vector(ram_addr_len-1 downto 0); -- RAM Address
-	signal hwreset : std_logic; -- Hardware Reset
 	signal DACRWR : std_logic; -- DAC Ram Write
 	signal NFCK : std_logic; -- Inverse of Fast Clock
 	signal FCK : std_logic; -- Fast Clock
@@ -130,6 +138,17 @@ begin
 	
 end process;
 
+Reset_Switch: process(NOTHWRESET) is
+begin
+	if (NOTHWRESET = '0') then
+		NOT_RESET <= '0';
+	else
+		NOT_RESET <= 'Z';
+	end if;
+	
+	RESET <= (NOTHWRESET = '0') or (NOT_RESET = '0');
+	
+end process;
 
 Relay_Interface : process (FCK) is
 
@@ -139,7 +158,7 @@ begin
 
 integer_addr := to_integer(unsigned(cont_addr));
 
-if hwreset = '1' then
+if RESET then
 	spca <= (others => '0');
 	spcb <= (others => '0');
 	cont_data <= "10000000";
@@ -236,6 +255,8 @@ elsif rising_edge(FCK) then
 			cont_data <= data_addr(15 downto 8);
 		when data_addr_4 =>
 			cont_data <= data_addr(7 downto 0);
+		when cont_cfsw_addr => -- The Relay looks for a zero to configure.
+			cont_data(0) <= not(CONFIG);
 		when others =>
 			cont_data <= max_data_byte;
 		end case;
@@ -257,7 +278,7 @@ Clock_Divider_1 : process (FCK) is
 	variable count : integer range 0 to (2**31)-1;
 	variable state, next_state: integer range 0 to 1;
 begin
-	if (NOT_RESET = '0') or (rstcd1 = '1') or (hwreset = '1') then
+	if (rstcd1 = '1') or RESET then
 			count := 0;
 	elsif rising_edge(FCK) then
 		if count >= (to_integer(unsigned(DIVIA))) then
@@ -273,7 +294,7 @@ end process;
 Clock_Divider_2 : process (FCK) is
 	variable count : integer range 0 to (2**31)-1;
 begin
-	if (NOT_RESET = '0') or (rstcd2 = '1') or (hwreset = '1') then
+	if (rstcd2 = '1') or RESET then
 		count := 0;
 	elsif rising_edge(FCK) then
 		if count >= (to_integer(unsigned(DIVIB))) then
@@ -292,7 +313,7 @@ RAM1 : entity DAQ_RAM port map (
 	WrClock => NFCK,
 	WrClockEn => '1',
 	RdClockEn => '1',
-	Reset => RESET,
+	Reset => to_std_logic(RESET),
 	WE => ram1_we,
 	WrAddress => data_addr((ram_addr_len-1) downto 0), 
 	RdAddress => rd_ram1_addr((ram_addr_len-1) downto 0), 
@@ -305,7 +326,7 @@ RAM2 : entity DAQ_RAM port map (
 	WrClock => NFCK,
 	WrClockEn => '1',
 	RdClockEn => '1',
-	Reset => RESET,
+	Reset => to_std_logic(RESET),
 	WE => ram2_we,
 	WrAddress => data_addr((ram_addr_len-1) downto 0), 
 	RdAddress => rd_ram2_addr((ram_addr_len-1) downto 0), 
@@ -322,7 +343,9 @@ RAM1_read : process (DIVCKA) is
 
 	variable count : integer range 0 to 8191;
 begin
-	if falling_edge(DIVCKA) then
+	if CWR then
+		count := 0;
+	elsif falling_edge(DIVCKA) then
 		if count < (to_integer(unsigned(spca))) then
 			count := count + 1;
 		elsif count >= (to_integer(unsigned(spca))) then
@@ -337,7 +360,9 @@ RAM2_read : process (DIVCKB) is
 
 	variable count : integer range 0 to 8191;
 begin
-	if falling_edge(DIVCKB) then
+	if CWR then
+		count := 0;
+	elsif falling_edge(DIVCKB) then
 		if count < (to_integer(unsigned(spcb))) then
 			count := count + 1;
 		elsif count >= (to_integer(unsigned(spcb))) then
@@ -366,7 +391,6 @@ R <= not(rcb_sw(5));
 S <= not(rcb_sw(6));
 T <= not(rcb_sw(7));
 
-hwreset <= not(NOTHWRESET);
 
 Indicators : process(FCK) is
 
@@ -383,7 +407,7 @@ begin
 			J <= '0';
 		end if;
 
-		L <= HWRESET;
+		L <= to_std_logic(RESET);
 		K <= not(CONFIG);
 		V <= data_addr(0);
 		W <= CK;

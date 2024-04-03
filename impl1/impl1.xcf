@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Firmware/P3050FG/impl1/P3050FG_impl1.jed</File>
-			<FileTime>01/16/24 16:20:58</FileTime>
-			<JedecChecksum>0x9E0E</JedecChecksum>
+			<FileTime>03/14/24 14:49:25</FileTime>
+			<JedecChecksum>0x8323</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
@@ -47,9 +47,6 @@
 	<CableOptions>
 		<CableName>USB</CableName>
 		<PortAdd>EzUSB-0</PortAdd>
-		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#6&amp;amp;118a5f7e&amp;amp;0&amp;amp;1#</USBID>
-		<JTAGPinSetting>
-			TRST	ABSENT;
-		</JTAGPinSetting>
+		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#9&amp;amp;5aea44e&amp;amp;0&amp;amp;2#</USBID>
 	</CableOptions>
 </ispXCF>

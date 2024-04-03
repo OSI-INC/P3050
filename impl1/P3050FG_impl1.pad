@@ -6,14 +6,22 @@ Performance Grade:      5
 PACKAGE:          TQFP144
 Package Status:                     Final          Version 1.39
 
-Tue Jan 16 16:20:47 2024
+Fri Mar 15 12:01:06 2024
 
 Pinout by Port Name:
 +--------------+----------+---------------+-------+-----------+-----------+--------------------------------------------------------+
 | Port Name    | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                             |
 +--------------+----------+---------------+-------+-----------+-----------+--------------------------------------------------------+
 | A            | 83/1     | LVCMOS33_OUT  | PR17B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| AA           | 42/2     | LVCMOS33_OUT  | PB9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| AB           | 24/4     | LVCMOS33_OUT  | PL17B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| AC           | 50/2     | LVCMOS33_OUT  | PB16B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| AE           | 35/3     | LVCMOS33_OUT  | PL25B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
 | B            | 97/1     | LVCMOS33_OUT  | PR7B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| BA           | 33/3     | LVCMOS33_OUT  | PL24B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| BB           | 25/3     | LVCMOS33_OUT  | PL19A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| BC           | 41/2     | LVCMOS33_OUT  | PB6B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| BD           | 31/3     | LVCMOS33_OUT  | PL23D |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
 | C            | 98/1     | LVCMOS33_OUT  | PR7A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | CDS_in       | 2/5      | LVCMOS33_IN   | PL3B  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
 | CK           | 38/2     | LVCMOS33_IN   | PB4A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
@@ -52,7 +60,7 @@ Pinout by Port Name:
 | M            | 96/1     | LVCMOS33_OUT  | PR9A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | N            | 122/0    | LVCMOS33_OUT  | PT25A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | NOTHWRESET   | 47/2     | LVCMOS33_IN   | PB13A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| NOT_RESET    | 40/2     | LVCMOS33_IN   | PB6A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| NOT_RESET    | 40/2     | LVCMOS33_BIDI | PB6A  |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | O            | 121/0    | LVCMOS33_OUT  | PT25B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | P            | 117/0    | LVCMOS33_OUT  | PT28A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
 | Q            | 115/0    | LVCMOS33_OUT  | PT28B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
@@ -118,28 +126,28 @@ Pinout by Pin Number:
 | 21/4     | V                     | LOCATED    | LVCMOS33_OUT  | PL15A |                |           |           |
 | 22/4     | W                     | LOCATED    | LVCMOS33_OUT  | PL15B |                |           |           |
 | 23/4     |     unused, PULL:DOWN |            |               | PL17A |                |           |           |
-| 24/4     |     unused, PULL:DOWN |            |               | PL17B |                |           |           |
-| 25/3     |     unused, PULL:DOWN |            |               | PL19A |                |           |           |
+| 24/4     | AB                    |            | LVCMOS33_OUT  | PL17B |                |           |           |
+| 25/3     | BB                    |            | LVCMOS33_OUT  | PL19A |                |           |           |
 | 26/3     |     unused, PULL:DOWN |            |               | PL19B |                |           |           |
 | 27/3     |     unused, PULL:DOWN |            |               | PL22A | PCLKT3_0       |           |           |
 | 28/3     |     unused, PULL:DOWN |            |               | PL22B | PCLKC3_0       |           |           |
-| 31/3     |     unused, PULL:DOWN |            |               | PL23D |                |           |           |
+| 31/3     | BD                    |            | LVCMOS33_OUT  | PL23D |                |           |           |
 | 32/3     |     unused, PULL:DOWN |            |               | PL24A |                |           |           |
-| 33/3     |     unused, PULL:DOWN |            |               | PL24B |                |           |           |
+| 33/3     | BA                    |            | LVCMOS33_OUT  | PL24B |                |           |           |
 | 34/3     |     unused, PULL:DOWN |            |               | PL25A |                |           |           |
-| 35/3     |     unused, PULL:DOWN |            |               | PL25B |                |           |           |
+| 35/3     | AE                    |            | LVCMOS33_OUT  | PL25B |                |           |           |
 | 38/2     | CK                    | LOCATED    | LVCMOS33_IN   | PB4A  |                |           |           |
 | 39/2     | CK1                   | LOCATED    | LVCMOS33_IN   | PB4B  |                |           |           |
-| 40/2     | NOT_RESET             | LOCATED    | LVCMOS33_IN   | PB6A  | CSSPIN         |           |           |
-| 41/2     |     unused, PULL:DOWN |            |               | PB6B  |                |           |           |
-| 42/2     |     unused, PULL:DOWN |            |               | PB9A  |                |           |           |
+| 40/2     | NOT_RESET             | LOCATED    | LVCMOS33_BIDI | PB6A  | CSSPIN         |           |           |
+| 41/2     | BC                    |            | LVCMOS33_OUT  | PB6B  |                |           |           |
+| 42/2     | AA                    |            | LVCMOS33_OUT  | PB9A  |                |           |           |
 | 43/2     |     unused, PULL:DOWN |            |               | PB9B  |                |           |           |
 | 44/2     | CK2                   | LOCATED    | LVCMOS33_IN   | PB12A | MCLK/CCLK      |           |           |
 | 45/2     |     unused, PULL:DOWN |            |               | PB12B | SO/SPISO       |           |           |
 | 47/2     | NOTHWRESET            | LOCATED    | LVCMOS33_IN   | PB13A |                |           |           |
 | 48/2     | CONFIG                | LOCATED    | LVCMOS33_IN   | PB13B |                |           |           |
 | 49/2     |     unused, PULL:DOWN |            |               | PB16A | PCLKT2_0       |           |           |
-| 50/2     |     unused, PULL:DOWN |            |               | PB16B | PCLKC2_0       |           |           |
+| 50/2     | AC                    |            | LVCMOS33_OUT  | PB16B | PCLKC2_0       |           |           |
 | 52/2     | cont_addr[1]          | LOCATED    | LVCMOS33_IN   | PB18A |                |           |           |
 | 54/2     | cont_addr[3]          | LOCATED    | LVCMOS33_IN   | PB18B |                |           |           |
 | 55/2     | cont_addr[5]          | LOCATED    | LVCMOS33_IN   | PB23A | PCLKT2_1       |           |           |
@@ -454,7 +462,15 @@ List of All Pins' Locate Preferences Based on Final Placement After PAR
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
 LOCATE  COMP  "A"  SITE  "83";
+LOCATE  COMP  "AA"  SITE  "42";
+LOCATE  COMP  "AB"  SITE  "24";
+LOCATE  COMP  "AC"  SITE  "50";
+LOCATE  COMP  "AE"  SITE  "35";
 LOCATE  COMP  "B"  SITE  "97";
+LOCATE  COMP  "BA"  SITE  "33";
+LOCATE  COMP  "BB"  SITE  "25";
+LOCATE  COMP  "BC"  SITE  "41";
+LOCATE  COMP  "BD"  SITE  "31";
 LOCATE  COMP  "C"  SITE  "98";
 LOCATE  COMP  "CDS_in"  SITE  "2";
 LOCATE  COMP  "CK"  SITE  "38";
@@ -527,5 +543,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jan 16 16:20:49 2024
+Fri Mar 15 12:01:09 2024
 

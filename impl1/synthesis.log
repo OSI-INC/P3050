@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jan 16 16:20:39 2024
+Fri Mar 15 12:00:57 2024
 
 
 Command Line:  synthesis -f P3050FG_impl1_lattice.synproj -gui -msgset C:/Firmware/P3050FG/promote.xml 
@@ -89,30 +89,29 @@ INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(28): analyzing architecture st
 unit main is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/firmware/p3050fg/main.vhd. VHDL-1481
 INFO - synthesis: c:/firmware/p3050fg/main.vhd(10): analyzing entity main. VHDL-1012
-INFO - synthesis: c:/firmware/p3050fg/main.vhd(105): analyzing architecture behavior. VHDL-1010
+INFO - synthesis: c:/firmware/p3050fg/main.vhd(114): analyzing architecture behavior. VHDL-1010
 unit main is not yet analyzed. VHDL-1485
 unit main is not yet analyzed. VHDL-1485
 c:/firmware/p3050fg/main.vhd(10): executing main(behavior)
 
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(85): using initial value 'U' for reset since it is never assigned. VHDL-1303
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(129): fck should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(131): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(140): cont_addr should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(142): hwreset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(253): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(260): not_reset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(260): rstcd1 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(260): hwreset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(270): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(276): not_reset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(276): rstcd2 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(276): hwreset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(286): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-Removed duplicate sequential element rd_ram1_addr(13 bit), because it is equivalent to RAM1_read.count
-
-Removed duplicate sequential element rd_ram2_addr(13 bit), because it is equivalent to RAM2_read.count
-
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(102): replacing existing netlist main(behavior). VHDL-1205
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(137): fck should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(139): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(149): not_reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(151): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(159): cont_addr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(161): reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(274): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(281): rstcd1 should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(281): reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(291): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(297): rstcd2 should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(297): reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(307): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(346): cwr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(356): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(363): cwr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(373): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/firmware/p3050fg/main.vhd(111): replacing existing netlist main(behavior). VHDL-1205
 Top module name (VHDL): main
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -121,16 +120,32 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = main.
+WARNING - synthesis: I/O Port AA 's net has no driver and is unused.
+WARNING - synthesis: I/O Port AB 's net has no driver and is unused.
+WARNING - synthesis: I/O Port AC 's net has no driver and is unused.
+WARNING - synthesis: I/O Port AE 's net has no driver and is unused.
+WARNING - synthesis: I/O Port BA 's net has no driver and is unused.
+WARNING - synthesis: I/O Port BB 's net has no driver and is unused.
+WARNING - synthesis: I/O Port BC 's net has no driver and is unused.
+WARNING - synthesis: I/O Port BD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port UPLOAD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port EMPTY 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
+######## Missing driver on net AA. Patching with GND.
+######## Missing driver on net AB. Patching with GND.
+######## Missing driver on net AC. Patching with GND.
+######## Missing driver on net AE. Patching with GND.
+######## Missing driver on net BA. Patching with GND.
+######## Missing driver on net BB. Patching with GND.
+######## Missing driver on net BC. Patching with GND.
+######## Missing driver on net BD. Patching with GND.
 
 
 
 WARNING - synthesis: I/O Port UPLOAD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port EMPTY 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
-GSR instance connected to net NOTHWRESET_c.
+GSR instance connected to net n3979.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -150,23 +165,22 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file P3050FG_impl1.ngd.
 
 ################### Begin Area Report (main)######################
-Number of register bits => 254 of 7209 (3 % )
-BB => 8
+Number of register bits => 281 of 7209 (3 % )
+BB => 9
 CCU2D => 113
 DP8KC => 16
-FD1P3AX => 145
+FD1P3AX => 171
 FD1P3AY => 2
 FD1P3IX => 2
 FD1S3AX => 13
-FD1S3AY => 4
-FD1S3DX => 62
-FD1S3IX => 26
+FD1S3AY => 5
+FD1S3DX => 88
 GSR => 1
-IB => 15
+IB => 14
 INV => 2
-LUT4 => 227
-OB => 40
-PFUMX => 17
+LUT4 => 245
+OB => 48
+PFUMX => 16
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -176,35 +190,35 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 4
-  Net : CK1_c_derived_244, loads : 244
-  Net : FCK_N_605, loads : 16
+  Net : CK1_c_derived_245, loads : 245
+  Net : FCK_N_630, loads : 16
   Net : DIVCKB, loads : 2
   Net : DIVCKA, loads : 2
 Clock Enable Nets
-Number of Clock Enables: 21
+Number of Clock Enables: 22
 Top 10 highest fanout Clock Enables:
-  Net : NOTHWRESET_c, loads : 17
-  Net : CK1_c_derived_244_enable_59, loads : 8
-  Net : CK1_c_derived_244_enable_67, loads : 8
-  Net : CK1_c_derived_244_enable_82, loads : 8
-  Net : CK1_c_derived_244_enable_75, loads : 8
-  Net : CK1_c_derived_244_enable_12, loads : 8
-  Net : CK1_c_derived_244_enable_33, loads : 8
-  Net : CK1_c_derived_244_enable_135, loads : 8
-  Net : CK1_c_derived_244_enable_51, loads : 8
-  Net : CK1_c_derived_244_enable_50, loads : 8
+  Net : DIVCKA_N_175_enable_13, loads : 26
+  Net : CK1_c_derived_245_enable_41, loads : 10
+  Net : CK1_c_derived_245_enable_123, loads : 8
+  Net : CK1_c_derived_245_enable_11, loads : 8
+  Net : CK1_c_derived_245_enable_101, loads : 8
+  Net : CK1_c_derived_245_enable_56, loads : 8
+  Net : CK1_c_derived_245_enable_19, loads : 8
+  Net : CK1_c_derived_245_enable_64, loads : 8
+  Net : CK1_c_derived_245_enable_108, loads : 8
+  Net : CK1_c_derived_245_enable_86, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n2644, loads : 35
-  Net : Clock_Divider_1.count_30__N_407, loads : 32
-  Net : Clock_Divider_2.count_30__N_472, loads : 32
-  Net : n6640, loads : 31
-  Net : n6639, loads : 31
-  Net : cont_addr_c_0, loads : 29
+  Net : n2701, loads : 36
+  Net : CWR, loads : 34
+  Net : n7492, loads : 33
+  Net : DIVCKA_N_178, loads : 32
+  Net : DIVCKB_N_197, loads : 32
+  Net : n7489, loads : 31
+  Net : n7488, loads : 31
+  Net : data_addr_2, loads : 30
+  Net : data_addr_1, loads : 30
   Net : data_addr_0, loads : 29
-  Net : data_addr_1, loads : 28
-  Net : cont_addr_c_3, loads : 27
-  Net : data_addr_2, loads : 27
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -214,16 +228,16 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk3 [get_nets DIVCKA]                  |  200.000 MHz|  143.410 MHz|    10 *
+clk3 [get_nets DIVCKA]                  |  200.000 MHz|   97.551 MHz|    17 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets DIVCKB]                  |  200.000 MHz|  143.410 MHz|    10 *
+clk2 [get_nets DIVCKB]                  |  200.000 MHz|   97.551 MHz|    17 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CK1_c_derived_244]       |  200.000 MHz|  104.417 MHz|     6 *
+clk1 [get_nets FCK_N_630]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets FCK_N_605]               |            -|            -|     0  
+clk0 [get_nets CK1_c_derived_245]       |  200.000 MHz|  103.061 MHz|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -231,8 +245,8 @@ clk0 [get_nets FCK_N_605]               |            -|            -|     0
 3 constraints not met.
 
 
-Peak Memory Usage: 88.848  MB
+Peak Memory Usage: 90.848  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.453  secs
+Elapsed CPU time for LSE flow : 1.547  secs
 --------------------------------------------------------------

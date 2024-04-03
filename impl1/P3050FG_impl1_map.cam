@@ -1,144 +1,146 @@
 [ START MERGED ]
-DIVCKB_N_531 DIVCKB
-n3917 cont_data_6__N_4
-DIVCKA_N_487 DIVCKA
+DIVCKB_N_194 DIVCKB
+DIVCKA_N_175_enable_13 CWR
+DIVCKA_N_175 DIVCKA
+n4041 cont_data_5__N_6
+n4051 cont_data_0__N_16
 [ END MERGED ]
 [ START CLIPPED ]
-GND_net
-sub_726_add_2_13/S1
-sub_726_add_2_13/S0
-sub_729_add_2_13/S1
-sub_729_add_2_13/S0
-sub_729_add_2_cout/S1
-sub_729_add_2_cout/CO
-sub_727_add_2_9/S1
-sub_727_add_2_9/S0
-sub_727_add_2_11/S1
-sub_727_add_2_11/S0
-sub_726_add_2_15/S1
-sub_726_add_2_15/S0
-sub_726_add_2_17/S1
-sub_726_add_2_17/S0
-sub_726_add_2_19/S1
-sub_726_add_2_19/S0
-sub_725_add_2_7/S1
-sub_725_add_2_7/S0
-add_778_1/S0
-add_778_1/CI
-sub_725_add_2_9/S1
-sub_725_add_2_9/S0
-sub_726_add_2_21/S1
-sub_726_add_2_21/S0
-sub_726_add_2_23/S1
-sub_726_add_2_23/S0
-sub_727_add_2_5/S1
-sub_727_add_2_5/S0
-sub_726_add_2_25/S1
-sub_726_add_2_25/S0
-sub_725_add_2_11/S1
-sub_725_add_2_11/S0
-sub_727_add_2_1/S1
-sub_727_add_2_1/S0
-sub_727_add_2_1/CI
-sub_725_add_2_13/S1
-sub_725_add_2_13/S0
-sub_725_add_2_15/S1
-sub_725_add_2_15/S0
-Clock_Divider_1.count_779_add_4_31/CO
-sub_726_add_2_27/S1
-sub_726_add_2_27/S0
-sub_726_add_2_29/S1
-sub_726_add_2_29/S0
-Clock_Divider_2.count_780_add_4_1/S0
-Clock_Divider_2.count_780_add_4_1/CI
-sub_726_add_2_31/S1
-sub_726_add_2_31/S0
-sub_725_add_2_17/S1
-sub_725_add_2_17/S0
-sub_727_add_2_13/S1
-sub_727_add_2_13/S0
-sub_725_add_2_19/S1
-sub_725_add_2_19/S0
-sub_727_add_2_cout/S1
-sub_727_add_2_cout/CO
-sub_729_add_2_1/S1
-sub_729_add_2_1/S0
-sub_729_add_2_1/CI
-sub_729_add_2_3/S1
-sub_729_add_2_3/S0
-sub_726_add_2_cout/S1
-sub_726_add_2_cout/CO
-RAM2_read.count_784_add_4_1/S0
-RAM2_read.count_784_add_4_1/CI
-sub_725_add_2_21/S1
-sub_725_add_2_21/S0
-sub_725_add_2_23/S1
-sub_725_add_2_23/S0
-RAM2_read.count_784_add_4_13/CO
-sub_725_add_2_25/S1
-sub_725_add_2_25/S0
-RAM1_read.count_782_add_4_1/S0
-RAM1_read.count_782_add_4_1/CI
-sub_725_add_2_27/S1
-sub_725_add_2_27/S0
-sub_727_add_2_3/S1
-sub_727_add_2_3/S0
-sub_725_add_2_29/S1
-sub_725_add_2_29/S0
-sub_725_add_2_31/S1
-sub_725_add_2_31/S0
-sub_725_add_2_cout/S1
-sub_725_add_2_cout/CO
-sub_726_add_2_1/S1
-sub_726_add_2_1/S0
-sub_726_add_2_1/CI
-sub_726_add_2_3/S1
-sub_726_add_2_3/S0
-RAM1_read.count_782_add_4_13/CO
-sub_726_add_2_5/S1
-sub_726_add_2_5/S0
-Clock_Divider_1.count_779_add_4_1/S0
-Clock_Divider_1.count_779_add_4_1/CI
-sub_726_add_2_7/S1
-sub_726_add_2_7/S0
-sub_729_add_2_5/S1
-sub_729_add_2_5/S0
-add_778_cout/S1
-add_778_cout/CO
-sub_726_add_2_9/S1
-sub_726_add_2_9/S0
-sub_725_add_2_1/S1
-sub_725_add_2_1/S0
-sub_725_add_2_1/CI
-sub_726_add_2_11/S1
-sub_726_add_2_11/S0
-sub_727_add_2_7/S1
-sub_727_add_2_7/S0
-sub_725_add_2_3/S1
-sub_725_add_2_3/S0
-Clock_Divider_2.count_780_add_4_31/CO
-sub_729_add_2_7/S1
-sub_729_add_2_7/S0
-sub_729_add_2_9/S1
-sub_729_add_2_9/S0
-sub_729_add_2_11/S1
-sub_729_add_2_11/S0
-sub_725_add_2_5/S1
-sub_725_add_2_5/S0
+sub_778_add_2_9/S1
+sub_778_add_2_9/S0
+sub_778_add_2_11/S1
+sub_778_add_2_11/S0
+sub_774_add_2_13/S1
+sub_774_add_2_13/S0
+sub_778_add_2_13/S1
+sub_778_add_2_13/S0
+sub_775_add_2_29/S1
+sub_775_add_2_29/S0
+sub_775_add_2_31/S1
+sub_775_add_2_31/S0
+Clock_Divider_2.count_829_add_4_31/CO
+sub_775_add_2_cout/S1
+sub_775_add_2_cout/CO
+sub_774_add_2_25/S1
+sub_774_add_2_25/S0
+add_755_1/S0
+add_755_1/CI
+sub_774_add_2_5/S1
+sub_774_add_2_5/S0
+sub_774_add_2_7/S1
+sub_774_add_2_7/S0
+sub_774_add_2_1/S1
+sub_774_add_2_1/S0
+sub_774_add_2_1/CI
+sub_774_add_2_27/S1
+sub_774_add_2_27/S0
+add_755_13/CO
+add_751_1/S0
+add_751_1/CI
+add_827_cout/S1
+add_827_cout/CO
+sub_774_add_2_15/S1
+sub_774_add_2_15/S0
+sub_774_add_2_29/S1
+sub_774_add_2_29/S0
+sub_774_add_2_31/S1
+sub_774_add_2_31/S0
+sub_778_add_2_cout/S1
+sub_778_add_2_cout/CO
+sub_775_add_2_1/S1
+sub_775_add_2_1/S0
+sub_775_add_2_1/CI
+add_751_13/CO
+Clock_Divider_1.count_828_add_4_1/S0
+Clock_Divider_1.count_828_add_4_1/CI
+sub_774_add_2_cout/S1
+sub_774_add_2_cout/CO
+sub_776_add_2_1/S1
+sub_776_add_2_1/S0
+sub_776_add_2_1/CI
+sub_775_add_2_3/S1
+sub_775_add_2_3/S0
+sub_776_add_2_3/S1
+sub_776_add_2_3/S0
+sub_775_add_2_5/S1
+sub_775_add_2_5/S0
+sub_775_add_2_7/S1
+sub_775_add_2_7/S0
+sub_775_add_2_9/S1
+sub_775_add_2_9/S0
+sub_776_add_2_5/S1
+sub_776_add_2_5/S0
+sub_774_add_2_17/S1
+sub_774_add_2_17/S0
+sub_776_add_2_7/S1
+sub_776_add_2_7/S0
+sub_774_add_2_19/S1
+sub_774_add_2_19/S0
+sub_774_add_2_21/S1
+sub_774_add_2_21/S0
+sub_776_add_2_9/S1
+sub_776_add_2_9/S0
+sub_775_add_2_11/S1
+sub_775_add_2_11/S0
+sub_775_add_2_13/S1
+sub_775_add_2_13/S0
+sub_776_add_2_11/S1
+sub_776_add_2_11/S0
+sub_776_add_2_13/S1
+sub_776_add_2_13/S0
+sub_775_add_2_15/S1
+sub_775_add_2_15/S0
+sub_775_add_2_17/S1
+sub_775_add_2_17/S0
+sub_776_add_2_cout/S1
+sub_776_add_2_cout/CO
+sub_774_add_2_9/S1
+sub_774_add_2_9/S0
+sub_775_add_2_19/S1
+sub_775_add_2_19/S0
+add_827_1/S0
+add_827_1/CI
+sub_778_add_2_1/S1
+sub_778_add_2_1/S0
+sub_778_add_2_1/CI
+sub_775_add_2_21/S1
+sub_775_add_2_21/S0
+sub_778_add_2_3/S1
+sub_778_add_2_3/S0
+sub_778_add_2_5/S1
+sub_778_add_2_5/S0
+sub_774_add_2_23/S1
+sub_774_add_2_23/S0
+sub_775_add_2_23/S1
+sub_775_add_2_23/S0
+sub_775_add_2_25/S1
+sub_775_add_2_25/S0
+sub_778_add_2_7/S1
+sub_778_add_2_7/S0
+sub_775_add_2_27/S1
+sub_775_add_2_27/S0
+sub_774_add_2_3/S1
+sub_774_add_2_3/S0
+sub_774_add_2_11/S1
+sub_774_add_2_11/S0
+Clock_Divider_1.count_828_add_4_31/CO
+Clock_Divider_2.count_829_add_4_1/S0
+Clock_Divider_2.count_829_add_4_1/CI
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Tue Jan 16 16:20:41 2024
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Fri Mar 15 12:01:00 2024
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
-LOCATE COMP "cont_data[6]" SITE "71" ;
 LOCATE COMP "cont_data[7]" SITE "69" ;
+LOCATE COMP "cont_data[6]" SITE "71" ;
 LOCATE COMP "cont_data[5]" SITE "65" ;
 LOCATE COMP "cont_data[4]" SITE "70" ;
 LOCATE COMP "cont_data[3]" SITE "63" ;
 LOCATE COMP "cont_data[2]" SITE "68" ;
 LOCATE COMP "cont_data[1]" SITE "62" ;
 LOCATE COMP "cont_data[0]" SITE "67" ;
+LOCATE COMP "NOT_RESET" SITE "40" ;
 LOCATE COMP "EGRN" SITE "127" ;
 LOCATE COMP "EYLW" SITE "128" ;
 LOCATE COMP "DACA_OUT[7]" SITE "9" ;
@@ -192,7 +194,6 @@ LOCATE COMP "CWR_in" SITE "1" ;
 LOCATE COMP "CDS_in" SITE "2" ;
 LOCATE COMP "ETH" SITE "3" ;
 LOCATE COMP "NOTHWRESET" SITE "47" ;
-LOCATE COMP "NOT_RESET" SITE "40" ;
 LOCATE COMP "CONFIG" SITE "48" ;
 FREQUENCY PORT "CK2" 80.000000 MHz ;
 FREQUENCY PORT "CK1" 80.000000 MHz ;
