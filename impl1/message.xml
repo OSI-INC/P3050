@@ -4,26 +4,40 @@
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(47): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(29): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
             <Dynamic>UPLOAD</Dynamic>
             <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
-            <Navigation>47</Navigation>
+            <Navigation>29</Navigation>
         </Message>
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(48): Semantic error in &quot;IOBUF PORT &quot;ACTIV&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(30): Semantic error in &quot;IOBUF PORT &quot;ACTIV&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
             <Dynamic>ACTIV</Dynamic>
             <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
-            <Navigation>48</Navigation>
+            <Navigation>30</Navigation>
         </Message>
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(49): Semantic error in &quot;IOBUF PORT &quot;EMPTY&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(31): Semantic error in &quot;IOBUF PORT &quot;EMPTY&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
             <Dynamic>EMPTY</Dynamic>
             <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
-            <Navigation>49</Navigation>
+            <Navigation>31</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(33): Semantic error in &quot;IOBUF PORT &quot;CK&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>CK</Dynamic>
+            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>33</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>CK</Dynamic>
         </Message>
         <Message>
             <ID>1166064</ID>
@@ -42,6 +56,11 @@
             <Severity>Warning</Severity>
             <Dynamic>input</Dynamic>
             <Dynamic>ACTIV</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CK</Dynamic>
         </Message>
         <Message>
             <ID>51001046</ID>
@@ -109,110 +128,49 @@
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(10): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(12): </Dynamic>
             <Dynamic>main</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>10</Navigation>
+            <Navigation>12</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(114): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(136): </Dynamic>
             <Dynamic>behavior</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>114</Navigation>
+            <Navigation>136</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(137): </Dynamic>
-            <Dynamic>fck</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>137</Navigation>
-        </Message>
-        <Message>
-            <ID>35921613</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(139): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>139</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(149): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(173): </Dynamic>
             <Dynamic>not_reset</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>149</Navigation>
+            <Navigation>173</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(151): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(175): </Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>151</Navigation>
+            <Navigation>175</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(159): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(187): </Dynamic>
             <Dynamic>cont_addr</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>159</Navigation>
+            <Navigation>187</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(161): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(189): </Dynamic>
             <Dynamic>reset</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>161</Navigation>
-        </Message>
-        <Message>
-            <ID>35921613</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(274): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>274</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(281): </Dynamic>
-            <Dynamic>rstcd1</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>281</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(281): </Dynamic>
-            <Dynamic>reset</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>281</Navigation>
-        </Message>
-        <Message>
-            <ID>35921613</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(291): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>291</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(297): </Dynamic>
-            <Dynamic>rstcd2</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>297</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(297): </Dynamic>
-            <Dynamic>reset</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>297</Navigation>
+            <Navigation>189</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
@@ -224,81 +182,138 @@
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(346): </Dynamic>
-            <Dynamic>cwr</Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(314): </Dynamic>
+            <Dynamic>rstcd1</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>346</Navigation>
-        </Message>
-        <Message>
-            <ID>35921613</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(356): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>356</Navigation>
+            <Navigation>314</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(363): </Dynamic>
-            <Dynamic>cwr</Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(314): </Dynamic>
+            <Dynamic>reset</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>363</Navigation>
+            <Navigation>314</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(373): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(324): </Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>373</Navigation>
+            <Navigation>324</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(331): </Dynamic>
+            <Dynamic>rstcd2</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>331</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(331): </Dynamic>
+            <Dynamic>reset</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>331</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(341): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>341</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(382): </Dynamic>
+            <Dynamic>cwr</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>382</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(400): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>400</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(409): </Dynamic>
+            <Dynamic>cwr</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>409</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(427): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>427</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(495): </Dynamic>
+            <Dynamic>spca</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>495</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(498): </Dynamic>
+            <Dynamic>rama_out</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>498</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(501): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>501</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(505): </Dynamic>
+            <Dynamic>spcb</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>505</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(508): </Dynamic>
+            <Dynamic>ramb_out</Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>508</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(511): </Dynamic>
+            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>511</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(111): </Dynamic>
+            <Dynamic>c:/firmware/p3050fg/main.vhd(133): </Dynamic>
             <Dynamic>main</Dynamic>
             <Dynamic>behavior</Dynamic>
             <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>111</Navigation>
+            <Navigation>133</Navigation>
         </Message>
         <Message>
             <ID>35002005</ID>
             <Severity>Warning</Severity>
-            <Dynamic>AA</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>AB</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>AC</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>AE</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>BA</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>BB</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>BC</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>BD</Dynamic>
+            <Dynamic>CK</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -314,6 +329,11 @@
             <ID>35002005</ID>
             <Severity>Warning</Severity>
             <Dynamic>ACTIV</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CK</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -333,6 +353,19 @@
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>CK</Dynamic>
+            <Navigation>CK</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>CK</Dynamic>
         </Message>
         <Message>
             <ID>1166052</ID>
@@ -376,7 +409,23 @@
         <Message>
             <ID>1163101</ID>
             <Severity>Warning</Severity>
-            <Dynamic>6</Dynamic>
+            <Dynamic>8</Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CK1_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>CK1</Dynamic>
+            <Dynamic>142</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>62061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CK1_c</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

@@ -6,83 +6,81 @@ Performance Grade:      5
 PACKAGE:          TQFP144
 Package Status:                     Final          Version 1.39
 
-Fri Mar 15 12:01:06 2024
+Wed May 01 11:27:35 2024
 
 Pinout by Port Name:
 +--------------+----------+---------------+-------+-----------+-----------+--------------------------------------------------------+
 | Port Name    | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                             |
 +--------------+----------+---------------+-------+-----------+-----------+--------------------------------------------------------+
-| A            | 83/1     | LVCMOS33_OUT  | PR17B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| AA           | 42/2     | LVCMOS33_OUT  | PB9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| AB           | 24/4     | LVCMOS33_OUT  | PL17B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| AC           | 50/2     | LVCMOS33_OUT  | PB16B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| AE           | 35/3     | LVCMOS33_OUT  | PL25B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| B            | 97/1     | LVCMOS33_OUT  | PR7B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| BA           | 33/3     | LVCMOS33_OUT  | PL24B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| BB           | 25/3     | LVCMOS33_OUT  | PL19A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| BC           | 41/2     | LVCMOS33_OUT  | PB6B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| BD           | 31/3     | LVCMOS33_OUT  | PL23D |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| C            | 98/1     | LVCMOS33_OUT  | PR7A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| CDS_in       | 2/5      | LVCMOS33_IN   | PL3B  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| CK           | 38/2     | LVCMOS33_IN   | PB4A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
-| CK1          | 39/2     | LVCMOS33_IN   | PB4B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
-| CK2          | 44/2     | LVCMOS33_IN   | PB12A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
-| CONFIG       | 48/2     | LVCMOS33_IN   | PB13B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| CWR_in       | 1/5      | LVCMOS33_IN   | PL3A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| D            | 99/1     | LVCMOS33_OUT  | PR5B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| DACA_OUT[0]  | 17/4     | LVCMOS33_OUT  | PL11B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACA_OUT[1]  | 15/4     | LVCMOS33_OUT  | PL11A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACA_OUT[2]  | 14/4     | LVCMOS33_OUT  | PL10B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACA_OUT[3]  | 13/4     | LVCMOS33_OUT  | PL10A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACA_OUT[4]  | 12/5     | LVCMOS33_OUT  | PL9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACA_OUT[5]  | 11/5     | LVCMOS33_OUT  | PL9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACA_OUT[6]  | 10/5     | LVCMOS33_OUT  | PL8B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACA_OUT[7]  | 9/5      | LVCMOS33_OUT  | PL8A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[0]  | 95/1     | LVCMOS33_OUT  | PR9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[1]  | 94/1     | LVCMOS33_OUT  | PR11A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[2]  | 93/1     | LVCMOS33_OUT  | PR11B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[3]  | 92/1     | LVCMOS33_OUT  | PR12A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[4]  | 89/1     | LVCMOS33_OUT  | PR15A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[5]  | 87/1     | LVCMOS33_OUT  | PR15B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[6]  | 86/1     | LVCMOS33_OUT  | PR16A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| DACB_OUT[7]  | 85/1     | LVCMOS33_OUT  | PR16B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| E            | 100/1    | LVCMOS33_OUT  | PR5A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| EGRN         | 127/0    | LVCMOS33_OUT  | PT18B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| ETH          | 3/5      | LVCMOS33_IN   | PL4A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| EYLW         | 128/0    | LVCMOS33_OUT  | PT18A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| F            | 103/1    | LVCMOS33_OUT  | PR4C  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| G            | 77/1     | LVCMOS33_OUT  | PR21B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| H            | 78/1     | LVCMOS33_OUT  | PR21A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| I            | 76/1     | LVCMOS33_OUT  | PR23A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| J            | 81/1     | LVCMOS33_OUT  | PR18B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
-| K            | 82/1     | LVCMOS33_OUT  | PR18A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| L            | 84/1     | LVCMOS33_OUT  | PR17A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| M            | 96/1     | LVCMOS33_OUT  | PR9A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| N            | 122/0    | LVCMOS33_OUT  | PT25A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| NOTHWRESET   | 47/2     | LVCMOS33_IN   | PB13A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| NOT_RESET    | 40/2     | LVCMOS33_BIDI | PB6A  |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| O            | 121/0    | LVCMOS33_OUT  | PT25B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| P            | 117/0    | LVCMOS33_OUT  | PT28A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| Q            | 115/0    | LVCMOS33_OUT  | PT28B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| R            | 114/0    | LVCMOS33_OUT  | PT33A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| S            | 113/0    | LVCMOS33_OUT  | PT33B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| T            | 112/0    | LVCMOS33_OUT  | PT35A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| V            | 21/4     | LVCMOS33_OUT  | PL15A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| W            | 22/4     | LVCMOS33_OUT  | PL15B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
-| cont_addr[0] | 56/2     | LVCMOS33_IN   | PB23B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| cont_addr[1] | 52/2     | LVCMOS33_IN   | PB18A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| cont_addr[2] | 57/2     | LVCMOS33_IN   | PB26A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| cont_addr[3] | 54/2     | LVCMOS33_IN   | PB18B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| cont_addr[4] | 58/2     | LVCMOS33_IN   | PB26B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| cont_addr[5] | 55/2     | LVCMOS33_IN   | PB23A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
-| cont_data[0] | 67/2     | LVCMOS33_BIDI | PB35B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| cont_data[1] | 62/2     | LVCMOS33_BIDI | PB31B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| cont_data[2] | 68/2     | LVCMOS33_BIDI | PB37A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| cont_data[3] | 63/2     | LVCMOS33_BIDI | PB31D |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| cont_data[4] | 70/2     | LVCMOS33_BIDI | PB38A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| cont_data[5] | 65/2     | LVCMOS33_BIDI | PB35A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| cont_data[6] | 71/2     | LVCMOS33_BIDI | PB38B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| cont_data[7] | 69/2     | LVCMOS33_BIDI | PB37B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A            | 97/1     | LVCMOS33_OUT  | PR7B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| AA           | 59/2     | LVCMOS33_OUT  | PB29A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| AB           | 60/2     | LVCMOS33_OUT  | PB29B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| AC           | 61/2     | LVCMOS33_OUT  | PB31A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| AE           | 62/2     | LVCMOS33_OUT  | PB31B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| B            | 96/1     | LVCMOS33_OUT  | PR9A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| BA           | 52/2     | LVCMOS33_OUT  | PB18A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| BB           | 54/2     | LVCMOS33_OUT  | PB18B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| BC           | 57/2     | LVCMOS33_OUT  | PB26A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| BD           | 58/2     | LVCMOS33_OUT  | PB26B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| C            | 95/1     | LVCMOS33_OUT  | PR9B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| CDS_in       | 111/0    | LVCMOS33_IN   | PT35B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| CK1          | 142/0    | LVCMOS33_IN   | PT9B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                    |
+| CWR_in       | 110/0    | LVCMOS33_IN   | PT36C |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| D            | 94/1     | LVCMOS33_OUT  | PR11A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| DACA_OUT[0]  | 107/1    | LVCMOS33_OUT  | PR2A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACA_OUT[1]  | 106/1    | LVCMOS33_OUT  | PR2B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACA_OUT[2]  | 105/1    | LVCMOS33_OUT  | PR3A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACA_OUT[3]  | 104/1    | LVCMOS33_OUT  | PR3B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACA_OUT[4]  | 103/1    | LVCMOS33_OUT  | PR4C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACA_OUT[5]  | 100/1    | LVCMOS33_OUT  | PR5A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACA_OUT[6]  | 99/1     | LVCMOS33_OUT  | PR5B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACA_OUT[7]  | 98/1     | LVCMOS33_OUT  | PR7A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[0]  | 12/5     | LVCMOS33_OUT  | PL9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[1]  | 11/5     | LVCMOS33_OUT  | PL9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[2]  | 10/5     | LVCMOS33_OUT  | PL8B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[3]  | 9/5      | LVCMOS33_OUT  | PL8A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[4]  | 4/5      | LVCMOS33_OUT  | PL4B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[5]  | 3/5      | LVCMOS33_OUT  | PL4A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[6]  | 2/5      | LVCMOS33_OUT  | PL3B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| DACB_OUT[7]  | 1/5      | LVCMOS33_OUT  | PL3A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                          |
+| E            | 87/1     | LVCMOS33_OUT  | PR15B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| EGRN         | 125/0    | LVCMOS33_OUT  | PT22D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| ETH          | 109/0    | LVCMOS33_IN   | PT36D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| EYLW         | 126/0    | LVCMOS33_OUT  | PT22C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| F            | 86/1     | LVCMOS33_OUT  | PR16A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| G            | 85/1     | LVCMOS33_OUT  | PR16B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| H            | 84/1     | LVCMOS33_OUT  | PR17A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| I            | 42/2     | LVCMOS33_OUT  | PB9A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| J            | 41/2     | LVCMOS33_OUT  | PB6B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| K            | 45/2     | LVCMOS33_OUT  | PB12B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| L            | 43/2     | LVCMOS33_OUT  | PB9B  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| M            | 21/4     | LVCMOS33_OUT  | PL15A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| N            | 22/4     | LVCMOS33_OUT  | PL15B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| NCONFIG      | 39/2     | LVCMOS33_IN   | PB4B  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| NOTHWRESET   | 38/2     | LVCMOS33_IN   | PB4A  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| NOT_RESET    | 112/0    | LVCMOS33_BIDI | PT35A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| O            | 23/4     | LVCMOS33_OUT  | PL17A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| P            | 24/4     | LVCMOS33_OUT  | PL17B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| Q            | 31/3     | LVCMOS33_OUT  | PL23D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| R            | 32/3     | LVCMOS33_OUT  | PL24A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| S            | 33/3     | LVCMOS33_OUT  | PL24B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| T            | 34/3     | LVCMOS33_OUT  | PL25A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| V            | 47/2     | LVCMOS33_OUT  | PB13A |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| W            | 48/2     | LVCMOS33_OUT  | PB13B |           |           | DRIVE:8mA PULL:UP SLEW:SLOW                            |
+| cont_addr[0] | 115/0    | LVCMOS33_IN   | PT28B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| cont_addr[1] | 117/0    | LVCMOS33_IN   | PT28A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| cont_addr[2] | 119/0    | LVCMOS33_IN   | PT27D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| cont_addr[3] | 120/0    | LVCMOS33_IN   | PT27C |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| cont_addr[4] | 121/0    | LVCMOS33_IN   | PT25B |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| cont_addr[5] | 122/0    | LVCMOS33_IN   | PT25A |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                      |
+| cont_data[0] | 127/0    | LVCMOS33_BIDI | PT18B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| cont_data[1] | 128/0    | LVCMOS33_BIDI | PT18A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| cont_data[2] | 132/0    | LVCMOS33_BIDI | PT15B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| cont_data[3] | 133/0    | LVCMOS33_BIDI | PT15A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| cont_data[4] | 138/0    | LVCMOS33_BIDI | PT11B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| cont_data[5] | 139/0    | LVCMOS33_BIDI | PT11A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| cont_data[6] | 140/0    | LVCMOS33_BIDI | PT10B |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| cont_data[7] | 141/0    | LVCMOS33_BIDI | PT10A |           |           | DRIVE:8mA PULL:UP CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 +--------------+----------+---------------+-------+-----------+-----------+--------------------------------------------------------+
 
 Vccio by Bank:
@@ -107,120 +105,120 @@ Pinout by Pin Number:
 +----------+-----------------------+------------+---------------+-------+----------------+-----------+-----------+
 | Pin/Bank | Pin Info              | Preference | Buffer Type   | Site  | Dual Function  | PG Enable | BC Enable |
 +----------+-----------------------+------------+---------------+-------+----------------+-----------+-----------+
-| 1/5      | CWR_in                | LOCATED    | LVCMOS33_IN   | PL3A  | L_GPLLT_FB     |           |           |
-| 2/5      | CDS_in                | LOCATED    | LVCMOS33_IN   | PL3B  | L_GPLLC_FB     |           |           |
-| 3/5      | ETH                   | LOCATED    | LVCMOS33_IN   | PL4A  | L_GPLLT_IN     |           |           |
-| 4/5      |     unused, PULL:DOWN |            |               | PL4B  | L_GPLLC_IN     |           |           |
+| 1/5      | DACB_OUT[7]           | LOCATED    | LVCMOS33_OUT  | PL3A  | L_GPLLT_FB     |           |           |
+| 2/5      | DACB_OUT[6]           | LOCATED    | LVCMOS33_OUT  | PL3B  | L_GPLLC_FB     |           |           |
+| 3/5      | DACB_OUT[5]           | LOCATED    | LVCMOS33_OUT  | PL4A  | L_GPLLT_IN     |           |           |
+| 4/5      | DACB_OUT[4]           | LOCATED    | LVCMOS33_OUT  | PL4B  | L_GPLLC_IN     |           |           |
 | 5/5      |     unused, PULL:DOWN |            |               | PL6A  | PCLKT5_0       |           |           |
 | 6/5      |     unused, PULL:DOWN |            |               | PL6B  | PCLKC5_0       |           |           |
-| 9/5      | DACA_OUT[7]           | LOCATED    | LVCMOS33_OUT  | PL8A  |                |           |           |
-| 10/5     | DACA_OUT[6]           | LOCATED    | LVCMOS33_OUT  | PL8B  |                |           |           |
-| 11/5     | DACA_OUT[5]           | LOCATED    | LVCMOS33_OUT  | PL9A  |                |           |           |
-| 12/5     | DACA_OUT[4]           | LOCATED    | LVCMOS33_OUT  | PL9B  |                |           |           |
-| 13/4     | DACA_OUT[3]           | LOCATED    | LVCMOS33_OUT  | PL10A |                |           |           |
-| 14/4     | DACA_OUT[2]           | LOCATED    | LVCMOS33_OUT  | PL10B |                |           |           |
-| 15/4     | DACA_OUT[1]           | LOCATED    | LVCMOS33_OUT  | PL11A |                |           |           |
-| 17/4     | DACA_OUT[0]           | LOCATED    | LVCMOS33_OUT  | PL11B |                |           |           |
+| 9/5      | DACB_OUT[3]           | LOCATED    | LVCMOS33_OUT  | PL8A  |                |           |           |
+| 10/5     | DACB_OUT[2]           | LOCATED    | LVCMOS33_OUT  | PL8B  |                |           |           |
+| 11/5     | DACB_OUT[1]           | LOCATED    | LVCMOS33_OUT  | PL9A  |                |           |           |
+| 12/5     | DACB_OUT[0]           | LOCATED    | LVCMOS33_OUT  | PL9B  |                |           |           |
+| 13/4     |     unused, PULL:DOWN |            |               | PL10A |                |           |           |
+| 14/4     |     unused, PULL:DOWN |            |               | PL10B |                |           |           |
+| 15/4     |     unused, PULL:DOWN |            |               | PL11A |                |           |           |
+| 17/4     |     unused, PULL:DOWN |            |               | PL11B |                |           |           |
 | 19/4     |     unused, PULL:DOWN |            |               | PL12A | PCLKT4_0       |           |           |
 | 20/4     |     unused, PULL:DOWN |            |               | PL12B | PCLKC4_0       |           |           |
-| 21/4     | V                     | LOCATED    | LVCMOS33_OUT  | PL15A |                |           |           |
-| 22/4     | W                     | LOCATED    | LVCMOS33_OUT  | PL15B |                |           |           |
-| 23/4     |     unused, PULL:DOWN |            |               | PL17A |                |           |           |
-| 24/4     | AB                    |            | LVCMOS33_OUT  | PL17B |                |           |           |
-| 25/3     | BB                    |            | LVCMOS33_OUT  | PL19A |                |           |           |
+| 21/4     | M                     | LOCATED    | LVCMOS33_OUT  | PL15A |                |           |           |
+| 22/4     | N                     | LOCATED    | LVCMOS33_OUT  | PL15B |                |           |           |
+| 23/4     | O                     | LOCATED    | LVCMOS33_OUT  | PL17A |                |           |           |
+| 24/4     | P                     | LOCATED    | LVCMOS33_OUT  | PL17B |                |           |           |
+| 25/3     |     unused, PULL:DOWN |            |               | PL19A |                |           |           |
 | 26/3     |     unused, PULL:DOWN |            |               | PL19B |                |           |           |
 | 27/3     |     unused, PULL:DOWN |            |               | PL22A | PCLKT3_0       |           |           |
 | 28/3     |     unused, PULL:DOWN |            |               | PL22B | PCLKC3_0       |           |           |
-| 31/3     | BD                    |            | LVCMOS33_OUT  | PL23D |                |           |           |
-| 32/3     |     unused, PULL:DOWN |            |               | PL24A |                |           |           |
-| 33/3     | BA                    |            | LVCMOS33_OUT  | PL24B |                |           |           |
-| 34/3     |     unused, PULL:DOWN |            |               | PL25A |                |           |           |
-| 35/3     | AE                    |            | LVCMOS33_OUT  | PL25B |                |           |           |
-| 38/2     | CK                    | LOCATED    | LVCMOS33_IN   | PB4A  |                |           |           |
-| 39/2     | CK1                   | LOCATED    | LVCMOS33_IN   | PB4B  |                |           |           |
-| 40/2     | NOT_RESET             | LOCATED    | LVCMOS33_BIDI | PB6A  | CSSPIN         |           |           |
-| 41/2     | BC                    |            | LVCMOS33_OUT  | PB6B  |                |           |           |
-| 42/2     | AA                    |            | LVCMOS33_OUT  | PB9A  |                |           |           |
-| 43/2     |     unused, PULL:DOWN |            |               | PB9B  |                |           |           |
-| 44/2     | CK2                   | LOCATED    | LVCMOS33_IN   | PB12A | MCLK/CCLK      |           |           |
-| 45/2     |     unused, PULL:DOWN |            |               | PB12B | SO/SPISO       |           |           |
-| 47/2     | NOTHWRESET            | LOCATED    | LVCMOS33_IN   | PB13A |                |           |           |
-| 48/2     | CONFIG                | LOCATED    | LVCMOS33_IN   | PB13B |                |           |           |
+| 31/3     | Q                     | LOCATED    | LVCMOS33_OUT  | PL23D |                |           |           |
+| 32/3     | R                     | LOCATED    | LVCMOS33_OUT  | PL24A |                |           |           |
+| 33/3     | S                     | LOCATED    | LVCMOS33_OUT  | PL24B |                |           |           |
+| 34/3     | T                     | LOCATED    | LVCMOS33_OUT  | PL25A |                |           |           |
+| 35/3     |     unused, PULL:DOWN |            |               | PL25B |                |           |           |
+| 38/2     | NOTHWRESET            | LOCATED    | LVCMOS33_IN   | PB4A  |                |           |           |
+| 39/2     | NCONFIG               | LOCATED    | LVCMOS33_IN   | PB4B  |                |           |           |
+| 40/2     |     unused, PULL:DOWN |            |               | PB6A  | CSSPIN         |           |           |
+| 41/2     | J                     | LOCATED    | LVCMOS33_OUT  | PB6B  |                |           |           |
+| 42/2     | I                     | LOCATED    | LVCMOS33_OUT  | PB9A  |                |           |           |
+| 43/2     | L                     | LOCATED    | LVCMOS33_OUT  | PB9B  |                |           |           |
+| 44/2     |     unused, PULL:DOWN |            |               | PB12A | MCLK/CCLK      |           |           |
+| 45/2     | K                     | LOCATED    | LVCMOS33_OUT  | PB12B | SO/SPISO       |           |           |
+| 47/2     | V                     | LOCATED    | LVCMOS33_OUT  | PB13A |                |           |           |
+| 48/2     | W                     | LOCATED    | LVCMOS33_OUT  | PB13B |                |           |           |
 | 49/2     |     unused, PULL:DOWN |            |               | PB16A | PCLKT2_0       |           |           |
-| 50/2     | AC                    |            | LVCMOS33_OUT  | PB16B | PCLKC2_0       |           |           |
-| 52/2     | cont_addr[1]          | LOCATED    | LVCMOS33_IN   | PB18A |                |           |           |
-| 54/2     | cont_addr[3]          | LOCATED    | LVCMOS33_IN   | PB18B |                |           |           |
-| 55/2     | cont_addr[5]          | LOCATED    | LVCMOS33_IN   | PB23A | PCLKT2_1       |           |           |
-| 56/2     | cont_addr[0]          | LOCATED    | LVCMOS33_IN   | PB23B | PCLKC2_1       |           |           |
-| 57/2     | cont_addr[2]          | LOCATED    | LVCMOS33_IN   | PB26A |                |           |           |
-| 58/2     | cont_addr[4]          | LOCATED    | LVCMOS33_IN   | PB26B |                |           |           |
-| 59/2     |     unused, PULL:DOWN |            |               | PB29A |                |           |           |
-| 60/2     |     unused, PULL:DOWN |            |               | PB29B |                |           |           |
-| 61/2     |     unused, PULL:DOWN |            |               | PB31A |                |           |           |
-| 62/2     | cont_data[1]          | LOCATED    | LVCMOS33_BIDI | PB31B |                |           |           |
-| 63/2     | cont_data[3]          | LOCATED    | LVCMOS33_BIDI | PB31D |                |           |           |
-| 65/2     | cont_data[5]          | LOCATED    | LVCMOS33_BIDI | PB35A |                |           |           |
-| 67/2     | cont_data[0]          | LOCATED    | LVCMOS33_BIDI | PB35B |                |           |           |
-| 68/2     | cont_data[2]          | LOCATED    | LVCMOS33_BIDI | PB37A |                |           |           |
-| 69/2     | cont_data[7]          | LOCATED    | LVCMOS33_BIDI | PB37B |                |           |           |
-| 70/2     | cont_data[4]          | LOCATED    | LVCMOS33_BIDI | PB38A | SN             |           |           |
-| 71/2     | cont_data[6]          | LOCATED    | LVCMOS33_BIDI | PB38B | SI/SISPI       |           |           |
+| 50/2     |     unused, PULL:DOWN |            |               | PB16B | PCLKC2_0       |           |           |
+| 52/2     | BA                    | LOCATED    | LVCMOS33_OUT  | PB18A |                |           |           |
+| 54/2     | BB                    | LOCATED    | LVCMOS33_OUT  | PB18B |                |           |           |
+| 55/2     |     unused, PULL:DOWN |            |               | PB23A | PCLKT2_1       |           |           |
+| 56/2     |     unused, PULL:DOWN |            |               | PB23B | PCLKC2_1       |           |           |
+| 57/2     | BC                    | LOCATED    | LVCMOS33_OUT  | PB26A |                |           |           |
+| 58/2     | BD                    | LOCATED    | LVCMOS33_OUT  | PB26B |                |           |           |
+| 59/2     | AA                    | LOCATED    | LVCMOS33_OUT  | PB29A |                |           |           |
+| 60/2     | AB                    | LOCATED    | LVCMOS33_OUT  | PB29B |                |           |           |
+| 61/2     | AC                    | LOCATED    | LVCMOS33_OUT  | PB31A |                |           |           |
+| 62/2     | AE                    | LOCATED    | LVCMOS33_OUT  | PB31B |                |           |           |
+| 63/2     |     unused, PULL:DOWN |            |               | PB31D |                |           |           |
+| 65/2     |     unused, PULL:DOWN |            |               | PB35A |                |           |           |
+| 67/2     |     unused, PULL:DOWN |            |               | PB35B |                |           |           |
+| 68/2     |     unused, PULL:DOWN |            |               | PB37A |                |           |           |
+| 69/2     |     unused, PULL:DOWN |            |               | PB37B |                |           |           |
+| 70/2     |     unused, PULL:DOWN |            |               | PB38A | SN             |           |           |
+| 71/2     |     unused, PULL:DOWN |            |               | PB38B | SI/SISPI       |           |           |
 | 73/1     |     unused, PULL:DOWN |            |               | PR24B | DQ1            |           |           |
 | 74/1     |     unused, PULL:DOWN |            |               | PR24A | DQ1            |           |           |
 | 75/1     |     unused, PULL:DOWN |            |               | PR23B | DQ1            |           |           |
-| 76/1     | I                     | LOCATED    | LVCMOS33_OUT  | PR23A | DQ1            |           |           |
-| 77/1     | G                     | LOCATED    | LVCMOS33_OUT  | PR21B | DQ1            |           |           |
-| 78/1     | H                     | LOCATED    | LVCMOS33_OUT  | PR21A | DQ1            |           |           |
-| 81/1     | J                     | LOCATED    | LVCMOS33_OUT  | PR18B | DQ1            |           |           |
-| 82/1     | K                     | LOCATED    | LVCMOS33_OUT  | PR18A | DQ1            |           |           |
-| 83/1     | A                     | LOCATED    | LVCMOS33_OUT  | PR17B | DQ1            |           |           |
-| 84/1     | L                     | LOCATED    | LVCMOS33_OUT  | PR17A | DQ1            |           |           |
-| 85/1     | DACB_OUT[7]           | LOCATED    | LVCMOS33_OUT  | PR16B | DQS1N          |           |           |
-| 86/1     | DACB_OUT[6]           | LOCATED    | LVCMOS33_OUT  | PR16A | DQS1           |           |           |
-| 87/1     | DACB_OUT[5]           | LOCATED    | LVCMOS33_OUT  | PR15B |                |           |           |
-| 89/1     | DACB_OUT[4]           | LOCATED    | LVCMOS33_OUT  | PR15A |                |           |           |
+| 76/1     |     unused, PULL:DOWN |            |               | PR23A | DQ1            |           |           |
+| 77/1     |     unused, PULL:DOWN |            |               | PR21B | DQ1            |           |           |
+| 78/1     |     unused, PULL:DOWN |            |               | PR21A | DQ1            |           |           |
+| 81/1     |     unused, PULL:DOWN |            |               | PR18B | DQ1            |           |           |
+| 82/1     |     unused, PULL:DOWN |            |               | PR18A | DQ1            |           |           |
+| 83/1     |     unused, PULL:DOWN |            |               | PR17B | DQ1            |           |           |
+| 84/1     | H                     | LOCATED    | LVCMOS33_OUT  | PR17A | DQ1            |           |           |
+| 85/1     | G                     | LOCATED    | LVCMOS33_OUT  | PR16B | DQS1N          |           |           |
+| 86/1     | F                     | LOCATED    | LVCMOS33_OUT  | PR16A | DQS1           |           |           |
+| 87/1     | E                     | LOCATED    | LVCMOS33_OUT  | PR15B |                |           |           |
+| 89/1     |     unused, PULL:DOWN |            |               | PR15A |                |           |           |
 | 91/1     |     unused, PULL:DOWN |            |               | PR12B | PCLKC1_0/DQ0   |           |           |
-| 92/1     | DACB_OUT[3]           | LOCATED    | LVCMOS33_OUT  | PR12A | PCLKT1_0/DQ0   |           |           |
-| 93/1     | DACB_OUT[2]           | LOCATED    | LVCMOS33_OUT  | PR11B | DQS0N          |           |           |
-| 94/1     | DACB_OUT[1]           | LOCATED    | LVCMOS33_OUT  | PR11A | DQS0           |           |           |
-| 95/1     | DACB_OUT[0]           | LOCATED    | LVCMOS33_OUT  | PR9B  | DQ0            |           |           |
-| 96/1     | M                     | LOCATED    | LVCMOS33_OUT  | PR9A  | DQ0            |           |           |
-| 97/1     | B                     | LOCATED    | LVCMOS33_OUT  | PR7B  | DQ0            |           |           |
-| 98/1     | C                     | LOCATED    | LVCMOS33_OUT  | PR7A  | DQ0            |           |           |
-| 99/1     | D                     | LOCATED    | LVCMOS33_OUT  | PR5B  | DQ0            |           |           |
-| 100/1    | E                     | LOCATED    | LVCMOS33_OUT  | PR5A  | DQ0            |           |           |
-| 103/1    | F                     | LOCATED    | LVCMOS33_OUT  | PR4C  |                |           |           |
-| 104/1    |     unused, PULL:DOWN |            |               | PR3B  | R_GPLLC_IN/DQ0 |           |           |
-| 105/1    |     unused, PULL:DOWN |            |               | PR3A  | R_GPLLT_IN/DQ0 |           |           |
-| 106/1    |     unused, PULL:DOWN |            |               | PR2B  | R_GPLLC_FB/DQ0 |           |           |
-| 107/1    |     unused, PULL:DOWN |            |               | PR2A  | R_GPLLT_FB/DQ0 |           |           |
-| 109/0    |     unused, PULL:DOWN |            |               | PT36D | DONE           |           |           |
-| 110/0    |     unused, PULL:DOWN |            |               | PT36C | INITN          |           |           |
-| 111/0    |     unused, PULL:DOWN |            |               | PT35B |                |           |           |
-| 112/0    | T                     | LOCATED    | LVCMOS33_OUT  | PT35A |                |           |           |
-| 113/0    | S                     | LOCATED    | LVCMOS33_OUT  | PT33B |                |           |           |
-| 114/0    | R                     | LOCATED    | LVCMOS33_OUT  | PT33A |                |           |           |
-| 115/0    | Q                     | LOCATED    | LVCMOS33_OUT  | PT28B |                |           |           |
-| 117/0    | P                     | LOCATED    | LVCMOS33_OUT  | PT28A |                |           |           |
-| 119/0    |     unused, PULL:DOWN |            |               | PT27D | PROGRAMN       |           |           |
-| 120/0    |     unused, PULL:DOWN |            |               | PT27C | JTAGENB        |           |           |
-| 121/0    | O                     | LOCATED    | LVCMOS33_OUT  | PT25B |                |           |           |
-| 122/0    | N                     | LOCATED    | LVCMOS33_OUT  | PT25A |                |           |           |
-| 125/0    |     unused, PULL:DOWN |            |               | PT22D | SDA/PCLKC0_0   |           |           |
-| 126/0    |     unused, PULL:DOWN |            |               | PT22C | SCL/PCLKT0_0   |           |           |
-| 127/0    | EGRN                  | LOCATED    | LVCMOS33_OUT  | PT18B | PCLKC0_1       |           |           |
-| 128/0    | EYLW                  | LOCATED    | LVCMOS33_OUT  | PT18A | PCLKT0_1       |           |           |
+| 92/1     |     unused, PULL:DOWN |            |               | PR12A | PCLKT1_0/DQ0   |           |           |
+| 93/1     |     unused, PULL:DOWN |            |               | PR11B | DQS0N          |           |           |
+| 94/1     | D                     | LOCATED    | LVCMOS33_OUT  | PR11A | DQS0           |           |           |
+| 95/1     | C                     | LOCATED    | LVCMOS33_OUT  | PR9B  | DQ0            |           |           |
+| 96/1     | B                     | LOCATED    | LVCMOS33_OUT  | PR9A  | DQ0            |           |           |
+| 97/1     | A                     | LOCATED    | LVCMOS33_OUT  | PR7B  | DQ0            |           |           |
+| 98/1     | DACA_OUT[7]           | LOCATED    | LVCMOS33_OUT  | PR7A  | DQ0            |           |           |
+| 99/1     | DACA_OUT[6]           | LOCATED    | LVCMOS33_OUT  | PR5B  | DQ0            |           |           |
+| 100/1    | DACA_OUT[5]           | LOCATED    | LVCMOS33_OUT  | PR5A  | DQ0            |           |           |
+| 103/1    | DACA_OUT[4]           | LOCATED    | LVCMOS33_OUT  | PR4C  |                |           |           |
+| 104/1    | DACA_OUT[3]           | LOCATED    | LVCMOS33_OUT  | PR3B  | R_GPLLC_IN/DQ0 |           |           |
+| 105/1    | DACA_OUT[2]           | LOCATED    | LVCMOS33_OUT  | PR3A  | R_GPLLT_IN/DQ0 |           |           |
+| 106/1    | DACA_OUT[1]           | LOCATED    | LVCMOS33_OUT  | PR2B  | R_GPLLC_FB/DQ0 |           |           |
+| 107/1    | DACA_OUT[0]           | LOCATED    | LVCMOS33_OUT  | PR2A  | R_GPLLT_FB/DQ0 |           |           |
+| 109/0    | ETH                   | LOCATED    | LVCMOS33_IN   | PT36D | DONE           |           |           |
+| 110/0    | CWR_in                | LOCATED    | LVCMOS33_IN   | PT36C | INITN          |           |           |
+| 111/0    | CDS_in                | LOCATED    | LVCMOS33_IN   | PT35B |                |           |           |
+| 112/0    | NOT_RESET             | LOCATED    | LVCMOS33_BIDI | PT35A |                |           |           |
+| 113/0    |     unused, PULL:DOWN |            |               | PT33B |                |           |           |
+| 114/0    |     unused, PULL:DOWN |            |               | PT33A |                |           |           |
+| 115/0    | cont_addr[0]          | LOCATED    | LVCMOS33_IN   | PT28B |                |           |           |
+| 117/0    | cont_addr[1]          | LOCATED    | LVCMOS33_IN   | PT28A |                |           |           |
+| 119/0    | cont_addr[2]          | LOCATED    | LVCMOS33_IN   | PT27D | PROGRAMN       |           |           |
+| 120/0    | cont_addr[3]          | LOCATED    | LVCMOS33_IN   | PT27C | JTAGENB        |           |           |
+| 121/0    | cont_addr[4]          | LOCATED    | LVCMOS33_IN   | PT25B |                |           |           |
+| 122/0    | cont_addr[5]          | LOCATED    | LVCMOS33_IN   | PT25A |                |           |           |
+| 125/0    | EGRN                  | LOCATED    | LVCMOS33_OUT  | PT22D | SDA/PCLKC0_0   |           |           |
+| 126/0    | EYLW                  | LOCATED    | LVCMOS33_OUT  | PT22C | SCL/PCLKT0_0   |           |           |
+| 127/0    | cont_data[0]          | LOCATED    | LVCMOS33_BIDI | PT18B | PCLKC0_1       |           |           |
+| 128/0    | cont_data[1]          | LOCATED    | LVCMOS33_BIDI | PT18A | PCLKT0_1       |           |           |
 | 130/0    | Reserved: sysCONFIG   |            |               | PT17D | TMS            |           |           |
 | 131/0    | Reserved: sysCONFIG   |            |               | PT17C | TCK            |           |           |
-| 132/0    |     unused, PULL:DOWN |            |               | PT15B |                |           |           |
-| 133/0    |     unused, PULL:DOWN |            |               | PT15A |                |           |           |
+| 132/0    | cont_data[2]          | LOCATED    | LVCMOS33_BIDI | PT15B |                |           |           |
+| 133/0    | cont_data[3]          | LOCATED    | LVCMOS33_BIDI | PT15A |                |           |           |
 | 136/0    | Reserved: sysCONFIG   |            |               | PT14D | TDI            |           |           |
 | 137/0    | Reserved: sysCONFIG   |            |               | PT14C | TDO            |           |           |
-| 138/0    |     unused, PULL:DOWN |            |               | PT11B |                |           |           |
-| 139/0    |     unused, PULL:DOWN |            |               | PT11A |                |           |           |
-| 140/0    |     unused, PULL:DOWN |            |               | PT10B |                |           |           |
-| 141/0    |     unused, PULL:DOWN |            |               | PT10A |                |           |           |
-| 142/0    |     unused, PULL:DOWN |            |               | PT9B  |                |           |           |
+| 138/0    | cont_data[4]          | LOCATED    | LVCMOS33_BIDI | PT11B |                |           |           |
+| 139/0    | cont_data[5]          | LOCATED    | LVCMOS33_BIDI | PT11A |                |           |           |
+| 140/0    | cont_data[6]          | LOCATED    | LVCMOS33_BIDI | PT10B |                |           |           |
+| 141/0    | cont_data[7]          | LOCATED    | LVCMOS33_BIDI | PT10A |                |           |           |
+| 142/0    | CK1                   | LOCATED    | LVCMOS33_IN   | PT9B  |                |           |           |
 | 143/0    |     unused, PULL:DOWN |            |               | PT9A  |                |           |           |
 | PB4C/2   |     unused, PULL:DOWN |            |               | PB4C  |                |           |           |
 | PB4D/2   |     unused, PULL:DOWN |            |               | PB4D  |                |           |           |
@@ -461,77 +459,75 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "A"  SITE  "83";
-LOCATE  COMP  "AA"  SITE  "42";
-LOCATE  COMP  "AB"  SITE  "24";
-LOCATE  COMP  "AC"  SITE  "50";
-LOCATE  COMP  "AE"  SITE  "35";
-LOCATE  COMP  "B"  SITE  "97";
-LOCATE  COMP  "BA"  SITE  "33";
-LOCATE  COMP  "BB"  SITE  "25";
-LOCATE  COMP  "BC"  SITE  "41";
-LOCATE  COMP  "BD"  SITE  "31";
-LOCATE  COMP  "C"  SITE  "98";
-LOCATE  COMP  "CDS_in"  SITE  "2";
-LOCATE  COMP  "CK"  SITE  "38";
-LOCATE  COMP  "CK1"  SITE  "39";
-LOCATE  COMP  "CK2"  SITE  "44";
-LOCATE  COMP  "CONFIG"  SITE  "48";
-LOCATE  COMP  "CWR_in"  SITE  "1";
-LOCATE  COMP  "D"  SITE  "99";
-LOCATE  COMP  "DACA_OUT[0]"  SITE  "17";
-LOCATE  COMP  "DACA_OUT[1]"  SITE  "15";
-LOCATE  COMP  "DACA_OUT[2]"  SITE  "14";
-LOCATE  COMP  "DACA_OUT[3]"  SITE  "13";
-LOCATE  COMP  "DACA_OUT[4]"  SITE  "12";
-LOCATE  COMP  "DACA_OUT[5]"  SITE  "11";
-LOCATE  COMP  "DACA_OUT[6]"  SITE  "10";
-LOCATE  COMP  "DACA_OUT[7]"  SITE  "9";
-LOCATE  COMP  "DACB_OUT[0]"  SITE  "95";
-LOCATE  COMP  "DACB_OUT[1]"  SITE  "94";
-LOCATE  COMP  "DACB_OUT[2]"  SITE  "93";
-LOCATE  COMP  "DACB_OUT[3]"  SITE  "92";
-LOCATE  COMP  "DACB_OUT[4]"  SITE  "89";
-LOCATE  COMP  "DACB_OUT[5]"  SITE  "87";
-LOCATE  COMP  "DACB_OUT[6]"  SITE  "86";
-LOCATE  COMP  "DACB_OUT[7]"  SITE  "85";
-LOCATE  COMP  "E"  SITE  "100";
-LOCATE  COMP  "EGRN"  SITE  "127";
-LOCATE  COMP  "ETH"  SITE  "3";
-LOCATE  COMP  "EYLW"  SITE  "128";
-LOCATE  COMP  "F"  SITE  "103";
-LOCATE  COMP  "G"  SITE  "77";
-LOCATE  COMP  "H"  SITE  "78";
-LOCATE  COMP  "I"  SITE  "76";
-LOCATE  COMP  "J"  SITE  "81";
-LOCATE  COMP  "K"  SITE  "82";
-LOCATE  COMP  "L"  SITE  "84";
-LOCATE  COMP  "M"  SITE  "96";
-LOCATE  COMP  "N"  SITE  "122";
-LOCATE  COMP  "NOTHWRESET"  SITE  "47";
-LOCATE  COMP  "NOT_RESET"  SITE  "40";
-LOCATE  COMP  "O"  SITE  "121";
-LOCATE  COMP  "P"  SITE  "117";
-LOCATE  COMP  "Q"  SITE  "115";
-LOCATE  COMP  "R"  SITE  "114";
-LOCATE  COMP  "S"  SITE  "113";
-LOCATE  COMP  "T"  SITE  "112";
-LOCATE  COMP  "V"  SITE  "21";
-LOCATE  COMP  "W"  SITE  "22";
-LOCATE  COMP  "cont_addr[0]"  SITE  "56";
-LOCATE  COMP  "cont_addr[1]"  SITE  "52";
-LOCATE  COMP  "cont_addr[2]"  SITE  "57";
-LOCATE  COMP  "cont_addr[3]"  SITE  "54";
-LOCATE  COMP  "cont_addr[4]"  SITE  "58";
-LOCATE  COMP  "cont_addr[5]"  SITE  "55";
-LOCATE  COMP  "cont_data[0]"  SITE  "67";
-LOCATE  COMP  "cont_data[1]"  SITE  "62";
-LOCATE  COMP  "cont_data[2]"  SITE  "68";
-LOCATE  COMP  "cont_data[3]"  SITE  "63";
-LOCATE  COMP  "cont_data[4]"  SITE  "70";
-LOCATE  COMP  "cont_data[5]"  SITE  "65";
-LOCATE  COMP  "cont_data[6]"  SITE  "71";
-LOCATE  COMP  "cont_data[7]"  SITE  "69";
+LOCATE  COMP  "A"  SITE  "97";
+LOCATE  COMP  "AA"  SITE  "59";
+LOCATE  COMP  "AB"  SITE  "60";
+LOCATE  COMP  "AC"  SITE  "61";
+LOCATE  COMP  "AE"  SITE  "62";
+LOCATE  COMP  "B"  SITE  "96";
+LOCATE  COMP  "BA"  SITE  "52";
+LOCATE  COMP  "BB"  SITE  "54";
+LOCATE  COMP  "BC"  SITE  "57";
+LOCATE  COMP  "BD"  SITE  "58";
+LOCATE  COMP  "C"  SITE  "95";
+LOCATE  COMP  "CDS_in"  SITE  "111";
+LOCATE  COMP  "CK1"  SITE  "142";
+LOCATE  COMP  "CWR_in"  SITE  "110";
+LOCATE  COMP  "D"  SITE  "94";
+LOCATE  COMP  "DACA_OUT[0]"  SITE  "107";
+LOCATE  COMP  "DACA_OUT[1]"  SITE  "106";
+LOCATE  COMP  "DACA_OUT[2]"  SITE  "105";
+LOCATE  COMP  "DACA_OUT[3]"  SITE  "104";
+LOCATE  COMP  "DACA_OUT[4]"  SITE  "103";
+LOCATE  COMP  "DACA_OUT[5]"  SITE  "100";
+LOCATE  COMP  "DACA_OUT[6]"  SITE  "99";
+LOCATE  COMP  "DACA_OUT[7]"  SITE  "98";
+LOCATE  COMP  "DACB_OUT[0]"  SITE  "12";
+LOCATE  COMP  "DACB_OUT[1]"  SITE  "11";
+LOCATE  COMP  "DACB_OUT[2]"  SITE  "10";
+LOCATE  COMP  "DACB_OUT[3]"  SITE  "9";
+LOCATE  COMP  "DACB_OUT[4]"  SITE  "4";
+LOCATE  COMP  "DACB_OUT[5]"  SITE  "3";
+LOCATE  COMP  "DACB_OUT[6]"  SITE  "2";
+LOCATE  COMP  "DACB_OUT[7]"  SITE  "1";
+LOCATE  COMP  "E"  SITE  "87";
+LOCATE  COMP  "EGRN"  SITE  "125";
+LOCATE  COMP  "ETH"  SITE  "109";
+LOCATE  COMP  "EYLW"  SITE  "126";
+LOCATE  COMP  "F"  SITE  "86";
+LOCATE  COMP  "G"  SITE  "85";
+LOCATE  COMP  "H"  SITE  "84";
+LOCATE  COMP  "I"  SITE  "42";
+LOCATE  COMP  "J"  SITE  "41";
+LOCATE  COMP  "K"  SITE  "45";
+LOCATE  COMP  "L"  SITE  "43";
+LOCATE  COMP  "M"  SITE  "21";
+LOCATE  COMP  "N"  SITE  "22";
+LOCATE  COMP  "NCONFIG"  SITE  "39";
+LOCATE  COMP  "NOTHWRESET"  SITE  "38";
+LOCATE  COMP  "NOT_RESET"  SITE  "112";
+LOCATE  COMP  "O"  SITE  "23";
+LOCATE  COMP  "P"  SITE  "24";
+LOCATE  COMP  "Q"  SITE  "31";
+LOCATE  COMP  "R"  SITE  "32";
+LOCATE  COMP  "S"  SITE  "33";
+LOCATE  COMP  "T"  SITE  "34";
+LOCATE  COMP  "V"  SITE  "47";
+LOCATE  COMP  "W"  SITE  "48";
+LOCATE  COMP  "cont_addr[0]"  SITE  "115";
+LOCATE  COMP  "cont_addr[1]"  SITE  "117";
+LOCATE  COMP  "cont_addr[2]"  SITE  "119";
+LOCATE  COMP  "cont_addr[3]"  SITE  "120";
+LOCATE  COMP  "cont_addr[4]"  SITE  "121";
+LOCATE  COMP  "cont_addr[5]"  SITE  "122";
+LOCATE  COMP  "cont_data[0]"  SITE  "127";
+LOCATE  COMP  "cont_data[1]"  SITE  "128";
+LOCATE  COMP  "cont_data[2]"  SITE  "132";
+LOCATE  COMP  "cont_data[3]"  SITE  "133";
+LOCATE  COMP  "cont_data[4]"  SITE  "138";
+LOCATE  COMP  "cont_data[5]"  SITE  "139";
+LOCATE  COMP  "cont_data[6]"  SITE  "140";
+LOCATE  COMP  "cont_data[7]"  SITE  "141";
 
 
 
@@ -543,5 +539,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Mar 15 12:01:09 2024
+Wed May 01 11:27:38 2024
 

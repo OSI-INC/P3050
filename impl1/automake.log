@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Mar 15 12:00:57 2024
+Wed May 01 11:27:26 2024
 
 
 Command Line:  synthesis -f P3050FG_impl1_lattice.synproj -gui -msgset C:/Firmware/P3050FG/promote.xml 
@@ -91,30 +91,34 @@ Analyzing VHDL file c:/firmware/p3050fg/daq_ram.vhd. VHDL-1481
     <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/daq_ram.vhd(28): " arg1="structure" arg2="c:/firmware/p3050fg/daq_ram.vhd" arg3="28"  />
 unit main is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/firmware/p3050fg/main.vhd. VHDL-1481
-    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(10): " arg1="main" arg2="c:/firmware/p3050fg/main.vhd" arg3="10"  />
-    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(114): " arg1="behavior" arg2="c:/firmware/p3050fg/main.vhd" arg3="114"  />
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(12): " arg1="main" arg2="c:/firmware/p3050fg/main.vhd" arg3="12"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(136): " arg1="behavior" arg2="c:/firmware/p3050fg/main.vhd" arg3="136"  />
 unit main is not yet analyzed. VHDL-1485
 unit main is not yet analyzed. VHDL-1485
-c:/firmware/p3050fg/main.vhd(10): executing main(behavior)
+c:/firmware/p3050fg/main.vhd(12): executing main(behavior)
 
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(137): " arg1="fck" arg2="c:/firmware/p3050fg/main.vhd" arg3="137"  />
-    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(139): " arg1="c:/firmware/p3050fg/main.vhd" arg2="139"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(149): " arg1="not_reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="149"  />
-    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(151): " arg1="c:/firmware/p3050fg/main.vhd" arg2="151"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(159): " arg1="cont_addr" arg2="c:/firmware/p3050fg/main.vhd" arg3="159"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(161): " arg1="reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="161"  />
-    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(274): " arg1="c:/firmware/p3050fg/main.vhd" arg2="274"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(281): " arg1="rstcd1" arg2="c:/firmware/p3050fg/main.vhd" arg3="281"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(281): " arg1="reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="281"  />
-    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(291): " arg1="c:/firmware/p3050fg/main.vhd" arg2="291"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(297): " arg1="rstcd2" arg2="c:/firmware/p3050fg/main.vhd" arg3="297"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(297): " arg1="reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="297"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(173): " arg1="not_reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="173"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(175): " arg1="c:/firmware/p3050fg/main.vhd" arg2="175"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(187): " arg1="cont_addr" arg2="c:/firmware/p3050fg/main.vhd" arg3="187"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(189): " arg1="reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="189"  />
     <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(307): " arg1="c:/firmware/p3050fg/main.vhd" arg2="307"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(346): " arg1="cwr" arg2="c:/firmware/p3050fg/main.vhd" arg3="346"  />
-    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(356): " arg1="c:/firmware/p3050fg/main.vhd" arg2="356"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(363): " arg1="cwr" arg2="c:/firmware/p3050fg/main.vhd" arg3="363"  />
-    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(373): " arg1="c:/firmware/p3050fg/main.vhd" arg2="373"  />
-    <postMsg mid="35921205" type="Warning" dynamic="3" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(111): " arg1="main" arg2="behavior" arg3="c:/firmware/p3050fg/main.vhd" arg4="111"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(314): " arg1="rstcd1" arg2="c:/firmware/p3050fg/main.vhd" arg3="314"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(314): " arg1="reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="314"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(324): " arg1="c:/firmware/p3050fg/main.vhd" arg2="324"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(331): " arg1="rstcd2" arg2="c:/firmware/p3050fg/main.vhd" arg3="331"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(331): " arg1="reset" arg2="c:/firmware/p3050fg/main.vhd" arg3="331"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(341): " arg1="c:/firmware/p3050fg/main.vhd" arg2="341"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(382): " arg1="cwr" arg2="c:/firmware/p3050fg/main.vhd" arg3="382"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(400): " arg1="c:/firmware/p3050fg/main.vhd" arg2="400"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(409): " arg1="cwr" arg2="c:/firmware/p3050fg/main.vhd" arg3="409"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(427): " arg1="c:/firmware/p3050fg/main.vhd" arg2="427"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(495): " arg1="spca" arg2="c:/firmware/p3050fg/main.vhd" arg3="495"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(498): " arg1="rama_out" arg2="c:/firmware/p3050fg/main.vhd" arg3="498"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(501): " arg1="c:/firmware/p3050fg/main.vhd" arg2="501"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(505): " arg1="spcb" arg2="c:/firmware/p3050fg/main.vhd" arg3="505"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(508): " arg1="ramb_out" arg2="c:/firmware/p3050fg/main.vhd" arg3="508"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(511): " arg1="c:/firmware/p3050fg/main.vhd" arg2="511"  />
+    <postMsg mid="35921205" type="Warning" dynamic="3" navigation="2" arg0="c:/firmware/p3050fg/main.vhd(133): " arg1="main" arg2="behavior" arg3="c:/firmware/p3050fg/main.vhd" arg4="133"  />
 Top module name (VHDL): main
 Last elaborated design is main(behavior)
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
@@ -124,32 +128,18 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = main.
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="AA"  />
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="AB"  />
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="AC"  />
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="AE"  />
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="BA"  />
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="BB"  />
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="BC"  />
-    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="BD"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="CK"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="UPLOAD"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="EMPTY"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="ACTIV"  />
-######## Missing driver on net AA. Patching with GND.
-######## Missing driver on net AB. Patching with GND.
-######## Missing driver on net AC. Patching with GND.
-######## Missing driver on net AE. Patching with GND.
-######## Missing driver on net BA. Patching with GND.
-######## Missing driver on net BB. Patching with GND.
-######## Missing driver on net BC. Patching with GND.
-######## Missing driver on net BD. Patching with GND.
 
 
 
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="CK"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="UPLOAD"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="EMPTY"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="ACTIV"  />
-GSR instance connected to net n3979.
+GSR instance connected to net \i923/n1.
 Applying 200.000000 MHz constraint to all clocks
 
     <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
@@ -162,37 +152,41 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="CK" arg2="CK"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="CK"  />
     <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="UPLOAD" arg2="UPLOAD"  />
     <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="UPLOAD"  />
     <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="EMPTY" arg2="EMPTY"  />
     <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="EMPTY"  />
     <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="ACTIV" arg2="ACTIV"  />
     <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="ACTIV"  />
-    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="6"  />
+    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="8"  />
 
 Design Results:
-    748 blocks expanded
+    816 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file P3050FG_impl1.ngd.
 
 ################### Begin Area Report (main)######################
-Number of register bits => 281 of 7209 (3 % )
+Number of register bits => 290 of 7209 (4 % )
 BB => 9
 CCU2D => 113
 DP8KC => 16
-FD1P3AX => 171
+FD1P3AX => 179
 FD1P3AY => 2
+FD1P3DX => 26
 FD1P3IX => 2
-FD1S3AX => 13
-FD1S3AY => 5
-FD1S3DX => 88
+FD1S3AX => 15
+FD1S3AY => 2
+FD1S3DX => 62
+FD1S3JX => 2
 GSR => 1
-IB => 14
-INV => 2
-LUT4 => 245
+IB => 12
+INV => 1
+LUT4 => 314
 OB => 48
-PFUMX => 16
+PFUMX => 9
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -201,36 +195,34 @@ TSALL => 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 4
-  Net : CK1_c_derived_245, loads : 245
-  Net : FCK_N_630, loads : 16
-  Net : DIVCKB, loads : 2
-  Net : DIVCKA, loads : 2
+Number of Clocks: 2
+  Net : CK1_c, loads : 307
+  Net : CK1_N_642, loads : 16
 Clock Enable Nets
-Number of Clock Enables: 22
+Number of Clock Enables: 25
 Top 10 highest fanout Clock Enables:
-  Net : DIVCKA_N_175_enable_13, loads : 26
-  Net : CK1_c_derived_245_enable_41, loads : 10
-  Net : CK1_c_derived_245_enable_123, loads : 8
-  Net : CK1_c_derived_245_enable_11, loads : 8
-  Net : CK1_c_derived_245_enable_101, loads : 8
-  Net : CK1_c_derived_245_enable_56, loads : 8
-  Net : CK1_c_derived_245_enable_19, loads : 8
-  Net : CK1_c_derived_245_enable_64, loads : 8
-  Net : CK1_c_derived_245_enable_108, loads : 8
-  Net : CK1_c_derived_245_enable_86, loads : 8
+  Net : RAM2_read.count_12__N_577, loads : 27
+  Net : RAM1_read.count_12__N_541, loads : 27
+  Net : CK1_c_enable_181, loads : 26
+  Net : CK1_c_enable_51, loads : 10
+  Net : CK1_c_enable_33, loads : 8
+  Net : CK1_c_enable_78, loads : 8
+  Net : CK1_c_enable_86, loads : 8
+  Net : CK1_c_enable_123, loads : 8
+  Net : CK1_c_enable_93, loads : 8
+  Net : CK1_c_enable_162, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n2701, loads : 36
+  Net : n2965, loads : 36
   Net : CWR, loads : 34
-  Net : n7492, loads : 33
-  Net : DIVCKA_N_178, loads : 32
-  Net : DIVCKB_N_197, loads : 32
-  Net : n7489, loads : 31
-  Net : n7488, loads : 31
-  Net : data_addr_2, loads : 30
-  Net : data_addr_1, loads : 30
-  Net : data_addr_0, loads : 29
+  Net : data_addr_3, loads : 33
+  Net : data_addr_1, loads : 33
+  Net : n7658, loads : 33
+  Net : Clock_Divider_1.count_30__N_450, loads : 32
+  Net : Clock_Divider_2.count_30__N_514, loads : 32
+  Net : n7655, loads : 31
+  Net : n7653, loads : 31
+  Net : cont_addr_c_0, loads : 30
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -240,24 +232,18 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk3 [get_nets DIVCKA]                  |  200.000 MHz|   97.551 MHz|    17 *
+clk1 [get_nets CK1_N_642]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets DIVCKB]                  |  200.000 MHz|   97.551 MHz|    17 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets FCK_N_630]               |            -|            -|     0  
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets CK1_c_derived_245]       |  200.000 MHz|  103.061 MHz|     6 *
+clk0 [get_nets CK1_c]                   |  200.000 MHz|   99.020 MHz|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-3 constraints not met.
+1 constraints not met.
 
 
-Peak Memory Usage: 90.848  MB
+Peak Memory Usage: 89.520  MB
 
 --------------------------------------------------------------
 Elapsed CPU time for LSE flow : 1.547  secs
@@ -285,13 +271,15 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 Part used: LCMXO2-7000HCTQFP144, Performance used: 5.
 
 Loading device for application baspr from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Firmware/P3050FG/P3050FG.lpf(47): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: " arg1="UPLOAD" arg2="C:/Firmware/P3050FG/P3050FG.lpf" arg3="47"  />
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Firmware/P3050FG/P3050FG.lpf(48): Semantic error in &quot;IOBUF PORT &quot;ACTIV&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: " arg1="ACTIV" arg2="C:/Firmware/P3050FG/P3050FG.lpf" arg3="48"  />
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Firmware/P3050FG/P3050FG.lpf(49): Semantic error in &quot;IOBUF PORT &quot;EMPTY&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: " arg1="EMPTY" arg2="C:/Firmware/P3050FG/P3050FG.lpf" arg3="49"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Firmware/P3050FG/P3050FG.lpf(29): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: " arg1="UPLOAD" arg2="C:/Firmware/P3050FG/P3050FG.lpf" arg3="29"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Firmware/P3050FG/P3050FG.lpf(30): Semantic error in &quot;IOBUF PORT &quot;ACTIV&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: " arg1="ACTIV" arg2="C:/Firmware/P3050FG/P3050FG.lpf" arg3="30"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Firmware/P3050FG/P3050FG.lpf(31): Semantic error in &quot;IOBUF PORT &quot;EMPTY&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: " arg1="EMPTY" arg2="C:/Firmware/P3050FG/P3050FG.lpf" arg3="31"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/Firmware/P3050FG/P3050FG.lpf(33): Semantic error in &quot;IOBUF PORT &quot;CK&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: " arg1="CK" arg2="C:/Firmware/P3050FG/P3050FG.lpf" arg3="33"  />
 Package Status:                     Final          Version 1.39.
 
 Running general design DRC...
 
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="CK"  />
     <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="UPLOAD"  />
     <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="EMPTY"  />
     <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="ACTIV"  />
@@ -299,6 +287,7 @@ Removing unused logic...
 
 Optimizing...
 
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="CK"  />
     <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="UPLOAD"  />
     <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="EMPTY"  />
     <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="ACTIV"  />
@@ -306,19 +295,19 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:    281 out of  7209 (4%)
-      PFU registers:          281 out of  6864 (4%)
+   Number of registers:    290 out of  7209 (4%)
+      PFU registers:          290 out of  6864 (4%)
       PIO registers:            0 out of   345 (0%)
-   Number of SLICEs:       239 out of  3432 (7%)
-      SLICEs as Logic/ROM:    239 out of  3432 (7%)
+   Number of SLICEs:       275 out of  3432 (8%)
+      SLICEs as Logic/ROM:    275 out of  3432 (8%)
       SLICEs as RAM:            0 out of  2574 (0%)
       SLICEs as Carry:        113 out of  3432 (3%)
-   Number of LUT4s:        470 out of  6864 (7%)
-      Number used as logic LUTs:        244
+   Number of LUT4s:        540 out of  6864 (8%)
+      Number used as logic LUTs:        314
       Number used as distributed RAM:     0
       Number used as ripple logic:      226
       Number used as shift registers:     0
-   Number of PIO sites used: 71 + 4(JTAG) out of 115 (65%)
+   Number of PIO sites used: 69 + 4(JTAG) out of 115 (63%)
    Number of block RAMs:  16 out of 26 (62%)
    Number of GSRs:        1 out of 1 (100%)
    EFB used :        No
@@ -341,56 +330,58 @@ Design Summary:
    Notes:-
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
-   Number of clocks:  4
-     Net CK1_c_derived_245: 142 loads, 142 rising, 0 falling (Driver: CK1_I_0_2_lut_rep_119 )
-     Net FCK_N_630: 16 loads, 16 rising, 0 falling (Driver: FCK_I_0_1_lut_2_lut )
-     Net DIVCKA: 14 loads, 0 rising, 14 falling (Driver: DIVCKA_552 )
-     Net DIVCKB: 14 loads, 0 rising, 14 falling (Driver: DIVCKB_554 )
-   Number of Clock Enables:  22
+   Number of clocks:  1
+     Net CK1_c: 189 loads, 173 rising, 16 falling (Driver: PIO CK1 )
+   Number of Clock Enables:  25
+     Net RAM2_read.count_12__N_577: 7 loads, 7 LSLICEs
      Net CWR: 14 loads, 14 LSLICEs
-     Net CK1_c_derived_245_enable_11: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_56: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_101: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_71: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_34: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_19: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_27: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_108: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_41: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_123: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_48: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_64: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_78: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_86: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_94: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_131: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_149: 1 loads, 1 LSLICEs
-     Net CK1_c_derived_245_enable_139: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_116: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_147: 4 loads, 4 LSLICEs
-     Net CK1_c_derived_245_enable_148: 1 loads, 1 LSLICEs
-   Number of LSRs:  6
+     Net CK1_c_enable_8: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_25: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_51: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_169: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_154: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_123: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_93: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_63: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_40: 4 loads, 4 LSLICEs
+     Net RAM1_read.count_12__N_541: 7 loads, 7 LSLICEs
+     Net CK1_c_enable_33: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_70: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_78: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_86: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_100: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_108: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_116: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_131: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_139: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_147: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_162: 4 loads, 4 LSLICEs
+     Net CK1_c_enable_182: 1 loads, 1 LSLICEs
+     Net CK1_c_enable_183: 1 loads, 1 LSLICEs
+   Number of LSRs:  8
+     Net RAM2_read.count_12__N_577: 1 loads, 1 LSLICEs
      Net CWR: 14 loads, 14 LSLICEs
-     Net n7492: 32 loads, 0 LSLICEs
-     Net n4003: 1 loads, 1 LSLICEs
-     Net n4005: 1 loads, 1 LSLICEs
-     Net n7489: 16 loads, 16 LSLICEs
-     Net n7488: 16 loads, 16 LSLICEs
+     Net n4269: 1 loads, 1 LSLICEs
+     Net RAM1_read.count_12__N_541: 1 loads, 1 LSLICEs
+     Net n6545: 1 loads, 1 LSLICEs
+     Net n7658: 32 loads, 0 LSLICEs
+     Net n7655: 16 loads, 16 LSLICEs
+     Net n7653: 16 loads, 16 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n2701: 36 loads
+     Net n2965: 36 loads
      Net CWR: 35 loads
-     Net n7492: 33 loads
-     Net DIVCKA_N_178: 32 loads
-     Net DIVCKB_N_197: 32 loads
-     Net data_addr_1: 30 loads
-     Net data_addr_2: 30 loads
-     Net data_addr_0: 29 loads
-     Net cont_addr_c_0: 27 loads
-     Net data_addr_3: 26 loads
+     Net data_addr_1: 33 loads
+     Net data_addr_3: 33 loads
+     Net n7658: 33 loads
+     Net Clock_Divider_1.count_30__N_450: 32 loads
+     Net Clock_Divider_2.count_30__N_514: 32 loads
+     Net cont_addr_c_0: 30 loads
+     Net n7654: 26 loads
+     Net NOTHWRESET_c: 26 loads
  
 
-   Number of warnings:  9
+   Number of warnings:  12
    Number of errors:    0
 
 
@@ -400,7 +391,7 @@ INFO: Design contains EBR with GSR enabled. The GSR is only applicable for outpu
 
 Total CPU Time: 1 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 65 MB
+Peak Memory Usage: 66 MB
 
 Dumping design to file P3050FG_impl1_map.ncd.
 
@@ -415,7 +406,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "P3050FG_impl1_map.ncd"
-Fri Mar 15 12:01:01 2024
+Wed May 01 11:27:30 2024
 
 PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Firmware/P3050FG/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 P3050FG_impl1_map.ncd P3050FG_impl1.dir/5_1.ncd P3050FG_impl1.prf
@@ -439,49 +430,46 @@ License checked out.
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)   71+4(JTAG)/336     22% used
-                  71+4(JTAG)/115     65% bonded
+   PIO (prelim)   69+4(JTAG)/336     22% used
+                  69+4(JTAG)/115     63% bonded
 
-   SLICE            239/3432          6% used
+   SLICE            275/3432          8% used
 
    GSR                1/1           100% used
    EBR               16/26           61% used
 
 
 INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
-Number of Signals: 776
-Number of Connections: 2363
+Number of Signals: 860
+Number of Connections: 2536
 
 Pin Constraint Summary:
-   63 out of 71 pins locked (88% locked).
+   69 out of 69 pins locked (100% locked).
 
-The following 4 signals are selected to use the primary clock routing resources:
-    CK1_c_derived_245 (driver: SLICE_185, clk load #: 142)
-    FCK_N_630 (driver: SLICE_253, clk load #: 16)
-    DIVCKA (driver: SLICE_148, clk load #: 14)
-    DIVCKB (driver: SLICE_149, clk load #: 14)
+The following 1 signal is selected to use the primary clock routing resources:
+    CK1_c (driver: CK1, clk load #: 189)
 
+    <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="CK1_c" arg1="Primary" arg2="CK1" arg3="142" arg4="Primary"  />
 
 The following 4 signals are selected to use the secondary clock routing resources:
-    n7492 (driver: SLICE_185, clk load #: 0, sr load #: 32, ce load #: 0)
+    n7658 (driver: SLICE_185, clk load #: 0, sr load #: 32, ce load #: 0)
     CWR (driver: SLICE_115, clk load #: 0, sr load #: 14, ce load #: 14)
-    n7489 (driver: SLICE_293, clk load #: 0, sr load #: 16, ce load #: 0)
-    n7488 (driver: SLICE_290, clk load #: 0, sr load #: 16, ce load #: 0)
+    n7655 (driver: SLICE_312, clk load #: 0, sr load #: 16, ce load #: 0)
+    n7653 (driver: SLICE_311, clk load #: 0, sr load #: 16, ce load #: 0)
 
-Signal CK1_c_derived_245_enable_41 is selected as Global Set/Reset.
-.
+Signal CK1_c_enable_51 is selected as Global Set/Reset.
 Starting Placer Phase 0.
-..............
+............
 Finished Placer Phase 0.  REAL time: 2 secs 
 
 Starting Placer Phase 1.
-..................
-Placer score = 899400.
+...................
+Placer score = 265232.
 Finished Placer Phase 1.  REAL time: 5 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  888046
+Placer score =  263052
 Finished Placer Phase 2.  REAL time: 5 secs 
 
 
@@ -489,21 +477,19 @@ Finished Placer Phase 2.  REAL time: 5 secs
 
 Global Clock Resources:
   CLK_PIN    : 0 out of 8 (0%)
+  General PIO: 1 out of 336 (0%)
   PLL        : 0 out of 2 (0%)
   DCM        : 0 out of 2 (0%)
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "CK1_c_derived_245" from F1 on comp "SLICE_185" on site "R2C16D", clk load = 142
-  PRIMARY "FCK_N_630" from F0 on comp "SLICE_253" on site "R16C3A", clk load = 16
-  PRIMARY "DIVCKA" from Q0 on comp "SLICE_148" on site "R2C19C", clk load = 14
-  PRIMARY "DIVCKB" from Q0 on comp "SLICE_149" on site "R21C40C", clk load = 14
-  SECONDARY "n7492" from F0 on comp "SLICE_185" on site "R2C16D", clk load = 0, ce load = 0, sr load = 32
+  PRIMARY "CK1_c" from comp "CK1" on PIO site "142 (PT9B)", clk load = 189
+  SECONDARY "n7658" from F0 on comp "SLICE_185" on site "R14C18C", clk load = 0, ce load = 0, sr load = 32
   SECONDARY "CWR" from Q0 on comp "SLICE_115" on site "R14C20D", clk load = 0, ce load = 14, sr load = 14
-  SECONDARY "n7489" from F0 on comp "SLICE_293" on site "R14C20A", clk load = 0, ce load = 0, sr load = 16
-  SECONDARY "n7488" from F1 on comp "SLICE_290" on site "R21C18D", clk load = 0, ce load = 0, sr load = 16
+  SECONDARY "n7655" from F1 on comp "SLICE_312" on site "R14C20C", clk load = 0, ce load = 0, sr load = 16
+  SECONDARY "n7653" from F0 on comp "SLICE_311" on site "R21C20C", clk load = 0, ce load = 0, sr load = 16
 
-  PRIMARY  : 4 out of 8 (50%)
+  PRIMARY  : 1 out of 8 (12%)
   SECONDARY: 4 out of 8 (50%)
 
 Edge Clocks:
@@ -513,33 +499,34 @@ Edge Clocks:
 
 
 I/O Usage Summary (final):
-   71 + 4(JTAG) out of 336 (22.3%) PIO sites used.
-   71 + 4(JTAG) out of 115 (65.2%) bonded PIO sites used.
-   Number of PIO comps: 71; differential: 0.
+   69 + 4(JTAG) out of 336 (21.7%) PIO sites used.
+   69 + 4(JTAG) out of 115 (63.5%) bonded PIO sites used.
+   Number of PIO comps: 69; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
 +----------+----------------+------------+-----------+
 | I/O Bank | Usage          | Bank Vccio | Bank Vref |
 +----------+----------------+------------+-----------+
-| 0        | 9 / 28 ( 32%)  | 3.3V       | -         |
-| 1        | 21 / 29 ( 72%) | 3.3V       | -         |
-| 2        | 23 / 29 ( 79%) | 3.3V       | -         |
+| 0        | 21 / 28 ( 75%) | 3.3V       | -         |
+| 1        | 16 / 29 ( 55%) | 3.3V       | -         |
+| 2        | 16 / 29 ( 55%) | 3.3V       | -         |
 | 3        | 4 / 9 ( 44%)   | 3.3V       | -         |
-| 4        | 7 / 10 ( 70%)  | 3.3V       | -         |
-| 5        | 7 / 10 ( 70%)  | 3.3V       | -         |
+| 4        | 4 / 10 ( 40%)  | 3.3V       | -         |
+| 5        | 8 / 10 ( 80%)  | 3.3V       | -         |
 +----------+----------------+------------+-----------+
 
 Total placer CPU time: 4 secs 
 
 Dumping design to file P3050FG_impl1.dir/5_1.ncd.
 
-0 connections routed; 2363 unrouted.
+0 connections routed; 2536 unrouted.
 Starting router resource preassignment
+    <postMsg mid="62061008" type="Warning" dynamic="1" navigation="0" arg0="CK1_c"  />
 
 Completed router resource preassignment. Real time: 9 secs 
 
-Start NBR router at 12:01:10 03/15/24
+Start NBR router at 11:27:39 05/01/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -554,106 +541,77 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 12:01:10 03/15/24
+Start NBR special constraint process at 11:27:39 05/01/24
 
-Start NBR section for initial routing at 12:01:11 03/15/24
+Start NBR section for initial routing at 11:27:39 05/01/24
 Level 1, iteration 1
-16(0.00%) conflicts; 1786(75.58%) untouched conns; 827403 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.428ns/-827.404ns; real time: 10 secs 
+0(0.00%) conflict; 1976(77.92%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.734ns/0.000ns; real time: 9 secs 
 Level 2, iteration 1
-9(0.00%) conflicts; 1523(64.45%) untouched conns; 945070 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.472ns/-945.071ns; real time: 10 secs 
+3(0.00%) conflicts; 1971(77.72%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.523ns/0.000ns; real time: 9 secs 
 Level 3, iteration 1
-11(0.00%) conflicts; 1210(51.21%) untouched conns; 946045 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.472ns/-946.046ns; real time: 11 secs 
+4(0.00%) conflicts; 1820(71.77%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.556ns/0.000ns; real time: 9 secs 
 Level 4, iteration 1
-63(0.02%) conflicts; 0(0.00%) untouched conn; 952623 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.486ns/-952.623ns; real time: 11 secs 
+68(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.509ns/0.000ns; real time: 10 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 12:01:12 03/15/24
+Start NBR section for normal routing at 11:27:40 05/01/24
+Level 1, iteration 1
+4(0.00%) conflicts; 96(3.79%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.509ns/0.000ns; real time: 10 secs 
 Level 4, iteration 1
-37(0.01%) conflicts; 0(0.00%) untouched conn; 84862 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -2.876ns/-84.862ns; real time: 11 secs 
+34(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.322ns/0.000ns; real time: 10 secs 
 Level 4, iteration 2
-25(0.01%) conflicts; 0(0.00%) untouched conn; 60490 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -2.038ns/-60.491ns; real time: 11 secs 
+14(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.219ns/0.000ns; real time: 10 secs 
 Level 4, iteration 3
-15(0.00%) conflicts; 0(0.00%) untouched conn; 40957 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.388ns/-40.957ns; real time: 12 secs 
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.509ns/0.000ns; real time: 10 secs 
 Level 4, iteration 4
-9(0.00%) conflicts; 0(0.00%) untouched conn; 40957 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.388ns/-40.957ns; real time: 12 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.509ns/0.000ns; real time: 10 secs 
 Level 4, iteration 5
-2(0.00%) conflicts; 0(0.00%) untouched conn; 33810 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.250ns/-33.811ns; real time: 12 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.219ns/0.000ns; real time: 10 secs 
 Level 4, iteration 6
-14(0.00%) conflicts; 0(0.00%) untouched conn; 33810 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.250ns/-33.811ns; real time: 12 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.219ns/0.000ns; real time: 10 secs 
 Level 4, iteration 7
-3(0.00%) conflicts; 0(0.00%) untouched conn; 16253 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.084ns/-16.253ns; real time: 12 secs 
-Level 4, iteration 8
-7(0.00%) conflicts; 0(0.00%) untouched conn; 16253 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.084ns/-16.253ns; real time: 12 secs 
-Level 4, iteration 9
-0(0.00%) conflict; 0(0.00%) untouched conn; 9800 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.906ns/-9.800ns; real time: 12 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.981ns/0.000ns; real time: 10 secs 
 
-Start NBR section for performance tuning (iteration 1) at 12:01:13 03/15/24
+Start NBR section for setup/hold timing optimization with effort level 3 at 11:27:40 05/01/24
+
+Start NBR section for re-routing at 11:27:41 05/01/24
 Level 4, iteration 1
-7(0.00%) conflicts; 0(0.00%) untouched conn; 5316 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.566ns/-5.316ns; real time: 12 secs 
-Level 4, iteration 2
-2(0.00%) conflicts; 0(0.00%) untouched conn; 3568 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.576ns/-3.568ns; real time: 13 secs 
-Level 4, iteration 3
-0(0.00%) conflict; 0(0.00%) untouched conn; 2626 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.576ns/-2.626ns; real time: 13 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.981ns/0.000ns; real time: 11 secs 
 
-Start NBR section for performance tuning (iteration 2) at 12:01:14 03/15/24
-Level 4, iteration 1
-12(0.00%) conflicts; 0(0.00%) untouched conn; 1182 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.342ns/-1.182ns; real time: 13 secs 
-Level 4, iteration 2
-1(0.00%) conflict; 0(0.00%) untouched conn; 1012 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.342ns/-1.012ns; real time: 13 secs 
-Level 4, iteration 3
-7(0.00%) conflicts; 0(0.00%) untouched conn; 142 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.110ns/-0.142ns; real time: 13 secs 
-Level 4, iteration 4
-2(0.00%) conflicts; 0(0.00%) untouched conn; 142 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.110ns/-0.142ns; real time: 14 secs 
-Level 4, iteration 5
-1(0.00%) conflict; 0(0.00%) untouched conn; 11711 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.576ns/-11.711ns; real time: 14 secs 
-
-Start NBR section for re-routing at 12:01:15 03/15/24
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 1024 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -0.342ns/-1.024ns; real time: 14 secs 
-
-Start NBR section for post-routing at 12:01:15 03/15/24
+Start NBR section for post-routing at 11:27:41 05/01/24
 
 End NBR router with 0 unrouted connection
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 5 (0.21%)
-  Estimated worst slack<setup> : -0.342ns
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 2.981ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 14 secs 
-Total REAL time: 15 secs 
+Total CPU time 10 secs 
+Total REAL time: 11 secs 
 Completely routed.
-End of route.  2363 routed (100.00%); 0 unrouted.
+End of route.  2536 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -664,14 +622,14 @@ Dumping design to file P3050FG_impl1.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 0.106
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 2.981
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.306
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.200
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 14 secs 
-Total REAL time to completion: 15 secs 
+Total CPU  time to completion: 10 secs 
+Total REAL time to completion: 11 secs 
 
 par done!
 
@@ -708,7 +666,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
-Fri Mar 15 12:01:17 2024
+Wed May 01 11:27:42 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -748,11 +706,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 20210 paths, 6 nets, and 1906 connections (80.66% coverage)
+Constraints cover 9403 paths, 1 nets, and 2022 connections (79.73% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
-Fri Mar 15 12:01:17 2024
+Wed May 01 11:27:42 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -792,7 +750,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 20210 paths, 6 nets, and 1906 connections (80.66% coverage)
+Constraints cover 9403 paths, 1 nets, and 2022 connections (79.73% coverage)
 
 
 
@@ -808,7 +766,7 @@ Cumulative negative slack: 0 (0+0)
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 71 MB
+Peak Memory Usage: 72 MB
 
 
 tmcheck -par "P3050FG_impl1.par" 
@@ -899,4 +857,4 @@ Initialized UFM Pages:                     0 Page.
  
 Total CPU Time: 3 secs 
 Total REAL Time: 3 secs 
-Peak Memory Usage: 292 MB
+Peak Memory Usage: 293 MB
