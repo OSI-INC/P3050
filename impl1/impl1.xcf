@@ -47,6 +47,6 @@
 	<CableOptions>
 		<CableName>USB</CableName>
 		<PortAdd>EzUSB-0</PortAdd>
-		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#9&amp;amp;5aea44e&amp;amp;0&amp;amp;3#</USBID>
+		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#a&amp;amp;11d87903&amp;amp;0&amp;amp;3#</USBID>
 	</CableOptions>
 </ispXCF>
