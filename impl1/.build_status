@@ -6,30 +6,30 @@
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
             <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Jedecgen" build_result="0" update_result="2" update_time="1730392857"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1730406792"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1730392857">
-            <Task name="Map" build_result="0" update_result="2" update_time="1730392857"/>
+        <Milestone name="Map" build_result="2" build_time="1730406767">
+            <Task name="Map" build_result="2" update_result="0" update_time="1730406767"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="1730392857">
-            <Task name="PAR" build_result="0" update_result="2" update_time="1730392857"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1730392857"/>
+        <Milestone name="PAR" build_result="2" build_time="1730406782">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1730406782"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1730406784"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1730392854">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1730392854"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1730392854"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1730406764">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1730406764"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1730406792"/>
         </Milestone>
-        <Report name=".vdbs/P3050_impl1_map.vdb" last_build_time="1730392122" last_build_size="140366"/>
-        <Report name="P3050_impl1.bgn" last_build_time="1730392565" last_build_size="4517"/>
-        <Report name="P3050_impl1.jed" last_build_time="1730392565" last_build_size="1466525"/>
-        <Report name="P3050_impl1.lsedata" last_build_time="1730392118" last_build_size="921946"/>
-        <Report name="P3050_impl1.ncd" last_build_time="1730392139" last_build_size="724467"/>
-        <Report name="P3050_impl1.ngd" last_build_time="1730392120" last_build_size="494998"/>
-        <Report name="P3050_impl1.twr" last_build_time="1730392140" last_build_size="48247"/>
-        <Report name="P3050_impl1_map.ncd" last_build_time="1730392121" last_build_size="513264"/>
+        <Report name=".vdbs/P3050_impl1_map.vdb" last_build_time="1730406767" last_build_size="146055"/>
+        <Report name="P3050_impl1.bgn" last_build_time="1730406792" last_build_size="4558"/>
+        <Report name="P3050_impl1.jed" last_build_time="1730406792" last_build_size="1466452"/>
+        <Report name="P3050_impl1.lsedata" last_build_time="1730406762" last_build_size="1057674"/>
+        <Report name="P3050_impl1.ncd" last_build_time="1730406782" last_build_size="770752"/>
+        <Report name="P3050_impl1.ngd" last_build_time="1730406764" last_build_size="526914"/>
+        <Report name="P3050_impl1.twr" last_build_time="1730406784" last_build_size="45144"/>
+        <Report name="P3050_impl1_map.ncd" last_build_time="1730406766" last_build_size="544945"/>
     </Strategy>
 </BuildStatus>

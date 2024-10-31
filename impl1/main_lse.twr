@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Thu Oct 31 12:28:40 2024
+Thu Oct 31 16:32:44 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -18,125 +18,119 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk1 [get_nets CK1_N_642]
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets FCK_N_71]
             0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets CK1_c]
-            1720 items scored, 1720 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets FCK_c]
+            1012 items scored, 1012 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 5.910ns
+Error:  The following path violates requirements by 5.564ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3AX    CK             data_addr_i0_i9  (from CK1_c +)
-   Destination:    FD1P3AX    SP             DIVIA_i0_i23  (to CK1_c +)
+   Source:         FD1P3AX    CK             CWR_304  (from FCK_c +)
+   Destination:    FD1S3AY    D              rca_sw__i0  (to FCK_c +)
 
-   Delay:                  10.651ns  (29.0% logic, 71.0% route), 7 logic levels.
+   Delay:                  10.418ns  (25.4% logic, 74.6% route), 6 logic levels.
 
  Constraint Details:
 
-     10.651ns data_path data_addr_i0_i9 to DIVIA_i0_i23 violates
+     10.418ns data_path CWR_304 to rca_sw__i0 violates
       5.000ns delay constraint less
-      0.259ns LCE_S requirement (totaling 4.741ns) by 5.910ns
+      0.146ns L_S requirement (totaling 4.854ns) by 5.564ns
 
- Path Details: data_addr_i0_i9 to DIVIA_i0_i23
+ Path Details: CWR_304 to rca_sw__i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              data_addr_i0_i9 (from CK1_c)
-Route        19   e 1.572                                  data_addr[9]
-LUT4        ---     0.448              B to Z              i4067_2_lut
-Route         2   e 0.954                                  n7546
-LUT4        ---     0.448              D to Z              i4091_4_lut
-Route         1   e 0.788                                  n7570
-LUT4        ---     0.448              C to Z              i2_4_lut
-Route         3   e 1.051                                  n5657
-LUT4        ---     0.448              B to Z              i2_3_lut
-Route         1   e 0.788                                  n7449
-LUT4        ---     0.448              A to Z              i2_4_lut_adj_64
-Route         4   e 1.120                                  n13
-LUT4        ---     0.448              C to Z              i1_2_lut_3_lut_4_lut_adj_39
-Route         8   e 1.287                                  CK1_c_enable_162
+L_CO        ---     0.403             CK to Q              CWR_304 (from FCK_c)
+Route        37   e 1.758                                  CWR
+LUT4        ---     0.448              B to Z              CDS_I_0_356_2_lut_rep_178
+Route        12   e 1.384                                  n8218
+LUT4        ---     0.448              A to Z              i1_4_lut_4_lut_rep_158
+Route         5   e 1.174                                  n8127
+LUT4        ---     0.448              C to Z              i3040_2_lut_rep_155_3_lut
+Route        12   e 1.384                                  n8124
+LUT4        ---     0.448              A to Z              i2_4_lut_adj_71
+Route         8   e 1.287                                  FCK_c_enable_105
+LUT4        ---     0.448              D to Z              i3639_4_lut
+Route         1   e 0.788                                  n24
                   --------
-                   10.651  (29.0% logic, 71.0% route), 7 logic levels.
+                   10.418  (25.4% logic, 74.6% route), 6 logic levels.
 
 
-Error:  The following path violates requirements by 5.910ns
+Error:  The following path violates requirements by 5.564ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3AX    CK             data_addr_i0_i9  (from CK1_c +)
-   Destination:    FD1P3AX    SP             DIVIA_i0_i22  (to CK1_c +)
+   Source:         FD1P3AX    CK             CWR_304  (from FCK_c +)
+   Destination:    FD1S3AY    D              rcb_sw__i0  (to FCK_c +)
 
-   Delay:                  10.651ns  (29.0% logic, 71.0% route), 7 logic levels.
+   Delay:                  10.418ns  (25.4% logic, 74.6% route), 6 logic levels.
 
  Constraint Details:
 
-     10.651ns data_path data_addr_i0_i9 to DIVIA_i0_i22 violates
+     10.418ns data_path CWR_304 to rcb_sw__i0 violates
       5.000ns delay constraint less
-      0.259ns LCE_S requirement (totaling 4.741ns) by 5.910ns
+      0.146ns L_S requirement (totaling 4.854ns) by 5.564ns
 
- Path Details: data_addr_i0_i9 to DIVIA_i0_i22
+ Path Details: CWR_304 to rcb_sw__i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              data_addr_i0_i9 (from CK1_c)
-Route        19   e 1.572                                  data_addr[9]
-LUT4        ---     0.448              B to Z              i4067_2_lut
-Route         2   e 0.954                                  n7546
-LUT4        ---     0.448              D to Z              i4091_4_lut
-Route         1   e 0.788                                  n7570
-LUT4        ---     0.448              C to Z              i2_4_lut
-Route         3   e 1.051                                  n5657
-LUT4        ---     0.448              B to Z              i2_3_lut
-Route         1   e 0.788                                  n7449
+L_CO        ---     0.403             CK to Q              CWR_304 (from FCK_c)
+Route        37   e 1.758                                  CWR
+LUT4        ---     0.448              B to Z              CDS_I_0_356_2_lut_rep_178
+Route        12   e 1.384                                  n8218
+LUT4        ---     0.448              A to Z              i1_4_lut_4_lut_rep_158
+Route         5   e 1.174                                  n8127
+LUT4        ---     0.448              C to Z              i3040_2_lut_rep_155_3_lut
+Route        12   e 1.384                                  n8124
 LUT4        ---     0.448              A to Z              i2_4_lut_adj_64
-Route         4   e 1.120                                  n13
-LUT4        ---     0.448              C to Z              i1_2_lut_3_lut_4_lut_adj_39
-Route         8   e 1.287                                  CK1_c_enable_162
+Route         8   e 1.287                                  FCK_c_enable_98
+LUT4        ---     0.448              D to Z              i3640_4_lut
+Route         1   e 0.788                                  n24_adj_612
                   --------
-                   10.651  (29.0% logic, 71.0% route), 7 logic levels.
+                   10.418  (25.4% logic, 74.6% route), 6 logic levels.
 
 
-Error:  The following path violates requirements by 5.910ns
+Error:  The following path violates requirements by 5.217ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3AX    CK             data_addr_i0_i9  (from CK1_c +)
-   Destination:    FD1P3AX    SP             DIVIA_i0_i21  (to CK1_c +)
+   Source:         FD1P3AX    CK             CDS_305  (from FCK_c +)
+   Destination:    FD1S3AY    D              rca_sw__i0  (to FCK_c +)
 
-   Delay:                  10.651ns  (29.0% logic, 71.0% route), 7 logic levels.
+   Delay:                  10.071ns  (26.2% logic, 73.8% route), 6 logic levels.
 
  Constraint Details:
 
-     10.651ns data_path data_addr_i0_i9 to DIVIA_i0_i21 violates
+     10.071ns data_path CDS_305 to rca_sw__i0 violates
       5.000ns delay constraint less
-      0.259ns LCE_S requirement (totaling 4.741ns) by 5.910ns
+      0.146ns L_S requirement (totaling 4.854ns) by 5.217ns
 
- Path Details: data_addr_i0_i9 to DIVIA_i0_i21
+ Path Details: CDS_305 to rca_sw__i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              data_addr_i0_i9 (from CK1_c)
-Route        19   e 1.572                                  data_addr[9]
-LUT4        ---     0.448              B to Z              i4067_2_lut
-Route         2   e 0.954                                  n7546
-LUT4        ---     0.448              D to Z              i4091_4_lut
-Route         1   e 0.788                                  n7570
-LUT4        ---     0.448              C to Z              i2_4_lut
-Route         3   e 1.051                                  n5657
-LUT4        ---     0.448              B to Z              i2_3_lut
-Route         1   e 0.788                                  n7449
-LUT4        ---     0.448              A to Z              i2_4_lut_adj_64
-Route         4   e 1.120                                  n13
-LUT4        ---     0.448              C to Z              i1_2_lut_3_lut_4_lut_adj_39
-Route         8   e 1.287                                  CK1_c_enable_162
+L_CO        ---     0.403             CK to Q              CDS_305 (from FCK_c)
+Route        11   e 1.411                                  CDS
+LUT4        ---     0.448              A to Z              CDS_I_0_356_2_lut_rep_178
+Route        12   e 1.384                                  n8218
+LUT4        ---     0.448              A to Z              i1_4_lut_4_lut_rep_158
+Route         5   e 1.174                                  n8127
+LUT4        ---     0.448              C to Z              i3040_2_lut_rep_155_3_lut
+Route        12   e 1.384                                  n8124
+LUT4        ---     0.448              A to Z              i2_4_lut_adj_71
+Route         8   e 1.287                                  FCK_c_enable_105
+LUT4        ---     0.448              D to Z              i3639_4_lut
+Route         1   e 0.788                                  n24
                   --------
-                   10.651  (29.0% logic, 71.0% route), 7 logic levels.
+                   10.071  (26.2% logic, 73.8% route), 6 logic levels.
 
-Warning: 10.910 ns is the maximum delay for this constraint.
+Warning: 10.564 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -146,10 +140,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CK1_N_642]               |            -|            -|     0  
+clk1 [get_nets FCK_N_71]                |            -|            -|     0  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets CK1_c]                   |     5.000 ns|    10.910 ns|     7 *
+clk0 [get_nets FCK_c]                   |     5.000 ns|    10.564 ns|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -159,47 +153,103 @@ clk0 [get_nets CK1_c]                   |     5.000 ns|    10.910 ns|     7 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-n5_adj_720                              |       7|     702|     40.81%
+n3310                                   |      14|     234|     23.12%
                                         |        |        |
-n13                                     |       4|     651|     37.85%
+n7435                                   |       1|     234|     23.12%
                                         |        |        |
-n22                                     |       1|     632|     36.74%
+n7436                                   |       1|     234|     23.12%
                                         |        |        |
-n20                                     |       1|     312|     18.14%
+n7437                                   |       1|     234|     23.12%
                                         |        |        |
-n5657                                   |       3|     310|     18.02%
+n8123                                   |      13|     234|     23.12%
                                         |        |        |
-n7449                                   |       1|     310|     18.02%
+n3294                                   |      14|     221|     21.84%
                                         |        |        |
-n7546                                   |       2|     242|     14.07%
+n7442                                   |       1|     221|     21.84%
                                         |        |        |
-n4105                                   |      14|     208|     12.09%
+n7443                                   |       1|     221|     21.84%
                                         |        |        |
-n7263                                   |       1|     208|     12.09%
+n7444                                   |       1|     221|     21.84%
                                         |        |        |
-n7264                                   |       1|     208|     12.09%
+n8122                                   |      13|     221|     21.84%
                                         |        |        |
-n7265                                   |       1|     208|     12.09%
+Clock_Divider_1.count_30__N_418         |      32|     192|     18.97%
                                         |        |        |
-n7795                                   |      13|     208|     12.09%
+Clock_Divider_2.count_30__N_482         |      32|     192|     18.97%
                                         |        |        |
-n7802                                   |       3|     207|     12.03%
+n7447                                   |       1|     192|     18.97%
                                         |        |        |
-n7570                                   |       1|     186|     10.81%
+n7448                                   |       1|     192|     18.97%
                                         |        |        |
-n4121                                   |      14|     182|     10.58%
+n7449                                   |       1|     192|     18.97%
                                         |        |        |
-n7255                                   |       1|     182|     10.58%
+n7450                                   |       1|     192|     18.97%
                                         |        |        |
-n7256                                   |       1|     182|     10.58%
+n7451                                   |       1|     192|     18.97%
                                         |        |        |
-n7257                                   |       1|     182|     10.58%
+n7452                                   |       1|     192|     18.97%
                                         |        |        |
-n7258                                   |       1|     182|     10.58%
+n7453                                   |       1|     192|     18.97%
                                         |        |        |
-n7262                                   |       1|     182|     10.58%
+n7454                                   |       1|     192|     18.97%
                                         |        |        |
-n7796                                   |      13|     182|     10.58%
+n7455                                   |       1|     192|     18.97%
+                                        |        |        |
+n7456                                   |       1|     192|     18.97%
+                                        |        |        |
+n7457                                   |       1|     192|     18.97%
+                                        |        |        |
+n7458                                   |       1|     192|     18.97%
+                                        |        |        |
+n7459                                   |       1|     192|     18.97%
+                                        |        |        |
+n7460                                   |       1|     192|     18.97%
+                                        |        |        |
+n7479                                   |       1|     192|     18.97%
+                                        |        |        |
+n7480                                   |       1|     192|     18.97%
+                                        |        |        |
+n7481                                   |       1|     192|     18.97%
+                                        |        |        |
+n7482                                   |       1|     192|     18.97%
+                                        |        |        |
+n7483                                   |       1|     192|     18.97%
+                                        |        |        |
+n7484                                   |       1|     192|     18.97%
+                                        |        |        |
+n7485                                   |       1|     192|     18.97%
+                                        |        |        |
+n7486                                   |       1|     192|     18.97%
+                                        |        |        |
+n7487                                   |       1|     192|     18.97%
+                                        |        |        |
+n7488                                   |       1|     192|     18.97%
+                                        |        |        |
+n7489                                   |       1|     192|     18.97%
+                                        |        |        |
+n7490                                   |       1|     192|     18.97%
+                                        |        |        |
+n7491                                   |       1|     192|     18.97%
+                                        |        |        |
+n7492                                   |       1|     192|     18.97%
+                                        |        |        |
+n7434                                   |       1|     182|     17.98%
+                                        |        |        |
+n7441                                   |       1|     182|     17.98%
+                                        |        |        |
+n8124                                   |      12|     172|     17.00%
+                                        |        |        |
+n8127                                   |       5|     172|     17.00%
+                                        |        |        |
+n8218                                   |      12|     172|     17.00%
+                                        |        |        |
+n7433                                   |       1|     130|     12.85%
+                                        |        |        |
+n7440                                   |       1|     130|     12.85%
+                                        |        |        |
+n7446                                   |       1|     128|     12.65%
+                                        |        |        |
+n7478                                   |       1|     128|     12.65%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -207,10 +257,10 @@ n7796                                   |      13|     182|     10.58%
 Timing summary:
 ---------------
 
-Timing errors: 1720  Score: 7004213
+Timing errors: 1012  Score: 3626228
 
-Constraints cover  10882 paths, 746 nets, and 2097 connections (74.2% coverage)
+Constraints cover  10179 paths, 786 nets, and 2442 connections (77.7% coverage)
 
 
-Peak memory: 90222592 bytes, TRCE: 5537792 bytes, DLYMAN: 163840 bytes
+Peak memory: 95424512 bytes, TRCE: 4030464 bytes, DLYMAN: 327680 bytes
 CPU_TIME_REPORT: 0 secs 

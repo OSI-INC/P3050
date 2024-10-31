@@ -2,6 +2,22 @@
 <BaliMessageLog>
     <Task name="Map">
         <Message>
+            <ID>1100523</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(75): Semantic error in &quot;FREQUENCY PORT &quot;CK1&quot; 80.000000 MHz ;&quot;: </Dynamic>
+            <Dynamic>&quot;CK1&quot; matches no ports in the design. </Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>75</Navigation>
+        </Message>
+        <Message>
+            <ID>1100523</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(153): Semantic error in &quot;FREQUENCY NET &quot;CK1_c&quot; 80.000000 MHz ;&quot;: </Dynamic>
+            <Dynamic>CK1_c matches no clock nets in the design. </Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>153</Navigation>
+        </Message>
+        <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
             <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(29): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
@@ -32,6 +48,310 @@
             <Dynamic>CK</Dynamic>
             <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
             <Navigation>33</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(55): Semantic error in &quot;IOBUF PORT &quot;NOT_RESET&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>NOT_RESET</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>55</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(56): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[7]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[7]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>56</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(57): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[6]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[6]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>57</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(58): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[5]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[5]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>58</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(59): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[4]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[4]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>59</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(60): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[3]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[3]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(61): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[2]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[2]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>61</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(62): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[1]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[1]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>62</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(63): Semantic error in &quot;IOBUF PORT &quot;DACA_OUT[0]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[0]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>63</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(64): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[7]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[7]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>64</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(65): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[6]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[6]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>65</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(66): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[5]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[5]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>66</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(67): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[4]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[4]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>67</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(68): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[3]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[3]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>68</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(69): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[2]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[2]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>69</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(70): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[1]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[1]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>70</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(71): Semantic error in &quot;IOBUF PORT &quot;DACB_OUT[0]&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[0]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(74): Semantic error in &quot;IOBUF PORT &quot;CK1&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: </Dynamic>
+            <Dynamic>CK1</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>74</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(76): Semantic error in &quot;IOBUF PORT &quot;NOTHWRESET&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>NOTHWRESET</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>76</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(86): Semantic error in &quot;LOCATE COMP &quot;NOTHWRESET&quot; SITE &quot;38&quot; ;&quot;: </Dynamic>
+            <Dynamic>NOTHWRESET</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>86</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(87): Semantic error in &quot;LOCATE COMP &quot;CK1&quot; SITE &quot;142&quot; ;&quot;: </Dynamic>
+            <Dynamic>CK1</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>87</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(90): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[7]&quot; SITE &quot;98&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[7]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>90</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(91): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[6]&quot; SITE &quot;99&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[6]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>91</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(92): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[5]&quot; SITE &quot;100&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[5]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>92</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(93): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[4]&quot; SITE &quot;103&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[4]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>93</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(94): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[3]&quot; SITE &quot;104&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[3]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>94</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(95): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[2]&quot; SITE &quot;105&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[2]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>95</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(96): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[1]&quot; SITE &quot;106&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[1]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>96</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(97): Semantic error in &quot;LOCATE COMP &quot;DACA_OUT[0]&quot; SITE &quot;107&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACA_OUT[0]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>97</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(98): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[7]&quot; SITE &quot;1&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[7]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>98</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(99): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[6]&quot; SITE &quot;2&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[6]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>99</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(100): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[5]&quot; SITE &quot;3&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[5]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>100</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(101): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[4]&quot; SITE &quot;4&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[4]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>101</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(102): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[3]&quot; SITE &quot;9&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[3]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>102</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(103): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[2]&quot; SITE &quot;10&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[2]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>103</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(104): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[1]&quot; SITE &quot;11&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[1]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>104</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(105): Semantic error in &quot;LOCATE COMP &quot;DACB_OUT[0]&quot; SITE &quot;12&quot; ;&quot;: </Dynamic>
+            <Dynamic>DACB_OUT[0]</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>105</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(144): Semantic error in &quot;LOCATE COMP &quot;NOT_RESET&quot; SITE &quot;112&quot; ;&quot;: </Dynamic>
+            <Dynamic>NOT_RESET</Dynamic>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
+            <Navigation>144</Navigation>
         </Message>
         <Message>
             <ID>1166064</ID>
@@ -136,179 +456,246 @@
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(138): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(134): </Dynamic>
             <Dynamic>behavior</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>138</Navigation>
+            <Navigation>134</Navigation>
         </Message>
         <Message>
-            <ID>35921251</ID>
+            <ID>35921443</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(175): </Dynamic>
-            <Dynamic>not_reset</Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(303): </Dynamic>
+            <Dynamic>wrclock</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>175</Navigation>
+            <Navigation>303</Navigation>
         </Message>
         <Message>
-            <ID>35921613</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(177): </Dynamic>
-            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>177</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(189): </Dynamic>
-            <Dynamic>cont_addr</Dynamic>
-            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>189</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(191): </Dynamic>
-            <Dynamic>reset</Dynamic>
-            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>191</Navigation>
-        </Message>
-        <Message>
-            <ID>35921613</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(309): </Dynamic>
-            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>309</Navigation>
-        </Message>
-        <Message>
-            <ID>35921251</ID>
+            <ID>35921443</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/kevan/a3050/p3050/main.vhd(316): </Dynamic>
+            <Dynamic>wrclock</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>316</Navigation>
+        </Message>
+        <Message>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(202): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>202</Navigation>
+        </Message>
+        <Message>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(208): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>208</Navigation>
+        </Message>
+        <Message>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(212): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>212</Navigation>
+        </Message>
+        <Message>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(202): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>202</Navigation>
+        </Message>
+        <Message>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(208): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>208</Navigation>
+        </Message>
+        <Message>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(212): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>212</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(270): </Dynamic>
             <Dynamic>rstcd1</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>316</Navigation>
+            <Navigation>270</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(316): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(270): </Dynamic>
             <Dynamic>reset</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>316</Navigation>
+            <Navigation>270</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(326): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(280): </Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>326</Navigation>
+            <Navigation>280</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(333): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(287): </Dynamic>
             <Dynamic>rstcd2</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>333</Navigation>
+            <Navigation>287</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(333): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(287): </Dynamic>
             <Dynamic>reset</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>333</Navigation>
+            <Navigation>287</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(343): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(297): </Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>343</Navigation>
+            <Navigation>297</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(384): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(331): </Dynamic>
             <Dynamic>cwr</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>384</Navigation>
+            <Navigation>331</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(402): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(349): </Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>402</Navigation>
+            <Navigation>349</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(411): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(356): </Dynamic>
             <Dynamic>cwr</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>411</Navigation>
+            <Navigation>356</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(429): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(374): </Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>429</Navigation>
+            <Navigation>374</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(497): </Dynamic>
-            <Dynamic>spca</Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(412): </Dynamic>
+            <Dynamic>spc1</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>497</Navigation>
+            <Navigation>412</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(500): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(417): </Dynamic>
+            <Dynamic>spc2</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>417</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(423): </Dynamic>
+            <Dynamic>nconfig</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>423</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(424): </Dynamic>
+            <Dynamic>cds_in</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>424</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(425): </Dynamic>
+            <Dynamic>eth</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>425</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(426): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>426</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(431): </Dynamic>
+            <Dynamic>spc1</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>431</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(434): </Dynamic>
             <Dynamic>rama_out</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>500</Navigation>
+            <Navigation>434</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(503): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(436): </Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>503</Navigation>
+            <Navigation>436</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(507): </Dynamic>
-            <Dynamic>spcb</Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(441): </Dynamic>
+            <Dynamic>spc2</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>507</Navigation>
+            <Navigation>441</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(510): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(444): </Dynamic>
             <Dynamic>ramb_out</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>510</Navigation>
+            <Navigation>444</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(513): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(446): </Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>513</Navigation>
+            <Navigation>446</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/kevan/a3050/p3050/main.vhd(135): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(131): </Dynamic>
             <Dynamic>main</Dynamic>
             <Dynamic>behavior</Dynamic>
             <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
-            <Navigation>135</Navigation>
+            <Navigation>131</Navigation>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -410,22 +797,6 @@
             <ID>1163101</ID>
             <Severity>Warning</Severity>
             <Dynamic>8</Dynamic>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>61061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>CK1_c</Dynamic>
-            <Dynamic>Primary</Dynamic>
-            <Dynamic>CK1</Dynamic>
-            <Dynamic>142</Dynamic>
-            <Dynamic>Primary</Dynamic>
-        </Message>
-        <Message>
-            <ID>62061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>CK1_c</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

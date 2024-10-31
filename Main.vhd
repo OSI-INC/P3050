@@ -15,18 +15,18 @@ use ieee.numeric_std.all;
 entity main is 
 	port (
 		CK : in std_logic; -- 32.768kHz Clock
-		CK1 : in std_logic; -- 80MHz Clock
+		FCK : in std_logic; -- 80MHz Clock
 		cont_data : inout std_logic_vector(7 downto 0);
 		cont_addr : in std_logic_vector(5 downto 0);
 		CWR_in : in std_logic;
 		CDS_in : in std_logic;
 		ETH : in std_logic;
-		NOTHWRESET : in std_logic; -- Reset Button
-		NOT_RESET : inout std_logic; -- RCM6700 reset line
+		NHWRST : in std_logic; -- Reset Button
+		NRCMRST : inout std_logic; -- Reset from RCM6700
 		NCONFIG : in std_logic; -- Config Button
 		EGRN, EYLW : out std_logic;
-		DACA_OUT : out std_logic_vector(7 downto 0);
-		DACB_OUT : out std_logic_vector(7 downto 0);
+		dac1 : out std_logic_vector(7 downto 0);
+		dac2 : out std_logic_vector(7 downto 0);
 		A, -- S1 Config
 		B, -- S1 Config
 		C, -- S1 Config
@@ -63,13 +63,19 @@ entity main is
 		ACTIV -- Active
 		: boolean
 		);
-		
 
+		-- General-Purpose Constant
+		constant max_data_byte : std_logic_vector(7 downto 0) := "11111111";
+		constant high_z_byte : std_logic_vector(7 downto 0) := "ZZZZZZZZ";
+		constant zero_data_byte : std_logic_vector(7 downto 0) := "00000000";
+		constant one_data_byte : std_logic_vector(7 downto 0) := "00000001";
+		constant dac_mid_range : std_logic_vector(7 downto 0) := "10000000";
+		
 		-- Relay Interface Registers.
 		signal cont_tst: std_logic_vector(7 downto 0); -- Test Register
-		signal rca_sw : std_logic_vector(7 downto 0) := "00000001"; -- Register for Ch.A RC switches
-		signal rcb_sw : std_logic_vector(7 downto 0) := "00000001"; -- Register for Ch.B RC switches
-		signal attn_sw : std_logic_vector (7 downto 0) := "00000000"; -- Register for Attenuation switches
+		signal rca_sw : std_logic_vector(7 downto 0); -- RC Switch Register A
+		signal rcb_sw : std_logic_vector(7 downto 0); -- RC Switch Register B
+		signal attn_sw : std_logic_vector (7 downto 0); -- Attenuation Switches
 		signal rstcd1 : std_logic; -- Reset signal for writing to ch1
 		signal rstcd2 : std_logic; -- Reset signal for writing to ch2
 		signal data_addr : std_logic_vector(31 downto 0); -- Ram Address Register
@@ -77,38 +83,36 @@ entity main is
 		signal ram2_we : std_logic; -- Write Enable for Ram2
 		signal rama_out : std_logic_vector(7 downto 0); -- Ram Output for channel A
 		signal ramb_out : std_logic_vector(7 downto 0); -- Ram Output for channel B
-		signal spca : std_logic_vector(15 downto 0) := "0000000000000000"; -- Samples per cycle for channel A (Resets read counter)
-		signal spcb : std_logic_vector(15 downto 0) := "0000000000000000";-- Samples per cycle for channel B (Resets read counter)
+		signal spc1 : std_logic_vector(15 downto 0); -- Samples per Cycle A
+		signal spc2 : std_logic_vector(15 downto 0);-- Samples per Cycle B
 		
-		-- Relay Interface Constants with Read and Write as seen by the
-		-- LWDAQ Relay that is master of the interface. We respect the existing
-		-- allocation of controller addresses given in the A2071 manual. 
-		constant cont_id_addr : integer := 0; -- Hardware Identifier (Read)
-		constant cont_hv_addr : integer := 18; -- Hardware Version (Read)
-		constant cont_fv_addr : integer := 19; -- Firmware Version (Read)
-		constant data_addr_1: integer := 24; -- Data Address Space 1 (Write)
-		constant data_addr_2: integer := 25; -- Data Address Space 2 (Write)
-		constant data_addr_3: integer := 26; -- Data Address Space 3 (Write)
-		constant data_addr_4: integer := 27; -- Data Address Space 4 (Write)
-		constant cont_cfsw_addr : integer := 40; -- Relay Configuration
-		constant ram_portal : integer := 63; -- Ram Portal
+		-- Conrol Space Address Map
+		constant cont_id_addr : integer := 0; -- Controller Identifier (Read)
+		constant cont_hv_addr : integer := 18; -- Controller Hardware Version (Read)
+		constant cont_fv_addr : integer := 19; -- Controller Firmware Version (Read)
+		constant data_addr_b3: integer := 24; -- Data Address Byte 3 (Write)
+		constant data_addr_b2: integer := 25; -- Data Address Byte 2 (Write)
+		constant data_addr_b1: integer := 26; -- Data Address Byte 1 (Write)
+		constant data_addr_b0: integer := 27; -- Data Address Byte 0 (Write)
+		constant cont_cfsw_addr : integer := 40; -- Controller Configuration Switch (Read)
+		constant ram_portal : integer := 63; -- Ram Portal (Read/Write)
 		
-		-- Relay Interface Constants for data address space
-		constant rca_sw_addr : std_logic_vector(15 downto 0) := "1000000000000000"; -- Data Address location for register rca_sw
-		constant rcb_sw_addr : std_logic_vector(15 downto 0) := "1000000000000001"; -- Data Address location for register rcb_sw
-		constant DIVIA1_addr : std_logic_vector(15 downto 0) := "1000000000000010"; -- Data Address location for register DIVIA1
-		constant DIVIA2_addr : std_logic_vector(15 downto 0) := "1000000000000011"; -- Data Address location for register DIVIA2
-		constant DIVIA3_addr : std_logic_vector(15 downto 0) := "1000000000000100"; -- Data Address location for register DIVIA3
-		constant DIVIA4_addr : std_logic_vector(15 downto 0) := "1000000000000101"; -- Data Address location for register DIVIA4
-		constant DIVIB1_addr : std_logic_vector(15 downto 0) := "1000000000000110"; -- Data Address location for register DIVIB1
-		constant DIVIB2_addr : std_logic_vector(15 downto 0) := "1000000000000111"; -- Data Address location for register DIVIB2
-		constant DIVIB3_addr : std_logic_vector(15 downto 0) := "1000000000001000"; -- Data Address location for register DIVIB3
-		constant DIVIB4_addr : std_logic_vector(15 downto 0) := "1000000000001001"; -- Data Address location for register DIVIB4
-		constant spca1_addr : std_logic_vector(15 downto 0) := "1000000000001010"; -- Data Address location for register spca1
-		constant spca2_addr : std_logic_vector(15 downto 0) := "1000000000001011"; -- Data Address location for register spca2
-		constant spcb1_addr : std_logic_vector(15 downto 0) := "1000000000001100"; -- Data Address location for register spcb1
-		constant spcb2_addr : std_logic_vector(15 downto 0) := "1000000000001101"; -- Data Address location for register spcb2
-		constant attn_sw_addr : std_logic_vector(15 downto 0) := "1000000000001110"; -- Data Address location for register attn_sw
+		-- Data Space Address Map, Register Addresses. Given as offsets from 0x8000.
+		constant rca_sw_addr : integer := 0; -- RC Filter Switches, Channel A
+		constant rcb_sw_addr : integer := 1; -- RC Filter Switches, Channel B
+		constant DIVIA1_addr : integer := 2;
+		constant DIVIA2_addr : integer := 3;
+		constant DIVIA3_addr : integer := 4;
+		constant DIVIA4_addr : integer := 5;
+		constant DIVIB1_addr : integer := 6;
+		constant DIVIB2_addr : integer := 7;
+		constant DIVIB3_addr : integer := 8;
+		constant DIVIB4_addr : integer := 9;
+		constant spc1_hi_addr : integer := 10;
+		constant spc1_lo_addr : integer := 11;
+		constant spc2_hi_addr : integer := 12;
+		constant spc2_lo_addr : integer := 13;
+		constant attn_sw_addr : integer := 14;
 		
 		-- Configuration of RAM
 		constant cpu_addr_len : integer := 12;
@@ -118,27 +122,18 @@ entity main is
 		signal RESET : boolean;
 		
 		-- Synchronized, delayed, and inverted inputs.
-		signal CDS, CWR : boolean;
-		signal CDS_delayed : boolean;
+		signal CDS, CWR, DCDS : boolean;
 
-		-- General-Purpose Constant
-		constant max_data_byte : std_logic_vector(7 downto 0) := "11111111";
-		constant high_z_byte : std_logic_vector(7 downto 0) := "ZZZZZZZZ";
-		constant zero_data_byte : std_logic_vector(7 downto 0) := "00000000";
-		constant one_data_byte : std_logic_vector(7 downto 0) := "00000001";
-		
 		-- Version numbers.
 		constant hardware_id : integer := 50;
 		constant hardware_version : integer := 1;
 		constant firmware_version : integer := 1;
-
 end;
 
 
 architecture behavior of main is
 
--- Convert boolean to standar logic. We return '1' for 'true' and '0'
--- for 'false'.
+-- Convert boolean to standard logic.
 	function to_std_logic (v: boolean) return std_ulogic is
 	begin if v then return('1'); else return('0'); end if; end function;
 
@@ -149,173 +144,132 @@ architecture behavior of main is
 	signal DIVIB : std_logic_vector(31 downto 0) := (others => '0'); -- Clock Divisor for DACB
 	signal rd_ram1_addr, rd_ram2_addr : std_logic_vector(ram_addr_len-1 downto 0); -- RAM Address
 	signal DACRWR : std_logic; -- DAC Ram Write
-	signal NFCK : std_logic; -- Inverse of Fast Clock
-	signal FCK : std_logic; -- Fast Clock
-
 	
 begin
 
--- We generate an inverted clock signal that is the opposite of our 80MHz oscillator. 
--- This allows us to avoid putting the not() operator when instantiate RAM
-Clock_Inverter: process(CK1) is
+-- The Reset Controller combines the hardware and ethernet module reset signals to create
+-- our local reset signal.
+Reset_Controller: process(NHWRST,NRCMRST) is
 begin
-	NFCK <= not(CK1);
-	
-end process;
-
--- Combine the reset signals from the RCM6700 and the reset switch on the PCB to generate one global reset.
-Reset_Switch: process(NOTHWRESET) is
-begin
-	if (NOTHWRESET = '0') then
-		NOT_RESET <= '0';
+	if (NHWRST = '0') then
+		NRCMRST <= '0';
 	else
-		NOT_RESET <= 'Z';
+		NRCMRST <= 'Z';
 	end if;
-	
-	RESET <= (NOTHWRESET = '0') or (NOT_RESET = '0');
-	
+	RESET <= (NHWRST = '0') or (NRCMRST = '0');
 end process;
 
 
--- We assign registers to locations in the data space.
--- We set the reading and writing locations in the control space.
--- Specify when to write to RAM for each channel.
-Relay_Interface : process (CK1) is
-
-variable integer_addr : integer range 0 to 63;
-
+-- The Relay Interface provides the memory mapping of the control
+-- address into the control registers, and also into data space.
+Relay_Interface : process (RESET,FCK) is
+	variable integer_addr : integer range 0 to 63;
 begin
+	if RESET then
+		spc1 <= (others => '0');
+		spc2 <= (others => '0');
+		cont_data <= (others => 'Z');
+		ram1_we <= '1';
+		ram2_we <= '1';
+		DIVIA <= (others => '0');
+		DIVIB <= (others => '0');
+		rca_sw <= one_data_byte;
+		rcb_sw <= one_data_byte;
 
-integer_addr := to_integer(unsigned(cont_addr));
+	elsif rising_edge(FCK) then		
 
-if RESET then
-	spca <= (others => '0');
-	spcb <= (others => '0');
-	cont_data <= (others => 'Z');
-	ram1_we <= '1';
-	ram2_we <= '1';
-	DIVIA <= (others => '0');
-	DIVIB <= (others => '0');
-	rca_sw <= "00000001";
-	rcb_sw <= "00000001";
-
-elsif rising_edge(CK1) then		
-
-	CWR <= (CWR_in = '0');
-	CDS <= (CDS_in = '0');
-	CDS_delayed <= CDS;
-	cont_data <= (others => 'Z');	
-	ram1_we <= '0';
-	ram2_we <= '0';
-	
-	if CDS and CWR and (data_addr(15) = '1') then
-		rstcd2 <= '1';
-	else 
-		rstcd2 <= '0';
-	end if;
-	
-	if CDS and CWR and (data_addr(15) = '0') then
-		rstcd1 <= '1';
-	else
-		rstcd1 <= '0';
-	end if;
-	
-	-- Writing to RAM.
-	if CDS and CWR then
-		case integer_addr is
-		when data_addr_1 => data_addr(31 downto 24) <= cont_data (7 downto 0);
-		when data_addr_2 => data_addr(23 downto 16) <= cont_data (7 downto 0);
-		when data_addr_3 => data_addr(15 downto 8) <= cont_data (7 downto 0);
-		when data_addr_4 => data_addr(7 downto 0) <= cont_data (7 downto 0);
-		when ram_portal => 
-			if (data_addr(15) = '0') and (data_addr(14) = '0') then
-				ram1_we <= '1';
-				ram2_we <= '0';
-			elsif (data_addr(15) = '0') and (data_addr(14) = '1') then
-				ram1_we <= '0';
-				ram2_we <= '1';
-			else
-				ram1_we <= '0';
-				ram2_we <= '0';
-			end if;
-			if data_addr(15 downto 0) = rca_sw_addr then
-				rca_sw <= cont_data;
-			elsif data_addr(15 downto 0) = rcb_sw_addr then
-				rcb_sw <= cont_data;
-			elsif data_addr(15 downto 0) = DIVIA1_addr then
-				DIVIA(31 downto 24) <= cont_data(7 downto 0);
-			elsif data_addr(15 downto 0) = DIVIA2_addr then
-				DIVIA(23 downto 16) <= cont_data(7 downto 0);
-			elsif data_addr(15 downto 0) = DIVIA3_addr then
-				DIVIA(15 downto 8) <= cont_data(7 downto 0);
-			elsif data_addr(15 downto 0) = DIVIA4_addr then
-				DIVIA(7 downto 0) <= cont_data(7 downto 0);		
-			elsif data_addr(15 downto 0) = DIVIB1_addr then
-				DIVIB(31 downto 24) <= cont_data(7 downto 0);
-			elsif data_addr(15 downto 0) = DIVIB2_addr then
-				DIVIB(23 downto 16) <= cont_data(7 downto 0);
-			elsif data_addr(15 downto 0) = DIVIB3_addr then
-				DIVIB(15 downto 8) <= cont_data(7 downto 0);
-			elsif data_addr(15 downto 0) = DIVIB4_addr then
-				DIVIB(7 downto 0) <= cont_data(7 downto 0);		
-			elsif data_addr(15 downto 0) = spca1_addr then
-				spca(15 downto 8) <= cont_data(7 downto 0);	
-			elsif data_addr(15 downto 0) = spca2_addr then
-				spca(7 downto 0) <= cont_data(7 downto 0);	
-			elsif data_addr(15 downto 0) = spcb1_addr then
-				spcb(15 downto 8) <= cont_data(7 downto 0);	
-			elsif data_addr(15 downto 0) = spcb2_addr then
-				spcb(7 downto 0) <= cont_data(7 downto 0);		
-			elsif data_addr(15 downto 0) = attn_sw_addr then
-				attn_sw(7 downto 0) <= cont_data(7 downto 0);		
-			end if;
-		when others => cont_data <= cont_data;
-		end case;
-	-- Reading from RAM.
-	elsif CDS and (not CWR) then
-		cont_data <= (others => '0');
-		case integer_addr is
-		when cont_id_addr => 
-			cont_data <= std_logic_vector(to_unsigned(hardware_id,8));
-		when cont_hv_addr =>
-			cont_data <= std_logic_vector(to_unsigned(hardware_version, 8));
-		when cont_fv_addr =>
-			cont_data <= std_logic_vector(to_unsigned(firmware_version, 8));
-		when data_addr_1 =>
-			cont_data <= data_addr(31 downto 24);
-		when data_addr_2 =>
-			cont_data <= data_addr(23 downto 16);
-		when data_addr_3 =>
-			cont_data <= data_addr(15 downto 8);
-		when data_addr_4 =>
-			cont_data <= data_addr(7 downto 0);
-		when cont_cfsw_addr => -- The Relay looks for a zero to configure.
-			cont_data(0) <= NCONFIG;
-		when others =>
-			cont_data <= (others => '0');
-		end case;
-	end if;
-	
-	-- Increment the data address to allow for stream write.
-	if CWR and (integer_addr = ram_portal) then
-		if not(CDS) and CDS_delayed then
-				data_addr <= std_logic_vector(to_unsigned((to_integer(unsigned(data_addr))+1), 32));
+		CWR <= (CWR_in = '0');
+		CDS <= (CDS_in = '0');
+		DCDS <= CDS;
+		cont_data <= (others => 'Z');	
+		ram1_we <= '0';
+		ram2_we <= '0';
+		
+		if CDS and CWR and (data_addr(15) = '1') then
+			rstcd2 <= '1';
+		else 
+			rstcd2 <= '0';
 		end if;
+		
+		if CDS and CWR and (data_addr(15) = '0') then
+			rstcd1 <= '1';
+		else
+			rstcd1 <= '0';
+		end if;
+		
+		-- Writing to RAM.
+		if CDS and CWR then
+			case to_integer(unsigned(cont_addr)) is
+			when data_addr_b3 => data_addr(31 downto 24) <= cont_data(7 downto 0);
+			when data_addr_b2 => data_addr(23 downto 16) <= cont_data(7 downto 0);
+			when data_addr_b1 => data_addr(15 downto 8) <= cont_data(7 downto 0);
+			when data_addr_b0 => data_addr(7 downto 0) <= cont_data(7 downto 0);
+			when ram_portal => 
+				case to_integer(unsigned(data_addr(15 downto 14))) is
+				when 0 => ram1_we <= '1';
+				when 1 => ram2_we <= '1';
+				when 2 | 3 =>
+					case to_integer(unsigned(data_addr(5 downto 0))) is
+					when rca_sw_addr => rca_sw <= cont_data;
+					when rcb_sw_addr => rcb_sw <= cont_data;
+					when DIVIA1_addr => DIVIA(31 downto 24) <= cont_data(7 downto 0);
+					when DIVIA2_addr => DIVIA(23 downto 16) <= cont_data(7 downto 0);
+					when DIVIA3_addr => DIVIA(15 downto 8) <= cont_data(7 downto 0);
+					when DIVIA4_addr => DIVIA(7 downto 0) <= cont_data(7 downto 0);		
+					when DIVIB1_addr => DIVIB(31 downto 24) <= cont_data(7 downto 0);
+					when DIVIB2_addr => DIVIB(23 downto 16) <= cont_data(7 downto 0);
+					when DIVIB3_addr => DIVIB(15 downto 8) <= cont_data(7 downto 0);
+					when DIVIB4_addr => DIVIB(7 downto 0) <= cont_data(7 downto 0);		
+					when spc1_hi_addr => spc1(15 downto 8) <= cont_data(7 downto 0);	
+					when spc1_lo_addr => spc1(7 downto 0) <= cont_data(7 downto 0);	
+					when spc2_hi_addr => spc2(15 downto 8) <= cont_data(7 downto 0);	
+					when spc2_lo_addr => spc2(7 downto 0) <= cont_data(7 downto 0);		
+					when attn_sw_addr => attn_sw(7 downto 0) <= cont_data(7 downto 0);		
+					end case;
+				end case;
+			end case;
+		elsif CDS and (not CWR) then
+			cont_data <= (others => '0');
+			case to_integer(unsigned(cont_addr)) is
+			when cont_id_addr => 
+				cont_data <= std_logic_vector(to_unsigned(hardware_id,8));
+			when cont_hv_addr =>
+				cont_data <= std_logic_vector(to_unsigned(hardware_version, 8));
+			when cont_fv_addr =>
+				cont_data <= std_logic_vector(to_unsigned(firmware_version, 8));
+			when data_addr_b3 =>
+				cont_data <= data_addr(31 downto 24);
+			when data_addr_b2 =>
+				cont_data <= data_addr(23 downto 16);
+			when data_addr_b1 =>
+				cont_data <= data_addr(15 downto 8);
+			when data_addr_b0 =>
+				cont_data <= data_addr(7 downto 0);
+			when cont_cfsw_addr => 
+				cont_data(0) <= NCONFIG;
+			when others =>
+				cont_data <= (others => '0');
+			end case;
+		end if;
+		
+		-- Increment the data address to allow for stream write.
+		if CWR and (to_integer(unsigned(cont_addr)) = ram_portal) then
+			if not(CDS) and DCDS then
+					data_addr <= std_logic_vector(to_unsigned((to_integer(unsigned(data_addr))+1),32));
+			end if;
+		end if;
+
 	end if;
-
-end if;
-
-
 end process;
 
 -- We divide the main 80MHz clock by an amount specified in a register to determine the speed at which
 -- the function generator reads new values from RAM (Channel 1).
-Clock_Divider_1 : process (CK1) is
+Clock_Divider_1 : process (FCK) is
 	variable count : integer range 0 to (2**31)-1;
 begin
 	if (rstcd1 = '1') or RESET then
 		count := 0;
-	elsif rising_edge(CK1) then
+	elsif rising_edge(FCK) then
 		if count >= (to_integer(unsigned(DIVIA))) then
 			DIVCKA <= not(DIVCKA);
 			count := 0;
@@ -327,12 +281,12 @@ end process;
 
 -- We divide the main 80MHz clock by an amount specified in a register to determine the speed at which
 -- the function generator reads new values from RAM (Channel 2).
-Clock_Divider_2 : process (CK1) is
+Clock_Divider_2 : process (FCK) is
 	variable count : integer range 0 to (2**31)-1;
 begin
 	if (rstcd2 = '1') or RESET then
 		count := 0;
-	elsif rising_edge(CK1) then
+	elsif rising_edge(FCK) then
 		if count >= (to_integer(unsigned(DIVIB))) then
 			DIVCKB <= not(DIVCKB);
 			count := 0;
@@ -345,8 +299,8 @@ end process;
 
 -- We declare the RAM entity for Channel 1 and map its ports.
 RAM1 : entity DAQ_RAM port map (
-	RdClock => CK1,
-	WrClock => NFCK,
+	RdClock => FCK,
+	WrClock => not(FCK),
 	WrClockEn => '1',
 	RdClockEn => '1',
 	Reset => to_std_logic(RESET),
@@ -358,8 +312,8 @@ RAM1 : entity DAQ_RAM port map (
 	
 -- We declare the RAM entity for Channel 2 and map its ports.
 RAM2 : entity DAQ_RAM port map (
-	RdClock => CK1,
-	WrClock => NFCK,
+	RdClock => FCK,
+	WrClock => not(FCK),
 	WrClockEn => '1',
 	RdClockEn => '1',
 	Reset => to_std_logic(RESET),
@@ -368,26 +322,19 @@ RAM2 : entity DAQ_RAM port map (
 	RdAddress => rd_ram2_addr((ram_addr_len-1) downto 0), 
 	Data => cont_data,
 	Q => ramb_out(7 downto 0)) ;
-	
-
-
-
 		
-		
--- We read from RAM at a speed determined by the divided clock for channel 1. The function generator 
--- is only allowed to read as many values from RAM as specified by the spca register. Triggering on-- the rising edge of the 80MHz clock and using a state machine allows us to avoid timing errors.
-RAM1_read : process (CK1) is
-
+-- We read from RAM at a speed determined by the divided clock for channel 1.
+RAM1_Read : process (FCK) is
 	variable count : integer range 0 to 8191;
 	variable state, next_state: integer range 0 to 1;
 begin
 	if CWR then
 		count := 0;
-	elsif rising_edge(CK1) then
+	elsif rising_edge(FCK) then
 		if state = 0 and (DIVCKA = '1') then
-			if count < (to_integer(unsigned(spca))) then
+			if count < (to_integer(unsigned(spc1))) then
 				count := count + 1;
-			elsif count >= (to_integer(unsigned(spca))) then
+			elsif count >= (to_integer(unsigned(spc1))) then
 				count := 0;
 			end if;
 			next_state := 1;
@@ -401,20 +348,18 @@ begin
 	end if;
 end process;
 
--- We read from RAM at a speed determined by the divided clock for channel 2. The function generator 
--- is only allowed to read as many values from RAM as specified by the spcb register.
-RAM2_read : process (CK1) is
-
+-- We read from RAM at a speed determined by the divided clock for channel 2.
+RAM2_Read : process (FCK) is
 	variable count : integer range 0 to 8191;
 	variable state, next_state: integer range 0 to 1;
 begin
 	if CWR then
 		count := 0;
-	elsif rising_edge(CK1) then
+	elsif rising_edge(FCK) then
 		if state = 0 and (DIVCKB = '1') then
-			if count < (to_integer(unsigned(spcb))) then
+			if count < (to_integer(unsigned(spc2))) then
 				count := count + 1;
-			elsif count >= (to_integer(unsigned(spcb))) then
+			elsif count >= (to_integer(unsigned(spc2))) then
 				count := 0;
 			end if;
 			next_state := 1;
@@ -461,64 +406,47 @@ BB <= not(attn_sw(5));
 BC <= not(attn_sw(6));
 BD <= not(attn_sw(7));
 
--- We specify when to flash the indicator LEDs. The channel indicator LEDs should only 
--- be on when the samples per cycle register is greater than zero meaning no waveform
--- output corresponds to the light being off. The other four indicator LEDs are meant
--- to indicate the state of the RESET and CONFIG switches as well as the state of the
--- data strobe and ethernet communication.
-Indicators : process(CK1) is
-
+-- Indicator lamps.
+Indicators : process(RESET) is
 begin
-	if rising_edge(CK1) then
-		if (to_integer(unsigned(spca))) > 0 then
-			I <= '1';
-		else 
-			I <= '0';
-		end if;
-		if (to_integer(unsigned(spcb))) > 0 then
-			J <= '1';
-		else 
-			J <= '0';
-		end if;
-
-		L <= to_std_logic(RESET);
-		K <= not(NCONFIG);
-		V <= not(CDS_in);
-		W <= not(ETH);
+	if (to_integer(unsigned(spc1))) > 0 then
+		I <= '1';
+	else 
+		I <= '0';
 	end if;
-
+	if (to_integer(unsigned(spc2))) > 0 then
+		J <= '1';
+	else 
+		J <= '0';
+	end if;
+	L <= to_std_logic(RESET);
+	K <= not(NCONFIG);
+	V <= not(CDS_in);
+	W <= not(ETH);
 end process;
 
--- We use combinatorial logic on the output of the RAM with the state of
--- RESET and the channel. This ensures that the output of the function generator
--- is 0V during RESET or power up.
-Output1 : process (RESET) is
+-- DAC1 Output Bits.
+DAC1_Driver : process (RESET) is
 begin
-	if RESET or (spca = "0000000000000000") then
-		DACA_OUT (7 downto 0) <= "10000000";
+	if RESET or (to_integer(unsigned(spc1)) = 0) then
+		dac1(7 downto 0) <= dac_mid_range;
 	else
-		DACA_OUT <= rama_out;
+		dac1 <= rama_out;
 	end if;
-
 end process;
 
-Output2 : process (RESET) is
+-- DAC2 Output Bits.
+DAC2_Driver : process (RESET) is
 begin
-	if RESET or (spcb = "0000000000000000") then
-		DACB_OUT (7 downto 0) <= "10000000";
+	if RESET or (to_integer(unsigned(spc2)) = 0) then
+		dac2(7 downto 0) <= dac_mid_range;
 	else
-		DACB_OUT <= ramb_out;
+		dac2 <= ramb_out;
 	end if;
-
 end process;
 
--- We configure the LEDs on the RJ-45 port to indicate power and communication.
+-- Ethernet connector lamps.
 EGRN <= '1';
 EYLW <= not(ETH);
 
-
-
-
- 
-	
 end behavior;
