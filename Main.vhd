@@ -1,9 +1,12 @@
 -- <pre> LWDAQ controllable function generator(A3050) Firmware, Toplevel Unit
 
+-- Copyright (C) 2023-2024 Nathan Sayer, Open Source Instruments Inc.-- Copyright (C) 2024 Kevan Hashemi, Open Source Instruments Inc.
+
 -- V1.6 [4-APR-24] A305001D Version.
 
 -- V1.7 [1-MAY-24] Add Comments.
 
+-- V2.0 [31-OCT-24] Kevan takes over management of the code. Compile and test.
 
 library ieee;  
 use ieee.std_logic_1164.all;
@@ -106,7 +109,6 @@ entity main is
 		constant spcb1_addr : std_logic_vector(15 downto 0) := "1000000000001100"; -- Data Address location for register spcb1
 		constant spcb2_addr : std_logic_vector(15 downto 0) := "1000000000001101"; -- Data Address location for register spcb2
 		constant attn_sw_addr : std_logic_vector(15 downto 0) := "1000000000001110"; -- Data Address location for register attn_sw
-		
 		
 		-- Configuration of RAM
 		constant cpu_addr_len : integer := 12;

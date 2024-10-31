@@ -1,14 +1,14 @@
-synthesis:  version Diamond (64-bit) 3.12.0.240.2
+synthesis:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Wed May 01 11:27:26 2024
+Thu Oct 31 12:28:38 2024
 
 
-Command Line:  synthesis -f P3050FG_impl1_lattice.synproj -gui -msgset C:/Firmware/P3050FG/promote.xml 
+Command Line:  synthesis -f P3050_impl1_lattice.synproj -gui 
 
 Synthesis options:
 The -a option is MachXO2.
@@ -62,13 +62,13 @@ RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
 -p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p C:/Firmware/P3050FG/impl1 (searchpath added)
--p C:/Firmware/P3050FG (searchpath added)
+-p C:/Kevan/A3050/P3050/impl1 (searchpath added)
+-p C:/Kevan/A3050/P3050 (searchpath added)
 VHDL library = work
-VHDL design file = C:/Firmware/P3050FG/DAQ_RAM.vhd
-VHDL design file = C:/Firmware/P3050FG/DAQ_RAM.vhd
-VHDL design file = C:/Firmware/P3050FG/Main.vhd
-NGD file = P3050FG_impl1.ngd
+VHDL design file = C:/Kevan/A3050/P3050/DAQ_RAM.vhd
+VHDL design file = C:/Kevan/A3050/P3050/DAQ_RAM.vhd
+VHDL design file = C:/Kevan/A3050/P3050/Main.vhd
+NGD file = P3050_impl1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
@@ -78,44 +78,44 @@ Technology check ok...
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-INFO - synthesis: The default VHDL library search path is now "C:/Firmware/P3050FG/impl1". VHDL-1504
-Analyzing VHDL file c:/firmware/p3050fg/daq_ram.vhd. VHDL-1481
-INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(14): analyzing entity daq_ram. VHDL-1012
-INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(28): analyzing architecture structure. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "C:/Kevan/A3050/P3050/impl1". VHDL-1504
+Analyzing VHDL file c:/kevan/a3050/p3050/daq_ram.vhd. VHDL-1481
+INFO - synthesis: c:/kevan/a3050/p3050/daq_ram.vhd(14): analyzing entity daq_ram. VHDL-1012
+INFO - synthesis: c:/kevan/a3050/p3050/daq_ram.vhd(28): analyzing architecture structure. VHDL-1010
 unit main is not yet analyzed. VHDL-1485
-Analyzing VHDL file c:/firmware/p3050fg/daq_ram.vhd. VHDL-1481
-INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(14): analyzing entity daq_ram. VHDL-1012
-INFO - synthesis: c:/firmware/p3050fg/daq_ram.vhd(28): analyzing architecture structure. VHDL-1010
+Analyzing VHDL file c:/kevan/a3050/p3050/daq_ram.vhd. VHDL-1481
+INFO - synthesis: c:/kevan/a3050/p3050/daq_ram.vhd(14): analyzing entity daq_ram. VHDL-1012
+INFO - synthesis: c:/kevan/a3050/p3050/daq_ram.vhd(28): analyzing architecture structure. VHDL-1010
 unit main is not yet analyzed. VHDL-1485
-Analyzing VHDL file c:/firmware/p3050fg/main.vhd. VHDL-1481
-INFO - synthesis: c:/firmware/p3050fg/main.vhd(12): analyzing entity main. VHDL-1012
-INFO - synthesis: c:/firmware/p3050fg/main.vhd(136): analyzing architecture behavior. VHDL-1010
+Analyzing VHDL file c:/kevan/a3050/p3050/main.vhd. VHDL-1481
+INFO - synthesis: c:/kevan/a3050/p3050/main.vhd(15): analyzing entity main. VHDL-1012
+INFO - synthesis: c:/kevan/a3050/p3050/main.vhd(138): analyzing architecture behavior. VHDL-1010
 unit main is not yet analyzed. VHDL-1485
 unit main is not yet analyzed. VHDL-1485
-c:/firmware/p3050fg/main.vhd(12): executing main(behavior)
+c:/kevan/a3050/p3050/main.vhd(15): executing main(behavior)
 
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(173): not_reset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(175): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(187): cont_addr should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(189): reset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(307): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(314): rstcd1 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(314): reset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(324): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(331): rstcd2 should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(331): reset should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(341): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(382): cwr should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(400): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(409): cwr should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(427): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(495): spca should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(498): rama_out should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(501): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(505): spcb should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(508): ramb_out should be on the sensitivity list of the process. VHDL-1251
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(511): incomplete sensitivity list specified, assuming completeness. VHDL-1613
-WARNING - synthesis: c:/firmware/p3050fg/main.vhd(133): replacing existing netlist main(behavior). VHDL-1205
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(175): not_reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(177): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(189): cont_addr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(191): reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(309): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(316): rstcd1 should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(316): reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(326): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(333): rstcd2 should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(333): reset should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(343): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(384): cwr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(402): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(411): cwr should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(429): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(497): spca should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(500): rama_out should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(503): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(507): spcb should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(510): ramb_out should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(513): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/kevan/a3050/p3050/main.vhd(135): replacing existing netlist main(behavior). VHDL-1205
 Top module name (VHDL): main
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -135,7 +135,7 @@ WARNING - synthesis: I/O Port CK 's net has no driver and is unused.
 WARNING - synthesis: I/O Port UPLOAD 's net has no driver and is unused.
 WARNING - synthesis: I/O Port EMPTY 's net has no driver and is unused.
 WARNING - synthesis: I/O Port ACTIV 's net has no driver and is unused.
-GSR instance connected to net \i923/n1.
+GSR instance connected to net n2967.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -154,7 +154,7 @@ WARNING - synthesis: logical net 'ACTIV' has no load.
 WARNING - synthesis: input pad net 'ACTIV' has no legal load.
 WARNING - synthesis: DRC complete with 8 warnings.
 All blocks are expanded and NGD expansion is successful.
-Writing NGD file P3050FG_impl1.ngd.
+Writing NGD file P3050_impl1.ngd.
 
 ################### Begin Area Report (main)######################
 Number of register bits => 290 of 7209 (4 % )
@@ -172,9 +172,9 @@ FD1S3JX => 2
 GSR => 1
 IB => 12
 INV => 1
-LUT4 => 314
+LUT4 => 312
 OB => 48
-PFUMX => 9
+PFUMX => 10
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -192,25 +192,25 @@ Top 10 highest fanout Clock Enables:
   Net : RAM2_read.count_12__N_577, loads : 27
   Net : RAM1_read.count_12__N_541, loads : 27
   Net : CK1_c_enable_181, loads : 26
-  Net : CK1_c_enable_51, loads : 10
-  Net : CK1_c_enable_33, loads : 8
+  Net : CK1_c_enable_27, loads : 11
+  Net : CK1_c_enable_37, loads : 8
   Net : CK1_c_enable_78, loads : 8
   Net : CK1_c_enable_86, loads : 8
-  Net : CK1_c_enable_123, loads : 8
-  Net : CK1_c_enable_93, loads : 8
-  Net : CK1_c_enable_162, loads : 8
+  Net : CK1_c_enable_44, loads : 8
+  Net : CK1_c_enable_108, loads : 8
+  Net : CK1_c_enable_14, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : n2965, loads : 36
-  Net : CWR, loads : 34
-  Net : data_addr_3, loads : 33
   Net : data_addr_1, loads : 33
-  Net : n7658, loads : 33
+  Net : CWR, loads : 33
+  Net : n7812, loads : 33
+  Net : data_addr_2, loads : 32
   Net : Clock_Divider_1.count_30__N_450, loads : 32
   Net : Clock_Divider_2.count_30__N_514, loads : 32
-  Net : n7655, loads : 31
-  Net : n7653, loads : 31
-  Net : cont_addr_c_0, loads : 30
+  Net : data_addr_0, loads : 31
+  Net : n7807, loads : 31
+  Net : n7806, loads : 31
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -223,7 +223,7 @@ create_clock -period 5.000000 -name     |             |             |
 clk1 [get_nets CK1_N_642]               |            -|            -|     0  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets CK1_c]                   |  200.000 MHz|   99.020 MHz|     6 *
+clk0 [get_nets CK1_c]                   |  200.000 MHz|   91.659 MHz|     7 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -231,8 +231,8 @@ clk0 [get_nets CK1_c]                   |  200.000 MHz|   99.020 MHz|     6 *
 1 constraints not met.
 
 
-Peak Memory Usage: 89.520  MB
+Peak Memory Usage: 86.309  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.547  secs
+Elapsed CPU time for LSE flow : 1.716  secs
 --------------------------------------------------------------

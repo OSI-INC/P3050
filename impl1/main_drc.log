@@ -18,7 +18,7 @@ WARNING - synthesis: input pad net 'ACTIV' has no legal load.
 WARNING - synthesis: DRC complete with 8 warnings.
 
 Design Results:
-    816 blocks expanded
+    815 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
-Writing NGD file P3050FG_impl1.ngd.
+Writing NGD file P3050_impl1.ngd.

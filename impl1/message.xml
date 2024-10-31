@@ -4,33 +4,33 @@
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(29): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(29): Semantic error in &quot;IOBUF PORT &quot;UPLOAD&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
             <Dynamic>UPLOAD</Dynamic>
-            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
             <Navigation>29</Navigation>
         </Message>
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(30): Semantic error in &quot;IOBUF PORT &quot;ACTIV&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(30): Semantic error in &quot;IOBUF PORT &quot;ACTIV&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
             <Dynamic>ACTIV</Dynamic>
-            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
             <Navigation>30</Navigation>
         </Message>
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(31): Semantic error in &quot;IOBUF PORT &quot;EMPTY&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(31): Semantic error in &quot;IOBUF PORT &quot;EMPTY&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
             <Dynamic>EMPTY</Dynamic>
-            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
             <Navigation>31</Navigation>
         </Message>
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Firmware/P3050FG/P3050FG.lpf(33): Semantic error in &quot;IOBUF PORT &quot;CK&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>C:/Kevan/A3050/P3050/P3050.lpf(33): Semantic error in &quot;IOBUF PORT &quot;CK&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
             <Dynamic>CK</Dynamic>
-            <Navigation>C:/Firmware/P3050FG/P3050FG.lpf</Navigation>
+            <Navigation>C:/Kevan/A3050/P3050/P3050.lpf</Navigation>
             <Navigation>33</Navigation>
         </Message>
         <Message>
@@ -91,224 +91,224 @@
             <ID>35921504</ID>
             <Severity>Info</Severity>
             <Dynamic></Dynamic>
-            <Dynamic>C:/Firmware/P3050FG/impl1</Dynamic>
+            <Dynamic>C:/Kevan/A3050/P3050/impl1</Dynamic>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(14): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/daq_ram.vhd(14): </Dynamic>
             <Dynamic>daq_ram</Dynamic>
-            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/daq_ram.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(28): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/daq_ram.vhd(28): </Dynamic>
             <Dynamic>structure</Dynamic>
-            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/daq_ram.vhd</Navigation>
             <Navigation>28</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(14): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/daq_ram.vhd(14): </Dynamic>
             <Dynamic>daq_ram</Dynamic>
-            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/daq_ram.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/daq_ram.vhd(28): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/daq_ram.vhd(28): </Dynamic>
             <Dynamic>structure</Dynamic>
-            <Navigation>c:/firmware/p3050fg/daq_ram.vhd</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/daq_ram.vhd</Navigation>
             <Navigation>28</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(12): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(15): </Dynamic>
             <Dynamic>main</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>12</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>15</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(136): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(138): </Dynamic>
             <Dynamic>behavior</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>136</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>138</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(173): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(175): </Dynamic>
             <Dynamic>not_reset</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>173</Navigation>
-        </Message>
-        <Message>
-            <ID>35921613</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(175): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
             <Navigation>175</Navigation>
         </Message>
         <Message>
-            <ID>35921251</ID>
+            <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(187): </Dynamic>
-            <Dynamic>cont_addr</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>187</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(177): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>177</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(189): </Dynamic>
-            <Dynamic>reset</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(189): </Dynamic>
+            <Dynamic>cont_addr</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
             <Navigation>189</Navigation>
         </Message>
         <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(191): </Dynamic>
+            <Dynamic>reset</Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>191</Navigation>
+        </Message>
+        <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(307): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>307</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(309): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>309</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(314): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(316): </Dynamic>
             <Dynamic>rstcd1</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>314</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>316</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(314): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(316): </Dynamic>
             <Dynamic>reset</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>314</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>316</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(324): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>324</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(326): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>326</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(331): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(333): </Dynamic>
             <Dynamic>rstcd2</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>331</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>333</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(331): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(333): </Dynamic>
             <Dynamic>reset</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>331</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>333</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(341): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>341</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(343): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>343</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(382): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(384): </Dynamic>
             <Dynamic>cwr</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>382</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>384</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(400): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>400</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(402): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>402</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(409): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(411): </Dynamic>
             <Dynamic>cwr</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>409</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>411</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(427): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>427</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(429): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>429</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(495): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(497): </Dynamic>
             <Dynamic>spca</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>495</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>497</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(498): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(500): </Dynamic>
             <Dynamic>rama_out</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>498</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>500</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(501): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>501</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(503): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>503</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(505): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(507): </Dynamic>
             <Dynamic>spcb</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>505</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>507</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(508): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(510): </Dynamic>
             <Dynamic>ramb_out</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>508</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>510</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(511): </Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>511</Navigation>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(513): </Dynamic>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>513</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/firmware/p3050fg/main.vhd(133): </Dynamic>
+            <Dynamic>c:/kevan/a3050/p3050/main.vhd(135): </Dynamic>
             <Dynamic>main</Dynamic>
             <Dynamic>behavior</Dynamic>
-            <Navigation>c:/firmware/p3050fg/main.vhd</Navigation>
-            <Navigation>133</Navigation>
+            <Navigation>c:/kevan/a3050/p3050/main.vhd</Navigation>
+            <Navigation>135</Navigation>
         </Message>
         <Message>
             <ID>35002005</ID>
