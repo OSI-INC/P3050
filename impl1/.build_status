@@ -6,30 +6,37 @@
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
             <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1730406792"/>
+            <Task name="Jedecgen" build_result="0" update_result="2" update_time="1730429621"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1730406767">
-            <Task name="Map" build_result="2" update_result="0" update_time="1730406767"/>
+        <Milestone name="Map" build_result="0" build_time="1730429621">
+            <Task name="Map" build_result="0" update_result="2" update_time="1730429621"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1730406782">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1730406782"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1730406784"/>
+        <Milestone name="PAR" build_result="0" build_time="1730429621">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1730429621"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1730429621"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1730406764">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1730406764"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1730406792"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1730429462">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1730429462"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1730429462"/>
         </Milestone>
-        <Report name=".vdbs/P3050_impl1_map.vdb" last_build_time="1730406767" last_build_size="146055"/>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="3" update_time="0"/>
+            <Task name="BKM" build_result="0" update_result="3" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/P3050_impl1_map.vdb" last_build_time="1730424439" last_build_size="148825"/>
         <Report name="P3050_impl1.bgn" last_build_time="1730406792" last_build_size="4558"/>
         <Report name="P3050_impl1.jed" last_build_time="1730406792" last_build_size="1466452"/>
-        <Report name="P3050_impl1.lsedata" last_build_time="1730406762" last_build_size="1057674"/>
+        <Report name="P3050_impl1.lsedata" last_build_time="1730429394" last_build_size="996075"/>
         <Report name="P3050_impl1.ncd" last_build_time="1730406782" last_build_size="770752"/>
-        <Report name="P3050_impl1.ngd" last_build_time="1730406764" last_build_size="526914"/>
+        <Report name="P3050_impl1.ngd" last_build_time="1730429396" last_build_size="451431"/>
         <Report name="P3050_impl1.twr" last_build_time="1730406784" last_build_size="45144"/>
-        <Report name="P3050_impl1_map.ncd" last_build_time="1730406766" last_build_size="544945"/>
+        <Report name="P3050_impl1_map.ncd" last_build_time="1730424438" last_build_size="550455"/>
     </Strategy>
 </BuildStatus>
