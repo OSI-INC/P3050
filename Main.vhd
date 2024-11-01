@@ -9,6 +9,7 @@
 -- V2.0 [31-OCT-24] Kevan takes over management of the code. Compile and test.
 
 -- V2.1 [31-OCT-24] Cleaning up. Remove 32.768-KHz CK input. Use CK name for 80-MHz.
+-- Simplify sample clock generators.
 
 library ieee;  
 use ieee.std_logic_1164.all;
@@ -16,18 +17,18 @@ use ieee.numeric_std.all;
 
 entity main is 
 	port (
-		CK : in std_logic; -- 80MHz Clock
-		cont_data : inout std_logic_vector(7 downto 0);
-		cont_addr : in std_logic_vector(5 downto 0);
-		CWR_in : in std_logic;
-		CDS_in : in std_logic;
-		ETH : in std_logic;
-		NHWRST : in std_logic; -- Reset Button
-		NRCMRST : inout std_logic; -- Reset from RCM6700
-		NCONFIG : in std_logic; -- Config Button
-		EGRN, EYLW : out std_logic;
-		dac1 : out std_logic_vector(7 downto 0);
-		dac2 : out std_logic_vector(7 downto 0);
+		CK : in std_logic; -- Master Clock (Nominally 80 MHz)
+		cont_data : inout std_logic_vector(7 downto 0); -- Control Data Bus
+		cont_addr : in std_logic_vector(5 downto 0); -- Control Address Bus
+		CWR_in : in std_logic; -- Control Write
+		CDS_in : in std_logic; -- Control Data Strobe
+		ETH : in std_logic; -- Ethernet Activity
+		NHWRST : in std_logic; -- Inverted Hardware Reset
+		NRCMRST : inout std_logic; -- Inverted Rabbit Control Module Reset
+		NCONFIG : in std_logic; -- Inverted Configuration Switch
+		EGRN, EYLW : out std_logic; -- Green and Yellow Ethernet Connector Lamps
+		dac1 : out std_logic_vector(7 downto 0); -- Channel One DAC Output Bus
+		dac2 : out std_logic_vector(7 downto 0); -- Channel Two DAC Output Bus
 		A, -- S1 Config
 		B, -- S1 Config
 		C, -- S1 Config
@@ -77,9 +78,9 @@ entity main is
 	constant dptr_b1_addr: integer := 26; -- Data Address Byte 1 (Write)
 	constant dptr_b0_addr: integer := 27; -- Data Address Byte 0 (Write)
 	constant cfsw_addr : integer := 40; -- Controller Configuration Switch (Read)
-	constant ram_portal_addr : integer := 63; -- Ram Portal (Read/Write)
+	constant ram_portal_addr : integer := 63; -- Ram Portal (Write)
 	
-	-- Data Space Address Map, Register Addresses. Given as offsets from 0x8000.
+	-- Data Space Address Map, Register Addresses, offsets from 0x8000.
 	constant rc1_addr : integer := 0; -- RC Filter Control, Channel 1
 	constant rc2_addr : integer := 1; -- RC Filter Control, Channel 2
 	constant div1_addr : integer := 2; -- Clock Divisor, Channel 1
@@ -146,7 +147,9 @@ end process;
 
 
 -- The Relay Interface provides the memory mapping of the control
--- address into the control registers, and also into data space.
+-- address into the control registers. It implements the data space
+-- through the ram portal location in control space, with the data
+-- address register as the data space address.
 Relay_Interface : process (RESET,CK) is
 	variable integer_addr : integer range 0 to 63;
 begin
@@ -168,7 +171,7 @@ begin
 		RAM1WR <= '0';
 		RAM2WR <= '0';
 		
-		-- Control Space Write
+		-- Relay Writes to Controller's Control Space
 		if CDS and CWR then
 			case to_integer(unsigned(cont_addr)) is
 			when dptr_b3_addr => data_addr(31 downto 24) <= cont_data(7 downto 0);
@@ -176,7 +179,7 @@ begin
 			when dptr_b1_addr => data_addr(15 downto 8) <= cont_data(7 downto 0);
 			when dptr_b0_addr => data_addr(7 downto 0) <= cont_data(7 downto 0);
 			
-			-- RAM Portal Write
+			-- Relay Writes to Controller's Data Space through RAM Portal
 			when ram_portal_addr => 
 				case to_integer(unsigned(data_addr(15 downto 14))) is
 				when 0 => RAM1WR <= '1';
@@ -202,7 +205,7 @@ begin
 				end case;
 			end case;
 			
-		-- Control Space Read
+		-- Relay Reads from Controller's Control Space
 		elsif CDS and (not CWR) then
 			case to_integer(unsigned(cont_addr)) is
 			when cont_id_addr => 
@@ -212,13 +215,14 @@ begin
 			when cont_fv_addr =>
 				cont_data <= std_logic_vector(to_unsigned(firmware_version,8));
 			when cfsw_addr => 
-				cont_data(0) <= NCONFIG;
+				cont_data <= (others => '0');
+				cont_data(0) <= not(NCONFIG);
 			when others =>
 				cont_data <= (others => '0');
 			end case;
 		end if;
 		
-		-- Increment the data address once whenever we read from or write to the ram portal.
+		-- Increment the data address each time we access the data space.
 		if not(CDS) and DCDS and (to_integer(unsigned(cont_addr)) = ram_portal_addr) then
 			data_addr <= std_logic_vector(to_unsigned((to_integer(unsigned(data_addr))+1),32));
 		end if;
@@ -226,10 +230,10 @@ begin
 	end if;
 end process;
 
--- The Channel One Clock Divider creates the sample clock for Channel 1 by dividing the 80-MHz
--- main clock by the integer held in div1. We reset the divider every time we write to the
--- Channel 1 signal memory.
-CH1_Divider : process (CK) is
+-- The Channel One Clock generator creates divides CK by two, and then by the value
+-- the integer value (div1+1), so as to generate a sample clock at frequency 
+-- CK/2/(div1+1) that we will use to increment the sample memory address.
+CH1_Clock : process (CK) is
 	variable count : integer range 0 to (2**31)-1;
 begin
 	if (RAM1WR = '1') or RESET then
@@ -244,8 +248,8 @@ begin
 	end if;
 end process;
 
--- The Channel Two Clock Divider.
-CH2_Divider : process (CK) is
+-- The Channel Two Clock generator.
+CH2_Clock : process (CK) is
 	variable count : integer range 0 to (2**31)-1;
 begin
 	if (RAM2WR = '1') or RESET then
@@ -286,8 +290,9 @@ CH2_Memory : entity DAQ_RAM port map (
 	Data => cont_data,
 	Q => ramb_out(7 downto 0)) ;
 		
--- The Channel One Generator generates the sample values that drive the DAC1 output. It reads
--- from the signal memory at the Channel One sample clock speed.
+-- The Channel One Generator reads sample values our of the sample memory.
+-- It starts at location zero and proceeds to the location spc1, so as to
+-- produce a waveform with spc1+1 samples.
 CH1_Generator : process (SCK1) is
 	variable count : integer range 0 to (2**ram_addr_len)-1;
 begin
