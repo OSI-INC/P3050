@@ -11,8 +11,11 @@
 -- V2.1 [31-OCT-24] Cleaning up. Remove 32.768-KHz CK input. Use CK name for 
 -- 80-MHz. Simplify sample clock generators.
 
--- V2.2 [31-OCT-24] Clean-up complete, separate attenuator registers for each
+-- V2.2 [01-NOV-24] Clean-up complete, separate attenuator registers for each
 -- channel, names self-consistent, intermediate output variables eliminated.
+
+-- V2.3 [03-NOV-24] Rearrange register map to separate channels from one 
+-- another.
 
 library ieee;  
 use ieee.std_logic_1164.all;
@@ -47,11 +50,11 @@ entity main is
 	);
 
 	-- General-Purpose Constant
-	constant max_data_byte : std_logic_vector(7 downto 0) := "11111111";
-	constant high_z_byte : std_logic_vector(7 downto 0) := "ZZZZZZZZ";
-	constant zero_data_byte : std_logic_vector(7 downto 0) := "00000000";
-	constant one_data_byte : std_logic_vector(7 downto 0) := "00000001";
-	constant dac_mid_range : std_logic_vector(7 downto 0) := "10000000";
+	constant max_byte : std_logic_vector(7 downto 0) := "11111111";
+	constant z_byte : std_logic_vector(7 downto 0) := "ZZZZZZZZ";
+	constant zero_byte : std_logic_vector(7 downto 0) := "00000000";
+	constant one_byte : std_logic_vector(7 downto 0) := "00000001";
+	constant center_byte : std_logic_vector(7 downto 0) := "10000000";
 	
 	-- Conrol Space Address Map
 	constant cont_id_addr : integer := 0; -- Controller Identifier (Read)
@@ -65,14 +68,14 @@ entity main is
 	constant ram_portal_addr : integer := 63; -- Ram Portal (Write)
 	
 	-- Data Space Address Map, Register Addresses, offsets from 0x8000.
-	constant rc1_addr : integer := 0; -- Channel One Filter Control
-	constant rc2_addr : integer := 1; -- Channel Two Filter Control
-	constant div1_addr : integer := 2; -- Channel One Divisor
-	constant div2_addr : integer := 6; -- Channel Two Divisor
-	constant spc1_addr : integer := 10; -- Channel One Samples per Cycle
-	constant spc2_addr : integer := 12; -- Channel Two Samples per Cycle
-	constant att1_addr : integer := 14; -- Channel One Attenuition Register
-	constant att2_addr : integer := 15; -- Channel Two Attenuition Register
+	constant div1_addr : integer := 0; -- Channel One Divisor, Four Bytes
+	constant len1_addr : integer := 4; -- Channel One Signal Length, Two Bytes
+	constant rc1_addr : integer := 6; -- Channel One Filter Control, One Byte
+	constant att1_addr : integer := 7; -- Channel One Attenuator Control, One Byte
+	constant div2_addr : integer := 16; -- Channel Two Divisor, Four Bytes
+	constant len2_addr : integer := 20; -- Channel Two Signal Length, Two Bytes
+	constant rc2_addr : integer := 22; -- Channel Two Filter Control, One Byte
+	constant att2_addr : integer := 23; -- Channel Two Attenuator Control, One Byte
 	
 	-- Configuration of RAM
 	constant cpu_addr_len : integer := 12;
@@ -97,8 +100,10 @@ architecture behavior of main is
 	signal RAM2WR : std_logic; -- Channel Two Memory Write
 	signal ram1_out : std_logic_vector(7 downto 0); -- Channel One Memory Output
 	signal ram2_out : std_logic_vector(7 downto 0); -- Channel Two Memory Output
-	signal spc1 : std_logic_vector(15 downto 0); -- Channel One Samples per Cycle
-	signal spc2 : std_logic_vector(15 downto 0);-- Channel Two Samples per Cycle
+	signal len1 : std_logic_vector(15 downto 0); -- Channel One Samples per Cycle Minus One
+	signal len2 : std_logic_vector(15 downto 0);-- Channel Two Samples per Cycle Minus One
+	signal div1 : std_logic_vector(31 downto 0); -- Channel One Clock Divisor Minus One
+	signal div2 : std_logic_vector(31 downto 0); -- Channel Two Clock Divisor Minus One
 	
 	-- Reset signals.
 	signal RESET : boolean;
@@ -109,8 +114,6 @@ architecture behavior of main is
 	-- Signals.
 	signal SCK1 : std_logic; -- Channel One Sample Clock
 	signal SCK2 : std_logic; -- Channel Two Sample Clock
-	signal div1 : std_logic_vector(31 downto 0); -- Channel One Clock Divisor
-	signal div2 : std_logic_vector(31 downto 0); -- Channel Two Clock Divisor
 	signal rd_ram1_addr : std_logic_vector(ram_addr_len-1 downto 0); -- Channel One Sample Address
 	signal rd_ram2_addr : std_logic_vector(ram_addr_len-1 downto 0); -- Channel Two Sample Address
 	
@@ -137,15 +140,15 @@ Relay_Interface : process (RESET,CK) is
 	variable integer_addr : integer range 0 to 63;
 begin
 	if RESET then
-		spc1 <= (others => '0');
-		spc2 <= (others => '0');
+		len1 <= (others => '0');
+		len2 <= (others => '0');
 		cont_data <= (others => 'Z');
 		RAM1WR <= '0';
 		RAM2WR <= '0';
 		div1 <= (others => '0');
 		div2 <= (others => '0');
-		rc1 <= one_data_byte;
-		rc2 <= one_data_byte;
+		rc1 <= one_byte;
+		rc2 <= one_byte;
 		att1 <= (others => '1');
 		att2 <= (others => '1');
 	elsif rising_edge(CK) then		
@@ -181,10 +184,10 @@ begin
 					when div2_addr+1 => div2(23 downto 16) <= cont_data(7 downto 0);
 					when div2_addr+2 => div2(15 downto 8) <= cont_data(7 downto 0);
 					when div2_addr+3 => div2(7 downto 0) <= cont_data(7 downto 0);		
-					when spc1_addr+0 => spc1(15 downto 8) <= cont_data(7 downto 0);	
-					when spc1_addr+1 => spc1(7 downto 0) <= cont_data(7 downto 0);	
-					when spc2_addr+0 => spc2(15 downto 8) <= cont_data(7 downto 0);	
-					when spc2_addr+1 => spc2(7 downto 0) <= cont_data(7 downto 0);		
+					when len1_addr+0 => len1(15 downto 8) <= cont_data(7 downto 0);	
+					when len1_addr+1 => len1(7 downto 0) <= cont_data(7 downto 0);	
+					when len2_addr+0 => len2(15 downto 8) <= cont_data(7 downto 0);	
+					when len2_addr+1 => len2(7 downto 0) <= cont_data(7 downto 0);		
 					when att1_addr => att1 <= not(cont_data(3 downto 0));	
 					when att2_addr => att2 <= not(cont_data(3 downto 0));
 					end case;
@@ -216,9 +219,9 @@ begin
 	end if;
 end process;
 
--- The Channel One Clock generator creates divides CK by two, and then by the value
--- the integer value (div1+1), so as to generate a sample clock at frequency 
--- CK/2/(div1+1) that we will use to increment the sample memory address.
+-- The Channel One Clock generator divides CK by two, and then by div1+1 so as to
+-- generate a sample clock at frequency CK/2/(div1+1) = 40 MHz / (div+1). We will
+-- use this clock to increment the sample memory address.
 CH1_Clock : process (CK) is
 	variable count : integer range 0 to (2**31)-1;
 begin
@@ -277,15 +280,15 @@ CH2_Memory : entity DAQ_RAM port map (
 	Q => ram2_out(7 downto 0)) ;
 		
 -- The Channel One Generator reads sample values our of the sample memory.
--- It starts at location zero and proceeds to the location spc1, so as to
--- produce a waveform with spc1+1 samples.
+-- It starts at location zero and proceeds to the location len1, so as to
+-- produce a waveform with len1+1 samples.
 CH1_Generator : process (SCK1) is
 	variable count : integer range 0 to (2**ram_addr_len)-1;
 begin
 	if (RAM1WR = '1') or RESET then
 		count := 0;
 	elsif rising_edge(SCK1) then
-		if count < (to_integer(unsigned(spc1))) then
+		if count < (to_integer(unsigned(len1))) then
 			count := count + 1;
 		else
 			count := 0;
@@ -301,7 +304,7 @@ begin
 	if (RAM1WR = '1') or RESET then
 		count := 0;
 	elsif rising_edge(SCK2) then
-		if count < (to_integer(unsigned(spc2))) then
+		if count < (to_integer(unsigned(len2))) then
 			count := count + 1;
 		else
 			count := 0;
@@ -313,8 +316,8 @@ end process;
 -- Indicator lamps.
 Indicators : process(RESET) is
 begin
-	ON1 <= to_std_logic(to_integer(unsigned(spc1)) /= 0);
-	ON2 <= to_std_logic(to_integer(unsigned(spc2)) /= 0);
+	ON1 <= to_std_logic(to_integer(unsigned(len1)) /= 0);
+	ON2 <= to_std_logic(to_integer(unsigned(len2)) /= 0);
 	LRESET <= to_std_logic(RESET);
 	LCONFIG <= not(NCONFIG);
 	LCDS <= not(NCDS);
@@ -324,8 +327,8 @@ end process;
 -- DAC1 Output Bits.
 DAC1_Driver : process (RESET) is
 begin
-	if RESET or (to_integer(unsigned(spc1)) = 0) then
-		dac1(7 downto 0) <= dac_mid_range;
+	if RESET or (to_integer(unsigned(len1)) = 0) then
+		dac1(7 downto 0) <= center_byte;
 	else
 		dac1 <= ram1_out;
 	end if;
@@ -334,8 +337,8 @@ end process;
 -- DAC2 Output Bits.
 DAC2_Driver : process (RESET) is
 begin
-	if RESET or (to_integer(unsigned(spc2)) = 0) then
-		dac2(7 downto 0) <= dac_mid_range;
+	if RESET or (to_integer(unsigned(len2)) = 0) then
+		dac2(7 downto 0) <= center_byte;
 	else
 		dac2 <= ram2_out;
 	end if;
